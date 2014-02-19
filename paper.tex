@@ -76,12 +76,27 @@
 		In 2002, it was decided to ditch the old code base and reimplement the project as Tor, the Second Generation Onion Router, introducing perfect forward secrecy, directory servers, hidden services and more \cite{bib:dingledine}.
 		
 		\subsection{Onion routing}
-		
+			As described in the original design paper of The Onion Router, network traffic is forwarded through a circuit of nodes, where each node only knows the previous and next node in the circuit. With a sufficiently long circuit of (independent) nodes, this means that two communicating parties can remain oblivious of each others physical location.
+			
+			Say we have a circuit of nodes $C = \{c_0, \dots, c_n\}$, where $c_0$ is our trusted client and $c_n$ is the exit node. Each node has its own public key $p$ and a corresponding private key $d$. For each node in $C$, $c_0$ generates a distinct secret $s$.
+			
+			The payload of each packet flowing from $c_0$ to $c_n$ through circuit $C$ is first encrypted with $s_e$, the secret generated for node $c_e$. This is repeated for $s_{e-1}$, $s_{e-2}$, etc, until lastly it is encrypted with $s_1$. With each layer of encryption, a header is added with the address of next node in the circuit, plus the generated secret $s$ for the current node, encrypted its public key.
+			
+			After node $c_1$ receives this packet from our trusted node $c_0$, it decrypts the secret $s_1$ with its private key $d_1$, and uses it to decrypt the rest of the packet. The result is a header with the address of node $c_2$ and the payload encrypted with secrets $s_2$ to $s_e$, which is forwarded to node $c_2$.
+			
+			As node $c_x$ receives data from the previous node $c_{x-1}$, it peels off another layer of encryption, much as how you can peel an onion layer for layer, and forwards it to $c_{x+1}$. When exit node $c_n$ decrypts the last layer and forwards the unencrypted payload outside the network to the original destination that $c_0$ specified, acting as a traditional proxy. 
+			
+			When $c_n$ receives a response, this whole process is applied in reverse order, encrypting the payload with its secret along the way, instead of decrypting. When $c_0$ receives the packet, it peels off all the encryption layers to retrieve the unencrypted payload. 
+			
+			With the second generation onion routing used in Tor, a modified algorithm is used to derive the encryption keys, called \emph{telescoping path-building}, which also provides perfect forward secrecy. This algorithm is described in section \ref{ss:tor_circuit}.
+			
+			
 		\subsection{Directory servers}
 		
 		\subsection{Relay and exit nodes}
 		
 		\subsection{Circuit creation}
+			\label{ss:tor_circuit}
 		
 		\subsection{Disadvantages}
 		
