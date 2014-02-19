@@ -70,8 +70,10 @@
 		
 		
 	\section{Tor design}
+		\label{sec:tor}
+		The implementation of The Onion Router was first described by the U.S. Navy Research Laboratory, as means to protect government communications from digital, as well as physical attacks, by hiding the location of the communicating party or parties \cite{bib:goldschlag}.
 		
-		This section describes 
+		In 2002, it was decided to ditch the old code base and reimplement the project as Tor, the Second Generation Onion Router, introducing perfect forward secrecy, directory servers, hidden services and more \cite{bib:dingledine}.
 		
 		\subsection{Onion routing}
 		
@@ -132,9 +134,12 @@
 		% set second argument of \begin to the number of references
 		% (used to reserve space for the reference number labels box)
 	\begin{thebibliography}{1}
+
+		\bibitem{bib:goldschlag}
+			David M. Goldschlag, Michael G. Reed, and Paul F. Syverson. "Hiding Routing Information", Workshop on Information Hiding, Cambridge, UK, May, 1996.
 		
-		\bibitem{IEEEhowto:kopka}
-			H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+		\bibitem{bib:dingledine}
+			Roger Dingledine, Nick Mathewson, Paul Syverson. "Tor: The Second-Generation Onion Router", 2002.
 		
 	\end{thebibliography}
 
