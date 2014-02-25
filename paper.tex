@@ -71,9 +71,9 @@
 		
 	\section{Tor design}
 		\label{sec:tor}
-		The implementation of The Onion Router was first described by the U.S. Navy Research Laboratory, as means to protect government communications from digital, as well as physical attacks, by hiding the location of the communicating party or parties \cite{bib:goldschlag}.
+		The implementation of The Onion Router was first described by the U.S. Navy Research Laboratory, as means to protect government communications from digital, as well as physical attacks, by hiding the location of the communicating party or parties \cite{goldschlag1996hiding}.
 		
-		In 2002, it was decided to ditch the old code base and reimplement the project as Tor, the Second Generation Onion Router, introducing perfect forward secrecy, directory servers, hidden services and more \cite{bib:dingledine}.
+		In 2002, it was decided to ditch the old code base and reimplement the project as Tor, the Second Generation Onion Router, introducing perfect forward secrecy, directory servers, hidden services and more \cite{dingledine2004tor}.
 		
 		\subsection{Onion routing}
 			As described in the original design paper of The Onion Router, network traffic is forwarded through a circuit of nodes, where each node only knows the previous and next node in the circuit. With a sufficiently long circuit of (independent) nodes, this means that two communicating parties can remain oblivious of each others physical location.
@@ -100,9 +100,8 @@
 			
 			
 		\subsection{Relay and exit nodes}
-			[gebruikt: the second generation onion router]
 			The Tor network consists of several components. The clients in the Tor network are known as Onion Proxies. The software to run an Onion Proxy is available for free on the Tor website [linkje] and is easy to configure. The Onion Proxies are responsible for downloading the directory information, establish circuits across the network and handle connections from user applications.\\\\
-			The routing in the network is done by Onion Routers, also called relay nodes. The relay nodes relays the data from the Onion Proxy to the webserver across a circuit (circuits are described in 2D). Each Onion Router is connected to every other Onion Router with a TLS connection [link naar TLS protocol]. Each circuit has three type of Onion Routers [link naar download.pdf]:
+			The routing in the network is done by Onion Routers, also called relay nodes. The relay nodes relays the data from the Onion Proxy to the webserver across a circuit (circuits are described in 2D). Each Onion Router is connected to every other Onion Router with a TLS connection [link naar TLS protocol]. Each circuit has three type of Onion Routers \cite{mccoy2008shining}:
 			\begin{itemize}
 				\item The entrance Tor router: this is the router that is directly connected to an Onion Proxy and can observe the origin of a request through the Tor network. The entrance router sends the packet to the middle Tor router.
 				\item The middle Tor router: this router is connected to the entrance router and the exit router.
@@ -174,15 +173,8 @@
 		% <OR> manually copy in the resultant .bbl file
 		% set second argument of \begin to the number of references
 		% (used to reserve space for the reference number labels box)
-	\begin{thebibliography}{1}
-
-		\bibitem{bib:goldschlag}
-			David M. Goldschlag, Michael G. Reed, and Paul F. Syverson. "Hiding Routing Information", Workshop on Information Hiding, Cambridge, UK, May, 1996.
-		
-		\bibitem{bib:dingledine}
-			Roger Dingledine, Nick Mathewson, Paul Syverson. "Tor: The Second-Generation Onion Router", 2002.
-		
-	\end{thebibliography}
+	\bibliography{paper}{}
+\bibliographystyle{plain}
 
 \end{document}
 
