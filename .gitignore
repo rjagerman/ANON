@@ -1,5 +1,6 @@
 paper.pdf
 *~
+*.DS_Store
 *.acn
 *.acr
 *.alg
