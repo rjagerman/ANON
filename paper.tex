@@ -151,7 +151,7 @@ Another problem is that the Tor clients are not optimal at handling latency and 
 Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. Removing the empty TLS application record which could reduce the overhead in the TCP/IP header with 6.3\%.
 
 \section{Tor vulnerabilities and attacks}
-Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor.
+Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, X attacks, Y attacks and Z attacks.
 
 \subsection{Browser based attacks}
 Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.\\
@@ -164,7 +164,14 @@ The solution for the JavaScript injection attack is disabling active content sys
 
 \section{Current decentralized systems}
 
-\section{Which components needs to be decentralized of Tor?}
+\section{The difficulties of decentralizing Tor}
+
+\subsection{Bootstrapping new nodes}
+If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be one starting point where this new node can discover neighbors in the network to connect with. In Tor a directory server can tell the new node what his neighbors are and how to find them \cite{dingledine2004tor}.
+Moving this system to a non peer-to-peer base is difficult. Dingledine et al. stated that this indeed is still an open problem. With decentralized systems there is no central directory server to tell a new node where to locate neighbors and there might be a lot of malicious nodes in the network. Some systems such as Tarzan, MorphMix and Pastra [citjes hiero] do have made some attempts towards a decentralized system, but have yet to find the final answer.
+
+\subsection{Incentives in decentralized systems}
+
 
 \section{Comparison existing decentralized  networks}
 Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
@@ -204,10 +211,8 @@ Some other decentralized peer-to-peer systems has been developed, focussing on a
 \subsection{Comparison and differences}
 
 \section{Conclusion}
-The conclusion goes here.
-
-
-
+We come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, only a few are actually implemented. The systems that do exist such as X and Y (hier deze noemen aan de hand van de tabel) are getting things right, yet they often lack or have poor implementations on other aspects.\\
+While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
 
 		
 		
