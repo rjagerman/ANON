@@ -156,7 +156,9 @@ Besides the disadvantages mentioned in the previous section, Tor also suffers fr
 
 \subsection{Browser based attacks}
 Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.\\
+
 By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network. By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag.\\
+
 To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.\\
 The solution to this problem is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 
@@ -169,6 +171,7 @@ Many other decentralized peer-to-peer networks have been proposed and some have 
 
 \subsection{Gnutella}
 Gnutella is a decentralized peer-to-peer network used for distributed search of files. Since the network is fully decentralized, peers in the network are called 'servents', a combination of servers and clients. Each peer can act both as a server, answering queries, or as a client, requesting and executing search queries. In order for a client to bootstrap, a new peer connects to one of several known hosts that are almost always available. These peers can be found on http://gnutellahosts.com. Once the peer has joined, there are several messages a servant can send out:
+
 \begin{itemize}
 \item A peer sends a PING message to it's neighbours to announce it's presents. This message is forwarded to other peers and each peer sends a PONG message back.
 \item The peer can issue QUERY answers. Other peers responds with a QUERY RESPONSE message to specify whether the file that was issued in the query, was found or not.
@@ -178,14 +181,18 @@ Gnutella is an unstructured network which means that the placement of data items
 
 \subsection{Freenet}
 In Freenet, each data item is represented by a key that is independent of the location of the file. Freenet is called a loosely structured network because of this. To issue a query, the request is passed from client to client where each client makes a decision about the location to send the request next.\\\\
+
 There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key which enables personal namespaces. This key contains a public key and a private key where the private key is used to store the data and the public key is used in the queries of the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.\\\\
+
 The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded anymore. Results of queries are being cached in intermediate nodes to reduce the time for a query response.
 
 \subsection{Tribler}
 
 \subsection{Tapestry}
 Tapestry is based on the plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality. Tapastry is very similar to pastry [link naar pastry paper] but there are some small differences in in the handling of network locality and data replication.\\\\
+
 Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.\\\\
+
 Tapestry is a fundamental component of Oceanstore [linkje naar paper over Oceanstore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch.
 
 \subsection{Tarzan}
