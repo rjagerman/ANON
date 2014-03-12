@@ -193,6 +193,9 @@ Many other decentralized peer-to-peer networks have been proposed and some have 
 			Some other decentralized peer-to-peer systems has been developed, focussing on anonymity. An example of such a system is AP3 (Anonymizing Peer-to-Peer Proxy) [linkje naar AP3 paper] which makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.
 			
 			<hier moet nog een stukje over i2p komen voor degene die dat paper heeft gelezen>
+			
+		\subsection{Comparison and differences}
+			Comparison table.
 		
 	\section{Tor vulnerabilities and attacks}
 Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, X attacks, Y attacks and Z attacks.
@@ -205,10 +208,6 @@ Besides the disadvantages mentioned in the previous section, Tor also suffers fr
 		By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.\\
 
 		The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
-		
-		
-		\subsection{Comparison and differences}
-			Comparison table.
 	
 	\section{Conclusion}
 		We come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, only a few are actually implemented. The systems that do exist such as X and Y (hier deze noemen aan de hand van de tabel) are getting things right, yet they often lack or have poor implementations on other aspects.\\
