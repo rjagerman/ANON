@@ -71,15 +71,9 @@
 	\IEEEPARstart{L}{orem} ipsum dolor sit amet, consectetur adipiscing elit. Nunc et elit nec metus ultrices faucibus. Mauris volutpat libero eu arcu sodales, ac bibendum neque pulvinar. Sed et ipsum nunc. Quisque ac sem ut nunc tincidunt commodo. Cras at odio nibh. Pellentesque sodales ut tortor sed dictum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 		
 		
-<<<<<<< HEAD
-\section{Introduction in Tor}
-\label{sec:tor}
-The implementation of The Onion Router was first described by the U.S. Navy Research Laboratory, as means to protect government communications from digital, as well as physical attacks, by hiding the location of the communicating party or parties \cite{goldschlag1996hiding}.
-=======
 \section{Introduction to Tor}
 	\label{sec:tor}
 	The implementation of The Onion Router was first described by the U.S. Navy Research Laboratory, as means to protect government communications from digital, as well as physical attacks, by hiding the location of the communicating party or parties \cite{goldschlag1996hiding}.
->>>>>>> origin/master
 
 	In 2002, it was decided to ditch the old code base and reimplement the project as Tor, the Second Generation Onion Router, introducing perfect forward secrecy, directory servers, hidden services and more \cite{dingledine2004tor}.
 		
@@ -147,7 +141,11 @@ The implementation of The Onion Router was first described by the U.S. Navy Rese
 \section{Problems when decentralizing}
 		hier komt de introductie
 		
-		\subsection{Bootstrapping}
+			\subsection{Bootstrapping new nodes}
+		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be one starting point where this new node can discover neighbors in the network to connect with. In Tor a directory server can tell the new node what his neighbors are and how to find them \cite{dingledine2004tor}.
+Moving this system to a non peer-to-peer base is difficult. Dingledine et al. stated that this indeed is still an open problem. With decentralized systems there is no central directory server to tell a new node where to locate neighbors and there might be a lot of malicious nodes in the network. Some systems such as Tarzan, MorphMix and Pastra [citjes hiero] do have made some attempts towards a decentralized system, but have yet to find the final answer.
+
+		\subsection{Incentives in decentralized systems}
 	
 	\section{Current decentralized systems}
 		Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
@@ -175,102 +173,16 @@ The implementation of The Onion Router was first described by the U.S. Navy Rese
 		
 		\subsection{Tribler}
 			Information about Tribler.
-		
-<<<<<<< HEAD
-\subsection{Disadvantages}
-While Tor guaranteers anonimity, there are some disadvantages using it. The main disadvantage is that the Tor network is slow. According to the Tor Metrics project [link naar tor metrics project], it takes about 6 seconds to download 1 MiB of data.\\
 
 
-According to Dingleding et al \cite{dingledine2009performance}, there are six reasons why Tor is not optimal. In this section, we will summarize these reasons and explain what could be done to fix them.\\
 
-
-First of all, the congestion control does not work well. The network has some problems handling bulk transfers, such as when downloading large files or streaming high-quality videos. The congestion control could be improved by using an unreliable protocol for links between Tor relays.\\
-
-
-Some Tor users put more traffic on the network than they contribute by running a Onion Router. This means that these users are slowing the network down as they use more traffic than giving to the network. A possible solution for this is to throttle certain protocols at exit nodes or at Onion Proxies.\\
-
-
-Also, the Tor network doesn't have the capacity to handle all the users that want privacy on the Internet. By increasing the amount of Onion Routing in the Tor network, the capacity is increased. Incentives such as LIRA \cite{jansen13lira} could make more users run a Onion Router, thus increasing the capacity of the network.\\
-
-
-The current path selection algorithm of Tor doesn't distribute the load evenly over the network. The problem is that the current selection strategy is optimal when the network is fully loaded. Using a better path selection algorithm could increase the capacity of the network and the overall user experience.\\
-
-
-Another problem is that the Tor clients are not optimal at handling latency and connection failures. For example, if extending a circuit fails, the entire circuit is abandoned. An improvement would be to first try to extend the circuit to some other places. If that fails, the circuit could be abandoned. Also, a better timeout mechanism could be chosen for building circuits.\\
-
-
-Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. Removing the empty TLS application record which could reduce the overhead in the TCP/IP header with 6.3\%.
-
-\section{Tor vulnerabilities and attacks}
-Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, X attacks, Y attacks and Z attacks.
-
-\subsection{Browser based attacks}
-Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.\\
-
-By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.\\
-
-By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.\\
-
-The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
-
-\section{Current decentralized systems}
-
-\section{The difficulties of decentralizing Tor}
-
-\subsection{Bootstrapping new nodes}
-If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be one starting point where this new node can discover neighbors in the network to connect with. In Tor a directory server can tell the new node what his neighbors are and how to find them \cite{dingledine2004tor}.
-Moving this system to a non peer-to-peer base is difficult. Dingledine et al. stated that this indeed is still an open problem. With decentralized systems there is no central directory server to tell a new node where to locate neighbors and there might be a lot of malicious nodes in the network. Some systems such as Tarzan, MorphMix and Pastra [citjes hiero] do have made some attempts towards a decentralized system, but have yet to find the final answer.
-
-\subsection{Incentives in decentralized systems}
-
-
-\section{Comparison existing decentralized  networks}
+	\section{Comparison existing decentralized  networks}
 Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
 
-\subsection{Gnutella}
-Gnutella is a decentralized peer-to-peer network used for distributed search of files. Since the network is fully decentralized, peers in the network are called 'servents', a combination of servers and clients. Each peer can act both as a server, answering queries, or as a client, requesting and executing search queries. In order for a client to bootstrap, a new peer connects to one of several known hosts that are almost always available. These peers can be found on http://gnutellahosts.com. Once the peer has joined, there are several messages a servant can send out:
-
-\begin{itemize}
-\item A peer sends a PING message to it's neighbours to announce it's presents. This message is forwarded to other peers and each peer sends a PONG message back.
-\item The peer can issue QUERY answers. Other peers responds with a QUERY RESPONSE message to specify whether the file that was issued in the query, was found or not.
-\item To transfer items between peers, the GET and PUSH messages are being used.
-\end{itemize}
-Gnutella is an unstructured network which means that the placement of data items is not based on any knowledge of the topology nor the contents of the file. To search for a file, a flooding algorithm is used.
-
-\subsection{Freenet}
-In Freenet, each data item is represented by a key that is independent of the location of the file. Freenet is called a loosely structured network because of this. To issue a query, the request is passed from client to client where each client makes a decision about the location to send the request next.\\\\
-
-There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key which enables personal namespaces. This key contains a public key and a private key where the private key is used to store the data and the public key is used in the queries of the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.\\\\
-
-The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded anymore. Results of queries are being cached in intermediate nodes to reduce the time for a query response.
-
-\subsection{Tribler}
-
-\subsection{Tapestry}
-Tapestry is based on the plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality. Tapastry is very similar to pastry [link naar pastry paper] but there are some small differences in in the handling of network locality and data replication.\\\\
-
-Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.\\\\
-
-Tapestry is a fundamental component of Oceanstore [linkje naar paper over Oceanstore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch.
-
-\subsection{Tarzan}
-
-\subsection{Other anonymous systems}
-Some other decentralized peer-to-peer systems has been developed, focussing on anonymity. An example of such a system is AP3 (Anonymizing Peer-to-Peer Proxy) [linkje naar AP3 paper] which makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.\\\\
-<hier moet nog een stukje over i2p komen voor degene die dat paper heeft gelezen>
-
-\subsection{Comparison and differences}
-
-\section{Conclusion}
-We come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, only a few are actually implemented. The systems that do exist such as X and Y (hier deze noemen aan de hand van de tabel) are getting things right, yet they often lack or have poor implementations on other aspects.\\
-While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
-
-=======
 		\subsection{Tapestry}
 			Tapestry is based on the plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality. Tapastry is very similar to pastry [link naar pastry paper] but there are some small differences in in the handling of network locality and data replication.
 		
 			Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
->>>>>>> origin/master
 		
 			Tapestry is a fundamental component of Oceanstore [linkje naar paper over Oceanstore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch.
 		
@@ -283,25 +195,24 @@ While Tor also still has a lot to improve on, further research and development i
 			<hier moet nog een stukje over i2p komen voor degene die dat paper heeft gelezen>
 		
 	\section{Tor vulnerabilities and attacks}
-		Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor.
+Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, X attacks, Y attacks and Z attacks.
 
 		\subsection{Browser based attacks}
-			Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.
-		
-			By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
-		
-			By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.
-		
-			The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
-	
-	\section{Comparison existing decentralized  networks}
+		Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.\\
+
+		By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.\\
+
+		By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.\\
+
+		The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 		
 		
 		\subsection{Comparison and differences}
 			Comparison table.
 	
 	\section{Conclusion}
-		The conclusion goes here.
+		We come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, only a few are actually implemented. The systems that do exist such as X and Y (hier deze noemen aan de hand van de tabel) are getting things right, yet they often lack or have poor implementations on other aspects.\\
+While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
 
 	\appendices
 %		\section{Proof of the First Zonklar Equation}
