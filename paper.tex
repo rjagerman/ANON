@@ -121,7 +121,7 @@
 		
 		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to OR2, Alice first sends a \emph{relay extend} cell to OR1. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and OR2 ($ g^{a_2} $). OR1 takes this first half of the key and sends a \emph{create} cell with this key to OR2. When OR1 receives a created cell, OR1 passes this cell to Alice. Now Alice and OR2 share a common key: $ K = g^{a_2b_2} $. The same procedure can be used to extend the circuit with more nodes.
 			
-	\subsection{Disadvantages}
+	\subsection{Disadvantages}	
 		While Tor guarantees anonymity, there are some disadvantages using it. The main disadvantage is that the Tor network is slow. According to the Tor Metrics project [link naar tor metrics project], it takes about 6 seconds to download 1 MiB of data.
 		
 		According to Dingledine et al \cite{dingledine2009performance}, there are six reasons why Tor is not optimal. In this section, we will summarize these reasons and explain what could be done to fix them.
@@ -139,7 +139,9 @@
 		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. Removing the empty TLS application record which could reduce the overhead in the TCP/IP header with 6.3\%.
 
 \section{Problems when decentralizing}
-		hier komt de introductie
+		As we saw in the previous section, we would like to have a decentralized anonymous network. This isn't an easy task: 15 years of decentralization attempts on the Tor network are behind us. Several well-used decentralized peer-to-peer overlay networks are active such as Gnutella [link], Freenet [link] and Tapestry. These networks will be described in more detail in the next chapter. Among these networks are some overlay anonymous networks such as Tarzan.
+
+		There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
 		
 		\subsection{Bootstrapping}
 	
@@ -197,11 +199,15 @@
 		
 			The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 	
-	\section{Comparison existing decentralized  networks}
+	\section{Comparison existing decentralized networks}
 		
-		
-		\subsection{Comparison and differences}
-			Comparison table.
+		In the last section, we discussedexisting decentralized peer-to-peer networks. In this section we will make a comparison between these networks. For each network, we will explain the following features:
+\begin{itemize}
+\item Compatibility with Tor. If the network is compatible with Tor, the network or some features of the network could be used for the decentralization of Tor.
+\item Public implementation. For each network we will explain whether a public implementation is available.
+\item Used in practice. Is the network used in practice?
+\item Attack resistance. We will explain the various weaknesses and possible attacks of each network.
+\end{itemize}
 	
 	\section{Conclusion}
 		The conclusion goes here.
