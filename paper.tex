@@ -122,6 +122,7 @@
 		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to OR2, Alice first sends a \emph{relay extend} cell to OR1. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and OR2 ($ g^{a_2} $). OR1 takes this first half of the key and sends a \emph{create} cell with this key to OR2. When OR1 receives a created cell, OR1 passes this cell to Alice. Now Alice and OR2 share a common key: $ K = g^{a_2b_2} $. The same procedure can be used to extend the circuit with more nodes.
 			
 	\subsection{Disadvantages}
+	\label{ss:tor_disadvantages}
 		While Tor guarantees anonymity, there are some disadvantages using it. The main disadvantage is that the Tor network is slow. According to the Tor Metrics project [link naar tor metrics project], it takes about 6 seconds to download 1 MiB of data.
 		
 		According to Dingledine et al \cite{dingledine2009performance}, there are six reasons why Tor is not optimal. In this section, we will summarize these reasons and explain what could be done to fix them.
@@ -143,9 +144,12 @@
 		
 			\subsection{Bootstrapping new nodes}
 		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be one starting point where this new node can discover neighbors in the network to connect with. In Tor a directory server can tell the new node what his neighbors are and how to find them \cite{dingledine2004tor}.
-Moving this system to a non peer-to-peer base is difficult. Dingledine et al. stated that this indeed is still an open problem. With decentralized systems there is no central directory server to tell a new node where to locate neighbors and there might be a lot of malicious nodes in the network. Some systems such as Tarzan, MorphMix and Pastra [citjes hiero] do have made some attempts towards a decentralized system, but have yet to find the final answer.
+Moving this system to a non peer-to-peer base is difficult. Dingledine et al. stated that this indeed is still an open problem. With decentralized systems there is no central directory server to tell a new node where to locate neighbors and there might be a lot of malicious nodes in the network. Some systems such as Tarzan, MorphMix and Pastry \cite{rowstron2001pastry, rennhard2002introducing} do have made some attempts towards a decentralized system, but have yet to find the final answer.
 
 		\subsection{Incentives in decentralized systems}
+		As described in section \ref{ss:tor_disadvantages} people are using more bandwidth than that they donate. There are multiple proposals \cite{dingledine2010building, jansen13lira} to introduce incentives into Tor. If one would also have to build an incentive system into a decentralized system, they would have to find a way to manage the ratings of each client in the network, in such a way that they cannot be falsely modified. In other words the incentive data has to be accurate and reliable. Besides the integrity of the data, also the traffic it generates on the network should have minimal impact.\\
+		Rahman \cite{rahman2009survey} ........
+		
 	
 	\section{Current decentralized systems}
 		Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
