@@ -210,7 +210,11 @@
 		The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response. To prevent looping of the requests, each request contains a random identifier. The peers the request travels through, keep track of these identifiers and rejects the request if the request has already been answered by the peer.
 		
 	\subsection{NISAN}
-		Information about NISAN.
+		NISAN, or Network Information Service for Anonymization Networks \cite{panchenko2006nisan}, is an anonymization network which implements a distributed node discovery. Not only does a central node administrator (the Directory Server in Tor) imply trust in those servers, Panchenko et al. also argue that a central node administration (the Directory Server in Tor) does not scale, as the current directory server protocol was already improved two times to reduce bandwidth costs, with a fairly low amount of users.
+		
+		NISAN implements a DHT-based approach (Kademlia) for distributing node information, in such a way that does not require the client to know about all the nodes in the network (such as in Tor). To build a circuit, NISAN generates random IDs and searches for the closest hit throughout the network. This makes it possible to build a path with nodes picked in a random, uniform way among all nodes, without the trust of a third party.
+		
+		This does not fully protect against fingerprinting or bridging attacks (passive attacks), and suggest to do random walks throughout the network to mitigate that. The authors admit however this decreases the protection against an active attack.
 		
 	\subsection{MorphMix}
 		MorphMix \cite{rennhard2002introducing} functions similar to both Tor and MIX networks. It relies on nested encryption and routing traffic over multiple nodes to ensure anonymity of its users' communication. Additionally MorphMix uses the typical behavior of a MIX network, where it reorders messages that enter a node before sending them out.
