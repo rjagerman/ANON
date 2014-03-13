@@ -138,6 +138,18 @@
 		Another problem is that the Tor clients are not optimal at handling latency and connection failures. For example, if extending a circuit fails, the entire circuit is abandoned. An improvement would be to first try to extend the circuit to some other places. If that fails, the circuit could be abandoned. Also, a better timeout mechanism could be chosen for building circuits.		
 		
 		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. Removing the empty TLS application record which could reduce the overhead in the TCP/IP header with 6.3\%.
+		
+	\section{Tor vulnerabilities and attacks}
+Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, X attacks, Y attacks and Z attacks.
+
+		\subsection{Browser based attacks}
+		Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.\\
+
+		By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.\\
+
+		By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.\\
+
+		The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 
 \section{Problems when decentralizing}
 		hier komt de introductie
@@ -148,7 +160,12 @@ Moving this system to a non peer-to-peer base is difficult. Dingledine et al. st
 
 		\subsection{Incentives in decentralized systems}
 		As described in section \ref{ss:tor_disadvantages} people are using more bandwidth than that they donate. There are multiple proposals \cite{dingledine2010building, jansen13lira} to introduce incentives into Tor. If one would also have to build an incentive system into a decentralized system, they would have to find a way to manage the ratings of each client in the network, in such a way that they cannot be falsely modified. In other words the incentive data has to be accurate and reliable. Besides the integrity of the data, also the traffic it generates on the network should have minimal impact.\\
-		Rahman \cite{rahman2009survey} ........
+		
+		Rahman \cite{rahman2009survey} proposes several options to build in incentives in a peer-to-peer network. The first thing that is described is the so called \emph{Warm-glow Model}. In this model determines the percentage of free-rides based on the probabilistic population distribution. If the percentage is above a certain threshold, the system will show signs of diminishing marginal returns.\\
+		
+		The second proposal is using monetary schemes. While it is not exemplified a lot, the main idea is to use a virtual currency as incentive. The problems with this approach are the scalability and the hidden costs of this service.\\
+		
+		The third proposal is \emph{Reciprocity-Based Schemes}. Using this approach a peer maintains a behavior history of other peers in the network. These schemes can be based on two somewhat reciprocities: direct reciprocity or indirect reciprocity. The formal are more suitable for longer relationships between peers. The latter is more scalable but they rely on third party and must handle trust issues themselves.
 		
 	
 	\section{Current decentralized systems}
@@ -200,21 +217,12 @@ Many other decentralized peer-to-peer networks have been proposed and some have 
 			
 		\subsection{Comparison and differences}
 			Comparison table.
-		
-	\section{Tor vulnerabilities and attacks}
-Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, X attacks, Y attacks and Z attacks.
-
-		\subsection{Browser based attacks}
-		Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.\\
-
-		By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.\\
-
-		By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.\\
-
-		The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 	
 	\section{Conclusion}
-		We come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, only a few are actually implemented. The systems that do exist such as X and Y (hier deze noemen aan de hand van de tabel) are getting things right, yet they often lack or have poor implementations on other aspects.\\
+		In this technical report we introduced Tor and explained how Tor works and which components define a Tor network. Furthermore we looked at the main disadvantages and problems Tor currently has. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. The next section shows which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.\\
+		
+		From this table we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, there is not a system yet that can compete with Tor. The systems that do exist such as Tarzan, Torsk and Gnutella are getting things right, yet they often lack functionality such as anonymity or XXXXXX.\\
+		
 While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
 
 	\appendices
