@@ -173,7 +173,6 @@ Besides the disadvantages mentioned in the previous section, Tor also suffers fr
 
 		There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
 		
-<<<<<<< HEAD
 			\subsection{Bootstrapping new nodes}
 		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be one starting point where this new node can discover neighbors in the network to connect with. In Tor a directory server can tell the new node what his neighbors are and how to find them \cite{dingledine2004tor}.\\
 		
@@ -187,18 +186,12 @@ Moving this system to a non peer-to-peer base is difficult. Dingledine et al. st
 		The second proposal is using monetary schemes. While it is not exemplified a lot, the main idea is to use a virtual currency as incentive. The problems with this approach are the scalability and the hidden costs of this service.\\
 		
 		The third proposal is \emph{Reciprocity-Based Schemes}. Using this approach a peer maintains a behavior history of other peers in the network. These schemes can be based on two somewhat reciprocities: direct reciprocity or indirect reciprocity. The formal are more suitable for longer relationships between peers. The latter is more scalable but they rely on third party and must handle trust issues themselves.
-		
-	
-=======
-		\subsection{Bootstrapping}
-		Hier komt informatie over het bootstrappen.
 
 		\subsection{Key exchange}
 		When using a decentralized network, using a centralized authority for managing the keys, is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. Diffie-Hellman is for example used in the circuit setup in Onion Routing (see chapter I), however, it is possible for an adversary to manipulate with the keys send between two parties. This makes it possible for the adversary to decrypt all message sent between the two parties.
 
 		Tor currently uses an interactive forward-secret key-exchange protocol called the Tor authentication protocol (TAP) [linkje naar ace]. This protocol uses telescoping which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is ACE, an one-way authenticated key exchange protocol. The authors of this methods claim to have an 46\% efficiency improvement on the side of the client and an efficiency improvement of nearly 19\% on the side of the Onion Routers. ACE requires clients to send one extra element but that doesn't introduce any overhead because this element fits in the unused space in a cell.
 
->>>>>>> origin/master
 	\section{Current decentralized systems}
 		Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
 	
@@ -226,17 +219,14 @@ Moving this system to a non peer-to-peer base is difficult. Dingledine et al. st
 		\subsection{Tribler}
 			Information about Tribler.
 
-<<<<<<< HEAD
-
 
 	\section{Comparison existing decentralized  networks}
 Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
 
-=======
 		\subsection{Pastry}
 			Information about Pastry.
 		
->>>>>>> origin/master
+
 		\subsection{Tapestry}
 			Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality. Tapastry is very similar to pastry [link naar pastry paper] but there are some small differences in in the handling of network locality and data replication.
 		
