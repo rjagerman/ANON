@@ -138,18 +138,26 @@
 		
 		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. Removing the empty TLS application record which could reduce the overhead in the TCP/IP header with 6.3\%.
 
+		As we saw, the directory service generates overhead of the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor [linkjezz] but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
+
 \section{Problems when decentralizing}
 		As we saw in the previous section, we would like to have a decentralized anonymous network. This isn't an easy task: 15 years of decentralization attempts on the Tor network are behind us. Several well-used decentralized peer-to-peer overlay networks are active such as Gnutella [link], Freenet [link] and Tapestry. These networks will be described in more detail in the next chapter. Among these networks are some overlay anonymous networks such as Tarzan.
 
 		There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
 		
 		\subsection{Bootstrapping}
-	
+		Hier komt informatie over het bootstrappen.
+
+		\subsection{Key exchange}
+		When using a decentralized network, using a centralized authority for managing the keys, is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. Diffie-Hellman is for example used in the circuit setup in Onion Routing (see chapter I), however, it is possible for an adversary to manipulate with the keys send between two parties. This makes it possible for the adversary to decrypt all message sent between the two parties.
+
+		Tor currently uses an interactive forward-secret key-exchange protocol called the Tor authentication protocol (TAP) [linkje naar ace]. This protocol uses telescoping which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is ACE, an one-way authenticated key exchange protocol. The authors of this methods claim to have an 46\% efficiency improvement on the side of the client and an efficiency improvement of nearly 19\% on the side of the Onion Routers. ACE requires clients to send one extra element but that doesn't introduce any overhead because this element fits in the unused space in a cell.
+
 	\section{Current decentralized systems}
 		Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
 	
 		\subsection{Gnutella}
-			Gnutella is a decentralized peer-to-peer network used for distributed search of files. Since the network is fully decentralized, peers in the network are called 'servents', a combination of servers and clients. Each peer can act both as a server, answering queries, or as a client, requesting and executing search queries. In order for a client to bootstrap, a new peer connects to one of several known hosts that are almost always available. These peers can be found on http://gnutellahosts.com. Once the peer has joined, there are several messages a servant can send out:
+			Gnutella is a decentralized peer-to-peer network used for distributed search of files. Since the network is fully decentralized, peers in the network are called 'servents', a combination of the words servers and clients. Each peer can act both as a server, answering queries, or as a client, requesting and executing search queries. In order for a client to bootstrap, a new peer connects to one of several known hosts that are almost always available. These peers can be found on http://gnutellahosts.com. Once the peer has joined, there are several messages a servant can send out:
 		
 			\begin{itemize}
 				\item A peer sends a PING message to it's neighbours to announce it's presents. This message is forwarded to other peers and each peer sends a PONG message back.
@@ -162,22 +170,25 @@
 		\subsection{Freenet}
 			In Freenet, each data item is represented by a key that is independent of the location of the file. Freenet is called a loosely structured network because of this. To issue a query, the request is passed from client to client where each client makes a decision about the location to send the request next.
 		
-			There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key which enables personal namespaces. This key contains a public key and a private key where the private key is used to store the data and the public key is used in the queries of the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.
+			There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key (SSK) which enables personal namespaces. This key contains a public key and a private key where the private key is used to store the data and the public key is used in the queries of the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.
 		
-			The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response.
+			The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response. To prevent looping of the requests, each request contains a random identifier. The peers the request travels through, keep track of these identifiers and rejects the request if the request has already been answered by the peer.
 			
 		\subsection{NISAN}
 			Information about NISAN.
 		
 		\subsection{Tribler}
 			Information about Tribler.
+
+		\subsection{Pastry}
+			Information about Pastry.
 		
 		\subsection{Tapestry}
-			Tapestry is based on the plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality. Tapastry is very similar to pastry [link naar pastry paper] but there are some small differences in in the handling of network locality and data replication.
+			Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality. Tapastry is very similar to pastry [link naar pastry paper] but there are some small differences in in the handling of network locality and data replication.
 		
 			Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
 		
-			Tapestry is a fundamental component of Oceanstore [linkje naar paper over Oceanstore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch.
+			Tapestry is a fundamental component of Oceanstore [linkje naar paper over Oceanstore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
 		
 		\subsection{Tarzan}
 			Information about Tarzan.
