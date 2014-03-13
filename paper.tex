@@ -173,11 +173,11 @@
 			Information about NISAN.
 			
 		\subsection{MorphMix}
-			MorphMix functions similar to both Tor and MIX networks. It relies on nested encryption and routing traffic over multiple nodes to ensure anonymity of its users' communication. Additionally MorphMix uses the typical behavior of a MIX network, where it reorders messages that enter a node before sending them out.
+			MorphMix \cite{rennhard2002introducing} functions similar to both Tor and MIX networks. It relies on nested encryption and routing traffic over multiple nodes to ensure anonymity of its users' communication. Additionally MorphMix uses the typical behavior of a MIX network, where it reorders messages that enter a node before sending them out.
 			
 			MIX networks are high latency and traffic moves slow. Messages will have to be stored on a node until enough messages have arrived to start sending them out in a random order. Often times cover traffic is used to generate enough messages for the network to obfuscate the real communication, which in turn generates a lot of bandwidth overhead. MorphMix has been developed as a low latency and high performance network. As such, it will not hold messages for very long, nor will it use cover traffic.
 			
-			In contrast to Tor, MorphMix does not feature a centralized node discovery mechanism. Instead, every node is free to chose a set of next nodes that will be the continuation of an anonymous tunnel. A malicious node could select a colluding node to continue the tunnel and therefor control the entire tunnel. To prevent this, a witness node is appointed to mediate the setup of an anonymous tunnel. Although this makes the possibility of such an attack more difficult, it is not impossible.
+			In contrast to Tor, MorphMix does not feature a centralized node discovery mechanism. Instead, every node is free to chose a set of next nodes that will be the continuation of an anonymous tunnel. A malicious node could select a colluding node to continue the tunnel and therefor control the entire tunnel. To prevent this, a witness node is appointed to mediate the setup of an anonymous tunnel. Although this makes the possibility of such an attack more difficult, it doesn't make it impossible.
 			
 			An important part of MorphMix is the ability to detect malicious tunnels. Tunnels that are set up by well behaving nodes will select the next nodes in the tunnel randomly. Malicious colluding nodes, however, will specifically select nodes that are part of the malicious network to continue the tunnel. This will reveal itself in the fact that the probability of the selection of certain nodes is increased. By using this information it becomes possible, to an extent, to detect malicious tunnels.
 		
