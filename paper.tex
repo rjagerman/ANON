@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_GB
 \documentclass[journal]{IEEEtran}
 
 % Some very useful LaTeX packages include:
@@ -11,6 +12,8 @@
 %\usepackage{stfloats}
 %\usepackage{dblfloatfix}
 %\usepackage{url}
+\usepackage{graphicx}
+\usepackage{epstopdf}
 
 % *** Do not adjust lengths that control margins, column widths, etc. ***
 % *** Do not use packages that alter fonts (such as pslatex).         ***
@@ -80,13 +83,13 @@
 	\label{sec:tor}
 	
 	The implementation of The Onion Router was first described by the U.S. Navy Research Laboratory, as means to protect government communications from digital, as well as physical attacks, by hiding the location of the communicating party or parties \cite{goldschlag1996hiding}.
-
+	
 	In 2002, it was decided to ditch the old code base and reimplement the project as Tor, the Second Generation Onion Router, introducing perfect forward secrecy, directory servers, hidden services and more \cite{dingledine2004tor}.
-		
+
 	\subsection{Onion routing}
 		As described in the original design paper of The Onion Router, network traffic is forwarded through a circuit of nodes, where each node only knows the previous and next node in the circuit. With a sufficiently long circuit of (independent) nodes, this means that two communicating parties can remain oblivious of each others physical location.
 					
-		Say we have a circuit consisting of four nodes: our trusted client node ($C$), an (entry) relay node ($X$), a (middle) relay node ($Y$) and an exit node ($Z$). In this case, there are two relay nodes, but this is not a fixed number (and could be increased for more security). Each node has its own public key and a corresponding private key. When building the circuit, our client generates a distinct secret for each of these nodes.
+		Say we have a circuit consisting of four nodes: our trusted client node ($C$), an (entry or guard) relay node ($X$), a (middle) relay node ($Y$) and an exit node ($Z$). In this case, there are three relay nodes, but this is not a fixed number. A visualisation of this path can be seen in figure \ref{fig:tor_layout}. Each node has its own public key and a corresponding private key. When building the circuit, our client generates a distinct secret for each of these nodes.
 					
 		The payload of each packet flowing through the circuit is first encrypted with the distinct secret for last node $Z$, then with the distinct secret for node $Y$, and last with the secret for node $X$. With each layer of encryption, a header is added with the address of the next node in the circuit, plus the used distinct secret encrypted with corresponding nodes public key. 
 					
@@ -97,11 +100,18 @@
 		When exit node $Z$ receives a response, this whole process is applied in reverse order, encrypting the payload with its secret along the way, instead of decrypting. When our client $C$ receives the packet, it peels off all the encryption layers to retrieve the unencrypted payload.
 		
 		With the second generation onion routing used in Tor, a modified algorithm is used to derive the encryption keys, called \emph{telescoping path-building}, which also provides perfect forward secrecy. This algorithm is described in section \ref{ss:tor_circuit}.
+		
+		\begin{figure}[!t]
+			\centering
+			\includegraphics[width=0.4\textwidth]{graphics/tor.pdf}
+			\caption{The components of the Tor network. After downloading the node list from the Directory Server, the user creates a circuit through a guard node, a relay node and an exit node, and uses it to communicate (anonymously) with the internet.}
+			\label{fig:tor_layout}
+		\end{figure}
 				
 	\subsection{Directory servers}
 		The original Onion Router implementation used in-band status updates where each node broadcasts know nodes to its neighbours. An attacker could exploit this to isolate and limit the knowledge of a client, forcing connections through malicious nodes. Beside possible security disadvantages, in-band status updates also have the disadvantage that it takes longer to propagate throughout the network and create a global consensus.
 					
-		To mitigate these concerns, Directory Servers were introduced to Tor during its reimplementation to keep a redundant central consensus about the network. They act as HTTP servers to which Tor nodes can publish signed information about themselves. Tor clients can in turn download this information.
+		To mitigate these concerns, Directory Servers were introduced to Tor during its reimplementation to keep a redundant central consensus about the network. They act as HTTP servers to which Tor nodes can publish signed information about themselves. Tor clients can in turn download this information, as seen in figure \ref{fig:tor_layout}.
 					
 		This information is signed by the Directory Servers before it is distributed to the Tor clients. The keys to verify these signatures are preloaded in the Tor software, along with the list of Directory Servers, which implies trust by the Tor client in the Directory Servers.
 
