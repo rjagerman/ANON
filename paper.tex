@@ -157,31 +157,8 @@
 		Another problem is that the Tor clients are not optimal at handling latency and connection failures. For example, if extending a circuit fails, the entire circuit is abandoned. An improvement would be to first try to extend the circuit to some other places. If that fails, the circuit could be abandoned. Also, a better timeout mechanism could be chosen for building circuits.		
 		
 		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. Removing the empty TLS application record which could reduce the overhead in the TCP/IP header with 6.3\%.
-		
-	\section{Tor vulnerabilities and attacks}
-		\label{sec:attacks}
-	
-		Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks \cite{abbott2007browser, douceur2002sybil, bauer2007low}. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, Low-Resource Routing attacks, Sybil attacks and Replay attacks.
 
-		\subsection{Browser based attacks}
-			Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.
-	
-			By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
-	
-			By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.
-	
-			The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
-			
-		\subsection{Low-Resource Routing attacks}
-			Hier wat over routing attacks		
-		
-		\subsection{Sybil attacks}
-			Hier wat over sybil attacks
-		
-		\subsection{Replay Attacks}
-			Hier wat over replay attacks
-
-			As we saw, the directory service generates overhead of the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor [linkjezz] but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
+		As we saw, the directory service generates overhead on the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor [linkjezz] but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
 
 	\section{Problems when decentralizing}
 		\label{sec:problems}
@@ -247,21 +224,21 @@
 		\subsection{Tribler}
 			Information about Tribler.
 
-
-	\section{Comparison existing decentralized  networks}
-		\label{sec:comparison}
-		
-		Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
-
-		\subsection{Pastry}
-			Information about Pastry.	
-
 		\subsection{Tapestry}
-			Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality. Tapastry is very similar to pastry [link naar pastry paper] but there are some small differences in in the handling of network locality and data replication.
+			Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality.
 		
 			Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
 		
 			Tapestry is a fundamental component of Oceanstore [linkje naar paper over Oceanstore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
+
+		\subsection{Pastry}
+			Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Plastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about log(n) steps.
+
+			The Pastry overlay network is used in several applications, such as Scribe, Squirrel and PAST. Scribe is an system that has been built to send multicast messages. Instead of relying on the multicast infrastructure, multicast messages are sent using only unicast services. Pastry is used to create and manage multicast groups. Scribe makes use of the organization, robustness and reliability of the Pastry network.
+
+			Squirrel is a decentralized peer-to-peer web cache. The network uses Pastry to locate it's objects and for the routing algorithm. Squirrel allows users to share it's web cache with other users in the network, creating a large decentralized web cache. Squirrel however introduces some overhead when searching the cache. The challenge is to keep this overhead as low as possible.
+
+			PAST is a large scale persistent peer-to-peer network that has been designed to store files. It is built upon the Pastry network and the main focus of PAST is providing performance, scalability and security.
 		
 		\subsection{Tarzan}
 			Information about Tarzan.
@@ -277,7 +254,31 @@
 			\item{Public implementation:} For each network we will explain whether a public implementation is available.
 			\item{Used in practice:} Is the network used in practice?
 			\item{Attack resistance:} We will explain the various weaknesses and possible attacks of each network.
+			\item{Anonimity:} Does the network hide the identities of the sender and/or receiver?
 		\end{itemize}
+
+	\section{Tor vulnerabilities and attacks}
+		\label{sec:attacks}
+	
+		Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks \cite{abbott2007browser, douceur2002sybil, bauer2007low}. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, Low-Resource Routing attacks, Sybil attacks and Replay attacks.
+
+		\subsection{Browser based attacks}
+			Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.
+	
+			By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
+	
+			By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.
+	
+			The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
+			
+		\subsection{Low-Resource Routing attacks}
+			Hier wat over routing attacks		
+		
+		\subsection{Sybil attacks}
+			Hier wat over sybil attacks
+		
+		\subsection{Replay Attacks}
+			Hier wat over replay attacks
 	
 	\section{Conclusion}
 		\label{sec:conclusion}
