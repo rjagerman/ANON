@@ -251,6 +251,13 @@
 		
 		Once Tarzan has knowledge of enough nodes, it achieves its anonymity with much like a Chaumian mix, with layered encryption and routing through multiple hops. In contrast to Tor and other networks, Tarzan uses cover traffic to provide protection against traffic analysis by a global advisory to find an initiator.
 		
+	\subsection{Torsk}
+		Torsk [TORSKKKK PAPER] is an extension to Tor, designed to be an interoperable replacement for the circuit creation and Directory Service as used by Tor. The authors argue that the current Directory Service does not scale, with the percentage of the traffic in a network dedicated to node discovery growing as the number of nodes grow. With the 2009 version of Tor, they argue that 100\% of the networks traffic would consist of node discovery traffic with roughly 1.2 million clients. 
+		
+		Instead of the Directory Servers, it uses a DHT and a new Neighbourhood Authority. The DHT is a combination of Kademlia DHT and Myrmic DHT. Kademlia DHT was chosen because it is already widely used and it has proven itself for a large number of users.
+		
+		The Myrmic DHT runs on top of Kademlia, and introduces the Neighbourhood Authority. This authority issues certs to nodes that participate in the DHT, but it does not participate in the DHT itself. The NA makes this solution not a fully decentralized one, but its role is a lot smaller than the current Directory Servers. This does not solve the trust issue, but it does solve the scalability issue.
+		
 	\subsection{Other decentralized systems}
 		Some other decentralized peer-to-peer systems has been developed, focussing on anonymity. An example of such a system is AP3 (Anonymizing Peer-to-Peer Proxy) [linkje naar AP3 paper] which makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.
 
