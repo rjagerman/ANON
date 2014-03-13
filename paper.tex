@@ -126,7 +126,9 @@
 		
 		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to OR2, Alice first sends a \emph{relay extend} cell to OR1. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and OR2 ($ g^{a_2} $). OR1 takes this first half of the key and sends a \emph{create} cell with this key to OR2. When OR1 receives a created cell, OR1 passes this cell to Alice. Now Alice and OR2 share a common key: $ K = g^{a_2b_2} $. The same procedure can be used to extend the circuit with more nodes.
 			
-	\subsection{Disadvantages}	
+	\subsection{Disadvantages}
+	\label{ss:tor_disadvantages}
+
 		While Tor guarantees anonymity, there are some disadvantages using it. The main disadvantage is that the Tor network is slow. According to the Tor Metrics project [link naar tor metrics project], it takes about 6 seconds to download 1 MiB of data.
 		
 		According to Dingledine et al \cite{dingledine2009performance}, there are six reasons why Tor is not optimal. In this section, we will summarize these reasons and explain what could be done to fix them.
@@ -142,6 +144,27 @@
 		Another problem is that the Tor clients are not optimal at handling latency and connection failures. For example, if extending a circuit fails, the entire circuit is abandoned. An improvement would be to first try to extend the circuit to some other places. If that fails, the circuit could be abandoned. Also, a better timeout mechanism could be chosen for building circuits.		
 		
 		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. Removing the empty TLS application record which could reduce the overhead in the TCP/IP header with 6.3\%.
+		
+	\section{Tor vulnerabilities and attacks}
+Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks \cite{abbott2007browser, douceur2002sybil, bauer2007low}. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, Low-Resource Routing attacks, Sybil attacks and Replay attacks.
+
+		\subsection{Browser based attacks}
+		Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.\\
+
+		By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.\\
+
+		By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.\\
+
+		The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
+		
+		\subsection{Low-Resource Routing attacks}
+		Hier wat over routing attacks		
+		
+		\subsection{Sybil attacks}
+		Hier wat over sybil attacks
+		
+		\subsection{Replay Attacks}
+		Hier wat over replay attacks
 
 		As we saw, the directory service generates overhead of the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor [linkjezz] but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
 
@@ -150,8 +173,19 @@
 
 		There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
 		
-		\subsection{Bootstrapping}
-		Hier komt informatie over het bootstrappen.
+			\subsection{Bootstrapping new nodes}
+		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be one starting point where this new node can discover neighbors in the network to connect with. In Tor a directory server can tell the new node what his neighbors are and how to find them \cite{dingledine2004tor}.\\
+		
+Moving this system to a non peer-to-peer base is difficult. Dingledine et al. stated that this indeed is still an open problem. With decentralized systems there is no central directory server to tell a new node where to locate neighbors and there might be a lot of malicious nodes in the network. Some systems such as Tarzan, MorphMix and Pastry \cite{rowstron2001pastry, rennhard2002introducing} do have made some attempts towards a decentralized system, but have yet to find the final answer.
+
+		\subsection{Incentives in decentralized systems}
+		As described in section \ref{ss:tor_disadvantages} people are using more bandwidth than that they donate. There are multiple proposals \cite{dingledine2010building, jansen13lira} to introduce incentives into Tor. If one would also have to build an incentive system into a decentralized system, they would have to find a way to manage the ratings of each client in the network, in such a way that they cannot be falsely modified. In other words the incentive data has to be accurate and reliable. Besides the integrity of the data, also the traffic it generates on the network should have minimal impact.\\
+		
+		Rahman \cite{rahman2009survey} proposes several options to build in incentives in a peer-to-peer network. The first thing that is described is the so called \emph{Warm-glow Model}. In this model determines the percentage of free-rides based on the probabilistic population distribution. If the percentage is above a certain threshold, the system will show signs of diminishing marginal returns.\\
+		
+		The second proposal is using monetary schemes. While it is not exemplified a lot, the main idea is to use a virtual currency as incentive. The problems with this approach are the scalability and the hidden costs of this service.\\
+		
+		The third proposal is \emph{Reciprocity-Based Schemes}. Using this approach a peer maintains a behavior history of other peers in the network. These schemes can be based on two somewhat reciprocities: direct reciprocity or indirect reciprocity. The formal are more suitable for longer relationships between peers. The latter is more scalable but they rely on third party and must handle trust issues themselves.
 
 		\subsection{Key exchange}
 		When using a decentralized network, using a centralized authority for managing the keys, is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. Diffie-Hellman is for example used in the circuit setup in Onion Routing (see chapter I), however, it is possible for an adversary to manipulate with the keys send between two parties. This makes it possible for the adversary to decrypt all message sent between the two parties.
@@ -185,9 +219,14 @@
 		\subsection{Tribler}
 			Information about Tribler.
 
+
+	\section{Comparison existing decentralized  networks}
+Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
+
 		\subsection{Pastry}
 			Information about Pastry.
 		
+
 		\subsection{Tapestry}
 			Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality. Tapastry is very similar to pastry [link naar pastry paper] but there are some small differences in in the handling of network locality and data replication.
 		
@@ -200,20 +239,6 @@
 		
 		\subsection{Other decentralized systems}
 			Some other decentralized peer-to-peer systems has been developed, focussing on anonymity. An example of such a system is AP3 (Anonymizing Peer-to-Peer Proxy) [linkje naar AP3 paper] which makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.
-			
-			<hier moet nog een stukje over i2p komen voor degene die dat paper heeft gelezen>
-		
-	\section{Tor vulnerabilities and attacks}
-		Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor.
-
-		\subsection{Browser based attacks}
-			Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.
-		
-			By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
-		
-			By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.
-		
-			The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 	
 	\section{Comparison existing decentralized networks}
 		
@@ -226,51 +251,14 @@
 \end{itemize}
 	
 	\section{Conclusion}
-		The conclusion goes here.
+		In this technical report we introduced Tor and explained how Tor works and which components define a Tor network. Furthermore we looked at the main disadvantages and problems Tor currently has. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. The next section shows which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.\\
+		
+		From this table we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, there is not a system yet that can compete with Tor. The systems that do exist such as Tarzan, Torsk and Gnutella are getting things right, yet they often lack functionality such as anonymity, good routing performance or are vulnerable for a variety of  attacks.\\
+		
+While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
 
 	\appendices
-%		\section{Proof of the First Zonklar Equation}
-%			Appendix one text goes here.
-			
-			% you can choose not to have a title for an appendix
-			% if you want by leaving the argument blank
-%		\section{}
-%			Appendix two text goes here.
-			
-			
-		% use section* for acknowledgement
-%		\section*{Acknowledgment}
-%			The authors would like to thank...
-			
-			
-		% Can use something like this to put references on a page
-		% by themselves when using endfloat and the captionsoff option.
-%		\ifCLASSOPTIONcaptionsoff
-%		  \newpage
-%		\fi
-			
-		% trigger a \newpage just before the given reference
-		% number - used to balance the columns on the last page
-		% adjust value as needed - may need to be readjusted if
-		% the document is modified later
-		%\IEEEtriggeratref{8}
-		% The "triggered" command can be changed if desired:
-		%\IEEEtriggercmd{\enlargethispage{-5in}}
-		
-		% references section
-		
-		% can use a bibliography generated by BibTeX as a .bbl file
-		% BibTeX documentation can be easily obtained at:
-		% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
-		% The IEEEtran BibTeX style support page is at:
-		% http://www.michaelshell.org/tex/ieeetran/bibtex/
-		%\bibliographystyle{IEEEtran}
-		% argument is your BibTeX string definitions and bibliography database(s)
-		%\bibliography{IEEEabrv,../bib/paper}
-		%
-		% <OR> manually copy in the resultant .bbl file
-		% set second argument of \begin to the number of references
-		% (used to reserve space for the reference number labels box)
+	
 	\bibliography{paper_references}
 
 \end{document}
