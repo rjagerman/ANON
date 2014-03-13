@@ -178,8 +178,12 @@
 		Hier wat over routing attacks		
 		
 	\subsection{Sybil attacks}
-		Hier wat over sybil attacks
+		The Sybil attack is an attack where a single attacker represents itself as multiple nodes in a peer-to-peer system. Abusing this, the attacker is able to propagate false assumptions about the network to other nodes.
 		
+		First described by Douceur, he \cite{douceur2002sybil} mathematically proves that this attack is always possible without a central authority that certifies the participating nodes in one way or the other, except under what he call "extreme and unrealistic assumptions of resource parity and coordination among entities", or in other words: require all participants to do something expensive (in terms of resources) to identify itself. This must be done within a small enough time frame that an attacker can't do this in sequence, but all nodes must do them in parallel.
+		
+		A fully distributed network that implements such a solution is the Bitcoin network [BITCOIN PAPER: http://s.kwma.kr/pdf/Bitcoin/bitcoin.pdf], in which computing power, and not the number of nodes is important for the general network consensus.
+				
 	\subsection{Replay Attacks}
 		A replay attack [cite naar replay attack paper] happens when a malicious entry node duplicates cells and send them again. Since Tor uses uses the counter mode of Advanced Encryption Standard (AES-CTR) for encryption and decryption, the counter will be wrong when the duplicated package arrives causing the connection to be torn down.
 			
@@ -283,7 +287,7 @@
 		\item{Attack resistance:} We will explain the various weaknesses and possible attacks of each network.
 		\item{Anonimity:} Does the network hide the identities of the sender and/or receiver?
 	\end{itemize}
-	
+
 \section{Conclusion}
 	\label{sec:conclusion}
 		
