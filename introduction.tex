@@ -1,0 +1,24 @@
+% The very first letter is a 2 line initial drop letter followed
+% by the rest of the first word in caps.
+% 
+% form to use if the first word consists of a single letter:
+% \IEEEPARstart{A}{demo} file is ....
+% 
+% form to use if you need the single drop letter followed by
+% normal text (unknown if ever used by IEEE):
+% \IEEEPARstart{A}{}demo file is ....
+% 
+% Some journals put the first two words in caps:
+% \IEEEPARstart{T}{his demo} file is ....
+% 
+% Here we have the typical use of a "T" for an initial drop letter
+% and "HIS" in caps to complete the first word.
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+\IEEEPARstart{W}{ith} the introduction and commercialization of the internet in 1995, it has become an important tool for anyone to freely and easily communicate. In many cases however, internet usage is either censored or monitored by third parties. In recent years the need for anonymous internet communication has become more apparent. Revealing government wrongdoings, such as in the case of WikiLeaks, or the ability to communicate freely in a censored environment are two major examples of why anonymous communication is important.
+
+Although much research has been done on anonymous internet communication, only few systems have been actually implemented and are being used in practice. One of the most important factors that impact anonymity in a communication system is the number of users. A sufficiently large numbers of users are required for the system to make guarantees about its ability to conceal and hide users' communication. This makes it difficult to introduce a new anonymous internet system, due to the initial lack of users. Another important factor that impacts the anonymity of the system is decentralization. Whenever a network has centralized components and a malicious third party gains control over these components, the functionality and perhaps even the anonymity of the system is compromised.
+
+The most widely used anonymous communication system is Tor. In this paper we will analyze Tor and its semi-centralized nature. Furthermore we will look at attempts that have been made to decentralize Tor as well as several other decentralized systems.
+
+This paper is structured as following: In section \ref{sec:tor} we will give an introduction and overview of Tor. After that, we will talk about decentralization and its problems in section \ref{sec:problems}. Vulnerabilities in Tor are discussed in section \ref{sec:attacks}. Afterwards, we will discuss the current state of decentralized internet systems in section \ref{sec:decentralized}. A comparison of existing decentralized networks is made in section \ref{sec:comparison}. Finally, we will conclude and discuss our findings in section \ref{sec:conclusion}.

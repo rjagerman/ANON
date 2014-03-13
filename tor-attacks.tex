@@ -1,0 +1,25 @@
+Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks \cite{abbott2007browser, douceur2002sybil, bauer2007low}. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, Low-Resource Routing attacks, Sybil attacks and Replay attacks.
+
+\subsection{Browser based attacks}
+	Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis from $O(nk)$ to $O(n+k)$ where $n$ is the number of exit nodes and $k$ is the number of entry guards.\\
+
+	By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
+
+	By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666. Since Tor prefers older circuits, using a denial of service attack against the older exit nodes forces Tor into creating a circuit with the malicious exit node.
+
+	The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
+	
+\subsection{Low-Resource Routing attacks}
+	Hier wat over routing attacks		
+	
+\subsection{Sybil attacks}
+	The Sybil attack is an attack where a single attacker represents itself as multiple nodes in a peer-to-peer system. Abusing this, the attacker is able to propagate false assumptions about the network to other nodes.
+	
+	First described by Douceur, he \cite{douceur2002sybil} mathematically proves that this attack is always possible without a central authority that certifies the participating nodes in one way or the other, except under what he call "extreme and unrealistic assumptions of resource parity and coordination among entities", or in other words: require all participants to do something expensive (in terms of resources) to identify itself. This must be done within a small enough time frame that an attacker can't do this in sequence, but all nodes must do them in parallel.
+	
+	A fully distributed network that implements such a solution is the Bitcoin network [BITCOIN PAPER: http://s.kwma.kr/pdf/Bitcoin/bitcoin.pdf], in which computing power, and not the number of nodes is important for the general network consensus.
+			
+\subsection{Replay Attacks}
+	A replay attack [cite naar replay attack paper] happens when a malicious entry node duplicates cells and send them again. Since Tor uses uses the counter mode of Advanced Encryption Standard (AES-CTR) for encryption and decryption, the counter will be wrong when the duplicated package arrives causing the connection to be torn down.
+		
+	Using this, an accomplice exit router can therefore in cooperation with the entry node discover the sender and receiver's relationship. On top of that, this attack can also be used as a denial of service attack. This attack is according to the authors quite challenging to solve and does require some further research.
