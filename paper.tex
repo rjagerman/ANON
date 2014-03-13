@@ -158,14 +158,14 @@
 		
 		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header with 6.3\%.
 		
-				As we saw, the directory service generates overhead on the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor [linkjezz] but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
+		As we saw, the directory service generates overhead on the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor [linkjezz] but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
 		
-		\section{Tor vulnerabilities and attacks}
+\section{Tor vulnerabilities and attacks}
 	\label{sec:attacks}
-
+	
 	Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks \cite{abbott2007browser, douceur2002sybil, bauer2007low}. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, Low-Resource Routing attacks, Sybil attacks and Replay attacks.
 
-		\subsection{Browser based attacks}
+	\subsection{Browser based attacks}
 		Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis from $O(nk)$ to $O(n+k)$ where $n$ is the number of exit nodes and $k$ is the number of entry guards.\\
 
 		By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
@@ -174,17 +174,16 @@
 
 		The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 		
+	\subsection{Low-Resource Routing attacks}
+		Hier wat over routing attacks		
 		
-		\subsection{Low-Resource Routing attacks}
-			Hier wat over routing attacks		
+	\subsection{Sybil attacks}
+		Hier wat over sybil attacks
 		
-		\subsection{Sybil attacks}
-			Hier wat over sybil attacks
-		
-		\subsection{Replay Attacks}
-			A replay attack [cite naar replay attack paper] happens when a malicious entry node duplicates cells and send them again. Since Tor uses uses the counter mode of Advanced Encryption Standard (AES-CTR) for encryption and decryption, the counter will be wrong when the duplicated package arrives causing the connection to be torn down.
+	\subsection{Replay Attacks}
+		A replay attack [cite naar replay attack paper] happens when a malicious entry node duplicates cells and send them again. Since Tor uses uses the counter mode of Advanced Encryption Standard (AES-CTR) for encryption and decryption, the counter will be wrong when the duplicated package arrives causing the connection to be torn down.
 			
-			Using this, an accomplice exit router can therefore in cooperation with the entry node discover the sender and receiver's relationship. On top of that, this attack can also be used as a denial of service attack. This attack is according to the authors quite challenging to solve and does require some further research.
+		Using this, an accomplice exit router can therefore in cooperation with the entry node discover the sender and receiver's relationship. On top of that, this attack can also be used as a denial of service attack. This attack is according to the authors quite challenging to solve and does require some further research.
 
 \section{Problems when decentralizing}
 	\label{sec:problems}
@@ -193,28 +192,28 @@
 
 	There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
 
-		As we saw in the previous section, we would like to have a decentralized anonymous network. This isn't an easy task: 15 years of decentralization attempts on the Tor network are behind us. Several well-used decentralized peer-to-peer overlay networks are active such as Gnutella [link], Freenet [link] and Tapestry [link]. These networks will be described in more detail in the next chapter. Among these networks are some overlay anonymous networks such as Tarzan and Torks [link].
+	As we saw in the previous section, we would like to have a decentralized anonymous network. This isn't an easy task: 15 years of decentralization attempts on the Tor network are behind us. Several well-used decentralized peer-to-peer overlay networks are active such as Gnutella [link], Freenet [link] and Tapestry [link]. These networks will be described in more detail in the next chapter. Among these networks are some overlay anonymous networks such as Tarzan and Torks [link].
 
-		There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
+	There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
 		
-		\subsection{Bootstrapping new nodes}
-			If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be a starting point where this new node can discover neighbors in the network to connect with. In Tor, a directory server can tell the new node what his neighbors are and where to find them \cite{dingledine2004tor}.
+	\subsection{Bootstrapping new nodes}
+		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be a starting point where this new node can discover neighbors in the network to connect with. In Tor, a directory server can tell the new node what his neighbors are and where to find them \cite{dingledine2004tor}.
 		
-			Moving this system to a non peer-to-peer base is difficult: Dingledine et al. stated that this indeed is still an open problem. With decentralized systems, there is no central directory server to tell a new node where to locate neighbors and there might be a lot of malicious nodes in the network. Some systems such as Tarzan, MorphMix and Pastry \cite{rowstron2001pastry, rennhard2002introducing} are decentralized but they do suffer from performance issues. Some of these issues can be found in the last section when comparing these systems.
+		Moving this system to a non peer-to-peer base is difficult: Dingledine et al. stated that this indeed is still an open problem. With decentralized systems, there is no central directory server to tell a new node where to locate neighbors and there might be a lot of malicious nodes in the network. Some systems such as Tarzan, MorphMix and Pastry \cite{rowstron2001pastry, rennhard2002introducing} are decentralized but they do suffer from performance issues. Some of these issues can be found in the last section when comparing these systems.
 
-		\subsection{Incentives in decentralized systems}
-			As described in section \ref{ss:tor_disadvantages}, people are usually using more bandwidth than that they donate. There are multiple proposals \cite{dingledine2010building, jansen13lira} to introduce incentives into Tor. If one would also have to build an incentive system into a decentralized system, they would have to find a way to manage the ratings of each client in the network, in such a way that they cannot be falsely modified. In other words, the reputation data has to be accurate and reliable. Besides the integrity of this data, the traffic it generates on the network should have minimal impact on the overall performance.
+	\subsection{Incentives in decentralized systems}
+		As described in section \ref{ss:tor_disadvantages}, people are usually using more bandwidth than that they donate. There are multiple proposals \cite{dingledine2010building, jansen13lira} to introduce incentives into Tor. If one would also have to build an incentive system into a decentralized system, they would have to find a way to manage the ratings of each client in the network, in such a way that they cannot be falsely modified. In other words, the reputation data has to be accurate and reliable. Besides the integrity of this data, the traffic it generates on the network should have minimal impact on the overall performance.
 		
-			Rahman \cite{rahman2009survey} proposes several options to build in incentives in a peer-to-peer network. The first proposal that is described is the so called \emph{Warm-glow Model}. This model determines the percentage of free-rides based on the probabilistic population distribution. If the percentage is above a certain threshold, the system will show signs of diminishing marginal returns.
+		Rahman \cite{rahman2009survey} proposes several options to build in incentives in a peer-to-peer network. The first proposal that is described is the so called \emph{Warm-glow Model}. This model determines the percentage of free-rides based on the probabilistic population distribution. If the percentage is above a certain threshold, the system will show signs of diminishing marginal returns.
 		
-			The second proposal is using monetary schemes. While it is not exemplified a lot, the main idea is to use a virtual currency as incentive. The problems with this approach are the scalability and the hidden costs of this service.
+		The second proposal is using monetary schemes. While it is not exemplified a lot, the main idea is to use a virtual currency as incentive. The problems with this approach are the scalability and the hidden costs of this service.
 		
-			The third proposal is \emph{Reciprocity-Based Schemes}. Using this approach, a peer maintains a behavior history of other peers in the network. These schemes can be based on two somewhat reciprocities: direct reciprocity or indirect reciprocity. The formal are more suitable for longer relationships between peers. The latter is more scalable but they rely on third party and must handle trust issues themselves.
+		The third proposal is \emph{Reciprocity-Based Schemes}. Using this approach, a peer maintains a behavior history of other peers in the network. These schemes can be based on two somewhat reciprocities: direct reciprocity or indirect reciprocity. The formal are more suitable for longer relationships between peers. The latter is more scalable but they rely on third party and must handle trust issues themselves.
 
-		\subsection{Key exchange}
-			With a decentralized network, using a centralized authority for managing the keys, is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. Diffie-Hellman is for example used in the circuit setup in Onion Routing (see secion II-D), however, it is possible for an adversary to manipulate with the keys send between two parties, making the protocol vulnerable for a man-in-the-middle attack. This weakness makes it possible for an adversary to decrypt all message sent between the two parties.
+	\subsection{Key exchange}
+		With a decentralized network, using a centralized authority for managing the keys, is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. Diffie-Hellman is for example used in the circuit setup in Onion Routing (see secion II-D), however, it is possible for an adversary to manipulate with the keys send between two parties, making the protocol vulnerable for a man-in-the-middle attack. This weakness makes it possible for an adversary to decrypt all message sent between the two parties.
 
-			Tor currently uses an interactive forward-secret key-exchange protocol called the \emph{Tor Authentication Protocol} (TAP) [linkje naar ace]. This protocol uses telescoping which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is \emph{ACE}, an one-way authenticated key exchange protocol. The authors of this methods claim to have an 46\% efficiency improvement on the side of the client and an efficiency improvement of nearly 19\% on the side of the Onion Routers. ACE requires clients to send one extra element in the key exchange. This however, does not introduce any overhead because the element fits in the unused space in a cell.
+		Tor currently uses an interactive forward-secret key-exchange protocol called the \emph{Tor Authentication Protocol} (TAP) [linkje naar ace]. This protocol uses telescoping which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is \emph{ACE}, an one-way authenticated key exchange protocol. The authors of this methods claim to have an 46\% efficiency improvement on the side of the client and an efficiency improvement of nearly 19\% on the side of the Onion Routers. ACE requires clients to send one extra element in the key exchange. This however, does not introduce any overhead because the element fits in the unused space in a cell.
 
 \section{Current decentralized systems}
 	\label{sec:decentralized}
@@ -250,12 +249,12 @@
 	\subsection{Tribler}
 		Information about Tribler.
 
-		\subsection{Tapestry}
-			Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality.
+	\subsection{Tapestry}
+		Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality.
 		
-			Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
+		Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
 		
-			Tapestry is a fundamental component of OceanStore [linkje naar paper over OceanStore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
+		Tapestry is a fundamental component of OceanStore [linkje naar paper over OceanStore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
 
 	\subsection{Pastry}
 		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Plastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about log(n) steps.
@@ -285,14 +284,14 @@
 		\item{Anonimity:} Does the network hide the identities of the sender and/or receiver?
 	\end{itemize}
 	
-	\section{Conclusion}
-		\label{sec:conclusion}
+\section{Conclusion}
+	\label{sec:conclusion}
 		
-		In this technical report we introduced Tor and explained how Tor works and which components define a Tor network. Furthermore, we looked at the main disadvantages and problems Tor is currently facing. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. The next section shows which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.
+	In this technical report we introduced Tor and explained how Tor works and which components define a Tor network. Furthermore, we looked at the main disadvantages and problems Tor is currently facing. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. The next section shows which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.
 		
-		From this table, we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, there is not a system yet that can compete with Tor. The systems that do exist such as Tarzan, Torsk and Gnutella are getting things right, yet they often lack functionality such as anonymity, good routing performance or are vulnerable for a variety of attacks.
+	From this table, we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, there is not a system yet that can compete with Tor. The systems that do exist such as Tarzan, Torsk and Gnutella are getting things right, yet they often lack functionality such as anonymity, good routing performance or are vulnerable for a variety of attacks.
 		
-		While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
+	While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
 
 \appendices
 
