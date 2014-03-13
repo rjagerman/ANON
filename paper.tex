@@ -149,6 +149,8 @@
 		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. Removing the empty TLS application record which could reduce the overhead in the TCP/IP header with 6.3\%.
 		
 	\section{Tor vulnerabilities and attacks}
+		\label{sec:attacks}
+	
 		Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks \cite{abbott2007browser, douceur2002sybil, bauer2007low}. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, Low-Resource Routing attacks, Sybil attacks and Replay attacks.
 
 		\subsection{Browser based attacks}
@@ -172,6 +174,8 @@
 			As we saw, the directory service generates overhead of the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor [linkjezz] but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
 
 	\section{Problems when decentralizing}
+		\label{sec:problems}
+	
 		As we saw in the previous section, we would like to have a decentralized anonymous network. This isn't an easy task: 15 years of decentralization attempts on the Tor network are behind us. Several well-used decentralized peer-to-peer overlay networks are active such as Gnutella [link], Freenet [link] and Tapestry. These networks will be described in more detail in the next chapter. Among these networks are some overlay anonymous networks such as Tarzan.
 
 		There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
@@ -196,6 +200,8 @@
 			Tor currently uses an interactive forward-secret key-exchange protocol called the Tor authentication protocol (TAP) [linkje naar ace]. This protocol uses telescoping which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is ACE, an one-way authenticated key exchange protocol. The authors of this methods claim to have an 46\% efficiency improvement on the side of the client and an efficiency improvement of nearly 19\% on the side of the Onion Routers. ACE requires clients to send one extra element but that doesn't introduce any overhead because this element fits in the unused space in a cell.
 
 	\section{Current decentralized systems}
+		\label{sec:decentralized}
+	
 		Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
 	
 		\subsection{Gnutella}
@@ -233,6 +239,8 @@
 
 
 	\section{Comparison existing decentralized  networks}
+		\label{sec:comparison}
+		
 		Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Freehaven, Tapestry, Kademlia and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA and Napster, are not discussed here.[link naar survey p2p?]
 
 		\subsection{Pastry}
@@ -262,6 +270,8 @@
 		\end{itemize}
 	
 	\section{Conclusion}
+		\label{sec:conclusion}
+		
 		In this technical report we introduced Tor and explained how Tor works and which components define a Tor network. Furthermore we looked at the main disadvantages and problems Tor currently has. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. The next section shows which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.
 		
 		From this table we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, there is not a system yet that can compete with Tor. The systems that do exist such as Tarzan, Torsk and Gnutella are getting things right, yet they often lack functionality such as anonymity, good routing performance or are vulnerable for a variety of  attacks.
