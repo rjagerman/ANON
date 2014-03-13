@@ -189,7 +189,7 @@
 			With a decentralized network, using a centralized authority for managing the keys, is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. Diffie-Hellman is for example used in the circuit setup in Onion Routing (see secion II-D), however, it is possible for an adversary to manipulate with the keys send between two parties, making the protocol vulnerable for a man-in-the-middle attack. This weakness makes it possible for an adversary to decrypt all message sent between the two parties.
 
 			Tor currently uses an interactive forward-secret key-exchange protocol called the \emph{Tor Authentication Protocol} (TAP) [linkje naar ace]. This protocol uses telescoping which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is \emph{ACE}, an one-way authenticated key exchange protocol. The authors of this methods claim to have an 46\% efficiency improvement on the side of the client and an efficiency improvement of nearly 19\% on the side of the Onion Routers. ACE requires clients to send one extra element in the key exchange. This however, does not introduce any overhead because the element fits in the unused space in a cell.
-=======
+
 	\subsection{Bootstrapping new nodes}
 		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be one starting point where this new node can discover neighbors in the network to connect with. In Tor a directory server can tell the new node what his neighbors are and how to find them \cite{dingledine2004tor}.
 	
@@ -240,7 +240,7 @@
 			\end{itemize}
 			
 			Gnutella is an unstructured network which means that the placement of data items is not based on any knowledge of the topology nor the contents of the file. To search for a file, a flooding algorithm is used: each peer sends the request from another peer to each of it's neighbours in his routing table.
-=======
+
 		There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key (SSK) which enables personal namespaces. This key contains a public key and a private key where the private key is used to store the data and the public key is used in the queries of the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.
 	
 		The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response. To prevent looping of the requests, each request contains a random identifier. The peers the request travels through, keep track of these identifiers and rejects the request if the request has already been answered by the peer.
@@ -266,7 +266,7 @@
 			In contrast to Tor, MorphMix does not feature a centralized node discovery mechanism. Instead, every node is free to chose a set of next nodes that will be the continuation of an anonymous tunnel. A malicious node could select a colluding node to continue the tunnel and therefore control the entire tunnel. To prevent this, a witness node is appointed to mediate the setup of an anonymous tunnel. Although this makes the possibility of such an attack more difficult, it doesn't make it impossible.
 			
 			An important part of MorphMix is the ability to detect malicious tunnels. Tunnels that are set up by well behaving nodes will select the next nodes in the tunnel randomly. Malicious colluding nodes, however, will specifically select nodes that are part of the malicious network to continue the tunnel. This will reveal itself in the fact that the probability of the selection of certain nodes is increased. By using this information it becomes possible, to an extent, to detect malicious tunnels.
-=======
+
 		MIX networks typically are high latency and traffic moves slow. Messages will have to be stored on a node until enough messages have arrived to start sending them out in a random order. Often times cover traffic is used to generate enough messages for the network to obfuscate the real communication, which in turn generates a lot of bandwidth overhead. MorphMix has been developed as a low latency and high performance network. As such, it will not hold messages for very long, nor will it use cover traffic.
 		
 		In contrast to Tor, MorphMix does not feature a centralized node discovery mechanism. Instead, every node is free to chose a set of next nodes that will be the continuation of an anonymous tunnel. A malicious node could select a colluding node to continue the tunnel and therefor control the entire tunnel. To prevent this, a witness node is appointed to mediate the setup of an anonymous tunnel. Although this makes the possibility of such an attack more difficult, it doesn't make it impossible.
@@ -282,7 +282,7 @@
 			Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
 		
 			Tapestry is a fundamental component of OceanStore [linkje naar paper over OceanStore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
-=======
+
 	\subsection{Tapestry}
 		Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality.
 	
@@ -336,7 +336,7 @@
 		Hier wat over routing attacks		
 	
 			By running a HTTP exit node and a Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes, the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
-=======
+
 	\subsection{Sybil attacks}
 		Hier wat over sybil attacks
 	
@@ -367,7 +367,7 @@
 		While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
 
 	\appendices
-=======
+
 	In this technical report we introduced Tor and explained how Tor works and which components define a Tor network. Furthermore we looked at the main disadvantages and problems Tor currently has. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. The next section shows which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.
 	
 	From this table we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, there is not a system yet that can compete with Tor. The systems that do exist such as Tarzan, Torsk and Gnutella are getting things right, yet they often lack functionality such as anonymity, good routing performance or are vulnerable for a variety of  attacks.
