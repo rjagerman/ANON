@@ -126,12 +126,9 @@
 		
 		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to OR2, Alice first sends a \emph{relay extend} cell to OR1. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and OR2 ($ g^{a_2} $). OR1 takes this first half of the key and sends a \emph{create} cell with this key to OR2. When OR1 receives a created cell, OR1 passes this cell to Alice. Now Alice and OR2 share a common key: $ K = g^{a_2b_2} $. The same procedure can be used to extend the circuit with more nodes.
 			
-<<<<<<< HEAD
 	\subsection{Disadvantages}
 	\label{ss:tor_disadvantages}
-=======
-	\subsection{Disadvantages}	
->>>>>>> origin/master
+
 		While Tor guarantees anonymity, there are some disadvantages using it. The main disadvantage is that the Tor network is slow. According to the Tor Metrics project [link naar tor metrics project], it takes about 6 seconds to download 1 MiB of data.
 		
 		According to Dingledine et al \cite{dingledine2009performance}, there are six reasons why Tor is not optimal. In this section, we will summarize these reasons and explain what could be done to fix them.
@@ -233,25 +230,6 @@ Many other decentralized peer-to-peer networks have been proposed and some have 
 		
 		\subsection{Other decentralized systems}
 			Some other decentralized peer-to-peer systems has been developed, focussing on anonymity. An example of such a system is AP3 (Anonymizing Peer-to-Peer Proxy) [linkje naar AP3 paper] which makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.
-			
-			<hier moet nog een stukje over i2p komen voor degene die dat paper heeft gelezen>
-<<<<<<< HEAD
-			
-		\subsection{Comparison and differences}
-			Comparison table.
-=======
-		
-	\section{Tor vulnerabilities and attacks}
-		Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks [cites?]. In this section we will summarize some of the most well known problems with Tor.
-
-		\subsection{Browser based attacks}
-			Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis.
-		
-			By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
-		
-			By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666.
-		
-			The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 	
 	\section{Comparison existing decentralized networks}
 		
@@ -262,7 +240,6 @@ Many other decentralized peer-to-peer networks have been proposed and some have 
 \item Used in practice. Is the network used in practice?
 \item Attack resistance. We will explain the various weaknesses and possible attacks of each network.
 \end{itemize}
->>>>>>> origin/master
 	
 	\section{Conclusion}
 		In this technical report we introduced Tor and explained how Tor works and which components define a Tor network. Furthermore we looked at the main disadvantages and problems Tor currently has. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. The next section shows which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.\\
