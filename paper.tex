@@ -52,7 +52,7 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-	The abstract goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et elit nec metus ultrices faucibus. Mauris volutpat libero eu arcu sodales, ac bibendum neque pulvinar. Sed et ipsum nunc. Quisque ac sem ut nunc tincidunt commodo. Cras at odio nibh. Pellentesque sodales ut tortor sed dictum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+	There are quite a few distributed anonymous communication networks such as Tor, yet when it comes to decentralized anonymous systems the numbers are rather small and certain problems arise. In this technical report we explain how Tor works and which problems it currently faces. After that, we talk about why would like to decentralize, what the difficulties are with decentralizing networks and show which projects have made an attempt to decentralize or are already (partially) decentralized. Finally, we provide a table in where we compare these projects against each other, which will also be public available on the Github page mention in this report. (We are going to mention it, right?)
 \end{abstract}
 
 
@@ -203,10 +203,6 @@
 
 	There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
 
-	As we saw in the previous section, we would like to have a decentralized anonymous network. This isn't an easy task: 15 years of decentralization attempts on the Tor network are behind us. Several well-used decentralized peer-to-peer overlay networks are active such as Gnutella [link], Freenet [link] and Tapestry [link]. These networks will be described in more detail in the next chapter. Among these networks are some overlay anonymous networks such as Tarzan and Torks [link].
-
-	There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
-		
 	\subsection{Bootstrapping new nodes}
 		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be a starting point where this new node can discover neighbors in the network to connect with. In Tor, a directory server can tell the new node what his neighbors are and where to find them \cite{dingledine2004tor}.
 		
