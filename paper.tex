@@ -15,6 +15,8 @@
 %\usepackage{url}
 \usepackage{graphicx}
 \usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage{caption}
 
 % *** Do not adjust lengths that control margins, column widths, etc. ***
 % *** Do not use packages that alter fonts (such as pslatex).         ***
@@ -318,6 +320,26 @@
 		\item{Attack resistance:} We will explain the various weaknesses and possible attacks of each network.
 		\item{Anonymity:} Does the network hide the identities of the sender and/or receiver?
 	\end{itemize}
+
+\begin{center}
+	\captionof{table}{A comparison of decentralized peer-to-peer overlay networks}
+    \begin{longtable}{ | p{1.9cm} | p{0.8cm} | p{1.6cm} | p{2.2cm} | p{2.0cm} | p{2cm} | p{2cm} | p{2cm} |}
+    \hline
+    	Name & Year & Compatible with Tor & Public implementation & Used in practice & Attack resistance & Provides anonymity \\ \hline
+	Gnutella & ~2000 & no & yes & yes, has millions of users & Vulnerable for DDoS attacks and attacks from misbehaving peers & Queries are anonymous, IP addresses are revealed when downloading files.\\ \hline
+	Freenet & 2001 & no & yes, implementations are based on the FCP (Freenet Client Protocol) & yes & Vulnerable for man-in-the-middle attacks and Trojan attacks & yes\\ \hline
+	Tapestry & 2001 & no & yes & yes, several applications are based on it such as OceanStore and Bayeux & Vulnerable for man-in-the-middle attacks and Trojan attacks & no\\ \hline
+	Pastry & 2001 & no & yes & yes & Vulnerable for man-in-the-middle attacks and Trojan attacks & no\\ \hline
+	Anonymizing peer-to-peer proxy (AP3) & 2004 & no & no & no & Provides anonymity even in the case of a large-scale attack by a coordinated set of malicious nodes & yes\\ \hline
+	Tarzan & 2002 & no & no(?) & no & ? & yes\\ \hline
+	MorphMix & 2002 & no & yes & no & yes, although depending on the number of colluding malicious nodes & yes\\ \hline
+	I2P & 2003 & no & yes & yes & ? & yes\\ \hline
+	Salsa & 2006 & no & ? & ? & ? & ?\\ \hline
+	Tribler & 2008 & no, based on BitTorrent & yes & yes & ? & not yet\\ \hline
+	Torks & 2009 & yes & implementation exists, but not public(?) & no & ? & yes\\ \hline
+	NISAN & 2009 & no & no & no & ? & yes\\ \hline
+    \end{longtable}
+\end{center}
 
 \section{Conclusion}
 	\label{sec:conclusion}
