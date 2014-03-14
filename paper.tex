@@ -240,7 +240,7 @@
 	
 	Many other decentralized peer-to-peer networks have been proposed and some have been implemented [linkjes naar papers]. Examples of fully decentralized networks are Gnutella, Freenet, Pastry, Tapestry, and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA or Napster, are not discussed here.[link naar survey p2p?]
 
-	\subsection{Gnutella}
+	\subsection{Gnutella} % ~2000
 		Gnutella is a decentralized peer-to-peer network used for distributed search of files. Since the network is fully decentralized, peers in the network are called 'servents', a combination of the words servers and clients. Each peer can act both as a server, answering queries, or as a client, requesting and executing search queries. In order for a client to bootstrap, a new peer connects to one of several known hosts that are almost always available. These peers can be found on http://gnutellahosts.com. Once the peer has joined, there are several messages a servant can send out:
 	
 		\begin{itemize}
@@ -251,21 +251,30 @@
 		
 		Gnutella is an unstructured network which means that the placement of data items is not based on any knowledge of the topology nor the contents of the file. To search for a file, a flooding algorithm is used.
 	
-	\subsection{Freenet}
+	\subsection{Freenet} % 2001
 		In Freenet, each data item is represented by a key that is independent of the location of the file. Freenet is called a loosely structured network because of this. To issue a query, the request is passed from client to client where each client makes a decision about the location to send the request next.
 		
 		There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key (SSK) which enables personal namespaces. This key contains a public key and a private key where the private key is used to store the data and the public key is used in the queries of the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.
 		
 		The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response. To prevent looping of the requests, each request contains a random identifier. The peers the request travels through, keep track of these identifiers and rejects the request if the request has already been answered by the peer.
 		
-	\subsection{NISAN}
-		NISAN, or Network Information Service for Anonymization Networks \cite{panchenko2006nisan}, is an anonymization network which implements a distributed node discovery. Not only does a central node administrator (the Directory Server in Tor) imply trust in those servers, Panchenko et al. also argue that a central node administration (the Directory Server in Tor) does not scale, as the current directory server protocol was already improved two times to reduce bandwidth costs, with a fairly low amount of users.
+	\subsection{Tapestry} % 2001
+		Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality.
 		
-		NISAN implements a DHT-based approach (Kademlia) for distributing node information, in such a way that does not require the client to know about all the nodes in the network (such as in Tor). To build a circuit, NISAN generates random IDs and searches for the closest hit throughout the network. This makes it possible to build a path with nodes picked in a random, uniform way among all nodes, without the trust of a third party.
+		Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
 		
-		This does not fully protect against fingerprinting or bridging attacks (passive attacks), and suggest to do random walks throughout the network to mitigate that. The authors admit however this decreases the protection against an active attack.
-		
-	\subsection{MorphMix}
+		Tapestry is a fundamental component of OceanStore [linkje naar paper over OceanStore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
+
+	\subsection{Pastry} % 2001
+		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Plastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about log(n) steps.
+
+		The Pastry overlay network is used in several applications, such as Scribe, Squirrel and PAST. Scribe is an system that has been built to send multicast messages. Instead of relying on the multicast infrastructure, multicast messages are sent using only unicast services. Pastry is used to create and manage multicast groups. Scribe makes use of the organization, robustness and reliability of the Pastry network.
+
+		Squirrel is a decentralized peer-to-peer web cache. The network uses Pastry to locate it's objects and for the routing algorithm. Squirrel allows users to share it's web cache with other users in the network, creating a large decentralized web cache. Squirrel however introduces some overhead when searching the cache. The challenge is to keep this overhead as low as possible.
+
+		PAST is a large scale persistent peer-to-peer network that has been designed to store files. It is built upon the Pastry network and the main focus of PAST is providing performance, scalability and security.
+			
+	\subsection{MorphMix} % 2002
 		MorphMix \cite{rennhard2002introducing} functions similar to both Tor and MIX networks. It relies on nested encryption and routing traffic over multiple nodes to ensure anonymity of its users' communication. Additionally MorphMix uses the typical behavior of a MIX network, where it reorders messages that enter a node before sending them out.
 		
 		MIX networks are typically high latency networks and traffic in it moves slow. Messages will have to be stored on a node until enough messages have arrived to start sending them out in a random order. Often times cover traffic is used to generate enough messages for the network to obfuscate the real communication, which in turn generates a lot of bandwidth overhead. MorphMix has been developed as a low latency and high performance network. As such, it will not hold messages for very long, nor will it use cover traffic.
@@ -274,33 +283,24 @@
 		
 		An important part of MorphMix is the ability to detect malicious tunnels. Tunnels that are set up by well behaving nodes will select the next nodes in the tunnel randomly. Malicious colluding nodes, however, will specifically select nodes that are part of the malicious network to continue the tunnel. This will reveal itself in the fact that the probability of the selection of certain nodes is increased. By using this information it becomes possible, to an extent, to detect malicious tunnels.
 		
-	\subsection{Tribler}
-		Information about Tribler.
-
-	\subsection{Tapestry}
-		Tapestry is based on the Plaxton mesh data structure [linkje naar plaxton paper], which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality.
-		
-		Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
-		
-		Tapestry is a fundamental component of OceanStore [linkje naar paper over OceanStore], a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
-
-	\subsection{Pastry}
-		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Plastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about log(n) steps.
-
-		The Pastry overlay network is used in several applications, such as Scribe, Squirrel and PAST. Scribe is an system that has been built to send multicast messages. Instead of relying on the multicast infrastructure, multicast messages are sent using only unicast services. Pastry is used to create and manage multicast groups. Scribe makes use of the organization, robustness and reliability of the Pastry network.
-
-		Squirrel is a decentralized peer-to-peer web cache. The network uses Pastry to locate it's objects and for the routing algorithm. Squirrel allows users to share it's web cache with other users in the network, creating a large decentralized web cache. Squirrel however introduces some overhead when searching the cache. The challenge is to keep this overhead as low as possible.
-
-		PAST is a large scale persistent peer-to-peer network that has been designed to store files. It is built upon the Pastry network and the main focus of PAST is providing performance, scalability and security.
-	
-	\subsection{Tarzan}
+	\subsection{Tarzan} % 2002
 		Tarzan [TARZAN PAPER] is a fully distributed peer-to-peer anonymity network. It implements a network address translator (NAT) to bridge between nodes running Tarzan and the internet. This means that services don\'t have to be aware of the fact they are running through Tarzan.
 		
 		Tarzan requires knowledge of a few existing nodes to bootstrap and uses a gossiping protocol to discover other nodes. Nambiar et al. showed however that this does not scale beyond roughly 10,000 nodes [NISAN, SALSA PAPER].
 		
 		Once Tarzan has knowledge of enough nodes, it achieves its anonymity with much like a Chaumian mix, with layered encryption and routing through multiple hops. In contrast to Tor and other networks, Tarzan uses cover traffic to provide protection against traffic analysis by a global advisory to find an initiator.
 		
-	\subsection{Torsk}
+	\subsection{Tribler} % 2008
+		Information about Tribler.
+
+	\subsection{NISAN} % 2009
+		NISAN, or Network Information Service for Anonymization Networks \cite{panchenko2006nisan}, is an anonymization network which implements a distributed node discovery. Not only does a central node administrator (the Directory Server in Tor) imply trust in those servers, Panchenko et al. also argue that a central node administration (the Directory Server in Tor) does not scale, as the current directory server protocol was already improved two times to reduce bandwidth costs, with a fairly low amount of users.
+		
+		NISAN implements a DHT-based approach (Kademlia) for distributing node information, in such a way that does not require the client to know about all the nodes in the network (such as in Tor). To build a circuit, NISAN generates random IDs and searches for the closest hit throughout the network. This makes it possible to build a path with nodes picked in a random, uniform way among all nodes, without the trust of a third party.
+		
+		This does not fully protect against fingerprinting or bridging attacks (passive attacks), and suggest to do random walks throughout the network to mitigate that. The authors admit however this decreases the protection against an active attack.
+		
+	\subsection{Torsk} % 2009
 		Torsk [TORSKKKK PAPER] is an extension to Tor, designed to be an interoperable replacement for the circuit creation and Directory Service as used by Tor. The authors argue that the current Directory Service does not scale, with the percentage of the traffic in a network dedicated to node discovery growing as the number of nodes grow. With the 2009 version of Tor, they argue that 100\% of the networks traffic would consist of node discovery traffic with roughly 1.2 million clients. 
 		
 		Instead of the Directory Servers, it uses a DHT and a new Neighbourhood Authority. The DHT is a combination of Kademlia DHT and Myrmic DHT. Kademlia DHT was chosen because it is already widely used and it has proven itself for a large number of users.
