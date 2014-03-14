@@ -1,5 +1,6 @@
 % !TeX spellcheck = en_GB
-\documentclass[journal]{IEEEtran}
+\documentclass{article}
+\usepackage{a4wide}
 
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load, see original template for descriptions)
@@ -39,15 +40,14 @@
 \title{30 years of privacy research for the masses \& \newline 15 years of decentralization attempts}
 % Authors
 \author{Rolf Jagerman, Wendo Sab\'ee, Laurens Versluis, Martijn de Vos}
+\date{}
 
-% The paper headers
-%\markboth{Journal of \LaTeX\ Class Files,~Vol.~11, No.~4, December~2012}%
-%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
-% The only time the second header will appear is for the odd numbered pages
-% after the title page when using the twoside option.
+\pagestyle{empty}
+
 
 % make the title area
 \maketitle
+\thispagestyle{empty}
 
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
@@ -74,7 +74,7 @@
 	% and "HIS" in caps to complete the first word.
 	% You must have at least 2 lines in the paragraph with the drop letter
 	% (should never be an issue)
-	\IEEEPARstart{W}{ith} the introduction and commercialization of the internet in 1995, it has become an important tool for anyone to freely and easily communicate. In many cases however, internet usage is either censored or monitored by third parties. In recent years the need for anonymous internet communication has become more apparent. Revealing government wrongdoings, such as in the case of WikiLeaks, or the ability to communicate freely in a censored environment are two major examples of why anonymous communication is important.
+	With the introduction and commercialization of the internet in 1995, it has become an important tool for anyone to freely and easily communicate. In many cases however, internet usage is either censored or monitored by third parties. In recent years the need for anonymous internet communication has become more apparent. Revealing government wrongdoings, such as in the case of WikiLeaks, or the ability to communicate freely in a censored environment are two major examples of why anonymous communication is important.
 	
 	Although much research has been done on anonymous internet communication, only few systems have been actually implemented and are being used in practice. One of the most important factors that impact anonymity in a communication system is the number of users. A sufficiently large numbers of users are required for the system to make guarantees about its ability to conceal and hide users' communication. This makes it difficult to introduce a new anonymous internet system, due to the initial lack of users. Another important factor that impacts the anonymity of the system is decentralization. Whenever a network has centralized components and a malicious third party gains control over these components, the functionality and perhaps even the anonymity of the system is compromised.
 	
@@ -332,10 +332,7 @@
 		
 	While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
 
-\appendices
-
+\bibliographystyle{plain}
 \bibliography{paper_references}
 
 \end{document}
-
-
