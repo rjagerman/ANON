@@ -178,7 +178,11 @@
 		The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 		
 	\subsection{Low-Resource Routing attacks}
-		Hier wat over routing attacks		
+		Another possible attack on the anonimity of tor is the so called \emph{low-resource routing attack} [linkje naar paper]. With this attack, it is possible for an adversary to perform an end-to-end traffic analysis with minimal resourcing, thus comprimising the anonimy Tor provides. The idea of this attack is that a malicious Onion router can lie about it's bandwidth, thus advertising a much higher bandwidth than it actually has. Because of the Tor path selection algorithm that prefers high-bandwidth nodes, the chance that a malicious entry node and exit node are chosen, is high.
+
+		Once a malicious entry node and exit node has been chosen, an analysis of the traffic can be done to link Onion proxies with the webservers he communicates with. Experimental research on a testbed, has shown that with an total of 66 nodes and 6 malicious nodes, is possible to compromise 46\% of the built circuits. On request of the Tor community, this attack hasn't been tested on the live Tor network. There are some extensions and improvements to this attack. It is possible to denial-of-service some of the well-used entry nodes, to force Tor clients to choose a new entry node, possibly a malicious one.
+
+		Bauer et al. proposed several solutions in his paper. The first one is to actually verify the resources of the nodes, for example, measuring the bandwidth and/or uptime of a node. Bandwidth can be checked centralized or decentralize: the disadvantages of a centralized bandwidth check, is that is generates much overhead on the network. With distributed bandwidth verification, Tor routers monitor each other but this is not enough to detect selective malicious nodes. Another solution is to restrict the amount of routers that can be on a single IP-address. The last solution proposed is to change the routing strategy.	
 		
 	\subsection{Sybil attacks}
 		The Sybil attack is an attack where a single attacker represents itself as multiple nodes in a peer-to-peer system. Abusing this, the attacker is able to propagate false assumptions about the network to other nodes.
