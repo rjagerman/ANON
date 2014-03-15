@@ -53,9 +53,9 @@ def get_markdown_table_header(columns):
 
 
 def get_markdown_table_divider(columns):
-    divider = {}
-    for key in columns.keys():
-        divider[key] = '-' * len(columns[key])
+    divider = columns
+    for key in divider.keys():
+        divider[key] = '-' * len(divider[key])
     return get_markdown_table_header(divider)
 
 
