@@ -52,7 +52,9 @@ def get_projects():
     projects = {}
     current_project = ''
     for line in get_readme():
-        if line[:4] == '### ':
+        if line[:3] == '## ':
+            pass
+        elif line[:4] == '### ':
             current_project = line[4:].rstrip()
             projects[current_project] = {'name': current_project, 'description': ''}
         elif current_project != '' and line.rstrip() != '':
