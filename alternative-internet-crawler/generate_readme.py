@@ -36,14 +36,14 @@ def get_projects(path):
 
     project_files = filter(lambda x: x.endswith('.json'), os.listdir(path))
 
-    projects = {}
+    projects = []
     for project_file in project_files:
         project_file = '%s%s%s' % (path, os.sep, project_file)
         logging.debug('Loading %s' % project_file)
 
         project_data = open(project_file)
         current_project = json.load(project_data)
-        projects[current_project['name']] = current_project
+        projects.append(current_project)
 
     return projects
 
@@ -70,7 +70,17 @@ def get_markdown_table_entry(columns, project):
     return '%s%s%s\n' % ('| ', ' | '.join(entry), ' |')
 
 
-def run_parser(directory='projects', output='readme.md'):
+def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
+    unknown_entry = -99999 if sort_reverse else 'zzzzz'
+
+    sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if k[sort_on].isdigit() else k[sort_on]) if sort_on in k.keys() else unknown_entry)
+    if sort_reverse:
+        sorted_list.reverse()
+
+    return sorted_list
+
+
+def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False):
     table_columns = OrderedDict([('name', 'Name'), ('description', 'Description'), ('updated_at', 'Last activity'),
                                  ('total_contributor_count', 'Contributors'), ('total_code_lines', 'LOC')])
 
@@ -84,10 +94,13 @@ def run_parser(directory='projects', output='readme.md'):
         header = get_markdown_table_divider(table_columns)
         output_file.write(header)
 
-        for project in sorted(projects.keys()):
-            logging.debug('Parsing %s' % project)
-            entry = get_markdown_table_entry(table_columns, projects[project])
-            output_file.write(entry, )
+        for project in get_sorted_list(projects, sort_on, sort_reverse):
+            try:
+                logging.debug('Parsing %s' % project['name'])
+                entry = get_markdown_table_entry(table_columns, project)
+                output_file.write(entry)
+            except:
+                logging.warning('Parsing entry failed (%s)' % project)
 
     logging.info('Wrote table to %s' % output)
 
@@ -107,10 +120,14 @@ def main():
                         default='projects', required=False, help='Directory to read the JSON files from')
     parser.add_argument('-o', '--output', action='store', dest='output', metavar='output.md', default='readme.md',
                         required=False, help='File to write the generated table to')
+    parser.add_argument('-s', '--sort', action='store', dest='sort', metavar='column', default='name', required=False,
+                        help='Column to sort on (named as used in the JSON files)')
+    parser.add_argument('-r', '--reverse', action='store_true', dest='sort_reverse', required=False,
+                        help='Sort in reverse order')
 
     args = parser.parse_args()
 
-    run_parser(directory=args.directory, output=args.output)
+    run_parser(directory=args.directory, output=args.output, sort_on=args.sort, sort_reverse=args.sort_reverse)
 
 
 if __name__ == "__main__":
