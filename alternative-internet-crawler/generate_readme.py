@@ -103,9 +103,9 @@ def main():
     #parser.add_argument('-a', '--api', action='store', dest='api', metavar="api", default='', required=True,
     #                    help='Your Ohloh API key.')
 
-    parser.add_argument('-d', '--directory', action='store', dest='directory', metavar="directory",
+    parser.add_argument('-d', '--directory', action='store', dest='directory', metavar='directory/',
                         default='projects', required=False, help='Directory to read the JSON files from')
-    parser.add_argument('-o', '--output', action='store', dest='output', metavar='output', default='readme.md',
+    parser.add_argument('-o', '--output', action='store', dest='output', metavar='output.md', default='readme.md',
                         required=False, help='File to write the generated table to')
 
     args = parser.parse_args()
