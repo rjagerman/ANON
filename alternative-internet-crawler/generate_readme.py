@@ -132,7 +132,7 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
 
     if generate_all:
         for key in table_columns.keys():
-            write_output(projects=projects, table_columns=table_columns, output='TABLE_%s.md' % table_columns[key].upper().replace(' ', '_'), sort_on=key, sort_reverse=(not key == 'name'), add_links=add_links)
+            write_output(projects=projects, table_columns=table_columns, output='TABLE_%s.md' % table_columns[key].upper().replace(' ', '_'), sort_on=key, sort_reverse=(not (key == 'name' or key == 'main_language')), add_links=add_links)
     else:
         write_output(projects=projects, table_columns=table_columns, output=output, sort_on=sort_on, sort_reverse=sort_reverse, add_links=add_links)
 
