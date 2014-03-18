@@ -1,160 +1,160 @@
-﻿| Name | Description | Last activity | Contributors | LOC |
-| ---- | ----------- | ------------- | ------------ | --- |
-| Ampify | [Ampify](http://ampify.net/) is an open source, decentralised, social platform. It is intended as a successor to the Open Web and as a replacement for closed platforms like iOS and Facebook by providing a web application framework to create social apps on top of a secure, decentralised core. | 2014-03-14T22:07:58Z | 8 | 2643 |
-| AnoNet | [AnoNet](http://wiki.ucis.nl/Anonet) is a decentralized friend-to-friend network built using VPNs and software BGP routers. anoNet works by making it difficult to learn the identities of others on the network allowing them to anonymously host IPv4 and IPv6 services) | unknown | unknown | unknown |
-| Askemos | A fast and trustworthy foundation on which to build applications: Byzantine fault-tolerant P2P computation and storage.[Askemos](http://askemos.org) creates an "autonomous virtual execution environment for applications" - designed to be tamper-proof and fault tolerant.  Users share not only static files but dynamic objects too. Code is taken as equivalent to contracts ("smart contracts") and hosts check each others compliance.It executes the code on several different machines, runtime libraries, compilers, operating systems etc. in parallel. Signed cryptographic hash are compared/stored for every transaction. Thus, this counters subversion of various components, eliminating the need to trust. | 2014-03-15T02:50:44Z | 1 | 78730 |
-| Avatar | [Avatar](http://avatar.ai) is a distributed "operating system for the internet" running inside the web browser. It allows for secure messaging (think email, social networks) and distributed data storage, employing a policy of "privacy and data security by default". Building its own encrypted P2P network, it does not rely upon any central authority. | 2014-03-14T10:06:22Z | 7 | 167 |
-| BaseParadigm | [BaseParadigm](https://bitbucket.org/travisfw/baseparadigm/) is anopen source (GPLv3) library for managing a content addressable binarysemantic graph. Content addressability means enabling a number of dataexchange protocols (including p2p) for a developer usingBaseParadigm. Content addressable data is immutable, and so a semanticgraph is necessary for managing updates, annotations, reputation, andnavigational links. BaseParadigm lays the basis for a new paradigm fordata management that can be done offline as much as is desirable, andputs control over data storage, transmission, and processing back inthe hands of the user. Identity management becomes data managementrather than what it is today: contract management with third party webservices. Application interop is simplified from web API support tosimple graph queries. The user's experience is that all their data isavailable all the time in the places they expect. | unknown | unknown | unknown |
-| BipIO | [BipIO](https://bip.io) is an open source personal content and workflow automation platform.  'Bips' are dynamic named graphs which are cheap to create, can auto-expire, and serve or transform public/private content across multiple protocols. | unknown | unknown | unknown |
-| BitMessage | [BitMessage](https://bitmessage.org/wiki/Main_Page) is a P2P communications protocol used to send encrypted messages to another person or to many subscribers. It is decentralized and trustless, meaning that you need-not inherently trust any entities like root certificate authorities. See [whitepaper](https://bitmessage.org/bitmessage.pdf) | 2014-03-14T21:28:58Z | 77 | 34055 |
-| BitPhone | [BitPhone](http://www.gullicksonlaboratories.com/projects/bitphone/) is a mobile communications device with the features of a modern smartphone built on top of decentralized BitCoin-style proof-of-work networking. | unknown | unknown | unknown |
-| BitTorrent Sync | [BitTorrent Sync](http://www.bittorrent.com/sync) by BitTorrent Labs. Easy and effortless file replication between computers (and mobile devices) without using the cloud, so the only limit is available storage. All data transfers are encrypted. Works on Windows, Linux, OSX, Android and iOS. Recently they've [opened up their API](http://www.bittorrent.com/sync/developers/api) to developers. | 2014-03-13T12:30:58Z | 5 | 0 |
-| Bitcloud | [Bitcloud](http://http://bitcloudproject.org) is an open source distributed cloud storage system and escrow agent based on Tahoe-LAFS that allows publishers to pay storage nodes for storing encrypted data and sharing that data with others. The decentralized nature of Bitcloud allows anyone to publish large amounts of data in a way that is free from censorship, high costs, and proprietary software.  The first application for bitcloud will be [WeTube](https://github.com/wetube/wetube-web), a platform for viewing and publishing videos, podcasts, ebooks, music, and other forms of media. | unknown | unknown | unknown |
-| Bitcoin | [BitCoin](http://bitcoin.org/en/) is a digital currency, a protocol, and a software that enables it. Decentralized crypto-currency | 2014-03-14T18:08:07Z | 229 | 474602 |
-| Bitcoin by Mobile | [Bitcoin by Mobile](http://www.bitcoinbymobile.com/) allows Bitcoin newcomers to quickly and easily purchase small sums of Bitcoin using their mobile phone to fund the purchase. | unknown | unknown | unknown |
-| Bitlove | [bitlove-ui](http://bitlove.org/) Bitlove creates Torrents for all enclosures of an RSS/ATOM feed and seeds them for podcasts. | 2014-03-14T13:35:29Z | 4 | 9136 |
-| Books | [Books](http://en.wikipedia.org/wiki/Books) are a stable, production tested communication protocol suitable for a wide range of information services. | 2014-03-15T02:15:37Z | 32 | 6131 |
-| BriarProject | The [BriarProject](http://briar.sourceforge.net/) is building secure communication tools to enable journalists, activists and civil society groups to communicate safely without fear of government interference. Our open source mobile and desktop apps will provide a secure, easy-to-use alternative to email, blogs and message boards, where users can exchange private messages with their contacts, create their own blogs and message boards, and subscribe to blogs and boards their contacts have shared. | unknown | unknown | unknown |
-| Cables | [Cables communication](http://dee.su/cables) implements secure and anonymous communication using email-like addresses, pioneered in Liberté Linux. Cables communication is Liberté's pivotal component for enabling anyone to communicate safely and covertly in hostile environments. | 2014-03-15T05:49:41Z | 2 | 2577 |
-| Camlistore | [Camlistore](http://camlistore.org/) is your personal storage system for life. It is an acronym for "Content-Addressable Multi-Layer Indexed Storage" and could be described as "Like git for all content in your life" | 2014-03-15T17:30:59Z | 57 | 215893 |
-| ClearSkies | [ClearSkies](https://github.com/jewel/clearskies) is a peer-to-peer file sync program.  It is inspired by BitTorrent Sync, but has an open and fully-documented protocol. | 2014-03-13T21:25:47Z | 13 | 4670 |
-| Coinpunk | [Coinpunk](http://coinpunk.org/) is a web application that allows anyone to run their own self-hosted Bitcoin wallet service that is accessible from your web browser anywhere in the world. It's free, open source, and you can install it on your server right now. | 2014-03-13T12:26:29Z | 12 | 578377 |
-| Commotion Wireless | [Commotion Wireless](https://commotionwireless.net) is an open-source communication tool that uses mobile phones, computers, and other wireless devices to create decentralized mesh networks. | 2014-03-15T01:56:28Z | 2 | 6238 |
-| Cowbox | [Cowbox](http://ideelibre.fr/cowbox/index.php/Main_Page) is a hand-held standalone server, broadcasting its own network and containing web applications for coworking. | unknown | unknown | unknown |
-| Cozy | [Cozy](http://cozy.io) is a personal cloud you can host, hack and delete. With Cozy, you manage your web apps like you were on your smartphone. It provides an open market place from where you can install the web app you made yourself (Cozy is a [personal PaaS](http://cozy.io/hack/getting-started/architecture-overview.html)). Today, the most successful applications are Contact and Calendar managers that you can synchronize with any device. Check the [demo](https://demo.cozycloud.cc) to discover more applications. | 2014-03-13T00:17:20Z | 6 | 77336 |
-| CryptAByte | [CryptAByte](https://cryptabyte.com/) CryptAByte.com is a free online drop box that enables secure (encrypted) message and file sharing over the web using a public-key infrastructure. Messages and files are encrypted using a public key and can only be decrypted using the passphrase entered when your key is created. Your data is never stored in plaintext, and is impossible to decrypt without your passphrase. | unknown | unknown | unknown |
-| Cryptosphere | [The Cryptosphere](http://cryptosphere.org/) is a global peer-to-peer cryptosystem for publishing and securely distributing both data and HTML5/JS applications pseudonymously with no central point of failure. It's built on top of the next-generation [Networking and Cryptography (NaCl) library](http://nacl.cr.yp.to/) and the Git data model. [Code](https://github.com/cryptosphere/cryptosphere) | unknown | unknown | unknown |
-| DeadC | [DeadC](http://deadc.net/) Create a one-click expiring link | unknown | unknown | unknown |
-| Diaspora* | [Diaspora*](http://diasporaproject.org/) is a free social network consisting of personal web server that implements a distributed social networking service. Diaspora* is a fun and creative community that puts you in control. | 2014-03-14T09:21:46Z | 368 | 51305 |
-| Drogulus | The [Drogulus](http://drogul.us/) (WIP) is a programmable peer-to-peer data store. It's an open, federated and decentralised system where the identity of users and provenance of data is ensured by cryptographically signing digital assets.[Redecentralise Video interview](http://redecentralize.org/#interviews) | unknown | unknown | unknown |
-| Enigmabox | The [Enigmabox](http://wiki.enigmabox.net/) is a ready to use cjdns appliance. cjdns is a public-key crypto network protocol, the fingerprint is your IPv6 address. This means, your IP is your identity. So we can use it for various useful things, e.g. as an email address or a phone number. We will start preparing existing internet services like email or VoIP to use cjdns in this decentral manner. Our goal is to encrypt the entire internet, make crypto accessible and make secure and decentralized internet services available for the rest of us. | unknown | unknown | unknown |
-| Ethereum | [Ethereum](http://ethereum.org/ethereum.html) is an enhanced cryptocurrency with support for Next-Generation Generalized Smart Contract and Smart Property. | unknown | unknown | unknown |
-| Firecloud | [Firecloud](http://firecloud.co) is a P2P web publishing platform in your using Persona and WebRTC to work its magic. | unknown | unknown | unknown |
-| Firestr | [Firestr](http://github.com/mempko/firestr) is a simple decentralized communication and computation platform. Apps are written in Lua and are pushed to peers where they automatically run and connect. All communication is P2P and encrypted. | 2014-03-15T17:19:15Z | 3 | 35416 |
-| Folpy | [Folpy](https://bitbucket.org/folpy/folpy/) is a friend-to-friend network, also called a Darknet, a network where you only connect to people you trust. On the network you can exchange files with your friend, message them and participate on the global Forum. | unknown | unknown | unknown |
-| FreedomBox | [Freedom Box](http://freedomboxfoundation.org/) is about privacy, control, ease of use and dehierarchicalization. Inspired by Eben Moglen's vision of a small, cheap and simple computer that serves freedom in the home. We are building a Debian based platform for distributed applications. | 2014-03-13T11:02:31Z | 19 | 10793 |
-| Freenet | [Freenet](http://freenetproject.org) is free software which lets you anonymously share files, browse and publish "freesites" (web sites accessible only through Freenet) and chat on forums, without fear of censorship. Freenet is decentralised to make it less vulnerable to attack, and if used in "darknet" mode, where users only connect to their friends, is very difficult to detect. | 2014-03-15T00:28:33Z | 183 | 442416 |
-| Freifunk | [Freifunk](http://en.freifunk.net) is a non-commercial initiative for free decentraliced wireless mesh networks. Technically Freifunk firmwares are based on [OpenWRT](http://www.openwrt.net) and OLSR or B.A.T.M.A.N. | 2012-03-23T02:27:46Z | 1 | 0 |
-| Friendica | [Friendica](https://github.com/friendica/friendica) is a decentralised network which focuses on federation of social networking sites and projects into a common stream. | 2014-03-13T03:18:24Z | 67 | 568609 |
-| Funkfeuer | [Funkfeuer](http://funkfeuer.at/) is, just like Freifunk, a non commercial initiative for free wireless mesh networks. Funkfeuer is based in Austria and uses [OpenWRT](http://www.openwrt.net) as the firmware for the Routers. | 2014-03-12T19:23:09Z | 2 | 316 |
-| G0Bin | [G0Bin](https://github.com/jyap808/g0bin) is a client side encrypted pastebin written in Go. The server has zero knowledge of pasted data. Data is encrypted/decrypted in the browser using 256 bits AES. | unknown | unknown | unknown |
-| GNU social | [GNU social](https://gnu.org/s/social) is a free software microblogging and privacy-aware social platform that supports OStatus federation, based on [StatusNet](http://status.net/) and Mikael Nordfeldth's Free Social. | 2014-03-15T12:18:19Z | 83 | 48036 |
-| GNU/consensus | [GNU/consensus](https://gnu.org/consensus) is a GNU project to coordinate development efforts of free software for social networking. It recommends using the [AGPLv3+ license](https://gnu.org/licenses/agpl) and aims to inform free software developers about interesting projects and perspectives for a decentralized, freedom-respecting, and privacy-respecting online social networking environment. The GNU/consensus promotes convergence towards the use of the extensible [GNUnet Social API](https://gnunet.org/design-social-messaging-system). | 2014-03-14T20:51:46Z | 19 | 23005 |
-| GNUnet | [GNUnet](https://gnunet.org/) is GNU's framework for secure peer-to-peer networking that does not use any centralized or otherwise trusted services. | 2014-03-13T01:08:53Z | 37 | 427762 |
-| Grand Decentral Station | [Grand Decentral Station](http://decentralize.it) is a concept for a server OS that enables designers and developers to build beautiful and secure self-hosted applications for everyone. | unknown | unknown | unknown |
-| Grimwire | [Grimwire](http://blog.grimwire.com/#2013-04-04-grimwire.md) is a browser OS which uses Web Workers for process isolation, and WebRTC for peer-to-peer communication. | 2014-03-13T01:39:49Z | 3 | 15563 |
-| Guifi | [Guifi](http://guifi.net/) is a european (especially from Catalonia, Spain) large network with over 22000 active nodes. Uses wifi in both infrastructure and mesh mode. Over 25km of fiber as well so far. | 2014-03-15T19:24:10Z | 15 | 59153 |
-| Hyperboria | [Hyperboria](http://hyperboria.net/) is a global decentralized network of "nodes" running cjdns software. The goal of Hyperboria is to provide an alternative to the internet with the principles of security, scalability and decentralization at the core. Anyone can participate in the network by locating a peer that is already connected. | 2014-03-13T11:50:34Z | 9 | 5587 |
-| I2P | [I2P](http://www.i2p2.de/) is an anonymizing network, offering a simple layer that identity-sensitive applications can use to securely communicate. All data is wrapped with several layers of encryption, and the network is both distributed and dynamic, with no trusted parties. | 2014-03-14T19:48:43Z | 51 | 216067 |
-| INDX | [INDX](http://sociam.github.io/indx) is a decentralised Web-based Personal Data Store and app platform from the [SOCIAM](http://sociam.org) EPSRC project in the UK, focused about giving individuals autonomy to effectively consolidate their cloud data into personal databases they control.  The platform is build out of a core of robust open source tools, including Postgres, Twisted, NodeJS, and AngularJS.  The platform is [released under GPLv3 on Github](https://sociam.github.io/indx). | 2014-03-15T03:03:34Z | 19 | 143883 |
-| IPOP | [IPOP (IP-over-P2P)](http://ipop-project.org/) is an open-source user-centric software virtual network allowing end users to define and create their own virtual private networks. | 2014-03-14T16:05:10Z | 25 | 5869 |
-| Idno | [Idno](http://idno.co/) is a distributed social publishing platform for companies, groups and individuals, based on [IndieWeb](http://indiewebcamp.com) technologies. All the code is available on [GitHub](https://github.com/idno/idno). | 2014-03-14T10:57:39Z | 1 | 169 |
-| KA Lite | [KA Lite](https://github.com/learningequality/ka-lite) is an open-source, lightweight, pure-Python web server and web app for serving Khan Academy content (videos and exercises) -- including progress tracking, coach reports, and gamification -- without needing persistent internet connectivity. | 2014-03-13T20:48:17Z | 3 | 95 |
-| Kademlia | [Kademlia](http://en.wikipedia.org/wiki/Kademlia) is a distributed hash table for decentralized peer-to-peer computer networks | unknown | unknown | unknown |
-| Keybits | [Keybits](http://keybits.net) makes it easy to run your own personal server. Setup and maintenance is made simple by using Docker and Ansible. (Similar to Sovereign but using Docker to 'containerize' applications.) | unknown | unknown | unknown |
-| Kune | [Kune](http://kune.cc/) is based on Apache Wave and is a free/open source distributed social network focused on collaboration rather than just on communication.[2] That is, it focuses on online real-time collaborative editing, decentralized social networking and web publishing, while focusing on workgroups rather than just on individuals. | 2014-01-01T10:56:47Z | 9 | 322393 |
-| Libertree | [Libertree](http://libertreeproject.org/) is free, libre, open-source software which is intended to provide a way for people to create their own social network. Libertree social networks can be free from commercial influence and manifestation, such as behaviour tracking, user profiling, advertising, data mining and analysis, and covert information filtering. | 2014-03-14T13:18:16Z | 2 | 1014 |
-| LibraryBox | [LibraryBox](http://jasongriffey.net/librarybox/)  is an open source, portable digital file distribution tool based on inexpensive hardware that enables delivery of educational, healthcare, and other vital information to individuals off the grid. | 2014-03-13T14:16:48Z | 1 | 662 |
-| LibreVPN | [LibreVPN](http://librevpn.org.ar) is a virtual mesh network using [tinc](http://tinc-vpn.org) plus configuration scripts that even let you build your own mesh VPN.  It's also IPv6 enabled. | unknown | unknown | unknown |
-| Litecoin | [LiteCoin](https://litecoin.org/)  is a peer-to-peer Internet currency that enables instant payments to anyone in the world (was based on Bitcoin) | 2014-03-14T12:09:39Z | 4 | 42793 |
-| Lorea | [Lorea](https://lorea.org/) researches free software Internet tools to emancipate your social networks where autonomy, group collaboration, and privacy matter.  Since 2009, Lorea has been _(re-)taking the networks_, with its flagship [N-1](https://n-1.cc/) seed. | 2014-03-12T21:44:58Z | 96 | 873431 |
-| MaidSafe | The [MaidSafe](http://maidsafe.net) network is a fully distributed platform on which application developers can build distributed applications. The network is made up by individual users who contribute storage, computing power and bandwidth to what is a global, public cloud. | 2014-03-15T06:20:44Z | 9 | 111118 |
-| Mailpile | [Mailpile](http://www.mailpile.is/) is free software, a web-mail program that you run on your own computer, so your data stays under your control. Because it is free software (a.k.a. open source), you can look under the hood and see how it works, or even modify it to make it better suit your particular needs. Mailpile is designed for speed and vast amounts of e-mail, it is flexible and themeable and has support for strong encryption built in from the very start. | 2014-03-15T16:23:37Z | 70 | 29386 |
-| MediaCrush | [MediaCrush](https://mediacru.sh) is free software (as in freedom and as in beer) for hosting media on the web. It's designed from the ground up to protect users' privacy and it losslessly compresses media whenever possible. It supports more than 500 formats of images, video and audio. If ffmpeg accepts it, MediaCrush can process it. It also converts GIFs to HTML5 video. | 2014-03-14T18:05:14Z | 15 | 13514 |
-| MediaGoblin | [GNU MediaGoblin](http://mediagoblin.org) (also shortened to MediaGoblin or GMG) is a free, decentralized Web platform (server software) for hosting and sharing digital media, aimed at providing an extensible, adaptive, and freedom-respectful software alternative to major media publishing services such as Flickr, deviantArt, YouTube, etc.-- [Wikipedia](http://en.wikipedia.org/wiki/MediaGoblin) | 2014-03-15T12:18:19Z | 83 | 48036 |
-| MettaNode | [MettaNode](https://github.com/berkus/mettanode) is a tool for fully decentralized communications - grab data you like and store it forever, share data with your friends, start chats, voice or video calls, form groups by interest, transparently keep all your notes between all of your devices; all based on a simple ideas of [UIA](http://pdos.csail.mit.edu/uia/). It is still in its infancy and only base transport protocol is done, work is now going on on overlay routing network. Final target is to have a bunch of clients for desktop and mobile platforms (Win, Mac, Linux, Android, iOS) as well as own operating system implementation ([Metta](https://github.com/berkus/metta/wiki)) running together. | 2012-12-03T00:09:18Z | 2 | 92270 |
-| Mixmaster | [Mixmaster](http://mixmaster.sourceforge.net/) is a remailer network. It represents the second generation of remailers. Mixmaster can be used via a web sites like [Anonymouse](http://anonymouse.org/) or as a stand-alone client. | unknown | unknown | unknown |
-| Mixminion | [Mixminion](http://mixminion.net/) is a new remailer approach. The so-called type III remailer allows it to receive and send anonymous messages. However the development has stalled and the current software needs improvement. | 2014-03-12T20:21:35Z | 6 | 30943 |
-| Movim | [Movim](http://movim.eu/) is a decentralized open source social network based on XMPP. | 2014-03-15T16:47:10Z | 21 | 23884 |
-| NameCoin | [NameCoin](http://namecoin.info/) is a decentralized naming system based on Bitcoin technology. | 2014-03-13T17:22:58Z | 76 | 37167 |
-| Netsukuku | [Netsukuku](http://netsukuku.freaknet.org) is an ad-hoc network system designed to handle massive numbers of nodes with minimal consumption of CPU and memory resources. It can be used to build a world-wide distributed, fault-tolerant, anonymous, and censorship-immune network, fully independent from the Internet. | 2012-04-29T05:50:27Z | 14 | 169283 |
-| Nightweb | [Nightweb](https://nightweb.net/) connects your Android device or PC to an anonymous, peer-to-peer social network. You can write posts and share photos, and your followers will retrieve them using BitTorrent running over the I2P anonymous network. It is still experimental. | unknown | unknown | unknown |
-| Nymote | [Nymote](http://nymote.org) is a set of tools and software infrastructure, created from the ground up, to provide end-users with life-long control of their networks and personal data. It starts with fundamental infrastructure to solve the problems around operating systems for the future, identity for users and devices and data-persistence across those devices. Think of it as the toolstack to recapture the original vision of a resilient, decentralised Internet. | unknown | unknown | unknown |
-| OneTime (1ty) | [1TY](https://1ty.me/) is "One Time Self Destructing Links For Sharing Sensitive Information" | 2014-03-15T19:02:57Z | 3 | 2886 |
-| OpenLibernet | [OpenLibernet](http://www.openlibernet.org/) is a project to create a robust decentralized global mesh communication network that regards security and privacy as a priority and makes internet regulation and censorship impossible. OpenLibernet is built around a robust payment system based on Bitcoin that rewards its users for actively joining, expanding and maintaining the network, and creates a traffic economy with perpetually decreasing prices. | unknown | unknown | unknown |
-| OpenNIC | [OpenNIC Project](http://www.opennicproject.org/) is an alternative DNS provider that is open and democratic. | unknown | unknown | unknown |
-| Ori | [Ori](http://ori.scs.stanford.edu/) is a distributed file system built for offline operation and empowers the user with control over synchronization operations and conflict resolution.  It provides history through light weight snapshots and allows users to verify the history has not been tampered with. Through the use of replication instances it is resilient and can recover damaged data from other nodes. | 2014-03-11T11:32:25Z | 1 | 9350 |
-| Osiris | [Osiris](http://www.osiris-sps.org/) is software for decentralized portal, managed and shared via P2P between members. | 2014-03-14T16:48:48Z | 3 | 19 |
-| Ostel | [Ostel](https://ostel.co) is part of the Open Secure Telephony Network (OSTN) by the [Guardian-Project](https://guardianproject.info/). The goal is promoting free, open protocols, standards and software and to power end-to-end encrypted voice communications on mobile devices and desktop computers. They use standards such as SRTP, ZRTP, and SIP(over TLS). Clients are available for nearly every platform. | 2014-03-15T13:00:34Z | 5 | 11754 |
-| Others | See [unSYSTEM](#unSYSTEM) above, and [bitcointalk](https://bitcointalk.org/index.php?topic=134179.0) for a list of others. | 2014-03-15T16:35:03Z | 1 | 0 |
-| P | [P](http://ozan.io/p/) is a small JavaScript library for creating peer-to-peer applications in browsers.It allows for transitive connections across peers which makes certain network topologies, such mesh networks,easy to establish. | 2013-05-13T06:11:33Z | 27 | 25246 |
-| PageKite | [PageKite](https://pagekite.net/) is a dynamic reverse proxy designed to allow hosting of live (web-)servers on devices that are mobile, stuck behind strict firewalls or otherwise lack public IPs. | 2014-03-15T20:19:59Z | 1 | 4306 |
-| PeerCDN | [PeerCDN](https://peercdn.com/) automatically serves a site's static resources (images, videos, and file downloads) over a peer-to-peer network made up of the visitors currently on the site. | unknown | unknown | unknown |
-| PeerCoin/PPCoin | [PeerCoin/PPCoin](http://ppcoin.org/) is the first known cryptocurrency based on an implementation of a combined proof-of-stake/proof-of-work system | 2014-03-14T12:34:41Z | 127 | 100676 |
-| PeerServer | [PeerServer](http://www.peer-server.com/) is a peer-to-peer client server using WebRTC, where your browser acts as a server for other browsers across WebRTC peer-to-peer data channels. | unknown | unknown | unknown |
-| Peersm | [Peerm](http://www.peersm.com/) Anonymous P2P inside browsers, no installation, encrypted and secure. The browsers are talking the Tor protocol extended to P2P and are connecting to the nodes using WebSockets, multi-sources and streaming are supported. The final goal is to build a complete serverless P2P where anonymizer nodes are inside the browsers too relaying the traffic, using WebRTC. | unknown | unknown | unknown |
-| People's Open Network | [People's Open Network](https://sudoroom.org/wiki/Mesh) is a community mesh network in Oakland, California. | 2014-03-15T15:53:29Z | 3 | 9832 |
-| Phantom | [Phantom](https://code.google.com/p/phantom/) is (was?) a system for generic, decentralized, unstoppable internet anonymity | 2012-09-20T05:12:46Z | 2 | 4356 |
-| PirateBox | [PirateBox](http://daviddarts.com/piratebox/) is a self-contained mobile communication and file sharing device. Simply turn it on to transform any space into a free and open communications and file sharing network. | 2014-03-13T06:11:11Z | 2 | 843 |
-| Project Byzantium | [Project Byzantium](http://project-byzantium.org/) - Ad-hoc wireless mesh networking for the zombie apocalypse. The goal of Project Byzantium is to develop a communication system by which users can connect to each other and share information in the absence of convenient access to the Internet.  This is done by setting up an ad-hoc wireless mesh network that offers services which replace popular websites often used for this purpose, such as Twitter and IRC. | 2014-03-13T19:50:43Z | 16 | 62779 |
-| Project Meshnet | [Project Meshnet](https://projectmeshnet.org/) aims to build a sustainable decentralized alternative internet. Used by [Hyperboria](http://hyperboria.net/) and built on [CJDNS](http://cjdns.info/). | 2014-03-15T11:40:58Z | 1 | 0 |
-| Psyced | [Psyced](http://www.psyced.org/) is a scalable multi-protocol multi-casting chat, messaging and social server solution to build decentralized chat networks upon, released as open source. | 2013-01-06T02:51:40Z | 4 | 41671 |
-| Quick mesh project | [Quick mesh project](http://qmp.cat/) is an openwrt based mesh networking firmware. Can be installed on any openwrt supported system. Auto configures any needed connections, auto detects internet connections and aunounces them. Native IPv6 support with IPv4 tunnels for current networking support. | 2012-05-17T23:17:57Z | 8 | 33944 |
-| Quietnet | [Quietnet](https://github.com/Katee/quietnet) is a simple chat program using near ultrasonic frequencies. It works without Wi-Fi or Bluetooth and cannot be eavesdropped using conventional network capturing methods. | unknown | unknown | unknown |
-| Red Matrix | The [Red Matrix](https://redmatrix.me) is a decentralised identity and communications platform which provides internet-wide single-sign-on with nomadic identity, internet-wide access control, communications, content management and personal cloud storage. | 2014-03-15T19:22:22Z | 78 | 416794 |
-| Refuge | The [Refuge Project](http://refuge.io/) aims to provide a fully decentralized and opensource data platform. It is built in Erlang and includes [RCouch](https://github.com/refuge/rcouch), a static distribution of couchdb using rebar, and [Coffer](https://github.com/refuge/coffer), a blob server. | 2014-03-14T12:59:38Z | 1 | 10453 |
-| RenderJs | [RenderJS](http://www.renderjs.org) is a JavaScript library which provides an easy way to define gadgets (aka mashups) in pure HTML5, without requiring any application server. It is suitable for the development of mobile applications, desktop applications. | unknown | unknown | unknown |
-| Retroshare | [RetroShare](http://retroshare.sourceforge.net/) is an open source, decentralised communication platform. It lets you chat and share with friends and family, with a web-of-trust to authenticate peers. | 2014-02-24T19:29:32Z | 25 | 726104 |
-| STEED | [STEED](http://g10code.com/steed.html) is a protocol for opportunistic email encryption, featuring automatic key generation and distribution. | 2014-03-14T23:38:40Z | 1 | 0 |
-| Samizdat | Samizdat is a self-replicating LiveCD which creates an IPSec VPN between each newly-created LiveCD node and the system that created it.  It is thus "rhizomal" in the sense of Serval, but its objectives are more like those of arkOS: each node runs peer-to-peer services intended to replace the centralized services of github, skype, facebook, gmail, etc..  Samizdat provides strong cryptography for authentication of users over the network, and full disk encryption for installed systems, providing novice users fully-automated (zero-learning-curve) access to high-grade security.  Samizdat's installer does not ask any questions of the user except where to install.  The goal of Samizdat is to provide the benefits of public key cryptography to users who do not even understand what public key cryptography is.(Samizdat is also -- incidentally -- a generic framework for creating and managing LiveCD images for other purposes, such as managing multiple systems on a LAN, or system backup.)Send mail to samizdat@lists.riseup.net (public mailing list) or samizdat@childrenofmay.org (private email of project founder) for more information. | 2014-03-13T12:06:26Z | 2 | 7670 |
-| Seafile | [Seafile](http://seafile.com) is a cloud software similar to owncloud, with clients for Windows, Mac, Linux, Android and iOS. Server for Linux and Raspberry Pi. | 2014-03-14T16:03:02Z | 29 | 79098 |
-| See Namecoin above |  | unknown | unknown | unknown |
-| Serf | [Serf](http://www.serfdom.io/) is a decentralized solution for service discovery and orchestration that is lightweight, highly available, and fault tolerant. | 2014-03-15T02:57:33Z | 15 | 20267 |
-| Serval Project | [The Serval Project](http://www.servalproject.org/) lets mobile phones make phone calls to each other peer-to-peer without a base station. | 2014-03-15T11:23:03Z | 1 | 0 |
-| ShareIt! | [ShareIt!](http://shareit.es), server-less P2P filesharing application in pure Javascript and HTML5 using WebRTC. Winner of the "Most Innovative Project" on the spanish [Free Software Universitary Championship 2013](http://www.concursosoftwarelibre.org/1213/). | 2014-03-15T02:19:45Z | 10 | 8170 |
-| SlapOS | [SlapOS](http://community.slapos.org) is a decentralized Cloud Computing technology. It can automate the deployment and configuration of applications in a heterogeneous environment, either in datacenters or self-hosted. SlapOS is a Free Software (GPL). | 2014-03-15T18:57:56Z | 93 | 588596 |
-| Smallest Federated Wiki | [Smallest Federated Wiki](http://wardcunningham.github.io/) innovates in three ways. It shares through federation, composes by refactoring and wraps data with visualization.The project aims to demonstrate that wiki would have been better had it been effectively federated from the beginning, and explore federation policies necessary to sustain an open creative community. | 2014-03-15T12:29:37Z | 47 | 30675 |
-| Sneer | [Sneer](http://sneer.me) is a free and open source sovereign computing platform. It runs on your Windows, Mac or Linux machine (like Skype or Firefox) using the Java VM. It enables you to create your personal cluster by sharing hardware resources (CPU, disk space, network bandwidth) with your friends, host your own social network, information and media, create sovereign applications and share them with others, download and run sovereign applications created by others.You can do all these things directly with your peers, in an autonomous, sovereign way, without depending on online service providers such as email providers, Google, Facebook, etc. | 2014-03-15T11:05:36Z | 51 | 69649 |
-| SocietyOfMind | [SocietyOfMind](http://github.com/theProphet/SocietyOfMind) is a *complete* information model to make a p2p network and 3-d visualization layer that can scale to billions, re-make the Internet, and form a meta-mind for the planet.  For the full scope of the project and philosophy see the [wiki](http://pangaia.sourceforge.net/). | unknown | unknown | unknown |
-| Sparkleshare | [Sparkleshare](http://sparkleshare.org/) is a self-hosted file sync service, similar to Dropbox and based on Git. | 2014-03-13T23:55:34Z | 167 | 14035 |
-| Starkit | [Starkit](http://www.starkitsystems.com/) is a private cloud plug-n-play secure email server for private communication allowing you the benefits of secure email as soon as you turn it on. Bundled with Web-based interface for anywhere access. Apart from a Secure Mail Server You can use Starkit as your Secure Private Cloud storage to save important documents, photos and videos and access your stuff from anywhere. Requires zero maintenance. | 2014-03-15T11:10:37Z | 2 | 46592 |
-| StatusNet | StatusNet became [GNU social](#GNU social). | 2014-03-14T17:28:30Z | 92 | 230115 |
-| StreamRoot | [StreamRoot](http://www.streamroot.io/) is JavaScript in-browser video player using WebRTC. It creates a real-time peer-to-peer sharing network of users watching the same videos simultaniously, and reduces the origin server's bandwidth usage. | unknown | unknown | unknown |
-| SubToMe | [SubToMe](http://subtome.com) is a universal follow button. It decouples the publishing platform and the subscribing platform so that it's as easy to follow someone's RSS/Atom feed than it is to follow them on Twitter or Google+! | 2014-03-13T04:00:29Z | 16 | 138963 |
-| Syme | [Syme](https://getsyme.com) is an experimental project that aims at bringing more privacy and security to online communication through end-to-end encryption. Syme's zero-knowledge key infrastructure enables persistent multiparty communication and secure key exchanges on minimally trusted servers and relays. | 2014-03-15T12:47:46Z | 1 | 2773 |
-| SyncNet | [SyncNet](http://jack.minardi.org/software/syncnet-a-decentralized-web-browser/) is a decentralized web browser built on top of BitTorrent Sync and (soon) Colored Coins for name resolution. Every time you access a site, you store all of its contents on your machine. The next user to request the site can get the contents from both your machine and the original server. As more people access a page, it becomes available from more machines, reducing the load on the original server. | unknown | unknown | unknown |
-| Syndie | [Syndie](http://syndie.i2p2.de/)  is an open source system for operating distributed forums offering a secure and consistent interface to various anonymous and non-anonymous content networks. | 2014-03-14T21:39:58Z | 1 | 0 |
-| Tahoe-LAFS | [Tahoe-LAFS](https://tahoe-lafs.org) is a Free and Open cloud storage system. It distributes your data across multiple servers. Even if some of the servers fail or are taken over by an attacker, the entire filesystem continues to function correctly, preserving your privacy and security. | 2014-03-13T17:14:00Z | 54 | 158484 |
-| Tavern | [Tavern](https://tavern.com/) is a distributed, anonymous, unblockable network designed to ensure that no one is silenced, censored, or cut off from the rest of the world | 2014-03-13T19:37:29Z | 2 | 790 |
-| Telehash | [Telehash](http://telehash.org/) a new encrypted P2P JSON-based protocol enabling developers to quickly build apps that are distributed and private (see [v2](https://github.com/quartzjer/TeleHash/blob/master/org/v2.md) of the spec) | 2014-03-12T20:41:13Z | 15 | 9120 |
-| Tent protocol | [Tent](https://tent.io/) is a protocol that puts users back in control. Users should control the data they create, choose who can access it, and change service providers without losing their social graph.Tent is a protocol, not a platform. Like email, anyone can build Tent apps or host Tent servers, all Tent servers can talk to each other, and there is no central authority to restrict users or developers. | 2014-03-14T21:08:11Z | 2 | 520 |
-| The FNF | [The FNF](http://thefnf.org/) is the free network foundation: teaching how to build wireless community networks. | 2014-03-12T23:55:06Z | 3 | 670 |
-| Tidepools | [Tidepools](http://tidepools.co) is being developed within the [Red Hook Mesh Network](http://oti.newamerica.net/blogposts/2013/case_study_red_hook_initiative_wifi_tidepools-78575), for addressing local, social incentives for mesh use. An Open Source, Collaborative, Mobile Mapping & Social Hub, Reflecting Community Needs & Culture through Custom Apps, Time-based Maps, & Data Feeds. | 2014-03-14T10:32:58Z | 1 | 5548 |
-| Tomb | Dyne's [Tomb](https://tomb.dyne.org/) the crypto-undertaker is free software for easy encryption and backup of personal files, written in a single ZShell script that is easy to review and links commonly shared components (such as cryptsetup), unlike [TrueCrypt](#Truecrypt).  Tomb implements and encourages OPSEC best-practice, and comes with bind and execution hooks, steganography of keys and fast search over filenames and contents, and a graphical user interface. | 2014-03-13T18:34:36Z | 14 | 3179 |
-| Tonika | [Tonika](http://pdos.csail.mit.edu/~petar/5ttt.org/) is a  (digital) social network, which (by design) restricts direct communication to pairs of users who are friends, possesses many of the security properties (privacy, anonymity, deniability, resilience to denial-of-service attacks, etc.) that human sociaties implement organically in daily life. | unknown | unknown | unknown |
-| Tor | [Tor](https://www.torproject.org/) protects you by bouncing your communications around a distributed network of relays run by volunteers all around the world: it prevents somebody watching your Internet connection from learning what sites you visit, and it prevents the sites you visit from learning your physical location. | 2014-03-13T21:24:05Z | 184 | 329061 |
-| Tox | [Tox](https://github.com/irungentoo/ProjectTox-Core#why-are-you-doing-this-there-are-already-a-bunch-of-free-skype-alternatives)  The goal of this project is to create a configuration free p2p skype replacement. | 2014-03-15T03:22:09Z | 35 | 4854 |
-| Tribler | [Tribler](https://github.com/Tribler/tribler/wiki) Aims to create a censorship-free Internet. Already deployed, used and incrementally improved for 8-years. Tribler uses an upcoming IETF Internet Standard for [video streaming](http://datatracker.ietf.org/doc/draft-ietf-ppsp-peer-protocol/) and is backward compatible with Bittorrent. Future aim is using smartphones to even bypass Internet kill switches. An early proof-of-principle [Tribler-mobile](https://play.google.com/store/apps/details?id=org.tribler.mobile) is available on the Android Market. [Key principle](http://www.foxnews.com/tech/2012/02/10/forget-megaupload-researchers-call-new-file-sharing-network-invincible/): 'the only way to take it down is to take The Internet down'. [Overview paper](http://sigmm.org/records/records1201/featured03.html). | 2014-03-15T15:57:50Z | 48 | 148554 |
-| Trovebox | [Trovebox](https://github.com/photo) is an open source photo sharing webapp (like Instagram), which you can self-host. iOS and Android apps also open source. Uses cloud or local storage for the actual photos. Originally known as OpenPhoto; see also [theopenphotoproject.org](http://theopenphotoproject.org). | 2014-03-13T15:48:05Z | 1 | 9 |
-| Truecrypt | [TrueCrypt](http://www.truecrypt.org/) Free open source disk encryption software for Windows 7/Vista/XP/Mac OSX/ & Linux. Creates a virtual encrypted disk within a file and mounts it as a real disk. Encrypts an entire partition or storage device such as USB flash drive or hard drive. Encrypts a partition or drive where Windows is installed (pre-boot authentication). Encryption is automatic, real-time (on-the-fly) and transparent. Parallelization and pipelining allow data to be read and written as fast as if the drive was not encrypted. Encryption can be hardware-accelerated on modern processors. Provides plausible deniability, in case an adversary forces you to reveal the password: Hidden volume (steganography) and hidden operating system. More information on [documentation page](http://www.truecrypt.org/docs/) | 2014-03-14T12:34:48Z | 1 | 108817 |
-| Twister | [Twister](http://twister.net.co) is a secure and fully-decentralized P2P microblogging platform based on concepts and code from Bitcoin and Libtorrent (as described in [this whitepaper](http://arxiv.org/abs/1312.7152)). Feel free to contribute to its [core service](https://github.com/miguelfreitas/twister-core) or [HTML UI](https://github.com/miguelfreitas/twister-html)! | 2014-03-14T18:41:02Z | 3 | 30568 |
-| Unhosted | [Unhosted](https://unhosted.org/) - also known as "serverless", "client-side", or "static" web apps, unhosted web apps do not send your user data to their server. Either you connect your own server at runtime, or your data stays within the browser. | 2014-03-14T18:41:06Z | 2 | 6488 |
-| Urbit | [Urbit](http://www.urbit.org/) - an operating function, from Mars. | 2014-03-14T09:06:02Z | 34 | 79839 |
-| Village Telco | [Village Telco](http://villagetelco.org) is a an easy-to-use, scalable, standards-based, wireless, local, DIY, telephone company toolkit.  Their mission is to making voice and data communication affordable and accessible to anyone. | unknown | unknown | unknown |
-| Vole | [Vole](http://vole.cc/) is a web-based social network that you use in your browser, without a central server. It's built on the power of Bittorrent, Go and Ember.js. Uses bittorrent sync. | 2014-03-14T21:09:01Z | 3 | 181997 |
-| Wave / Apache Wave | [Wave](http://incubator.apache.org/wave/) is a distributed, near-real-time, rich collaboration platform that allows users to work together in new and exciting ways. Wave allows for flexible modes of communication, blending chat, email and collaborative document editing in to one seamless environment. | 2011-03-30T13:54:26Z | 3 | 38544 |
-| Webfist | [Webfist](http://webfist.org/) is a fallback for when providers don't support WebFinger natively. It lets you do WebFinger lookups for email addresses even if the owner of the domain name isn't playing along. WebFist works because of a judo move on an existing infrastructure: DKIM. | 2014-03-14T10:10:26Z | 2 | 1125 |
-| Webmentions | [Webmentions](http://indiewebcamp.com/webmention) are an interesting method of notify another site that a *comment* /post on your own site is written in response to a post on their site. The site receiving the webmention notification can then verify the request and gather the message adding into a conversation flow in their post.[This project](http://github.com/glennjones/webmentions) is working on a unified API. | 2014-03-13T17:26:37Z | 2 | 381 |
-| YaCy | [YACY](http://www.yacy.net/en/) is a peer-to-peer search that anyone can use to build a search portal for their intranet or to help search the public internet. When contributing to the world-wide peer network, the scale of YaCy is limited only by the number of users in the world and can index billions of web pages. It is fully decentralized, all users of the search engine network are equal, the network does not store user search requests and it is not possible for anyone to censor the content of the shared index. | 2014-03-15T14:43:00Z | 64 | 227069 |
-| Yaap it ! | [Yaap it !](http://yaap.it/) is another client-side encrypted burn-after-reading sharing service. It's written in JavaScript and you can install it on you own server: https://github.com/SeyZ/yaapit | unknown | unknown | unknown |
-| Yaler | [Yaler](https://yaler.net/) is a simple, open and scalable relay infrastructure for secure Web and SSH access to embedded systems located behind a firewall, NAT or mobile network router. | unknown | unknown | unknown |
-| Younity | [Younity](http://getyounity.com/) is a "personal cloud" that lets users share their files between their devices, without uploading them to one centralised server. | unknown | unknown | unknown |
-| YunoHost | [YunoHost](https://doc.yunohost.org) is a server operating system aiming to make self-hosting accessible to everyone. | 2014-03-14T02:44:29Z | 3 | 282 |
-| Zero Bin | [Zero Bin](http://0bin.net/) is an open source alternative for pastebin with burn-after-read function & client side encryption. Source code is also available on github https://github.com/sametmax/0bin | 2014-03-15T11:22:43Z | 14 | 3620 |
-| ZeroTier One | [ZeroTier One](https://www.zerotier.com/) is an open source application that creates huge distributed Ethernet networks. It makes use of supernodes, but these run the same code as ordinary nodes and end-to-end encryption protects all unicast traffic. Semi-commercial with a freemium model. | unknown | unknown | unknown |
-| arkOS | [arkOS](https://arkos.io) is an operating system and software stack to easily host your own websites, email addresses, cloud services and more. It uses a graphical interface (called Genesis) to do all of this, with a focus on end-user experience and simple design. Presently in active development, it is currently functional on the Raspberry Pi with new services and platforms in the works. | 2014-03-14T14:43:48Z | 51 | 28157 |
-| buddycloud | [buddycloud](http://buddycloud.com/) is a set of tools, open source software and protocols to help you build a distributed social network. All the code is on [GitHub](https://github.com/buddycloud). | 2014-03-14T19:16:32Z | 12 | 25900 |
-| cjdns | [cjdns](http://cjdns.info/) - Encrypted networking for regular people. cjdns implements an encrypted IPv6 network using public key cryptography for address allocation and a distributed hash table for routing. This provides near zero-configuration networking without many of the security and robustness issues that regular IPv4 and IPv6 networks have. | 2014-03-15T05:51:46Z | 1 | 200 |
-| dn42 | [dn42](https://dn42.net/Home) is a big dynamic VPN network, which employs Internet technologies (BGP, whois database, DNS, etc). Participants connect to each other using network tunnels (GRE, OpenVPN, Tinc, IPsec), and exchange routes thanks to the Border Gateway Protocol. Network addresses are assigned in the 172.22.0.0/15 range, and private AS numbers are used: see registry. See the About page for more information. | unknown | unknown | unknown |
-| eDonkey network (eD2k) | [eDonkey network](http://en.wikipedia.org/wiki/EDonkey_network) is a decentralized, mostly server-based, peer-to-peer file sharing network best suited to share big files among users, and to provide long term availability of files | unknown | unknown | unknown |
-| edgenet | [edgenet](http://theedg.es) is a peer-to-peer opportunistic network built over mobile devices (and potentially home routers). It is a concept, with many layers already build (ZeroMQ, Zyre). It uses temporary 'cells' to connect devices and exchange information opportunistically. It's suited to decentralized chat and proximity networking. | 2014-03-13T00:16:36Z | 2 | 0 |
-| gitsync | [gitsync](https://github.com/raybejjani/gitsync) is a git repository synchronisation and discovery tool. It's goal is to allow developers to coordinate without a central master repository. | 2014-03-14T16:22:51Z | 3 | 137 |
-| jIO | [jIO](http://www.j-io.org/) is a client-side JavaScript library to manage documents across multiple storages, in a modular way, such as LocalStorage, WebDAV, Amazon S3, you name it. | 2014-03-14T00:52:24Z | 8 | 48203 |
-| ownCloud | [ownCloud](http://www.owncloud.org/) is personal cloud software with a focus on ease of use and syncing, mobile clients and a wide range of applications. | 2014-03-15T14:00:24Z | 392 | 1297012 |
-| pubsubhubbub | [pubsubhubbub](https://code.google.com/p/pubsubhubbub/) is a simple, open, server-to-server webhook-based pubsub (publish/subscribe) protocol for any web accessible resources. | 2014-03-14T23:00:09Z | 2 | 43 |
-| pump.io | [pump.io](http://pump.io/) Described as "a stream server that does most of what people really want from a social network". It's a social stream with support for federated comunication. | 2014-03-15T13:40:24Z | 11 | 87147 |
-| qaul.net | [qaul.net](https://github.com/WachterJud/qaul.net) implements a redundant, open communication principle, in which wireless-enabled computers and mobile devices can directly form a spontaneous network. Chat functions, file sharing and voice chat is possible independent of internet and cellular networks. | 2014-03-12T23:01:50Z | 8 | 1516519 |
-| trsst | [trsst](http://www.trsst.com/) looks and feels like twitter but encrypted and anonymized and decentralized and only you hold the keys. Protocol implementation draft is available on [github](https://github.com/TrsstProject/trsst). | unknown | unknown | unknown |
-| unSYSTEM | [unSYSTEM](http://unsystem.net/) is a collective dedicated to creating popular tools that promote privacy, independence, and integrity in contradistinction to those used for mass surveillance and suppression.  Software projects include [Libbitcoin](https://libbitcoin.dyne.org/), [SX](https://sx.dyne.org/), and [Lorea](#Lorea). | unknown | unknown | unknown |
-| weborganiZm | [weborganiZm] (http://weborganizm.org/) is an Ad-Free NON-indexed network for creating and sharing of the knowledges that follows these principles: Non-Profit, Reproducible, Reinforcing the Digital Commons, Grassroots. | unknown | unknown | unknown |
-| wlan slovenija | [wlan slovenija](http://dev.wlan-si.net/) is developing technologies for easy deployment of community wireless mesh networks. The main idea is that power is in numbers so deployment should be so easy that anybody can do it, that anybody can start a new wireless mesh network and create a new community. | unknown | unknown | unknown |
+﻿| Name | Last activity | Contributors | LOC |
+| ---- | ------------- | ------------ | --- |
+| Ampify | 2014-03-14T22:07:58Z | 8 | 2643 |
+| AnoNet | unknown | unknown | unknown |
+| Askemos | 2014-03-15T02:50:44Z | 1 | 78730 |
+| Avatar | 2014-03-14T10:06:22Z | 7 | 167 |
+| BaseParadigm | unknown | unknown | unknown |
+| BipIO | unknown | unknown | unknown |
+| BitMessage | 2014-03-14T21:28:58Z | 77 | 34055 |
+| BitPhone | unknown | unknown | unknown |
+| BitTorrent Sync | 2014-03-13T12:30:58Z | 5 | 0 |
+| Bitcloud | unknown | unknown | unknown |
+| Bitcoin | 2014-03-14T18:08:07Z | 229 | 474602 |
+| Bitcoin by Mobile | unknown | unknown | unknown |
+| Bitlove | 2014-03-14T13:35:29Z | 4 | 9136 |
+| Books | 2014-03-15T02:15:37Z | 32 | 6131 |
+| BriarProject | unknown | unknown | unknown |
+| Cables | 2014-03-15T05:49:41Z | 2 | 2577 |
+| Camlistore | 2014-03-15T17:30:59Z | 57 | 215893 |
+| ClearSkies | 2014-03-13T21:25:47Z | 13 | 4670 |
+| Coinpunk | 2014-03-13T12:26:29Z | 12 | 578377 |
+| Commotion Wireless | 2014-03-15T01:56:28Z | 2 | 6238 |
+| Cowbox | unknown | unknown | unknown |
+| Cozy | 2014-03-13T00:17:20Z | 6 | 77336 |
+| CryptAByte | unknown | unknown | unknown |
+| Cryptosphere | unknown | unknown | unknown |
+| DeadC | unknown | unknown | unknown |
+| Diaspora* | 2014-03-14T09:21:46Z | 368 | 51305 |
+| Drogulus | unknown | unknown | unknown |
+| Enigmabox | unknown | unknown | unknown |
+| Ethereum | unknown | unknown | unknown |
+| Firecloud | unknown | unknown | unknown |
+| Firestr | 2014-03-15T17:19:15Z | 3 | 35416 |
+| Folpy | unknown | unknown | unknown |
+| FreedomBox | 2014-03-13T11:02:31Z | 19 | 10793 |
+| Freenet | 2014-03-15T00:28:33Z | 183 | 442416 |
+| Freifunk | 2012-03-23T02:27:46Z | 1 | 0 |
+| Friendica | 2014-03-13T03:18:24Z | 67 | 568609 |
+| Funkfeuer | 2014-03-12T19:23:09Z | 2 | 316 |
+| G0Bin | unknown | unknown | unknown |
+| GNU social | 2014-03-15T12:18:19Z | 83 | 48036 |
+| GNU/consensus | 2014-03-14T20:51:46Z | 19 | 23005 |
+| GNUnet | 2014-03-13T01:08:53Z | 37 | 427762 |
+| Grand Decentral Station | unknown | unknown | unknown |
+| Grimwire | 2014-03-13T01:39:49Z | 3 | 15563 |
+| Guifi | 2014-03-15T19:24:10Z | 15 | 59153 |
+| Hyperboria | 2014-03-13T11:50:34Z | 9 | 5587 |
+| I2P | 2014-03-14T19:48:43Z | 51 | 216067 |
+| INDX | 2014-03-15T03:03:34Z | 19 | 143883 |
+| IPOP | 2014-03-14T16:05:10Z | 25 | 5869 |
+| Idno | 2014-03-14T10:57:39Z | 1 | 169 |
+| KA Lite | 2014-03-13T20:48:17Z | 3 | 95 |
+| Kademlia | unknown | unknown | unknown |
+| Keybits | unknown | unknown | unknown |
+| Kune | 2014-01-01T10:56:47Z | 9 | 322393 |
+| Libertree | 2014-03-14T13:18:16Z | 2 | 1014 |
+| LibraryBox | 2014-03-13T14:16:48Z | 1 | 662 |
+| LibreVPN | unknown | unknown | unknown |
+| Litecoin | 2014-03-14T12:09:39Z | 4 | 42793 |
+| Lorea | 2014-03-12T21:44:58Z | 96 | 873431 |
+| MaidSafe | 2014-03-15T06:20:44Z | 9 | 111118 |
+| Mailpile | 2014-03-15T16:23:37Z | 70 | 29386 |
+| MediaCrush | 2014-03-14T18:05:14Z | 15 | 13514 |
+| MediaGoblin | 2014-03-15T12:18:19Z | 83 | 48036 |
+| MettaNode | 2012-12-03T00:09:18Z | 2 | 92270 |
+| Mixmaster | unknown | unknown | unknown |
+| Mixminion | 2014-03-12T20:21:35Z | 6 | 30943 |
+| Movim | 2014-03-15T16:47:10Z | 21 | 23884 |
+| NameCoin | 2014-03-13T17:22:58Z | 76 | 37167 |
+| Netsukuku | 2012-04-29T05:50:27Z | 14 | 169283 |
+| Nightweb | unknown | unknown | unknown |
+| Nymote | unknown | unknown | unknown |
+| OneTime (1ty) | 2014-03-15T19:02:57Z | 3 | 2886 |
+| OpenLibernet | unknown | unknown | unknown |
+| OpenNIC | unknown | unknown | unknown |
+| Ori | 2014-03-11T11:32:25Z | 1 | 9350 |
+| Osiris | 2014-03-14T16:48:48Z | 3 | 19 |
+| Ostel | 2014-03-15T13:00:34Z | 5 | 11754 |
+| Others | 2014-03-15T16:35:03Z | 1 | 0 |
+| P | 2013-05-13T06:11:33Z | 27 | 25246 |
+| PageKite | 2014-03-15T20:19:59Z | 1 | 4306 |
+| PeerCDN | unknown | unknown | unknown |
+| PeerCoin/PPCoin | 2014-03-14T12:34:41Z | 127 | 100676 |
+| PeerServer | unknown | unknown | unknown |
+| Peersm | unknown | unknown | unknown |
+| People's Open Network | 2014-03-15T15:53:29Z | 3 | 9832 |
+| Phantom | 2012-09-20T05:12:46Z | 2 | 4356 |
+| PirateBox | 2014-03-13T06:11:11Z | 2 | 843 |
+| Project Byzantium | 2014-03-13T19:50:43Z | 16 | 62779 |
+| Project Meshnet | 2014-03-15T11:40:58Z | 1 | 0 |
+| Psyced | 2013-01-06T02:51:40Z | 4 | 41671 |
+| Quick mesh project | 2012-05-17T23:17:57Z | 8 | 33944 |
+| Quietnet | unknown | unknown | unknown |
+| Red Matrix | 2014-03-15T19:22:22Z | 78 | 416794 |
+| Refuge | 2014-03-14T12:59:38Z | 1 | 10453 |
+| RenderJs | unknown | unknown | unknown |
+| Retroshare | 2014-02-24T19:29:32Z | 25 | 726104 |
+| STEED | 2014-03-14T23:38:40Z | 1 | 0 |
+| Samizdat | 2014-03-13T12:06:26Z | 2 | 7670 |
+| Seafile | 2014-03-14T16:03:02Z | 29 | 79098 |
+| See Namecoin above | unknown | unknown | unknown |
+| Serf | 2014-03-15T02:57:33Z | 15 | 20267 |
+| Serval Project | 2014-03-15T11:23:03Z | 1 | 0 |
+| ShareIt! | 2014-03-15T02:19:45Z | 10 | 8170 |
+| SlapOS | 2014-03-15T18:57:56Z | 93 | 588596 |
+| Smallest Federated Wiki | 2014-03-15T12:29:37Z | 47 | 30675 |
+| Sneer | 2014-03-15T11:05:36Z | 51 | 69649 |
+| SocietyOfMind | unknown | unknown | unknown |
+| Sparkleshare | 2014-03-13T23:55:34Z | 167 | 14035 |
+| Starkit | 2014-03-15T11:10:37Z | 2 | 46592 |
+| StatusNet | 2014-03-14T17:28:30Z | 92 | 230115 |
+| StreamRoot | unknown | unknown | unknown |
+| SubToMe | 2014-03-13T04:00:29Z | 16 | 138963 |
+| Syme | 2014-03-15T12:47:46Z | 1 | 2773 |
+| SyncNet | unknown | unknown | unknown |
+| Syndie | 2014-03-14T21:39:58Z | 1 | 0 |
+| Tahoe-LAFS | 2014-03-13T17:14:00Z | 54 | 158484 |
+| Tavern | 2014-03-13T19:37:29Z | 2 | 790 |
+| Telehash | 2014-03-12T20:41:13Z | 15 | 9120 |
+| Tent protocol | 2014-03-14T21:08:11Z | 2 | 520 |
+| The FNF | 2014-03-12T23:55:06Z | 3 | 670 |
+| Tidepools | 2014-03-14T10:32:58Z | 1 | 5548 |
+| Tomb | 2014-03-13T18:34:36Z | 14 | 3179 |
+| Tonika | unknown | unknown | unknown |
+| Tor | 2014-03-13T21:24:05Z | 184 | 329061 |
+| Tox | 2014-03-15T03:22:09Z | 35 | 4854 |
+| Tribler | 2014-03-15T15:57:50Z | 48 | 148554 |
+| Trovebox | 2014-03-13T15:48:05Z | 1 | 9 |
+| Truecrypt | 2014-03-14T12:34:48Z | 1 | 108817 |
+| Twister | 2014-03-14T18:41:02Z | 3 | 30568 |
+| Unhosted | 2014-03-14T18:41:06Z | 2 | 6488 |
+| Urbit | 2014-03-14T09:06:02Z | 34 | 79839 |
+| Village Telco | unknown | unknown | unknown |
+| Vole | 2014-03-14T21:09:01Z | 3 | 181997 |
+| Wave / Apache Wave | 2011-03-30T13:54:26Z | 3 | 38544 |
+| Webfist | 2014-03-14T10:10:26Z | 2 | 1125 |
+| Webmentions | 2014-03-13T17:26:37Z | 2 | 381 |
+| YaCy | 2014-03-15T14:43:00Z | 64 | 227069 |
+| Yaap it ! | unknown | unknown | unknown |
+| Yaler | unknown | unknown | unknown |
+| Younity | unknown | unknown | unknown |
+| YunoHost | 2014-03-14T02:44:29Z | 3 | 282 |
+| Zero Bin | 2014-03-15T11:22:43Z | 14 | 3620 |
+| ZeroTier One | unknown | unknown | unknown |
+| arkOS | 2014-03-14T14:43:48Z | 51 | 28157 |
+| buddycloud | 2014-03-14T19:16:32Z | 12 | 25900 |
+| cjdns | 2014-03-15T05:51:46Z | 1 | 200 |
+| dn42 | unknown | unknown | unknown |
+| eDonkey network (eD2k) | unknown | unknown | unknown |
+| edgenet | 2014-03-13T00:16:36Z | 2 | 0 |
+| gitsync | 2014-03-14T16:22:51Z | 3 | 137 |
+| jIO | 2014-03-14T00:52:24Z | 8 | 48203 |
+| ownCloud | 2014-03-15T14:00:24Z | 392 | 1297012 |
+| pubsubhubbub | 2014-03-14T23:00:09Z | 2 | 43 |
+| pump.io | 2014-03-15T13:40:24Z | 11 | 87147 |
+| qaul.net | 2014-03-12T23:01:50Z | 8 | 1516519 |
+| trsst | unknown | unknown | unknown |
+| unSYSTEM | unknown | unknown | unknown |
+| weborganiZm | unknown | unknown | unknown |
+| wlan slovenija | unknown | unknown | unknown |
