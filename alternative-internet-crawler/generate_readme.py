@@ -58,11 +58,12 @@ def get_markdown_page_header():
     return header
 
 
-def get_markdown_table_header(columns, add_links, sort_on):
+def get_markdown_table_header(columns, add_links, sort_on=None):
     if add_links:
         linked_columns = columns.copy()
         for key in linked_columns.keys():
-            linked_columns[key] = '[%s](TABLE_%s.md)' % (linked_columns[key], linked_columns[key].replace(' ', '_').upper())
+            if not key == sort_on:
+                linked_columns[key] = '[%s](TABLE_%s.md)' % (linked_columns[key], linked_columns[key].replace(' ', '_').upper())
         return get_markdown_table_header(linked_columns, add_links=False)
     else:
         return '%s%s%s\n' % ('| ', ' | '.join(columns.values()), ' |')
