@@ -124,8 +124,9 @@ def write_output(projects, table_columns, output='readme.md', sort_on='name', so
 
 
 def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False, generate_all=False):
-    table_columns = OrderedDict([('name', 'Name'), ('updated_at', 'Last activity'),
-                                 ('total_contributor_count', 'Contributors'), ('total_code_lines', 'LOC'), ('main_language', 'Language')])
+    table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('updated_at', 'Last activity'),
+                                 ('total_code_lines', 'LOC'), ('total_commit_count', 'Commits'),
+                                 ('total_contributor_count', 'Contributors')])
 
     projects = get_projects(directory)
     logging.info('Loaded %s projects' % len(projects))
