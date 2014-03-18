@@ -81,7 +81,7 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
 
 
 def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False):
-    table_columns = OrderedDict([('name', 'Name'), ('description', 'Description'), ('updated_at', 'Last activity'),
+    table_columns = OrderedDict([('name', 'Name'), ('updated_at', 'Last activity'),
                                  ('total_contributor_count', 'Contributors'), ('total_code_lines', 'LOC')])
 
     projects = get_projects(directory)
