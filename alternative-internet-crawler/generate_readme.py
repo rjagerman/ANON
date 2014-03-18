@@ -48,22 +48,32 @@ def get_projects(path):
     return projects
 
 
-def get_markdown_table_header(columns):
-    return '%s%s%s\n' % ('| ', ' | '.join(columns.values()), ' |')
+def get_markdown_table_header(columns, add_links):
+    if add_links:
+        linked_columns = columns
+        for key in linked_columns.keys():
+            linked_columns[key] = '[%s](TABLE_%s.md)' % (linked_columns[key], linked_columns[key].replace(' ', '_').upper())
+        return get_markdown_table_header(linked_columns, add_links=False)
+    else:
+        return '%s%s%s\n' % ('| ', ' | '.join(columns.values()), ' |')
 
 
 def get_markdown_table_divider(columns):
     divider = columns
     for key in divider.keys():
         divider[key] = '-' * len(divider[key])
-    return get_markdown_table_header(divider)
+    return get_markdown_table_header(divider, add_links=False)
 
 
-def get_markdown_table_entry(columns, project):
+def get_markdown_table_entry(columns, project, add_links):
     entry = []
     for key in columns.keys():
         try:
-            entry.append(project[key])
+            if add_links and key == 'name':
+                project_anchor = filter(lambda c: c.isalpha() or c == " ", project[key]).replace(' ', '-').lower()
+                entry.append('[%s](README.md#%s)' % (project[key], project_anchor))
+            else:
+                entry.append(project[key])
         except:
             entry.append('unknown')
 
@@ -80,7 +90,7 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
     return sorted_list
 
 
-def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False):
+def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False):
     table_columns = OrderedDict([('name', 'Name'), ('updated_at', 'Last activity'),
                                  ('total_contributor_count', 'Contributors'), ('total_code_lines', 'LOC')])
 
@@ -88,7 +98,7 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
     logging.info('Loaded %s projects' % len(projects))
 
     with codecs.open(output, 'w', 'utf-8-sig') as output_file:
-        header = get_markdown_table_header(table_columns)
+        header = get_markdown_table_header(table_columns, add_links)
         output_file.write(header)
 
         header = get_markdown_table_divider(table_columns)
@@ -97,7 +107,7 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
         for project in get_sorted_list(projects, sort_on, sort_reverse):
             try:
                 logging.debug('Parsing %s' % project['name'])
-                entry = get_markdown_table_entry(table_columns, project)
+                entry = get_markdown_table_entry(table_columns, project, add_links)
                 output_file.write(entry)
             except:
                 logging.warning('Parsing entry failed (%s)' % project)
@@ -124,10 +134,12 @@ def main():
                         help='Column to sort on (named as used in the JSON files)')
     parser.add_argument('-r', '--reverse', action='store_true', dest='sort_reverse', required=False,
                         help='Sort in reverse order')
+    parser.add_argument('-l', '--add-links', action='store_true', dest='add_links', required=False,
+                        help='Link from header to sorted versions, plus link from entried to readme.md')
 
     args = parser.parse_args()
 
-    run_parser(directory=args.directory, output=args.output, sort_on=args.sort, sort_reverse=args.sort_reverse)
+    run_parser(directory=args.directory, output=args.output, sort_on=args.sort, sort_reverse=args.sort_reverse, add_links=args.add_links)
 
 
 if __name__ == "__main__":
