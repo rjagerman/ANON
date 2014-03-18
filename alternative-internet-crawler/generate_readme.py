@@ -96,7 +96,7 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
 
     logging.info('Sorting on \'%s\'' % sort_on)
 
-    sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if (not k[sort_on] is None and k[sort_on].isdigit()) else k[sort_on]) if sort_on in k.keys() else unknown_entry)
+    sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if (not k[sort_on] is None and k[sort_on].isdigit()) else k[sort_on]) if sort_on in k.keys() and not k[sort_on] is None else unknown_entry)
     if sort_reverse:
         sorted_list.reverse()
 
