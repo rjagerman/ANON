@@ -23,6 +23,7 @@ Otherwise, to use "readme.md" and "projects" as defaults, use:
 
 from argparse import ArgumentParser
 from collections import OrderedDict
+from datetime import datetime
 import logging
 import json
 import os
@@ -65,17 +66,23 @@ def get_markdown_table_divider(columns):
     return get_markdown_table_header(divider, add_links=False)
 
 
+def get_markdown_table_entry_format_name(entry):
+    project_anchor = filter(lambda c: c.isalpha() or c == " ", entry).replace(' ', '-').lower()
+    return '[%s](README.md#%s)' % (entry, project_anchor)
+
+
 def get_markdown_table_entry(columns, project, add_links):
+    format_functions = {'name': lambda s, l: get_markdown_table_entry_format_name(s) if l else s,
+                        'updated_at': lambda s, l: datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d'),
+                        'total_contributor_count': lambda s, l: '%s contributors' % s,
+                        'total_code_lines': lambda s, l: '<{:>10,} K'.format(1) if (int(s) / 1000) <= 1 else '{:>10,} K'.format(int(s) / 1000)}
+
     entry = []
     for key in columns.keys():
         try:
-            if add_links and key == 'name':
-                project_anchor = filter(lambda c: c.isalpha() or c == " ", project[key]).replace(' ', '-').lower()
-                entry.append('[%s](README.md#%s)' % (project[key], project_anchor))
-            else:
-                entry.append(project[key])
+            entry.append(format_functions[key](project[key], add_links and key == 'name'))
         except:
-            entry.append('unknown')
+            entry.append(project[key] if key in project.keys() else 'unknown')
 
     return '%s%s%s\n' % ('| ', ' | '.join(entry), ' |')
 
