@@ -49,7 +49,16 @@ def get_projects(path):
     return projects
 
 
-def get_markdown_table_header(columns, add_links):
+def get_markdown_page_header():
+    header = '# Alternative Internet\n' + \
+             'Project statistics fetched from [Ohloh](https://www.ohloh.net).\n' +\
+             '\n' + \
+             '[< Back to list](README.md)\n' + \
+             '\n'
+    return header
+
+
+def get_markdown_table_header(columns, add_links, sort_on):
     if add_links:
         linked_columns = columns.copy()
         for key in linked_columns.keys():
@@ -106,7 +115,11 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
 def write_output(projects, table_columns, output='readme.md', sort_on='name', sort_reverse=False, add_links=False):
 
     with codecs.open(output, 'w', 'utf-8-sig') as output_file:
-        header = get_markdown_table_header(table_columns, add_links)
+        if add_links:
+            header = get_markdown_page_header()
+            output_file.write(header)
+
+        header = get_markdown_table_header(table_columns, add_links, sort_on)
         output_file.write(header)
 
         header = get_markdown_table_divider(table_columns)
