@@ -1,4 +1,9 @@
-﻿| [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
+﻿# Alternative Internet
+Project statistics fetched from [Ohloh](https://www.ohloh.net).
+
+[< Back to list](README.md)
+
+| [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | Commits | [Contributors](TABLE_CONTRIBUTORS.md) |
 | ---- | -------- | ------------- | --- | ------- | ------------ |
 | [ownCloud](README.md#owncloud) | PHP | 2014-03-15 | 1,297 K | 34391 commit(s) | 392 contributor(s) |
 | [Freenet](README.md#freenet) | Java | 2014-03-15 | 442 K | 32009 commit(s) | 183 contributor(s) |

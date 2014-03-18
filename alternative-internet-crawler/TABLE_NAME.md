@@ -1,4 +1,9 @@
-﻿| [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
+﻿# Alternative Internet
+Project statistics fetched from [Ohloh](https://www.ohloh.net).
+
+[< Back to list](README.md)
+
+| Name | [Language](TABLE_LANGUAGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
 | ---- | -------- | ------------- | --- | ------- | ------------ |
 | [Ampify](README.md#ampify) | shell script | 2014-03-14 | 2 K | 1574 commit(s) | 8 contributor(s) |
 | [AnoNet](README.md#anonet) | unknown | unknown | unknown | unknown | unknown |

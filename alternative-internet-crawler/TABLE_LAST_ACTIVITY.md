@@ -1,4 +1,9 @@
-﻿| [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
+﻿# Alternative Internet
+Project statistics fetched from [Ohloh](https://www.ohloh.net).
+
+[< Back to list](README.md)
+
+| [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | Last activity | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
 | ---- | -------- | ------------- | --- | ------- | ------------ |
 | [PageKite](README.md#pagekite) | JavaScript | 2014-03-15 | 4 K | 5 commit(s) | 1 contributor(s) |
 | [Guifi](README.md#guifi) | PHP | 2014-03-15 | 59 K | 384 commit(s) | 15 contributor(s) |

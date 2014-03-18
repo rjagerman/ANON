@@ -1,4 +1,9 @@
-﻿| [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
+﻿# Alternative Internet
+Project statistics fetched from [Ohloh](https://www.ohloh.net).
+
+[< Back to list](README.md)
+
+| [Name](TABLE_NAME.md) | Language | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
 | ---- | -------- | ------------- | --- | ------- | ------------ |
 | [Refuge](README.md#refuge) | ActionScript | 2014-03-14 | 10 K | 57 commit(s) | 1 contributor(s) |
 | [Serf](README.md#serf) | C | 2014-03-15 | 20 K | 1056 commit(s) | 15 contributor(s) |

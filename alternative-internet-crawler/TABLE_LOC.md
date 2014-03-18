@@ -1,4 +1,9 @@
-﻿| [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
+﻿# Alternative Internet
+Project statistics fetched from [Ohloh](https://www.ohloh.net).
+
+[< Back to list](README.md)
+
+| [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | LOC | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
 | ---- | -------- | ------------- | --- | ------- | ------------ |
 | [qaul.net](README.md#qaulnet) | C | 2014-03-12 | 1,516 K | 367 commit(s) | 8 contributor(s) |
 | [ownCloud](README.md#owncloud) | PHP | 2014-03-15 | 1,297 K | 34391 commit(s) | 392 contributor(s) |
