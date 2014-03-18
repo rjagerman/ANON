@@ -75,7 +75,7 @@ def get_markdown_table_entry(columns, project, add_links):
     format_functions = {'name': lambda s, l: get_markdown_table_entry_format_name(s) if l else s,
                         'updated_at': lambda s, l: datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d'),
                         'total_contributor_count': lambda s, l: '%s contributors' % s,
-                        'total_code_lines': lambda s, l: '<{:>10,} K'.format(1) if (int(s) / 1000) <= 1 else '{:>10,} K'.format(int(s) / 1000)}
+                        'total_code_lines': lambda s, l: '<{:,} K'.format(1) if (int(s) / 1000) <= 1 else '{:,} K'.format(int(s) / 1000)}
 
     entry = []
     for key in columns.keys():
