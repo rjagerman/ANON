@@ -51,7 +51,7 @@ def get_projects(path):
 
 def get_markdown_table_header(columns, add_links):
     if add_links:
-        linked_columns = columns
+        linked_columns = columns.copy()
         for key in linked_columns.keys():
             linked_columns[key] = '[%s](TABLE_%s.md)' % (linked_columns[key], linked_columns[key].replace(' ', '_').upper())
         return get_markdown_table_header(linked_columns, add_links=False)
@@ -60,7 +60,7 @@ def get_markdown_table_header(columns, add_links):
 
 
 def get_markdown_table_divider(columns):
-    divider = columns
+    divider = columns.copy()
     for key in divider.keys():
         divider[key] = '-' * len(divider[key])
     return get_markdown_table_header(divider, add_links=False)
@@ -82,7 +82,7 @@ def get_markdown_table_entry(columns, project, add_links):
         try:
             entry.append(format_functions[key](project[key], add_links and key == 'name'))
         except:
-            entry.append(project[key] if key in project.keys() else 'unknown')
+            entry.append(project[key] if key in project.keys() and not project[key] is None else 'unknown')
 
     return '%s%s%s\n' % ('| ', ' | '.join(entry), ' |')
 
@@ -95,7 +95,7 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
 
     logging.info('Sorting on \'%s\'' % sort_on)
 
-    sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if k[sort_on].isdigit() else k[sort_on]) if sort_on in k.keys() else unknown_entry)
+    sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if (not k[sort_on] is None and k[sort_on].isdigit()) else k[sort_on]) if sort_on in k.keys() else unknown_entry)
     if sort_reverse:
         sorted_list.reverse()
 
