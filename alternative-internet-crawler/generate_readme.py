@@ -74,13 +74,14 @@ def get_markdown_table_entry_format_name(entry):
 def get_markdown_table_entry(columns, project, add_links):
     format_functions = {'name': lambda s, l: get_markdown_table_entry_format_name(s) if l else s,
                         'updated_at': lambda s, l: datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d'),
-                        'total_contributor_count': lambda s, l: '%s contributors' % s,
+                        'total_contributor_count': lambda s, l: '%s contributor(s)' % s,
+                        'total_commit_count': lambda s, l: '%s commit(s)' % s,
                         'total_code_lines': lambda s, l: '<{:,} K'.format(1) if (int(s) / 1000) <= 1 else '{:,} K'.format(int(s) / 1000)}
 
     entry = []
     for key in columns.keys():
         try:
-            entry.append(format_functions[key](project[key], add_links and key == 'name'))
+            entry.append(format_functions[key](project[key], add_links))
         except:
             entry.append(project[key] if key in project.keys() and not project[key] is None else 'unknown')
 
@@ -102,12 +103,7 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
     return sorted_list
 
 
-def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False):
-    table_columns = OrderedDict([('name', 'Name'), ('updated_at', 'Last activity'),
-                                 ('total_contributor_count', 'Contributors'), ('total_code_lines', 'LOC')])
-
-    projects = get_projects(directory)
-    logging.info('Loaded %s projects' % len(projects))
+def write_output(projects, table_columns, output='readme.md', sort_on='name', sort_reverse=False, add_links=False):
 
     with codecs.open(output, 'w', 'utf-8-sig') as output_file:
         header = get_markdown_table_header(table_columns, add_links)
@@ -125,6 +121,20 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
                 logging.warning('Parsing entry failed (%s)' % project)
 
     logging.info('Wrote table to %s' % output)
+
+
+def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False, generate_all=False):
+    table_columns = OrderedDict([('name', 'Name'), ('updated_at', 'Last activity'),
+                                 ('total_contributor_count', 'Contributors'), ('total_code_lines', 'LOC'), ('main_language', 'Language')])
+
+    projects = get_projects(directory)
+    logging.info('Loaded %s projects' % len(projects))
+
+    if generate_all:
+        for key in table_columns.keys():
+            write_output(projects=projects, table_columns=table_columns, output='TABLE_%s.md' % table_columns[key].upper().replace(' ', '_'), sort_on=key, sort_reverse=(not key == 'name'), add_links=add_links)
+    else:
+        write_output(projects=projects, table_columns=table_columns, output=output, sort_on=sort_on, sort_reverse=sort_reverse, add_links=add_links)
 
 
 def main():
@@ -147,11 +157,14 @@ def main():
     parser.add_argument('-r', '--reverse', action='store_true', dest='sort_reverse', required=False,
                         help='Sort in reverse order')
     parser.add_argument('-l', '--add-links', action='store_true', dest='add_links', required=False,
-                        help='Link from header to sorted versions, plus link from entried to readme.md')
+                        help='Link from header to sorted versions, plus link from entries to readme.md')
+    parser.add_argument('-a', '-all', action='store_true', dest='generate_all', required=False,
+                        help='Generate all files as TABLE_COLUMN_NAME.md (-s, -r, -o are ignored)')
 
     args = parser.parse_args()
 
-    run_parser(directory=args.directory, output=args.output, sort_on=args.sort, sort_reverse=args.sort_reverse, add_links=args.add_links)
+    run_parser(directory=args.directory, output=args.output, sort_on=args.sort, sort_reverse=args.sort_reverse,
+               add_links=args.add_links, generate_all=args.generate_all)
 
 
 if __name__ == "__main__":
