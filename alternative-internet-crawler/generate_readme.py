@@ -93,6 +93,8 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
     if len(filter(lambda k: sort_on in k.keys(), dictionary)) < 1:
         raise Exception('Column \'%s\' not found in any of the entries' % sort_on)
 
+    logging.info('Sorting on \'%s\'' % sort_on)
+
     sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if k[sort_on].isdigit() else k[sort_on]) if sort_on in k.keys() else unknown_entry)
     if sort_reverse:
         sorted_list.reverse()
