@@ -17,6 +17,11 @@
 \usepackage{epstopdf}
 \usepackage{longtable}
 \usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{bbding}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{amssymb}
 
 % *** Do not adjust lengths that control margins, column widths, etc. ***
 % *** Do not use packages that alter fonts (such as pslatex).         ***
@@ -29,6 +34,7 @@
 
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
+\newcommand{\xmark}{\sffamily x}
 
 % *** UTF8 ***
 \usepackage[utf8]{inputenc}
@@ -54,35 +60,18 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-	There are quite a few distributed anonymous communication networks such as Tor, yet when it comes to decentralized anonymous systems the numbers are rather small and certain problems arise. In this technical report we explain how Tor works and which attacks are possible and which vulnerabilities currently exist in Tor. After that, we talk about why would like to decentralize these peer-to-peer networks, what the difficulties are with decentralizing networks and show which projects have made an attempt to decentralize or are already (partially) decentralized. Finally, we provide a table in where we compare these projects against each other, which will also be public available on the Github page mention in this report.
+	There are quite a few distributed anonymous communication networks such as Tor, yet when it comes to decentralized anonymous systems the numbers are rather small and certain problems arise. In this technical report we explain how Tor works and which attacks are possible and which vulnerabilities currently exist in Tor. After that, we talk about why would like to decentralize peer-to-peer networks, what the difficulties are with decentralizing networks and show which projects have made an attempt to decentralize or are already (partially) decentralized. Finally, we provide a table in where we compare these projects against each other, which will also be public available on the Github page mention in this report.
 \end{abstract}
 
 
 \section{Introduction}
-	% The very first letter is a 2 line initial drop letter followed
-	% by the rest of the first word in caps.
-	% 
-	% form to use if the first word consists of a single letter:
-	% \IEEEPARstart{A}{demo} file is ....
-	% 
-	% form to use if you need the single drop letter followed by
-	% normal text (unknown if ever used by IEEE):
-	% \IEEEPARstart{A}{}demo file is ....
-	% 
-	% Some journals put the first two words in caps:
-	% \IEEEPARstart{T}{his demo} file is ....
-	% 
-	% Here we have the typical use of a "T" for an initial drop letter
-	% and "HIS" in caps to complete the first word.
-	% You must have at least 2 lines in the paragraph with the drop letter
-	% (should never be an issue)
 	With the introduction and commercialization of the internet in 1995, it has become an important tool for anyone to freely and easily communicate. In many cases however, internet usage is either censored or monitored by third parties. In recent years the need for anonymous internet communication has become more apparent. Revealing government wrongdoings, such as in the case of WikiLeaks, or the ability to communicate freely in a censored environment are two major examples of why anonymous communication is important.
 	
 	Although much research has been done on anonymous internet communication, only few systems have been actually implemented and are being used in practice. One of the most important factors that impact anonymity in a communication system is the number of users. A sufficiently large numbers of users are required for the system to make guarantees about its ability to conceal and hide users' communication. This makes it difficult to introduce a new anonymous internet system, due to the initial lack of users. Another important factor that impacts the anonymity of the system is decentralization. Whenever a network has centralized components and a malicious third party gains control over these components, the functionality and perhaps even the anonymity of the system is compromised.
 	
 	The most widely used anonymous communication system is Tor. In this paper we will analyze Tor and its semi-centralized nature. Furthermore we will look at attempts that have been made to decentralize Tor as well as several other decentralized systems.
 	
-	This paper is structured as following: In section \ref{sec:tor} we will give an introduction and overview of Tor. After that, we will talk about decentralization and its problems in section \ref{sec:problems}. Vulnerabilities in Tor are discussed in section \ref{sec:attacks}. Afterwards, we will discuss the current state of decentralized internet systems in section \ref{sec:decentralized}. A comparison of existing decentralized networks is made in section \ref{sec:comparison}. Finally, we will conclude and discuss our findings in section \ref{sec:conclusion}.
+	This paper is structured as following: In section \ref{sec:tor} we will give an introduction and overview of Tor. Known vulnerabilities in Tor are discussed in section \ref{sec:attacks}. After that, we will talk about decentralization and its problems in section \ref{sec:problems}. The current state of decentralized internet systems is discussed in section \ref{sec:decentralized}. A comparison of existing decentralized networks is made in section \ref{sec:comparison}. Finally, we will conclude and discuss our findings in section \ref{sec:conclusion}.
 	
 \section{Introduction to Tor}
 	\label{sec:tor}
@@ -123,7 +112,7 @@
 	\subsection{Relay and exit nodes}
 		The Tor network consists of several components. The clients in the Tor network are known as Onion Proxies. The software to run an Onion Proxy is available for free on the Tor website \cite{torprojectwebsite} and is easy for users to configure. The Onion Proxies are responsible for downloading the directory information, establishing circuits across the network and handling connections from user applications.
 		
-		The routing in the network is done by Onion Routers, also called relay nodes. The relay nodes relay the data from the Onion Proxy to the web server across a circuit (circuits are described in II-D). Each Onion Router is connected to every other Onion Router with a TLS connection \cite{tlsprotocol}. Each circuit has three type of Onion Routers \cite{mccoy2008shining}:
+		The routing in the network is done by Onion Routers, also called relay nodes. The relay nodes relay the data from the Onion Proxy to the web server across a circuit (circuits are described in \ref{ss:tor_circuit}). Each Onion Router is connected to every other Onion Router with a TLS connection \cite{tlsprotocol}. Each circuit has three type of Onion Routers \cite{mccoy2008shining}:
 		
 		\begin{itemize}
 			\item{The entrance Tor router:} this router is directly connected to an Onion Proxy and can observe the origin of a request through the Tor network. The entrance router sends the packet to the middle Tor router.
@@ -142,9 +131,9 @@
 		
 		%Before a circuit can be established, a path has to be chosen. The current path selection algorithm in Tor selects nodes based on the bandwidth of the nodes \cite{wang2012congestion}. Nodes that have more bandwidth, have a higher probability to be chosen for the circuit setup, however, the same node can't be used more than once in a circuit.
 		
-		Suppose Alice is an Onion Proxy that wants to connect through the Tor network to a web server. Circuit setup uses the Diffie-Hellman key-exchange protocol \cite{diffiehellman} to establish a shared secret between nodes. To create a new circuit, Alice first sends a \emph{create} cell with the first half of the Diffie-Hellman handshake ($ g^b $) to the first node in her selected path (for example, OR1). OR1 sends a \emph{created} cell back with the second half of the key ($ g^b $) along with a hash of the final key. Now both Alice and OR1 have a shared key they use to encrypt and decrypt data sent between them.
+		Suppose Alice is an Onion Proxy that wants to connect through the Tor network to a web server. Circuit setup uses the Diffie-Hellman key-exchange protocol \cite{diffiehellman} to establish a shared secret between nodes. To create a new circuit, Alice first sends a \emph{create} cell with the first half of the Diffie-Hellman handshake to the first node in her selected path (for example, OR1). OR1 sends a \emph{created} cell back with the second half of the key along with a hash of the final key. Now both Alice and OR1 have a shared key they use to encrypt and decrypt data sent between them.
 		
-		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to OR2, Alice first sends a \emph{relay extend} cell to OR1. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and OR2 ($ g^{a_2} $). OR1 takes this first half of the key and sends a \emph{create} cell with this key to OR2. When OR1 receives a created cell, OR1 passes this cell to Alice. Now Alice and OR2 share a common key: $ K = g^{a_2b_2} $. The same procedure can be used to extend the circuit with more nodes.
+		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to OR2, Alice first sends a \emph{relay extend} cell to OR1. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and OR2. OR1 takes this first half of the key and sends a \emph{create} cell with this key to OR2. When OR1 receives a created cell, OR1 passes this cell to Alice. Now Alice and OR2 share a common key. The same procedure can be used to extend the circuit with more nodes.
 			
 	\subsection{Disadvantages}
 		\label{ss:tor_disadvantages}
@@ -169,9 +158,9 @@
 		Tor clients are not optimal at handling latency and connection failures. For example, if extending a circuit fails, the entire circuit is abandoned. An improvement would be to first try to extend the circuit to some other places. If that fails, the circuit could be abandoned. Also, a better timeout mechanism could be chosen for building circuits.		
 		
 		\subsubsection{Directory information overhead}
-		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header with 6.3\%.
-		
-		As we saw, the directory service generates overhead on the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor \cite{wang2012octopus, alsabah2013pctcp} (WHICH CITES CAN BE ADDED HERE? A LOT ARE MORE SUITEABLE FOR THE CURRENT DECENTRALIZED SYSTEM SECTION) but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
+		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header by 6.3\%.
+
+		As we saw, the directory service generates overhead on the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor \cite{wang2012octopus, alsabah2013pctcp} (WHICH CITES CAN BE ADDED HERE? A LOT ARE MORE SUITEABLE FOR THE CURRENT DECENTRALIZED SYSTEM SECTION) but so far, no anonymous, well-performing decentralized network has come up. This due to the many extra problems decentralization brings along with.
 		
 \section{Tor vulnerabilities and attacks}
 	\label{sec:attacks}
@@ -179,20 +168,20 @@
 	Besides the disadvantages mentioned in the previous section, Tor also suffers from several vulnerabilities that can be exploited trough attacks \cite{abbott2007browser, douceur2002sybil, bauer2007low}. In this section we will summarize some of the most well known problems with Tor as well as define the following categories of attacks: Browser based attacks, Low-Resource Routing attacks, Sybil attacks and Replay attacks.
 
 	\subsection{Browser based attacks}
-		Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis from $O(nk)$ to $O(n+k)$ where $n$ is the number of exit nodes and $k$ is the number of entry guards.\\
+		Traffic analysis can be used to attack the anonymity of a user (a Tor client) browsing the web using Tor \cite{abbott2007browser}. By misusing the exit policy of Tor one can reduce the time required to perform the analysis from $O(nk)$ to $O(n+k)$ where $n$ is the number of exit nodes and $k$ is the number of entry guards.
 
-		By running a HTTP exit node and an Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into the web pages that pass by, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
+		By running an HTTP exit node and a Tor router that eventually will act as an entry node in the network, an adversary can discover the identity of a user. The exit node injects an invisible iframe containing some JavaScript into any web page that passes through it, each sending a unique ID to a malicious web server. Every ten minutes the Tor client chooses a new circuit and eventually an unlucky Tor client picks and uses the malicious entry node that was placed in the network.
 
-		By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. A similar system can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports 4661 to 4666. Since Tor prefers older circuits, using a denial of service attack against the older exit nodes forces Tor into creating a circuit with the malicious exit node.
+		By performing traffic analysis to compare the unique IDs of the web server and the circuits passing trough the entry node, a user can be identified via matches. Disabling JavaScript does not mitigate this, because a similar attack can be set up only using the HTML meta refresh tag. To increase the odds of a user choosing the malicious exit node, one can run the exit node on unpopular ports. There are usually only a few exit nodes running on file sharing ports, such as 4661 to 4666. Since Tor prefers older circuits, using a denial of service attack against the older exit nodes forces Tor into creating a circuit with the malicious exit node.
 
 		The solution for the JavaScript injection attack is disabling active content systems in the browser. For the HTML only variant one would have to use HTTPS to prevent man-in-the-middle attacks.
 		
 	\subsection{Low-Resource Routing attacks}
-		Another possible attack on the anonimity of tor is the so called \emph{low-resource routing attack} \cite{bauer2007low}. With this attack, it is possible for an adversary to perform an end-to-end traffic analysis with minimal resourcing, thus comprimising the anonimy Tor provides. The idea of this attack is that a malicious Onion router can lie about it's bandwidth, thus advertising a much higher bandwidth than it actually has. Because of the Tor path selection algorithm that prefers high-bandwidth nodes, the chance that a malicious entry node and exit node are chosen, is high.
+		Another possible attack on the anonymity of tor is the so called \emph{low-resource routing attack} \cite{bauer2007low}. With this attack, it is possible for an adversary to perform an end-to-end traffic analysis with minimal resources, thus compromising the anonymity Tor provides. The idea of this attack is that a malicious Onion router can lie about it's bandwidth, thus advertising a much higher bandwidth than it actually has. Because of the Tor path selection algorithm that prefers high-bandwidth nodes, the chance that a malicious entry and exit node are chosen, is high.
 
-		Once a malicious entry node and exit node has been chosen, an analysis of the traffic can be done to link Onion proxies with the webservers he communicates with. Experimental research on a testbed, has shown that with an total of 66 nodes and 6 malicious nodes, is possible to compromise 46\% of the built circuits. On request of the Tor community, this attack hasn't been tested on the live Tor network. There are some extensions and improvements to this attack. It is possible to denial-of-service some of the well-used entry nodes, to force Tor clients to choose a new entry node, possibly a malicious one.
+		Once a malicious entry and exit node have been chosen, an analysis of the traffic can be done to link Onion proxies with the web servers they communicates with. Experimental research in a test setting has shown that with an total of 66 non-malicious and 6 malicious nodes, is possible to compromise 46\% of the built circuits. At the request of the Tor community, this attack hasn't been tested on the live Tor network. There are some extensions and improvements to this attack. It is possible to perform a denial of service attack on well used entry nodes, forcing Tor clients to choose a new one. This improves the chance that a Tor client chooses a malicious entry node. 
 
-		Bauer et al. proposed several solutions in his paper. The first one is to actually verify the resources of the nodes, for example, measuring the bandwidth and/or uptime of a node. Bandwidth can be checked centralized or decentralize: the disadvantages of a centralized bandwidth check, is that is generates much overhead on the network. With distributed bandwidth verification, Tor routers monitor each other but this is not enough to detect selective malicious nodes. Another solution is to restrict the amount of routers that can be on a single IP-address. The last solution proposed is to change the routing strategy.	
+		Bauer et al. proposed several solutions in their paper. The first one is to actually verify the resources of the nodes by, for example, measuring the bandwidth and/or uptime of a node. Bandwidth can be checked centralized or decentralized: the disadvantages of a centralized bandwidth check is that is generates much overhead on the network. With distributed bandwidth verification, Tor routers monitor each other but this is not enough to detect selective malicious nodes. Another solution is to restrict the amount of routers that can be on a single IP-address. The last solution proposed is to change the routing strategy.	
 		
 	\subsection{Sybil attacks}
 		The Sybil attack is an attack where a single attacker represents itself as multiple nodes in a peer-to-peer system. Abusing this, the attacker is able to propagate false assumptions about the network to other nodes.
@@ -202,16 +191,16 @@
 		A fully distributed network that implements such a solution is the Bitcoin network \cite{nakamoto2008bitcoin}, in which computing power, and not the number of nodes is important for the general network consensus.
 				
 	\subsection{Replay Attacks}
-		A replay attack \cite{pries2008new} happens when a malicious entry node duplicates cells and send them again. Since Tor uses uses the counter mode of Advanced Encryption Standard (AES-CTR) for encryption and decryption, the counter will be wrong when the duplicated package arrives causing the connection to be torn down.
-			
-		Using this, an accomplice exit router can therefore in cooperation with the entry node discover the sender and receiver's relationship. On top of that, this attack can also be used as a denial of service attack. This attack is according to the authors quite challenging to solve and does require some further research.
+		A replay attack \cite{pries2008new} happens when a malicious entry node duplicates cells and send them again. Since Tor uses the counter mode of Advanced Encryption Standard (AES-CTR) for encryption and decryption, the counter will be wrong when the duplicated package arrives causing the circuit to be destroyed.
+
+		Using this, an accomplice exit router can therefore, in cooperation with the entry node, discover the sender and receiver's relationship. On top of that, this attack can also be used as a denial of service attack. According to Pries et al., defending against this attack is quite challenging to solve and requires some further research.
 
 \section{Problems with decentralizing}
 	\label{sec:problems}
 
 	As we saw in section \ref{sec:tor}, we would like to have a decentralized anonymous network. This isn't an easy task: 15 years of decentralization attempts on the Tor network are behind us. Several well-used decentralized peer-to-peer overlay networks are active such as Gnutella \cite{ripeanu2001peer}, Freenet \cite{lua2005survey} and Tapestry. These networks will be described in more detail in the next chapter. Among these networks are some overlay anonymous networks such as Tarzan.
 
-	There are advantages when using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
+	There are advantages to using a centralized authority: this authority can be used for bootstrapping, key management and to manage the reputation of the users. When removing this central authority, these components needs to be spread across the peers in the network. In this section we will explain the various problems that are involved when decentralizing Tor. In the next section, we will explain several decentralized peer-to-peer networks and make a comparison between them.
 
 	\subsection{Bootstrapping new nodes}
 		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be a starting point where this new node can discover neighbors in the network to connect with. In Tor, a directory server can tell the new node what his neighbors are and where to find them \cite{dingledine2004tor}.
@@ -237,14 +226,14 @@
 		The third proposal is \emph{Reciprocity-Based Schemes}. Using this approach, a peer maintains a behavior history of other peers in the network. These schemes can be based on two somewhat reciprocities: direct reciprocity or indirect reciprocity. The formal are more suitable for longer relationships between peers. The latter is more scalable but they rely on third party and must handle trust issues themselves.
 
 	\subsection{Key exchange}
-		With a decentralized network, using a centralized authority for managing the keys, is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. Diffie-Hellman is for example used in the circuit setup in Onion Routing (see secion II-D), however, it is possible for an adversary to manipulate with the keys send between two parties, making the protocol vulnerable for a man-in-the-middle attack. This weakness makes it possible for an adversary to decrypt all message sent between the two parties.
+		With a decentralized network, using a centralized authority for managing the keys, is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. It is used in the circuit creation in Onion Routing (see section \ref{ss:tor_circuit}), for example. However, it is possible for an adversary to manipulate with the keys send between two parties, making the protocol vulnerable to a man-in-the-middle attack. This weakness makes it possible for an adversary to decrypt all message sent between the two parties.
 
-		Tor currently uses an interactive forward-secret key-exchange protocol called the \emph{Tor Authentication Protocol} (TAP) \cite{backes2012ace}. This protocol uses telescoping which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is \emph{ACE}, an one-way authenticated key exchange protocol. The authors of this methods claim to have an 46\% efficiency improvement on the side of the client and an efficiency improvement of nearly 19\% on the side of the Onion Routers. ACE requires clients to send one extra element in the key exchange. This however, does not introduce any overhead because the element fits in the unused space in a cell.
+		Tor currently uses an interactive forward-secret key-exchange protocol called the \emph{Tor Authentication Protocol} (TAP) \cite{backes2012ace}. This protocol uses telescoping, which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is \emph{ACE}, a one-way authenticated key exchange protocol. The authors of this methods claim to have an 46\% efficiency improvement on the side of the client and nearly 19\% on the side of the Onion Routers. ACE requires clients to send one extra element in the key exchange. This does not introduce any overhead however, because the element fits in the unused space in a cell.
 
 \section{Current decentralized systems}
 	\label{sec:decentralized}
 	
-	Many other decentralized peer-to-peer networks have been proposed and some have been implemented \cite{mislove2004ap3, rennhard2002introducing, panchenko2006nisan, rowstron2001pastry, nambiar2006salsa, freedman2002tarzan, ripeanu2001peer, androutsellis2004survey}. Examples of fully decentralized networks are Gnutella, Freenet, Pastry, Tapestry, and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here. Networks that are partially or hybrid centralized, such as KaZaA or Napster, are not discussed here.
+	Many other decentralized peer-to-peer networks have been proposed and some have been implemented \cite{mislove2004ap3, rennhard2002introducing, panchenko2006nisan, rowstron2001pastry, nambiar2006salsa, freedman2002tarzan, ripeanu2001peer, androutsellis2004survey}. Examples of fully decentralized networks are Gnutella, Freenet, Pastry, Tapestry, and Tarzan. Each of these decentralized networks will be discussed in the next section. Note that we're only considering fully decentralized networks here, with the exception of Torsk (which is almost fully decentralized but still requires a Neighbourhood Authority). Networks that are partially or hybrid centralized, such as KaZaA or Napster, are not discussed here.
 
 	\subsection{Gnutella} % ~2000
 		Gnutella is a decentralized peer-to-peer network used for distributed search of files. Since the network is fully decentralized, peers in the network are called 'servents', a combination of the words servers and clients. Each peer can act both as a server, answering queries, or as a client, requesting and executing search queries. In order for a client to bootstrap, a new peer connects to one of several known hosts that are almost always available. These peers can be found on http://gnutellahosts.com. Once the peer has joined, there are several messages a servant can send out:
@@ -260,9 +249,9 @@
 	\subsection{Freenet} % 2001
 		In Freenet, each data item is represented by a key that is independent of the location of the file. Freenet is called a loosely structured network because of this. To issue a query, the request is passed from client to client where each client makes a decision about the location to send the request next.
 		
-		There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key (SSK) which enables personal namespaces. This key contains a public key and a private key where the private key is used to store the data and the public key is used in the queries of the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.
+		There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key (SSK) which enables personal namespaces. This key contains a public and a private key. The private key is used to store the data and the public key is used in the queries for the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.
 		
-		The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response. To prevent looping of the requests, each request contains a random identifier. The peers the request travels through, keep track of these identifiers and rejects the request if the request has already been answered by the peer.
+		The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response. To prevent looping of the requests, each request contains a random identifier. The peers that the request travels through, keep track of these identifiers and rejects the request if the request has already been answered by the peer.
 		
 	\subsection{Tapestry} % 2001
 		Tapestry is based on the Plaxton mesh data structure, which maintains pointers to node in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality.
@@ -272,7 +261,7 @@
 		Tapestry is a fundamental component of OceanStore, a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
 
 	\subsection{Pastry} % 2001
-		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Pastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about log(n) steps.
+		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Pastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about $\log(n)$ steps.
 
 		The Pastry overlay network is used in several applications, such as Scribe, Squirrel and PAST. Scribe is an system that has been built to send multicast messages. Instead of relying on the multicast infrastructure, multicast messages are sent using only unicast services. Pastry is used to create and manage multicast groups. Scribe makes use of the organization, robustness and reliability of the Pastry network.
 
@@ -281,9 +270,9 @@
 		PAST is a large scale persistent peer-to-peer network that has been designed to store files. It is built upon the Pastry network and the main focus of PAST is providing performance, scalability and security.
 			
 	\subsection{MorphMix} % 2002
-		MorphMix \cite{rennhard2002introducing} functions similar to both Tor and MIX networks. It relies on nested encryption and routing traffic over multiple nodes to ensure anonymity of its users' communication. Additionally MorphMix uses the typical behavior of a MIX network, where it reorders messages that enter a node before sending them out.
+		MorphMix \cite{rennhard2002introducing} functions similar to both Tor and MIX networks. It relies on nested encryption and routing traffic over multiple nodes to ensure anonymity of its users' communication. Additionally, MorphMix uses the typical behavior of a MIX network, where it reorders messages that enter a node before sending them out.
 		
-		MIX networks are typically high latency networks and traffic in it moves slow. Messages will have to be stored on a node until enough messages have arrived to start sending them out in a random order. Often times cover traffic is used to generate enough messages for the network to obfuscate the real communication, which in turn generates a lot of bandwidth overhead. MorphMix has been developed as a low latency and high performance network. As such, it will not hold messages for very long, nor will it use cover traffic.
+		MIX networks are typically high latency and traffic in it moves slow. Messages will have to be stored on a node until enough messages have arrived to start sending them out in a random order. Often, cover traffic is used to generate enough messages for the network to obfuscate the real communication, which in turn generates a lot of bandwidth overhead. MorphMix has been developed as a low latency and high performance network. As such, it will not hold messages for very long, nor will it use cover traffic.
 		
 		In contrast to Tor, MorphMix does not feature a centralized node discovery mechanism. Instead, every node is free to chose a set of next nodes that will be the continuation of an anonymous tunnel. A malicious node could select a colluding node to continue the tunnel and therefore control the entire tunnel. To prevent this, a witness node is appointed to mediate the setup of an anonymous tunnel. Although this makes the possibility of such an attack more difficult, it doesn't make it impossible.
 		
@@ -297,7 +286,7 @@
 		Once Tarzan has knowledge of enough nodes, it achieves its anonymity with much like a Chaumian mix, with layered encryption and routing through multiple hops. In contrast to Tor and other networks, Tarzan uses cover traffic to provide protection against traffic analysis by a global advisory to find an initiator.
 		
 	\subsection{Tribler} % 2008
-		Tribler is a social-based peer-to-peer file sharing system based on the BiTtorrent protocol. \cite{pouwelse2008tribler}. Tribler considers social phenomena and the sense of community as important parts of file sharing. Although the system is completely decentralized, it does not yet provide its users with anonymity. However, this is something that is currently undergoing research.
+		Tribler is a social-based peer-to-peer file sharing system based on the BitTorrent protocol. \cite{pouwelse2008tribler}. Tribler considers social phenomena and the sense of community as important parts of file sharing. Although the system is completely decentralized, it does not yet provide its users with anonymity. However, this is something that is currently undergoing research.
 		
 		Tribler introduces a novel protocol called BuddyCast. Peer and content discovery use this protocol, which disseminates information epidemically. Additionally, the protocol allows users to find taste buddies, which are peers that share similar interests in files. This enables quick finding of content that a user is interested in and builds on the idea of social phenomena.
 		
@@ -323,8 +312,6 @@
 \section{Comparison existing decentralized networks}
 	\label{sec:comparison}
 	
-	\include{table}
-	
 	In the last section, we discussed existing decentralized peer-to-peer networks. In this section we will make a comparison between these networks. For each network, we will explain the following features:
 
 	\begin{itemize}
@@ -335,14 +322,20 @@
 		\item{Anonymity:} Does the network hide the identities of the sender and/or receiver?
 	\end{itemize}
 	
-	As a contribution to (anonymous) decentralized system research, we have improved and updated the list of anonymous systems (available at https://github.com/redecentralize/alternative-internet). For each of the listed systems, we have created an entry in a table that shows the total lines of code (LOC), activity, amount of contributors, tags, (main) programming language, amount of commits, etc. This table is available on the same Github page. We hope that his will provide more insight into which systems are more serious and mature than others, while also showing which one are still actively maintained. This Github project, including the table, is publicly available.
+	As a contribution to (anonymous) decentralized system research, we have improved and updated the list of these systems maintained by redecentralize.org\footnote{Found at https://github.com/redecentralize/alternative-internet}. For each of the listed systems, we have created an entry in a table that shows statistics such as the total lines of code (LOC), activity, amount of contributors, (main) programming language and amount of commits, sourced from Ohloh. This table is available on the same Github repository. We hope that his will provide more insight into which systems are more serious and mature than others, while also showing which one are still actively maintained. This Github repository, including the table, is publicly available.
+
+	\begin{landscape}
+		\begin{table}[p]
+			\include{table}
+		\end{table}
+	\end{landscape}
 
 \section{Conclusion}
 	\label{sec:conclusion}
 		
-	In this technical report we introduced Tor and explained how Tor works and which components define a Tor network. Furthermore, we looked at the main disadvantages and problems Tor is currently facing. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. The next section shows which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.
+	In this technical report we explained how Tor works and which components define a Tor network. Furthermore, we looked at the main disadvantages and problems Tor is currently facing. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. After that, we've written which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.
 		
-	From this table, we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, there is not a system yet that can compete with Tor. The systems that do exist such as Tarzan, Torsk and Gnutella are getting things right, yet they often lack functionality such as anonymity, good routing performance or are vulnerable for a variety of attacks.
+	From this table, we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While there is a lot of research on decentralized systems, there is no system yet that can compete with Tor. The systems that do exist such as Tarzan, Torsk and Gnutella are getting some things right, yet they often lack functionality such as anonymity, good routing performance or are vulnerable for a variety of attacks.
 		
 	While Tor also still has a lot to improve on, further research and development is needed to improve the current decentralized systems and develop a decentralized system that matches Tor's current standards.
 
