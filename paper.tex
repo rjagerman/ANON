@@ -264,7 +264,7 @@
 		Tapestry is a fundamental component of OceanStore, a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
 
 	\subsection{Pastry} % 2001
-		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Pastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about log(n) steps.
+		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Pastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about $\log(n)$ steps.
 
 		The Pastry overlay network is used in several applications, such as Scribe, Squirrel and PAST. Scribe is an system that has been built to send multicast messages. Instead of relying on the multicast infrastructure, multicast messages are sent using only unicast services. Pastry is used to create and manage multicast groups. Scribe makes use of the organization, robustness and reliability of the Pastry network.
 
