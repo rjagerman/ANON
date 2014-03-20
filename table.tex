@@ -1,9 +1,9 @@
 \begin{landscape}
 
 \begin{center}
-    \begin{longtable}{ | p{1.9cm} | p{0.8cm} | p{1.6cm} | p{2.2cm} | p{2.2cm} | p{2.2cm} | p{2.0cm} | p{2cm} | p{2cm} | }
+    \begin{longtable}{ | p{1.9cm} | p{0.8cm} | p{1.6cm} | p{2.2cm} | p{2.2cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} | p{2cm} | }
   		\caption{A comparison of decentralized peer-to-peer overlay networks} \\ \hline
-	    \textbf{Name} & \textbf{Year} & \textbf{Tor interoperability} & \textbf{Public implementation} & \textbf{Used in practice} & \textbf{DDoS attack possible} & \textbf{Sybil Attack possible} & \textbf{Man-in-the-middle attack possible} & \textbf{Provides anonymity} \\ \hline
+	    \textbf{Name} & \textbf{Year} & \textbf{Tor interoperability} & \textbf{Public implementation} & \textbf{Used in practice} & \textbf{Secure against DDoS attack} & \textbf{Secure against Sybil Attack} & \textbf{Secure against man-in-the-middle attack} & \textbf{Provides anonymity} \\ \hline
 		\endfirsthead
 		\multicolumn{7}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\ \hline
 	    \textbf{Name} & \textbf{Year} & \textbf{Tor interoperability} & \textbf{Public implementation} & \textbf{Used in practice} & \textbf{Attack resistance} & \textbf{Provides anonymity} \\ \hline
@@ -13,18 +13,18 @@
 		\hline
 		\endlastfoot
 	    
-		Gnutella & ~2000 & & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \\ \hline
-		Freenet & 2001 & & \checkmark & \checkmark & & \checkmark & \checkmark & \checkmark\\ \hline
-		Tapestry & 2001 & & \checkmark & \checkmark & & \checkmark & \checkmark & \\ \hline
-		Pastry & 2001 & & \checkmark & \checkmark & & \checkmark & \checkmark & \\ \hline
-		Anonymizing peer-to-peer proxy (AP3) & 2004 & & & & ? & ? & ? & \checkmark\\ \hline
-		Tarzan & 2002 & & & & ? & ? & ? & \checkmark\\ \hline
-		MorphMix & 2002 & & \checkmark & ? & ? & ? & ? & \checkmark \\ \hline
-		I2P & 2003 & & \checkmark & \checkmark & ? & ? & ? & \checkmark\\ \hline
-		Salsa & 2006 & & ? & ? & ? & ? & ? & ?\\ \hline
-		Tribler & 2008 & & \checkmark & \checkmark & ? & ? & ? &\\ \hline
-		Torks & 2009 & \checkmark & & & ? & ? & ? & \checkmark\\ \hline
-		NISAN & 2009 & & & & ? & ? & ? & \checkmark\\ \hline
+		Gnutella & 2000 & x & \checkmark & \checkmark & x & x & x & x \\ \hline
+		Freenet & 2001 & x & \checkmark & \checkmark & \checkmark & x & x & \checkmark\\ \hline
+		Tapestry & 2001 & x & \checkmark & \checkmark & \checkmark & x & x & x \\ \hline
+		Pastry & 2001 & x & \checkmark & \checkmark & \checkmark & x & x & x \\ \hline
+		Anonymizing peer-to-peer proxy (AP3) & 2004 & x & x & x & ? & ? & ? & \checkmark\\ \hline
+		Tarzan & 2002 & x & x & x & ? & ? & ? & \checkmark\\ \hline
+		MorphMix & 2002 & x & \checkmark & ? & ? & ? & ? & \checkmark \\ \hline
+		I2P & 2003 & x & \checkmark & \checkmark & ? & ? & ? & \checkmark\\ \hline
+		Salsa & 2006 & x & ? & ? & ? & ? & ? & ?\\ \hline
+		Tribler & 2008 & x & \checkmark & \checkmark & ? & ? & ? & x\\ \hline
+		Torks & 2009 & \checkmark & x & x & ? & ? & ? & \checkmark\\ \hline
+		NISAN & 2009 & x & x & x & ? & ? & ? & \checkmark\\ \hline
     \end{longtable}
 \end{center}
 
