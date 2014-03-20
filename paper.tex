@@ -194,9 +194,9 @@
 		A fully distributed network that implements such a solution is the Bitcoin network \cite{nakamoto2008bitcoin}, in which computing power, and not the number of nodes is important for the general network consensus.
 				
 	\subsection{Replay Attacks}
-		A replay attack \cite{pries2008new} happens when a malicious entry node duplicates cells and send them again. Since Tor uses uses the counter mode of Advanced Encryption Standard (AES-CTR) for encryption and decryption, the counter will be wrong when the duplicated package arrives causing the connection to be torn down.
-			
-		Using this, an accomplice exit router can therefore in cooperation with the entry node discover the sender and receiver's relationship. On top of that, this attack can also be used as a denial of service attack. This attack is according to the authors quite challenging to solve and does require some further research.
+		A replay attack \cite{pries2008new} happens when a malicious entry node duplicates cells and send them again. Since Tor uses the counter mode of Advanced Encryption Standard (AES-CTR) for encryption and decryption, the counter will be wrong when the duplicated package arrives causing the circuit to be destroyed.
+
+		Using this, an accomplice exit router can therefore, in cooperation with the entry node, discover the sender and receiver's relationship. On top of that, this attack can also be used as a denial of service attack. According to Pries et al., defending against this attack is quite challenging to solve and requires some further research.
 
 \section{Problems with decentralizing}
 	\label{sec:problems}
