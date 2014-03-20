@@ -161,9 +161,9 @@
 		
 		Another problem is that the Tor clients are not optimal at handling latency and connection failures. For example, if extending a circuit fails, the entire circuit is abandoned. An improvement would be to first try to extend the circuit to some other places. If that fails, the circuit could be abandoned. Also, a better timeout mechanism could be chosen for building circuits.		
 		
-		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header with 6.3\%.
+		Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header by 6.3\%.
 		
-		As we saw, the directory service generates overhead on the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor \cite{wang2012octopus, alsabah2013pctcp} (WHICH CITES CAN BE ADDED HERE? A LOT ARE MORE SUITEABLE FOR THE CURRENT DECENTRALIZED SYSTEM SECTION) but so far, no anonymous, well-performing decentralized network has come up. This is due to the fact that there are many problems decentralization brings along with.
+		As we saw, the directory service generates overhead on the network. If we could replace this central authority, we could reduce the overhead of the network and improve the performance. This means, we would like to have Tor decentralized. Many research has been done already on the decentralization of Tor \cite{wang2012octopus, alsabah2013pctcp} (WHICH CITES CAN BE ADDED HERE? A LOT ARE MORE SUITEABLE FOR THE CURRENT DECENTRALIZED SYSTEM SECTION) but so far, no anonymous, well-performing decentralized network has come up. This due to the many extra problems decentralization brings along with.
 		
 \section{Tor vulnerabilities and attacks}
 	\label{sec:attacks}
