@@ -152,14 +152,19 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
                                  ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
                                  ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
 
+    table_columns_default_reverse = ['updated_at', 'total_code_lines', 'total_commit_count', 'total_contributor_count']
+
     projects = get_projects(directory)
     logging.info('Loaded %s projects' % len(projects))
 
     if generate_all:
         for key in table_columns.keys():
-            write_output(projects=projects, table_columns=table_columns, output='TABLE_%s.md' % table_columns[key].upper().replace(' ', '_'), sort_on=key, sort_reverse=(not (key == 'name' or key == 'main_language')), add_links=add_links)
+            write_output(projects=projects, table_columns=table_columns,
+                         output='TABLE_%s.md' % table_columns[key].upper().replace(' ', '_'), sort_on=key,
+                         sort_reverse=(key in table_columns_default_reverse), add_links=add_links)
     else:
-        write_output(projects=projects, table_columns=table_columns, output=output, sort_on=sort_on, sort_reverse=sort_reverse, add_links=add_links)
+        write_output(projects=projects, table_columns=table_columns, output=output, sort_on=sort_on,
+                     sort_reverse=sort_reverse, add_links=add_links)
 
 
 def main():
