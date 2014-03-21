@@ -93,8 +93,8 @@ def get_markdown_table_entry_format_timedelta(td):
 def get_markdown_table_entry(columns, project, add_links):
     format_functions = {'name': lambda s, l: get_markdown_table_entry_format_name(s) if l else s,
                         'updated_at': lambda s, l: datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d'),
-                        'total_contributor_count': lambda s, l: '%s contributor(s)' % s,
-                        'total_commit_count': lambda s, l: '%s commit(s)' % s,
+                        'total_contributor_count': lambda s, l: '{:,} contributor(s)'.format(int(s)),
+                        'total_commit_count': lambda s, l: '{:,} commit(s)'.format(int(s)),
                         'total_code_lines': lambda s, l: '<{:,} K'.format(1) if (int(s) / 1000) <= 1 else '{:,} K'.format(int(s) / 1000),
                         'min_month': lambda s, l: '%s' % get_markdown_table_entry_format_timedelta(datetime.utcnow() - datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ'))}
 
