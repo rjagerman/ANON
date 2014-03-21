@@ -93,7 +93,7 @@ def get_markdown_table_entry(columns, project, add_links):
         try:
             entry.append(format_functions[key](project[key], add_links))
         except:
-            entry.append(project[key] if key in project.keys() and not project[key] is None else 'unknown')
+            entry.append(project[key] if key in project.keys() and not project[key] is None else '-')
 
     return '%s%s%s\n' % ('| ', ' | '.join(entry), ' |')
 
