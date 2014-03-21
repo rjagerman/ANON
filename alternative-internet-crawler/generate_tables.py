@@ -81,12 +81,22 @@ def get_markdown_table_entry_format_name(entry):
     return '[%s](README.md#%s)' % (entry, project_anchor)
 
 
+def get_markdown_table_entry_format_timedelta(td):
+    sday = 60 * 60 * 24  # one day
+    if td.total_seconds() < sday * 30:  # ~one month
+        return '<1 month'
+    elif td.total_seconds() < sday * 356:  # ~one year
+        return '%s month(s)' % int(td.total_seconds() / (sday * 30))
+    else:
+        return '%s year(s)' % int(td.total_seconds() / (sday * 356))
+
 def get_markdown_table_entry(columns, project, add_links):
     format_functions = {'name': lambda s, l: get_markdown_table_entry_format_name(s) if l else s,
                         'updated_at': lambda s, l: datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ').strftime('%Y-%m-%d'),
                         'total_contributor_count': lambda s, l: '%s contributor(s)' % s,
                         'total_commit_count': lambda s, l: '%s commit(s)' % s,
-                        'total_code_lines': lambda s, l: '<{:,} K'.format(1) if (int(s) / 1000) <= 1 else '{:,} K'.format(int(s) / 1000)}
+                        'total_code_lines': lambda s, l: '<{:,} K'.format(1) if (int(s) / 1000) <= 1 else '{:,} K'.format(int(s) / 1000),
+                        'min_month': lambda s, l: '%s' % get_markdown_table_entry_format_timedelta(datetime.utcnow() - datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ'))}
 
     entry = []
     for key in columns.keys():
@@ -138,9 +148,9 @@ def write_output(projects, table_columns, output='readme.md', sort_on='name', so
 
 
 def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False, generate_all=False):
-    table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('updated_at', 'Last activity'),
-                                 ('total_code_lines', 'LOC'), ('total_commit_count', 'Commits'),
-                                 ('total_contributor_count', 'Contributors')])
+    table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('min_month', 'Age'),
+                                 ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
+                                 ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
 
     projects = get_projects(directory)
     logging.info('Loaded %s projects' % len(projects))
