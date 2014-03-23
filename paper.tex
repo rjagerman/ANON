@@ -141,25 +141,29 @@
 
 		While Tor offers its users a high level of anonymity, there are some disadvantages using it. According to Dingledine et al \cite{dingledine2009performance}, there are six reasons why Tor is not optimal. In this section, we will summarize these reasons and explain what could be done to fix them.
 		
-		\subsubsection{Congestion control}
-			Tor's congestion control does not work well. The network has some problems handling bulk transfers, such as downloading large files or streaming high-quality videos. The congestion control could be improved by using an unreliable protocol for links between Tor relays. Goldberg et al. \cite{alsabah2013pctcp} have proposed PCTCP which could improve the response time of the Tor network by 60\% and the download time of files by 30\%.	
+		\begin{itemize}
 		
-		\subsubsection{Bandwidth intensive applications}
+			\item
+				Tor's congestion control does not work well. The network has some problems handling bulk transfers, such as downloading large files or streaming high-quality videos. The congestion control could be improved by using an unreliable protocol for links between Tor relays. Goldberg et al. \cite{alsabah2013pctcp} have proposed PCTCP which could improve the response time of the Tor network by 60\% and the download time of files by 30\%.	
+		
+			\item
 			Some Tor users put more traffic on the network than they contribute by running a Onion Router. This means that these users are slowing the network down as they use more traffic than giving back. A possible solution for this is to throttle certain high-bandwidth protocols such as BitTorrent at exit nodes or at Onion Proxies.
 		
-		\subsubsection{Traffic capacity and contribution}
-			The Tor network doesn't have the capacity to handle all the users that want privacy on the Internet. According to the Tor Metrics project \cite{tormetricsprojectwebsite}, it takes about 6 seconds to download 1 MiB of data. By increasing the amount of Onion Routing in the Tor network, the capacity is increased. Incentives such as LIRA \cite{jansen13lira} could make more users run an Onion Router, thus increasing the capacity of the network and making it faster.	
+			\item
+				The Tor network doesn't have the capacity to handle all the users that want privacy on the Internet. According to the Tor Metrics project \cite{tormetricsprojectwebsite}, it takes about 6 seconds to download 1 MiB of data. By increasing the amount of Onion Routing in the Tor network, the capacity is increased. Incentives such as LIRA \cite{jansen13lira} could make more users run an Onion Router, thus increasing the capacity of the network and making it faster.	
 		
-		\subsubsection{Load balanced path selection}
-			The current path selection algorithm of Tor doesn't distribute the load evenly over the network. The problem is that the current selection strategy is optimal when the network is fully loaded. This is not always the case. Using a better path selection algorithm could increase the capacity of the network and the overall user experience.		
+			\item
+				The current path selection algorithm of Tor doesn't distribute the load evenly over the network. The problem is that the current selection strategy is optimal when the network is fully loaded. This is not always the case. Using a better path selection algorithm could increase the capacity of the network and the overall user experience.		
 		
-		\subsubsection{Latency and connection failure handling}
-			Tor clients are not optimal at handling latency and connection failures. For example, if extending a circuit fails, the entire circuit is abandoned. An improvement would be to first try to extend the circuit to some other places. If that fails, the circuit could be abandoned. Also, a better timeout mechanism could be chosen for building circuits.		
+			\item
+				Tor clients are not optimal at handling latency and connection failures. For example, if extending a circuit fails, the entire circuit is abandoned. An improvement would be to first try to extend the circuit to some other places. If that fails, the circuit could be abandoned. Also, a better timeout mechanism could be chosen for building circuits.		
 		
-		\subsubsection{Directory information overhead}
-			Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header by 6.3\%.
+			\item
+				Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header by 6.3\%.
 
 			The directory service generates overhead on the network. Replacing this central authority with a decentralized component, could reduce the overhead of the network and improve performance. Furthermore, it would alleviate a security concern. A malicious adversary could gain control of the directory server and force a connection through a set of colluding nodes. In a decentralized environment such an attack would be much more difficult. In conclusion, this means that we would like to see Tor decentralized. Although much research has been done on the decentralization of Tor, it still uses centralized components today.
+			
+		\end{itemize}
 
 		\subsection{Tor stinks}
 			The anonymous communication with Tor can also be used for distribution illegal content or setting up illegal services. Illegal content and services is a serious problem Tor is facing. A recent example is the shutdown of \emph{Silk Road}, an online market for trading drugs. This market operated as a hidden Tor service. These hidden services are accessed through their onion address and not through their IP-address, hiding the physical location of the service. This makes it very hard for agencies to track and shut down these operations.
@@ -339,7 +343,7 @@
 \section{Conclusion}
 	\label{sec:conclusion}
 		
-	We explained how Tor works and which components define a Tor network. Furthermore, we looked at the main disadvantages and problems Tor is currently facing. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. After that, we've written which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.
+	We explained how the leading privacy enhancing technology Tor works and which components define a Tor network. Furthermore, we looked at the main disadvantages and problems Tor is currently facing. We then made a bridge to decentralized systems. We first explained which problems one might face when decentralizing a system such as Tor. After that, we've written which systems currently have a decentralized structure and/or mechanism. These systems are then compared to each other with their pros and cons.
 		
 	From table \ref{tbl:comparison}, we come to the conclusion that there is no complete decentralized system that provides the full functionality and security that Tor offers today. While a lot of research has been done on decentralized systems, there is no system yet that can compete with Tor. Decentralized systems that do exist such as Tarzan, I2P, Torsk or Gnutella, show promising attempts to decentralize and anonymize the internet. Yet each of these systems either lacks in performance or is vulnerable to some type of attack.
 		
