@@ -194,7 +194,7 @@
 		Bauer et al. proposed several solutions in their paper. The first one is to actually verify the resources of the nodes by, for example, measuring the bandwidth and/or uptime of a node. Bandwidth can be checked centralized or decentralized: the disadvantage of a centralized bandwidth check is that it generates much overhead on the network. With distributed bandwidth verification, Tor routers monitor each other but this is not enough to detect selective malicious nodes. Another solution is to restrict the amount of routers that can be on a single IP-address. The last solution proposed is to change the routing strategy.	
 		
 	\subsection{Sybil attacks}
-		The Sybil attack is an attack where a single attacker represents itself as multiple nodes in a peer-to-peer system. Abusing this, the attacker is able to propagate false assumptions about the network to other nodes.
+		The Sybil attack is an attack where a single attacker represents itself as millions of nodes in a peer-to-peer system. Abusing this, the attacker is able to propagate false assumptions about the network to other nodes.
 		
 		First described by Douceur, he \cite{douceur2002sybil} mathematically proves that this attack is always possible without a central authority that certifies the participating nodes in one way or another. The exception to this rule is what he calls "extreme and unrealistic assumptions of resource parity and coordination among entities", or in other words: require all participants to do something expensive (in terms of resources) to identify themselves. This must be done within a small enough time frame, so that an attacker can't do this in sequence, but all nodes must do them in parallel.
 		
