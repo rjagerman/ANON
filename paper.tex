@@ -69,9 +69,9 @@
 
 
 \section{Introduction}
-	All feelings of privacy on telephones, mobile phones or the internet is an illusion. In recent years the need for privacy enhancing technology has become more apparent. Revealing government wrongdoings, such as in the case of WikiLeaks, or the ability to communicate freely in a censored environment are two major examples of why anonymous communication is important.
+	All feelings of privacy on the internet, telephones or mail is an illusion. In recent years the need for privacy enhancing technology has become more apparent. Revealing government wrongdoings, such as in the case of WikiLeaks, or the ability to communicate freely in a censored environment are two major examples of why anonymous communication is important.
 	
-	Although much research has been done on anonymous internet communication, only few systems have been actually implemented and are being used in practice. One of the most important factors that impact anonymity in a communication system is the number of users. A sufficiently large numbers of users are required for a system to make guarantees about its ability to protect the privacy of its users. This makes it difficult to introduce a new anonymous internet system, due to the initial lack of users. To support a large number of users, such a network has to be decentralized. A lack of decentralization would otherwise result in bottlenecks that places constraints on the number of users that can be active.
+	Although much research has been done on anonymous internet communication, only few systems have been actually implemented and only one is actively being used in practice. One of the most important factors that impact anonymity in a communication system is the number of users. A sufficiently large numbers of users is required for a system to make guarantees about its ability to protect the privacy of its users. This makes it difficult to introduce a new anonymous internet system, due to the initial lack of users. To support a large number of users, such a network has to be decentralized. A lack of decentralization would otherwise result in bottlenecks that place constraints on the number of users.
 	
 	The most widely used anonymous communication system is Tor. In this paper we will analyze Tor and its semi-centralized nature. Decentralizing Tor isn't an easy task: After 15 years of decentralization attempts, the network is still centralized. Only few decentralized alternatives to Tor exist, however they lack the userbase to be considered safe and useful. Examples include Gnutella \cite{ripeanu2001peer}, Freenet \cite{lua2005survey} and Tapestry.
 	
@@ -163,10 +163,10 @@
 		
 			\item
 				Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header by 6.3\%.
-
-			The directory service generates overhead on the network. Replacing this central authority with a decentralized component, could reduce the overhead of the network and improve performance. Furthermore, it would alleviate a security concern. A malicious adversary could gain control of the directory server and force a connection through a set of colluding nodes. In a decentralized environment such an attack would be much more difficult. In conclusion, this means that we would like to see Tor decentralized. Although much research has been done on the decentralization of Tor, it still uses centralized components today.
 			
 		\end{itemize}
+		
+		The directory service generates overhead on the network. Replacing this central authority with a decentralized component, could reduce the overhead of the network and improve performance. In conclusion, this means that we would like to see Tor decentralized. Although much research has been done on the decentralization of Tor, it still uses centralized components today.
 
 		\subsection{Tor stinks}
 			The anonymous communication with Tor can also be used for distribution illegal content or setting up illegal services. Illegal content and services is a serious problem Tor is facing. A recent example is the shutdown of \emph{Silk Road}, an online market for trading drugs. This market operated as a hidden Tor service. These hidden services are accessed through their onion address and not through their IP-address, hiding the physical location of the service. This makes it very hard for agencies to track and shut down these operations.
