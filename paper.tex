@@ -160,6 +160,11 @@
 			Much of the overhead of the network is in downloading the directory information. There is also overhead in the TLS connection between the nodes in the network. According to Dingledine et al, removing the empty TLS application record could reduce the overhead in the TCP/IP header by 6.3\%.
 
 			The directory service generates overhead on the network. Replacing this central authority with a decentralized component, could reduce the overhead of the network and improve performance. Furthermore, it would alleviate a security concern. A malicious adversary could gain control of the directory server and force a connection through a set of colluding nodes. In a decentralized environment such an attack would be much more difficult. In conclusion, this means that we would like to see Tor decentralized. Although much research has been done on the decentralization of Tor, it still uses centralized components today.
+
+		\subsection{The content on Tor}
+			The anonymous communication with Tor can also be used for distribution illegal content or setting up illegal services. Illegal content and services such as drugs trading or child pornography, is a serious problem Tor is facing. A recent example is the shutdown of \emph{Silk Road}, an online market for trading drugs. This market operated as a hidden Tor service. These hidden services are accessed through their onion address and not through their IP-address, hiding the physical location of the service. This makes it very hard for agencies to track and shut down these operations.
+
+			The illegal content travels unencrypted through a Tor exit node. Users running a Tor exit node, could be held responsible for distributing illegal content. A possible solution could be to filter the illegal content from the legal content. While content filtering is a viable solution, not many research has been done on it. It is also an open question whether filtering content is in line with the principles of Tor and the internet.
 		
 \section{Tor vulnerabilities and attacks}
 	\label{sec:attacks}
