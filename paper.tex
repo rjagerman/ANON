@@ -321,16 +321,32 @@
 		\item{Anonymity:} Does the network hide the identities of the sender and/or receiver?
 	\end{itemize}
 	
-	As a contribution to (anonymous) decentralized system research, we have improved and updated the list of these systems maintained by redecentralize.org\footnote{Found at https://github.com/redecentralize/alternative-internet}. For each of the listed systems, we have created an entry in a table that shows statistics such as the total lines of code (LOC), activity, amount of contributors, (main) programming language and amount of commits, sourced from Ohloh. This table is available on the same Github repository. We hope that his will provide more insight into which systems are more serious and mature than others, while also showing which one are still actively maintained. This Github repository, including the table, is publicly available.
+	\subsection{Alternative Internet Project}
+		Redecentralize.org is a project that describes itself with the aim to \textquoteleft start of a new information revolutions\textquoteright~by \textquoteleft bringing decentralized in the hands of billions\textquoteright~\cite{aboutredecentralizeorg}. One of the ways they do this, is by maintaining a Github repository\footnote{Found at https://github.com/redecentralize/alternative-internet} with projects that in some way help to decentralize the internet. This ranges from self hosted cloud applications, to crypto currencies, to anonymous networks.
+		
+		As a contribution to (anonymous) decentralized system research, we have improved and updated the list of these decentralized systems. For each of the listed systems, we have created an entry in a table that shows statistics such as the total lines of code (LOC), age, number of contributors and commits, activity and (main) programming language, sourced from Ohloh. This table is available on the same Github repository.
+		
+		An excerpt of the table is included as table \ref{tbl:altinternet}. In this instance, we chose to sort the table on the number of commits, because we found that this most accurately represented projects that have been established for some time and have been active in the past days. Other statistics such as LOC might not be very relevant on their own, because some projects include big libraries or other projects.
+		
+		In the table we notice that three of the entries are privacy enhancing networks that aim to provide unlinkability (Freenet, Tor, GNUnet), plus one that is currently in the process of implementing such a feature (Tribler). Furthermore we notice that, once above a certain threshold, none of the statistics have a clear effect on a projects popularity. For example, Freenet and Tor have similar statistics, while the number of Tor users \cite{tormetricsprojectwebsite} is several orders of magnitude higher than Freenet \cite{freenetstatistics}.
+		
+		So although clear differences aren't directly noticeable, we hope that his will provide more insight into which systems are more serious and mature than others, while also showing which one are still actively maintained.
 
-	\begin{landscape}
-		\begin{table}[p]
-			\centering
-			\include{tbl-currentsystems}
-			\caption{A comparison of decentralized peer-to-peer overlay networks}
-			\label{tbl:comparison}
-		\end{table}
-	\end{landscape}
+		\begin{landscape}
+			\begin{table}[p]
+				\centering
+				\include{tbl-currentsystems}
+				\caption{A comparison of decentralized peer-to-peer overlay networks}
+				\label{tbl:comparison}
+			\end{table}
+
+			\begin{table}[p]
+				\centering
+				\include{tbl-alternativeinternet}
+				\caption{A list with the top 10 projects from the Alternative Internet repository as of 2014-03-15, sorted on the number of commits.}
+				\label{tbl:altinternet}
+			\end{table}
+		\end{landscape}
 
 \section{Conclusion}
 	\label{sec:conclusion}
