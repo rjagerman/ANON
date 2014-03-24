@@ -71,7 +71,7 @@
 \section{Introduction}
 	All feelings of privacy on the internet or over telephones is an illusion. In recent years the need for privacy enhancing technology has become more apparent. Revealing government wrongdoings, such as in the case of WikiLeaks, or the ability to communicate freely in a censored environment are two major examples of why anonymous communication is important.
 	
-	Although much research has been done on anonymous internet communication, only few systems have been actually implemented and only one is actively being used in practice. One of the most important factors that impact anonymity in a communication system is the number of users. A sufficiently large numbers of users are required for a system to make guarantees about its ability to protect the privacy of its users. This makes it difficult to introduce a new anonymous internet system, due to the initial lack of users. To support a large number of users, such a network has to be decentralized. A lack of decentralization would otherwise result in bottlenecks that place constraints on the number of users.
+	Although much research has been done on anonymous internet communication, only few systems have been actually implemented and only one is actively being used in practice. One of the most important factors that impact anonymity in a communication system is the number of users. A sufficiently large number of users are required for a system to make guarantees about its ability to protect the privacy of its users. This makes it difficult to introduce a new anonymous internet system, due to the initial lack of users. To support a large number of users, such a network has to be decentralized. A lack of decentralization would otherwise result in bottlenecks that place constraints on the number of users.
 	
 	The most widely used anonymous communication system is Tor. In this paper we will analyze Tor and its semi-centralized nature. Tor struggles to keep up with the bandwidth demands of its users. As the number of users increases, the need to decentralize Tor becomes more urgent. Decentralizing Tor isn't an easy task: After 15 years of decentralization attempts, the network is still centralized. Only few decentralized alternatives to Tor exist, however they lack the userbase to be considered safe and useful. Examples include Gnutella \cite{ripeanu2001peer}, Freenet \cite{lua2005survey} and Tapestry.
 	
@@ -260,17 +260,17 @@
 		
 		There are three types of file keys in Freenet: the first one is called the Keyword-Signed Key (KSK) which is derived from a short description of the file. Another key is the Signed-Subspace key (SSK) which enables personal namespaces. This key contains a public and a private key. The private key is used to store the data and the public key is used in the queries for the file. The third type of key is the Content-Hash Key (CHK) which is used for updating and splitting of contents.
 		
-		The routing algorithm for storing and retrieving data is dynamically and can adjust to the topology of the network. Each peer has only knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traversal. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response. To prevent looping of the requests, each request contains a random identifier. The peers that the request travels through, keep track of these identifiers and rejects the request if the request has already been answered by the peer.
+		The routing algorithm for storing and retrieving data is dynamic and can adjust to the topology of the network. Each peer only has knowledge about his neighbours. Each request has a Hops-To-Live timer which indicates how many peers the request may traverse. Each peer decrements the timer by one and when the timer reaches zero, the request isn't forwarded any more. Results of queries are being cached in intermediate nodes to reduce the time for a query response. To prevent looping of the requests, each request contains a random identifier. The peers that the request travels through, keep track of these identifiers and rejects the request if the request has already been answered by the peer.
 		
 	\subsection{Tapestry} % 2001
 		Tapestry is based on the Plaxton mesh data structure, which maintains pointers to nodes in the network whose IDs match the elements of a tree-like structure of ID prefixes up to a digit position. A property of Tapestry is that it offers load distribution and routing locality.
 		
-		Like Gnutella, peers can take the role of a client, issuing requests and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
+		Like Gnutella, peers can take the role of a client, issuing requests, and the role of a server where objects are stored. A peer can also function as a router, which forwards an incoming message. The routing algorithm is based on the destination ID of the packet. Routers are using local routing maps to route messages to the destination ID digit by digit. The routing system ensures that each peer in the system can be found in a logarithmic amount of hops.
 		
 		Tapestry is a fundamental component of OceanStore, a decentralized storage system. Tapestry is also used in systems such as Bayeux and SpamWatch, a decentralized spam-filtering system.
 
 	\subsection{Pastry} % 2001
-		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Pastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniform sampled from the key space. Each node can be found in about $\log(n)$ steps.
+		Pastry is very similar to Tapestry, but there are some small differences. One of these differences is the handling of network locality and data object replication. Pastry also uses the Plaxton mesh data structure for the routing algorithm. Each peer in the network gets assigned a random 128-bit identifier that is uniformly sampled from the key space. Each node can be found in about $\log(n)$ steps.
 
 		The Pastry overlay network is used in several applications, such as Scribe, Squirrel and PAST. Scribe is a system that has been built to send multicast messages. Instead of relying on the multicast infrastructure, multicast messages are sent using only unicast services. Pastry is used to create and manage multicast groups. Scribe makes use of the organization, robustness and reliability of the Pastry network.
 
@@ -288,7 +288,7 @@
 		An important part of MorphMix is the ability to detect malicious tunnels. Tunnels that are set up by well behaving nodes will select the next nodes in the tunnel randomly. Malicious colluding nodes, however, will specifically select nodes that are part of the malicious network to continue the tunnel. This will reveal itself in the fact that the probability of the selection of certain nodes is increased. By using this information it becomes possible, to an extent, to detect malicious tunnels.
 		
 	\subsection{Tarzan} % 2002
-		Tarzan \cite{freedman2002tarzan} is a fully distributed peer-to-peer anonymity network. It implements a network address translator (NAT) to bridge between nodes running Tarzan and the internet. This means that services don\'t have to be aware of the fact they are running through Tarzan.
+		Tarzan \cite{freedman2002tarzan} is a fully distributed peer-to-peer anonymity network. It implements a network address translator (NAT) to bridge between nodes running Tarzan and the internet. This means that services don't have to be aware of the fact they are running through Tarzan.
 		
 		Tarzan requires knowledge of a few existing nodes to bootstrap and uses a gossiping protocol to discover other nodes. Nambiar et al. showed however that this does not scale beyond roughly 10,000 nodes \cite{panchenko2009nisan, nambiar2006salsa}.
 		
@@ -302,7 +302,7 @@
 		Although not an anonymization network, Tribler does accomplish a lot on the topic of decentralization. The BuddyCast protocol uses BitTorrent infohashes to spread information completely decentralized throughout the network. With future work on anonymization, this can be a promising approach to anonymous file sharing.
 
 	\subsection{NISAN} % 2009
-		NISAN, or Network Information Service for Anonymization Networks \cite{panchenko2006nisan}, is an anonymization network which implements a distributed node discovery. Not only does a central node administrator (the Directory Server in Tor) imply trust in those servers, Panchenko et al. also argue that a central node administration (the Directory Server in Tor) does not scale, as the current directory server protocol was already improved two times to reduce bandwidth costs, with a fairly low amount of users.
+		NISAN, or Network Information Service for Anonymization Networks \cite{panchenko2006nisan}, is an anonymization network which implements a distributed node discovery. Not only does a central node administrator (the Directory Server in Tor) imply trust in those servers, Panchenko et al. also argue that a central node administration (the Directory Server in Tor) does not scale. The current directory server protocol was already improved two times to reduce bandwidth costs, with a fairly low amount of users.
 		
 		NISAN implements a DHT-based approach (Kademlia) for distributing node information, in such a way that does not require the client to know about all the nodes in the network (such as in Tor). To build a circuit, NISAN generates random IDs and searches for the closest hit throughout the network. This makes it possible to build a path with nodes picked in a random, uniform way among all nodes, without the trust of a third party.
 		
@@ -315,8 +315,8 @@
 		
 		The Myrmic DHT runs on top of Kademlia, and introduces the Neighbourhood Authority. This authority issues certificates to nodes that participate in the DHT, but it does not participate in the DHT itself. The NA makes this solution not a fully decentralized one, but its role is a lot smaller than the current Directory Servers. This does not solve the trust issue, but it does solve the scalability issue.
 		
-	\subsection{Other decentralized systems}
-		Some other decentralized peer-to-peer systems has been developed, focussing on anonymity. An example of such a system is AP3 (Anonymizing Peer-to-Peer Proxy) \cite{mislove2004ap3} which makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.
+	\subsection{AP3}
+		AP3 (Anonymizing Peer-to-Peer Proxy) \cite{mislove2004ap3} makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.
 
 \section{Comparison existing decentralized networks}
 	\label{sec:comparison}
@@ -328,7 +328,7 @@
 		\item{Public implementation:} For each network we will explain whether a public implementation is available.
 		\item{Used in practice:} Is the network used in practice?
 		\item{Attack resistance:} We will explain the various weaknesses and possible attacks of each network.
-		\item{Anonymity:} Does the network hide the identities of the sender and/or receiver?
+		\item{Unlinkability:} Does the network hide the identities of the sender and/or receiver?
 	\end{itemize}
 	
 	\subsection{Alternative Internet Project}
