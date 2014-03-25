@@ -47,7 +47,7 @@
 % Title of the paper
 \title{The fifteen year struggle of decentralizing privacy-enhancing technology}
 % Authors
-\author{Rolf Jagerman, Wendo Sab\'ee, Laurens Versluis, Martijn de Vos}
+\author{Rolf Jagerman, Wendo Sab\'ee, Laurens Versluis, Martijn de Vos\\ Supervised by Dr. Ir. Johan Pouwelse}
 \date{}
 
 \pagestyle{empty}
@@ -69,11 +69,11 @@
 
 
 \section{Introduction}
-	All feelings of privacy concerning browsing the internet, talking on the telephone or location tracking of cellphones are an illusion. In recent years the need for privacy-enhancing technology has become more apparent. Revelations by Edward Snowden of government misconduct and constitutional violations have sent shockwaves through the internet.
+	All feelings of privacy concerning browsing the internet, talking on the telephone or location tracking of cellphones are an illusion. In recent years the need for privacy-enhancing technology has become more apparent. Revelations by Edward Snowden of government misconduct and constitutional violations have sent shock waves through the internet.
 	
 	We failed to make an internet that is secure and private. Although much research has been done on anonymous internet communication, only few systems have been actually implemented and only one is actively being used. One of the most important factors that impact anonymity in a communication system is the number of users. A sufficiently large number of users are required for a system to make guarantees about its ability to protect the privacy of its users. This makes it difficult to introduce a new anonymous internet system, due to the initial lack of users. To support a large number of users, such a network has to be decentralized. A lack of decentralization would otherwise result in bottlenecks that place constraints on the number of users. Relying on server bandwidth donations has proven to be a difficult to sustain strategy.
 	
-	The most widely used anonymous communication system is Tor. In this paper we will analyze Tor and its semi-centralized nature. Tor struggles to keep up with the bandwidth demands of its users. As the number of users increases, the need to decentralize Tor becomes more urgent. Decentralizing Tor isn't an easy task: After 15 years of decentralization attempts, the network is still centralized. Only few decentralized alternatives to Tor exist, however they lack the userbase to be considered safe and useful. Examples include Gnutella \cite{ripeanu2001peer}, Freenet \cite{lua2005survey} and Tapestry.
+	The most widely used anonymous communication system is Tor. In this paper we will analyze Tor and its semi-centralized nature. Tor struggles to keep up with the bandwidth demands of its users. As the number of users increases, the need to decentralize Tor becomes more urgent. Decentralizing Tor isn't an easy task: After 15 years of decentralization attempts, the network is still centralized. Only few decentralized alternatives to Tor exist, however they lack the user base to be considered safe and useful. Examples include Gnutella \cite{ripeanu2001peer}, Freenet \cite{lua2005survey} and Tapestry.
 	
 	This technical report is structured as following: In section \ref{sec:tor} we will give an introduction and overview of Tor. Known vulnerabilities in Tor are discussed in section \ref{sec:attacks}. After that, we will talk about decentralization and its problems in section \ref{sec:problems}. The current state of decentralized internet systems is discussed in section \ref{sec:decentralized}. A comparison of existing decentralized networks is made in section \ref{sec:comparison}. Finally, we will conclude and discuss our findings in section \ref{sec:conclusion}.
 	
@@ -82,7 +82,7 @@
 	
 	The implementation of The Onion Router (Tor) was first described in 1996 by the U.S. Navy Research Laboratory, as a means to protect government communications from digital, as well as physical attacks, by hiding the location of the communicating party or parties \cite{goldschlag1996hiding}. The idea behind onion routing traces back to 1981, where Chaum described it in his famous paper "Untraceable electronic mail, return addresses, and digital pseudonyms" \cite{chaum1981untraceable}.
 	
-	In 2002, the Tor project discontinued their old code base and reimplement the project as Tor, the Second Generation Onion Router. They introduced perfect forward secrecy, directory servers, hidden services and more \cite{dingledine2004tor}. In this section, we will explain the various components of Tor, the structure of the network, circuit creation and disadvantages of Tor.
+	In 2002, the Tor project discontinued their old code base and re-implement the project as Tor, the Second Generation Onion Router. They introduced perfect forward secrecy, directory servers, hidden services and more \cite{dingledine2004tor}. In this section, we will explain the various components of Tor, the structure of the network, circuit creation and disadvantages of Tor.
 	
 	\begin{figure*}[!t]
 		\centering
@@ -92,9 +92,9 @@
 	\end{figure*}
 
 	\subsection{Onion routing}
-		As described in the original design paper of The Onion Router \cite{goldschlag1996hiding}, network traffic is forwarded through a circuit of nodes, where each node only knows the previous and next node in the circuit. With a sufficiently long circuit of (independent) nodes, this means that two communicating parties can remain oblivious of each other's physical location.
+		As described in the original design paper of The Onion Router \cite{goldschlag1996hiding}, network traffic is forwarded through a circuit of nodes, where each node only knows the previous and next node in the circuit. With a sufficiently long circuit of (independent) nodes, this means that two communicating parties can remain oblivious of each others physical location.
 		
-		Say we have a circuit consisting of four nodes: our trusted client node ($C$), an (entry or guard) relay node ($X$), a (middle) relay node ($Y$) and an (exit) relay node ($Z$). In this case, there are three relay nodes, but this is not necessarily always the case as more middle relay nodes can be added. A visualisation of this path can be seen in figure \ref{fig:tor_layout}. Each node has its own public key and a corresponding private key. When building the circuit, our client generates a distinct secret for each of these nodes. More information about the circuit setup, can be found in \ref{ss:tor_circuit}.
+		Say we have a circuit consisting of four nodes: our trusted client node ($C$), an (entry or guard) relay node ($X$), a (middle) relay node ($Y$) and an (exit) relay node ($Z$). In this case, there are three relay nodes, but this is not necessarily always the case as more middle relay nodes can be added. A visualization of this path can be seen in figure \ref{fig:tor_layout}. Each node has its own public key and a corresponding private key. When building the circuit, our client generates a distinct secret for each of these nodes. More information about the circuit setup, can be found in \ref{ss:tor_circuit}.
 		
 		The payload of each packet flowing through the circuit is first encrypted with the distinct secret for last node $Z$, then with the distinct secret for node $Y$, and last with the secret for node $X$. With each layer of encryption, a header is added with the address of the next node in the circuit, plus the used distinct secret encrypted with corresponding nodes public key. 
 		
@@ -168,10 +168,11 @@
 		The directory service generates overhead on the network. Replacing this central authority with a decentralized component, could reduce the overhead of the network and improve performance. In conclusion, this means that we would like to see Tor decentralized. Although much research has been done on the decentralization of Tor, it still uses centralized components today.
 
 		\subsection{Tor stinks?}
-			Tor is not only used by human rights activists. It is also used by distributors of illegal content and providers of illegal services, because it is deemed untraceable. This serious problem is disrupting Tor's public image. A recent example is the shutdown of \emph{Silk Road}, which is an online market for trading prohibited substances. The market operated as a hidden Tor service. These services are accessed through an onion address and not an IP-address, hiding the physical location of the service. This makes it very hard for agencies to track and shut down these operations.
+			Tor is not only used by human rights activists. It is also used by distributors of illegal content and providers of illegal services, because it is deemed untraceable. This serious problem is disrupting Tor's public image. A recent example is the shutdown of \emph{Silk Road}, which is an online market for trading prohibited substances, buying weapons of mass destruction and other illegal goods. The market operated as a hidden Tor service. These services are accessed through an onion address and not an IP-address, hiding the physical location of the service. This makes it very hard for agencies to track and shut down these operations.
 			% Meer voorbeelden:
 			% - international business times -> silk road (zie wikipedia)
 			% - weapons of mass destruction (?)
+			% Is de zin nu zo goed? Ik heb wat voorbeelden erbij gezet
 
 			A recent research on the content and popularity of Tor's hidden services \cite{biryukov2013content} has shown that although there are Tor hidden services that distribute illegal content, many hidden services are resources devoted to human rights, freedom of speech and information which is prohibited in some countries. It is not clear which type of service is more popular on Tor.
 
@@ -216,7 +217,7 @@
 	Decentralization is a difficult research problem. A trusted central authority simplifies bootstrapping, key management and user reputation. If one of these authorities were taken control of, anonymity would be compromised. When decentralizing a central authority, its functionality needs to be dispersed across the peers in the network. In this section we will explain the various problems involving Tor decentralization.
 	
 	\subsection{Incentives in decentralized systems}
-		Tax evasion and environmental pollusion can be seen as forms of free-riding, a phenomenon that is prominent in Tor. People predominantly use more Tor bandwidth than they donate, see section \ref{ss:tor_disadvantages}. There are multiple proposals \cite{dingledine2010building, jansen13lira} to introduce incentives into Tor, all have failed. If one would also have to build an incentive system into a decentralized system, they would have to find a way to manage the ratings of each client in the network, in such a way that they cannot be falsely modified. In other words, the reputation data has to be accurate and reliable. Besides the integrity of this data, the traffic it generates on the network should have minimal impact on the overall performance.
+		Tax evasion and environmental pollution can be seen as forms of free-riding, a phenomenon that is prominent in Tor. People predominantly use more Tor bandwidth than they donate, see section \ref{ss:tor_disadvantages}. There are multiple proposals \cite{dingledine2010building, jansen13lira} to introduce incentives into Tor, all have failed. If one would also have to build an incentive system into a decentralized system, they would have to find a way to manage the ratings of each client in the network, in such a way that they cannot be falsely modified. In other words, the reputation data has to be accurate and reliable. Besides the integrity of this data, the traffic it generates on the network should have minimal impact on the overall performance.
 		
 		Rahman \cite{rahman2009survey} proposes several options to build incentives in a peer-to-peer network. The first proposal that is described is the so called \emph{Warm-glow Model}. This model determines the percentage of free-rides based on the probabilistic population distribution. If the percentage is above a certain threshold, the system will show signs of diminishing marginal returns.
 		
@@ -233,9 +234,9 @@
 
 
 	\subsection{Bootstrapping new nodes}
-		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be a starting point where this new node can discover neighbors in the network to connect with. In Tor, a directory server can tell the new node what his neighbors are and where to find them \cite{dingledine2004tor}.
+		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be a starting point where this new node can discover neighbours in the network to connect with. In Tor, a directory server can tell the new node what his neighbours are and where to find them \cite{dingledine2004tor}.
 		
-		Moving this system to a peer-to-peer base is difficult: Dingledine et al. stated that this is indeed still an open problem. With decentralized systems, there is no central directory server to tell a new node where to locate neighbors. Some systems such as Tarzan, MorphMix and Pastry \cite{rowstron2001pastry, rennhard2002introducing} are decentralized but they do suffer from performance issues.
+		Moving this system to a peer-to-peer base is difficult: Dingledine et al. stated that this is indeed still an open problem. With decentralized systems, there is no central directory server to tell a new node where to locate neighbours. Some systems such as Tarzan, MorphMix and Pastry \cite{rowstron2001pastry, rennhard2002introducing} are decentralized but they do suffer from performance issues.
 
 	\subsection{Key exchange}
 		With a decentralized network, using a centralized authority for managing the keys is not possible. This means that for secure communication, peers have to exchange the keys directly with each other, without a trusted party between them. Diffie-Hellman is a very popular algorithm for exchanging keys between two parties. It is used in the circuit creation in Onion Routing (see section \ref{ss:tor_circuit}) for example. However, it is possible for an adversary to manipulate the keys send between two parties, making the protocol vulnerable to a man-in-the-middle attack. This weakness makes it possible for an adversary to decrypt all messages sent between the two parties.
@@ -244,7 +245,7 @@
 
 \section{Decentralized privacy-enhancing systems}
 	\label{sec:decentralized}
-	Fully decentralized systems with large scale usage are without exception based on the peer-to-peer paradigm. Many such systems have been proposed, yet only some have been implemented and are currently in use and actively maintained \cite{mislove2004ap3, rennhard2002introducing, panchenko2006nisan, rowstron2001pastry, nambiar2006salsa, freedman2002tarzan, ripeanu2001peer, androutsellis2004survey}. Here we focus on fully decentralized networks with the exception of Torsk (which is almost fully decentralized but still requires a Neighbourhood Authority).
+	Fully decentralized systems with large scale usage are without exception based on the peer-to-peer paradigm. Many such systems have been proposed, yet only some have been implemented and are currently in use and actively maintained \cite{mislove2004ap3, rennhard2002introducing, panchenko2006nisan, rowstron2001pastry, nambiar2006salsa, freedman2002tarzan, ripeanu2001peer, androutsellis2004survey}. Here we focus on fully decentralized networks with the exception of Torsk (which is almost fully decentralized but still requires a Neighborhood Authority).
 
 	\subsection{Gnutella} % ~2000
 		Gnutella is a decentralized peer-to-peer network used for distributed search of files. Since the network is fully decentralized, peers in the network are called \emph{servents}, a combination of the words servers and clients. Each peer can act both as a server, answering queries, or as a client, requesting and executing search queries. In order for a client to bootstrap, a new peer connects to one of several known hosts that are almost always available \footnote{These peers can be found on http://gnutellahosts.com.}. Once the peer has joined, there are several messages a servent can send out:
@@ -289,6 +290,9 @@
 		
 		An important part of MorphMix is the ability to detect malicious tunnels. Tunnels that are set up by well behaving nodes will select the next nodes in the tunnel randomly. Malicious colluding nodes, however, will specifically select nodes that are part of the malicious network to continue the tunnel. This will reveal itself in the fact that the probability of the selection of certain nodes is increased. By using this information it becomes possible, to an extent, to detect malicious tunnels.
 		
+			\subsection{AP3} %2004
+		AP3 (Anonymizing Peer-to-Peer Proxy) \cite{mislove2004ap3} makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.
+		
 	\subsection{Tarzan} % 2002
 		Tarzan \cite{freedman2002tarzan} is a fully distributed peer-to-peer anonymity network. It implements a network address translator (NAT) to bridge between nodes running Tarzan and the internet. This means that services don't have to be aware of the fact they are running through Tarzan.
 		
@@ -317,11 +321,9 @@
 		Instead of the Directory Servers, it uses a DHT and a new Neighbourhood Authority. The DHT is a combination of Kademlia DHT and Myrmic DHT. Kademlia DHT was chosen because it is already widely used and it has proven itself for a large number of users.
 		
 		The Myrmic DHT runs on top of Kademlia, and introduces the Neighbourhood Authority. This authority issues certificates to nodes that participate in the DHT, but it does not participate in the DHT itself. The NA makes this solution not a fully decentralized one, but its role is a lot smaller than the current Directory Servers. This does not solve the trust issue, but it does solve the scalability issue.
-		
-	\subsection{AP3}
-		AP3 (Anonymizing Peer-to-Peer Proxy) \cite{mislove2004ap3} makes cooperative, decentralized anonymous communication possible. The AP3 system provides clients with three primitives: anonymous message delivery, anonymous channels and secure pseudonyms. Users are able to send and receive unicast, multicast and anycast messages anonymously. The strategy that AP3 is using for message delivery is similar to that of Tarzan: it relies on a network of peers to forward messages. A node along the request path, does not know whether the node from which it receives a message is the message's originator or simply another forwarding peer.
 
-	In this section, we discussed existing decentralized peer-to-peer networks. In this section we will make a comparison between these networks, as seen in table \ref{tbl:comparison}. For each network, we will explain the following features:
+	\subsection{Comparison}
+	In this subsection we will make a comparison between these networks, as seen in table \ref{tbl:comparison}. For each network, we will explain the following features:
 
 	\begin{itemize}
 		\item{Compatibility with Tor:} If the network is compatible with Tor, the network or some features of the network could be used for the decentralization of Tor.
@@ -331,9 +333,24 @@
 		\item{Unlinkability:} Does the network hide the identities of the sender and/or receiver?
 	\end{itemize}
 	
+	\begin{landscape}
+
+	% Zelfde volgorde als hoofdstukken
+	% Deze bij hoofdstuk 5 plaatsen!!!
+	% Enkel de rijen met stukjes in tekst (I2P? Salsa?)
+	\begin{table}[p]
+		\centering
+		\include{tbl-currentsystems}
+		\caption{A comparison of decentralized peer-to-peer overlay networks}
+		\label{tbl:comparison}
+	\end{table}
+	
+	\end{landscape}
+	
 
 \section{The documented struggle of alternative internet projects}
-	\label{sec:comparison}
+	\label{sec:comparison}	
+	
 	The largest repository of decentralization attempts is located at http://redecentralize.org. The struggle and pains of these projects illustrates the difficulty of decentralization. No projects succeeded in creating an alternative internet infrastructure. This ranges from self hosted cloud applications, to crypto currencies, to anonymous networks.
 
 	% what do they have in common
@@ -352,8 +369,17 @@
 		In the table we notice that three of the entries are privacy-enhancing networks that aim to provide unlinkability (Freenet, Tor, GNUnet), plus one that is currently in the process of implementing such a feature (Tribler). Furthermore we notice that, once above a certain threshold, none of the statistics have a clear effect on a projects popularity. For example, Freenet and Tor have similar statistics, while the number of Tor users \cite{tormetricsprojectwebsite} is several orders of magnitude higher than the number of Freenet users \cite{freenetstatistics}.
 		
 		So although clear differences aren't directly noticeable, we hope that his will provide more insight into which systems are more serious and mature than others, while also showing which one are still actively maintained.
-
-
+		
+			% Tabel moet nog mooi gemaakt worden
+	\begin{table}
+		\centering
+		\include{tbl-alternativeinternet}
+		\caption{A list with the top 10 projects from the Alternative Internet repository as of 2014-03-15, sorted on the number of commits.}
+		\label{tbl:altinternet}
+	\end{table}
+	
+	\newpage
+		
 
 \section{Conclusion}
 	\label{sec:conclusion}
@@ -363,28 +389,6 @@
 	From table \ref{tbl:comparison}, we conclude that there is no fully decentralized system capable of offering Tor anonymity today. Decentralized systems that do exist such as Tarzan, I2P, Torsk or Gnutella, show promising attempts to decentralize and anonymize the internet. Yet each of these systems either lacks in performance or is vulnerable to some type of attack.
 		
 	For the first time we document in detail, the amount of wasted effort and pain spent in decentralization. The current generation of technology lead by Tor still has room for improvement, while the next generation is only just appearing on the horizon.
-
-
-\begin{landscape}
-
-	% Zelfde volgorde als hoofdstukken
-	% Deze bij hoofdstuk 5 plaatsen!!!
-	% Enkel de rijen met stukjes in tekst (I2P? Salsa?)
-	\begin{table}[p]
-		\centering
-		\include{tbl-currentsystems}
-		\caption{A comparison of decentralized peer-to-peer overlay networks}
-		\label{tbl:comparison}
-	\end{table}
-
-	% Tabel kan inline tabel worden, zonder "last activity" en woordje "commit(s)"
-	\begin{table}[p]
-		\centering
-		\include{tbl-alternativeinternet}
-		\caption{A list with the top 10 projects from the Alternative Internet repository as of 2014-03-15, sorted on the number of commits.}
-		\label{tbl:altinternet}
-	\end{table}
-\end{landscape}
 
 \bibliographystyle{plain}
 \bibliography{paper_references}
