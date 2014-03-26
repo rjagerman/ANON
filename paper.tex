@@ -122,7 +122,7 @@
 			\item{The exit Tor router:} this router is connected to the web server. Note that the exit Tor router is the only router that can observe the final destination of the request.
 		\end{itemize}
 		
-		The first router in a circuit is the entrance router. The entrance router sends the data to one of the middle router which forwards the data to the exit router.
+		The first router in a circuit is the entrance router. The entrance router sends the data to one of the middle routers which forwards the data to the exit router.
 			
 	\subsection{Circuit creation}
 		\label{ss:tor_circuit}
@@ -148,7 +148,7 @@
 		\begin{itemize}
 			\item Tor's congestion control does not work well. The network has some problems handling bulk transfers, such as downloading large files or streaming high-quality videos. The congestion control could be improved by using an unreliable protocol such as UDP for links between Tor relays. Goldberg et al. \cite{alsabah2013pctcp} have proposed PCTCP which could improve the response time of the Tor network by 60\% and the download time of files by 30\%.	
 		
-			\item Some Tor users put more traffic on the network than they contribute by running a Onion Router. This means that these users are slowing the network down as they use more traffic than giving back. A possible solution for this is to throttle certain high-bandwidth protocols such as BitTorrent at exit nodes or at Onion Proxies.
+			\item Some Tor users put more traffic on the network than they contribute by running an Onion Router. This means that these users are slowing the network down as they use more traffic than giving back. A possible solution for this is to throttle certain high-bandwidth protocols such as BitTorrent at exit nodes or at Onion Proxies.
 		
 			\item The Tor network doesn't have the capacity to handle all the users that want privacy on the internet. According to the Tor Metrics project \cite{tormetricsprojectwebsite}, it takes about 6 seconds to download 1 MiB of data.
 			
