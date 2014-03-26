@@ -228,7 +228,6 @@
 		
 		There are several techniques to add an entry to the routers NAT table. Universal Plug and Play (UPnP) is one of those techniques, where the local device uses a HTTP request to the router to associate a port with the devices private network address. This technique is not available everywhere and sometimes considered a security risk. Different implementations of NAT require different techniques, such as \textit{hole punching}, \textit{relaying} or \textit{reversal}, as described by Wocker et al. \cite{wacker2008nat}.
 
-
 	\subsection{Bootstrapping new nodes}
 		If a Tor user decides to donate some of his bandwidth by running a bridge or a relay and thus creating a new node in the network, there has to be a starting point where this new node can discover neighbours in the network to connect with. In Tor, a directory server can tell the new node what his neighbours are and where to find them \cite{dingledine2004tor}.
 		
@@ -319,30 +318,27 @@
 		The Myrmic DHT runs on top of Kademlia, and introduces the Neighbourhood Authority. This authority issues certificates to nodes that participate in the DHT, but it does not participate in the DHT itself. The NA makes this solution not a fully decentralized one, but its role is a lot smaller than the current Directory Servers. This does not solve the trust issue, but it does solve the scalability issue.
 
 	\subsection{Comparison}
-	In this subsection we will make a comparison between these networks, as seen in table \ref{tbl:comparison}. For each network, we will explain the following features:
-
-	\begin{itemize}
-		\item{Compatibility with Tor:} If the network is compatible with Tor, the network or some features of the network could be used for the decentralization of Tor.
-		\item{Public implementation:} For each network we will explain whether a public implementation is available.
-		\item{Used in practice:} Is the network used in practice?
-		\item{Attack resistance:} We will explain the various weaknesses and possible attacks of each network.
-		\item{Unlinkability:} Does the network hide the identities of the sender and/or receiver?
-	\end{itemize}
+		In this subsection we will make a comparison between these networks, as seen in table \ref{tbl:comparison}. For each network, we will explain the following features:
 	
-	\begin{landscape}
-
-	% Zelfde volgorde als hoofdstukken
-	% Deze bij hoofdstuk 5 plaatsen!!!
-	% Enkel de rijen met stukjes in tekst (I2P? Salsa?)
-	\begin{table}[p]
-		\centering
-		\include{tbl-currentsystems}
-		\caption{A comparison of decentralized peer-to-peer overlay networks}
-		\label{tbl:comparison}
-	\end{table}
-	
-	\end{landscape}
-	
+		\begin{itemize}
+			\item{Compatibility with Tor:} If the network is compatible with Tor, the network or some features of the network could be used for the decentralization of Tor.
+			\item{Public implementation:} For each network we will explain whether a public implementation is available.
+			\item{Used in practice:} Is the network used in practice?
+			\item{Attack resistance:} We will explain the various weaknesses and possible attacks of each network.
+			\item{Unlinkability:} Does the network hide the identities of the sender and/or receiver?
+		\end{itemize}
+		
+		\begin{landscape}
+			% Zelfde volgorde als hoofdstukken
+			% Deze bij hoofdstuk 5 plaatsen!!!
+			% Enkel de rijen met stukjes in tekst (I2P? Salsa?)
+			\begin{table}[p]
+				\centering
+				\include{tbl-currentsystems}
+				\caption{A comparison of decentralized peer-to-peer overlay networks}
+				\label{tbl:comparison}
+			\end{table}
+		\end{landscape}
 
 \section{The documented struggle of alternative internet projects}
 	\label{sec:comparison}	
@@ -360,13 +356,13 @@
 	We made a significant contribution to this project index.
 	As a contribution to (anonymous) decentralized system research, we have improved and updated the list of these decentralized systems. For each of the listed systems, we have created an entry in a table that shows statistics such as the total lines of code (LOC), age, number of contributors and commits, activity and (main) programming language, sourced from Ohloh. This table is available on the same Github repository.
 		
-		An excerpt of the table is included as table \ref{tbl:altinternet}. In this instance, we chose to sort the table on the number of commits, because we found that this most accurately represented projects that have been established for some time and have been active in the past days. Other statistics such as LOC might not be very relevant on their own, because some projects include big libraries or other projects.
+	An excerpt of the table is included as table \ref{tbl:altinternet}. In this instance, we chose to sort the table on the number of commits, because we found that this most accurately represented projects that have been established for some time and have been active in the past days. Other statistics such as LOC might not be very relevant on their own, because some projects include big libraries or other projects.
 		
-		In the table we notice that three of the entries are privacy-enhancing networks that aim to provide unlinkability (Freenet, Tor, GNUnet), plus one that is currently in the process of implementing such a feature (Tribler). Furthermore we notice that, once above a certain threshold, none of the statistics have a clear effect on a projects popularity. For example, Freenet and Tor have similar statistics, while the number of Tor users \cite{tormetricsprojectwebsite} is several orders of magnitude higher than the number of Freenet users \cite{freenetstatistics}.
+	In the table we notice that three of the entries are privacy-enhancing networks that aim to provide unlinkability (Freenet, Tor, GNUnet), plus one that is currently in the process of implementing such a feature (Tribler). Furthermore we notice that, once above a certain threshold, none of the statistics have a clear effect on a projects popularity. For example, Freenet and Tor have similar statistics, while the number of Tor users \cite{tormetricsprojectwebsite} is several orders of magnitude higher than the number of Freenet users \cite{freenetstatistics}.
 		
-		So although clear differences aren't directly noticeable, we hope that his will provide more insight into which systems are more serious and mature than others, while also showing which one are still actively maintained.
+	So although clear differences aren't directly noticeable, we hope that his will provide more insight into which systems are more serious and mature than others, while also showing which one are still actively maintained.
 		
-			% Tabel moet nog mooi gemaakt worden
+	% Tabel moet nog mooi gemaakt worden
 	\begin{table}
 		\centering
 		\include{tbl-alternativeinternet}
