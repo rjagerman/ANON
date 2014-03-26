@@ -133,9 +133,9 @@
 		
 		%Before a circuit can be established, a path has to be chosen. The current path selection algorithm in Tor selects nodes based on the bandwidth of the nodes \cite{wang2012congestion}. Nodes that have more bandwidth, have a higher probability to be chosen for the circuit setup, however, the same node can't be used more than once in a circuit.
 		
-		Suppose Alice is an Onion Proxy that wants to connect through the Tor network to a web server. Circuit setup uses the Diffie-Hellman key-exchange protocol \cite{diffiehellman} to establish a shared secret between nodes. To create a new circuit, Alice first sends a \emph{create} cell with the first half of the Diffie-Hellman handshake to the first node in her selected path (for example, OR1). OR1 sends a \emph{created} cell back with the second half of the key along with a hash of the final key. Now both Alice and OR1 have a shared key they use to encrypt and decrypt data sent between them.
+		Suppose Alice is an Onion Proxy that wants to connect through the Tor network to a web server. Circuit setup uses the Diffie-Hellman key-exchange protocol \cite{diffiehellman} to establish a shared secret between nodes. To create a new circuit, Alice first sends a \emph{create} cell with the first half of the Diffie-Hellman handshake to the first node in her selected path (for example, $ OR_1 $). $ OR_1 $ sends a \emph{created} cell back with the second half of the key along with a hash of the final key. Now both Alice and $ OR_1 $ have a shared key they use to encrypt and decrypt data sent between them.
 		
-		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to OR2, Alice first sends a \emph{relay extend} cell to OR1. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and OR2. OR1 takes this first half of the key and sends a \emph{create} cell with this key to OR2. When OR1 receives a created cell, OR1 passes this cell to Alice. Now Alice and OR2 share a common key. The same procedure can be used to extend the circuit with more nodes.
+		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to $ OR_2 $, Alice first sends a \emph{relay extend} cell to $ OR_1 $. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and $ OR_2 $. $ OR_1 $ takes this first half of the key and sends a \emph{create} cell with this key to $ OR_2 $. When $ OR_1 $ receives a created cell, $ OR_1 $ passes this cell to Alice. Now Alice and $ OR_2 $ share a common key. The same procedure can be used to extend the circuit with more nodes.
 			
 	\subsection{Disadvantages}
 		\label{ss:tor_disadvantages}
@@ -344,7 +344,7 @@
 \section{The documented struggle of alternative internet projects}
 	\label{sec:comparison}	
 	
-	The largest repository of decentralization attempts is located at http://redecentralize.org. The aim of this repository is to \textquoteleft get decentralized products into the hands of billions\textquoteright \cite{aboutredecentralizeorg}. One of the ways they do this, is by maintaining a Github repository\footnote{Found at https://github.com/redecentralize/alternative-internet} with projects that in some way help to decentralize the internet. The struggle and pains of these projects illustrates the difficulty of decentralization. No projects succeeded in creating an alternative internet infrastructure. The projects range from self hosted cloud applications, to crypto currencies, to anonymous networks.
+	The largest repository of decentralization attempts is located at redecentralize.org. The aim of this repository is to \textquoteleft get decentralized products into the hands of billions\textquoteright \cite{aboutredecentralizeorg}. One of the ways they do this, is by maintaining a Github repository\footnote{Found at https://github.com/redecentralize/alternative-internet} with projects that in some way help to decentralize the internet. The struggle and pains of these projects illustrates the difficulty of decentralization. No projects succeeded in creating an alternative internet infrastructure. The projects range from self hosted cloud applications, to crypto currencies, to anonymous networks.
 
 	% what do they have in common
 	% security issues
@@ -358,9 +358,9 @@
 		
 	An excerpt of the table is included as table \ref{tbl:altinternet}. In this instance, we chose to sort the table on the number of commits, because we found that this most accurately represents both the maturity and activity of the projects. Other statistics such as LOC might not be very relevant on their own, because some projects include big libraries or other projects in their repository.
 		
-	In the table we notice that three of the entries are privacy-enhancing networks that aim to provide unlinkability (Freenet, Tor, GNUnet), plus one that is currently in the process of implementing such a feature (Tribler). Furthermore we notice that, once above a certain threshold, none of the statistics have a clear effect on a projects popularity. For example, Freenet and Tor have similar statistics, while the number of Tor users \cite{tormetricsprojectwebsite} is several orders of magnitude higher than the number of Freenet users \cite{freenetstatistics}.
+	In the table we notice that three of the entries are privacy-enhancing networks that aim to provide unlinkability (Freenet, Tor and GNUnet), plus one that is currently in the process of implementing such a feature (Tribler). Furthermore we notice that, once above a certain threshold, none of the statistics have a clear effect on a projects popularity. For example, Freenet and Tor have similar statistics, while the number of Tor users \cite{tormetricsprojectwebsite} is several orders of magnitude higher than the number of Freenet users \cite{freenetstatistics}.
 		
-	So although clear differences aren't directly noticeable, we hope that this comparison will provide more insight into which systems are more serious and mature than others, while also showing which one are still actively maintained.
+	So although clear differences aren't directly noticeable, we hope that this comparison will provide more insight into which systems are more serious and mature than others, while also showing which ones are still actively maintained.
 		
 	\begin{table}
 		\centering
