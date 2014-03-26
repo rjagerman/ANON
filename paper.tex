@@ -129,10 +129,6 @@
 		
 		Data on the Tor network travels over several relay nodes before it reaches its destination. Such a selection of nodes is called a circuit. To ensure both good performance and anonymity, a path is chosen using a sophisticated path selection algorithm. This algorithm selects nodes based on the bandwidth of the nodes \cite{wang2012congestion}. Nodes that have more bandwidth, have a higher probability to be chosen for the circuit setup. The same node cannot be used more than once in a single circuit.
 		
-		%As described in the previous section, data on the Tor networks travels over circuits. The data travels over the circuit in fixed-size cells that are 512 bytes long. Each cell has a header and a payload. The header consists of a number that identifies the circuit the cell travels on and a command that indicates what to do with the cell’s payload.
-		
-		%Before a circuit can be established, a path has to be chosen. The current path selection algorithm in Tor selects nodes based on the bandwidth of the nodes \cite{wang2012congestion}. Nodes that have more bandwidth, have a higher probability to be chosen for the circuit setup, however, the same node can't be used more than once in a circuit.
-		
 		Suppose Alice is an Onion Proxy that wants to connect through the Tor network to a web server. Circuit setup uses the Diffie-Hellman key-exchange protocol \cite{diffiehellman} to establish a shared secret between nodes. To create a new circuit, Alice first sends a \emph{create} cell with the first half of the Diffie-Hellman handshake to the first node in her selected path (for example, $ OR_1 $). $ OR_1 $ sends a \emph{created} cell back with the second half of the key along with a hash of the final key. Now both Alice and $ OR_1 $ have a shared key they use to encrypt and decrypt data sent between them.
 		
 		So now Alice has a connection with the first Onion Router in the circuit. To extend the circuit to $ OR_2 $, Alice first sends a \emph{relay extend} cell to $ OR_1 $. This cell contains the address of the next Onion Router in the circuit and the first half of the key to use in the communication between her and $ OR_2 $. $ OR_1 $ takes this first half of the key and sends a \emph{create} cell with this key to $ OR_2 $. When $ OR_1 $ receives a created cell, $ OR_1 $ passes this cell to Alice. Now Alice and $ OR_2 $ share a common key. The same procedure can be used to extend the circuit with more nodes.
@@ -351,8 +347,6 @@
 	% 1-man projects
 	% lack of documentation
 	% 
-
-	%Redecentralize.org is a project that describes itself with the aim to \textquoteleft start of a new information revolutions\textquoteright~by \textquoteleft bringing decentralized in the hands of billions\textquoteright~\cite{aboutredecentralizeorg}. One of the ways they do this, is by maintaining a Github repository\footnote{Found at https://github.com/redecentralize/alternative-internet} with projects that in some way help to decentralize the internet.
 		
 	We made a significant contribution to this project index. We created a table containing each of the listed systems that shows statistics such as the total lines of code (LOC), age, number of contributors and commits, activity and (main) programming language, sourced from Ohloh. This should make it easier to filter out poorly maintained or otherwise deprecated projects. The table is available on the same Github repository.
 		
