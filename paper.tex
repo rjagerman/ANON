@@ -214,7 +214,7 @@
 \section{Problems with decentralizing}
 	\label{sec:problems}
 
-	Decentralization is a difficult research problem. A trusted central authority simplifies bootstrapping, key management and user reputation. If one of these authorities were taken control of, anonymity would be compromised. When decentralizing a central authority, its functionality needs to be dispersed across the peers in the network. In this section we will explain the various problems involving Tor decentralization.
+	Decentralization is a difficult research problem. A trusted central authority simplifies bootstrapping, key management and user reputation. If one of these authorities were taken control of, anonymity could be compromised. When decentralizing a central authority, its functionality needs to be dispersed across the peers in the network. In this section we will explain the various problems involving Tor decentralization.
 	
 	\subsection{Incentives in decentralized systems}
 		Tax evasion and environmental pollution can be seen as forms of free-riding, a phenomenon that is prominent in Tor. People predominantly use more Tor bandwidth than they donate, see section \ref{ss:tor_disadvantages}. There are multiple proposals \cite{dingledine2010building, jansen13lira} to introduce incentives into Tor, all have failed. If one would also have to build an incentive system into a decentralized system, they would have to find a way to manage the ratings of each client in the network, in such a way that they cannot be falsely modified. In other words, the reputation data has to be accurate and reliable. Besides the integrity of this data, the traffic it generates on the network should have minimal impact on the overall performance.
