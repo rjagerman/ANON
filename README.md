@@ -1,4 +1,3 @@
-ANON
-====
+## Abstract
 
-ANON
+Ever since the introduction of the internet, it has been void of any privacy. A number of anonymous communication overlay networks exist whose aim it is to provide privacy to its users. However, due to the nature of the internet, there is major difficulty in getting these networks to become both decentralized and anonymous. We list reasons for having anonymous networks, discern the problems in achieving decentralization and sum up the biggest initiatives in the field and their current status. To do so, we use one exemplary network, the Tor network. We explain how Tor works, what vulnerabilities this network currently has, and possible attacks that could be used to violate privacy and anonymity. The Tor network is used as a key comparison network in the main part of the report: a tabular overview of the major anonymous networking technologies in use today.
