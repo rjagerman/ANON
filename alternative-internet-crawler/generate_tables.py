@@ -23,7 +23,7 @@ Otherwise, to use "readme.md" and "projects" as defaults, use:
 
 from argparse import ArgumentParser
 from collections import OrderedDict
-from datetime import datetime
+from datetime import datetime, timedelta
 import logging
 import json
 import os
@@ -73,7 +73,19 @@ def get_markdown_table_totals(columns, projects):
     total_entry = {}
     for key in columns.keys():
         entries = filter(lambda k: key in k.keys(), projects)
-        total_entry[key] = sum(int(project[key]) if (not project[key] is None and project[key].isdigit()) else 0 for project in entries)
+
+        if key == 'min_month':
+            total_time = timedelta(0)
+
+            for x in entries:
+                entry_time = (datetime.utcnow() - datetime.strptime(x[key], '%Y-%m-%dT%H:%M:%SZ')) if not x[key] is None else timedelta(0)
+                total_time = total_time + entry_time
+
+            # datetime.strftime() doesn't like years before 1900, so we'll just use a modified isotime() instead
+            total_entry[key] = "%sZ" % ((datetime.utcnow() - total_time).isoformat().strip().split(".")[0])
+        else:
+            total_entry[key] = sum(int(project[key]) if (not project[key] is None and project[key].isdigit()) else 0 for project in entries)
+
         if total_entry[key] == 0:
             total_entry[key] = '-'
 
@@ -102,6 +114,7 @@ def get_markdown_table_entry_format_timedelta(td):
         return '%s month(s)' % int(td.total_seconds() / (sday * 30))
     else:
         return '%s year(s)' % int(td.total_seconds() / (sday * 356))
+
 
 def get_markdown_table_entry(columns, project, add_links):
     format_functions = {'name': lambda s, l: get_markdown_table_entry_format_name(s) if l else s,
