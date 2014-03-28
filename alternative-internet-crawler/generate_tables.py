@@ -208,7 +208,7 @@ def main():
     parser.add_argument('--debug', action='store_true', dest='debug', required=False, help='Enable debug output')
 
     args = parser.parse_args()
-    logging.getLogger().setLevel(logging.DEBUG if args.debug == True else logging.INFO)
+    logging.getLogger().setLevel(logging.DEBUG if args.debug else logging.INFO)
 
     logging.debug(args)
 
