@@ -69,6 +69,14 @@ def get_markdown_table_header(columns, add_links, sort_on=None):
         return '%s%s%s\n' % ('| ', ' | '.join(columns.values()), ' |')
 
 
+def get_markdown_table_divider(columns):
+    divider = columns.copy()
+    for key in divider.keys():
+        divider[key] = '-' * len(divider[key])
+
+    return get_markdown_table_header(divider, add_links=False)
+
+
 def get_markdown_table_totals(columns, projects):
     total_entry = {}
     for key in columns.keys():
@@ -92,13 +100,6 @@ def get_markdown_table_totals(columns, projects):
     total_entry['name'] = '**Total:**'
 
     return get_markdown_table_entry(columns, total_entry, False)
-
-
-def get_markdown_table_divider(columns):
-    divider = columns.copy()
-    for key in divider.keys():
-        divider[key] = '-' * len(divider[key])
-    return get_markdown_table_header(divider, add_links=False)
 
 
 def get_markdown_table_entry_format_name(entry):
