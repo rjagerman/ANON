@@ -69,6 +69,19 @@ def get_markdown_table_header(columns, add_links, sort_on=None):
         return '%s%s%s\n' % ('| ', ' | '.join(columns.values()), ' |')
 
 
+def get_markdown_table_totals(columns, projects):
+    total_entry = {}
+    for key in columns.keys():
+        entries = filter(lambda k: key in k.keys(), projects)
+        total_entry[key] = sum(int(project[key]) if (not project[key] is None and project[key].isdigit()) else 0 for project in entries)
+        if total_entry[key] == 0:
+            total_entry[key] = '-'
+
+    total_entry['name'] = '**Total:**'
+
+    return get_markdown_table_entry(columns, total_entry, False)
+
+
 def get_markdown_table_divider(columns):
     divider = columns.copy()
     for key in divider.keys():
@@ -123,7 +136,7 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
     return sorted_list
 
 
-def write_output(projects, table_columns, output='readme.md', sort_on='name', sort_reverse=False, add_links=False):
+def write_output(projects, table_columns, output='readme.md', sort_on='name', sort_reverse=False, add_links=False, add_totals=False):
 
     with codecs.open(output, 'w', 'utf-8-sig') as output_file:
         if add_links:
@@ -144,10 +157,14 @@ def write_output(projects, table_columns, output='readme.md', sort_on='name', so
             except:
                 logging.warning('Parsing entry failed (%s)' % project)
 
+        if add_totals:
+            header = get_markdown_table_totals(table_columns, projects)
+            output_file.write(header)
+
     logging.info('Wrote table to %s' % output)
 
 
-def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False, generate_all=False):
+def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False, generate_all=False, add_totals=False):
     table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('min_month', 'Age'),
                                  ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
                                  ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
@@ -161,10 +178,10 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
         for key in table_columns.keys():
             write_output(projects=projects, table_columns=table_columns,
                          output='TABLE_%s.md' % table_columns[key].upper().replace(' ', '_'), sort_on=key,
-                         sort_reverse=(key in table_columns_default_reverse), add_links=add_links)
+                         sort_reverse=(key in table_columns_default_reverse), add_links=add_links, add_totals=add_totals)
     else:
         write_output(projects=projects, table_columns=table_columns, output=output, sort_on=sort_on,
-                     sort_reverse=sort_reverse, add_links=add_links)
+                     sort_reverse=sort_reverse, add_links=add_links, add_totals=add_totals)
 
 
 def main():
@@ -186,6 +203,8 @@ def main():
                         help='Link from header to sorted versions, plus link from entries to readme.md')
     parser.add_argument('-a', '-all', action='store_true', dest='generate_all', required=False,
                         help='Generate all files as TABLE_COLUMN_NAME.md (-s, -r, -o are ignored)')
+    parser.add_argument('-t', '--totals', action='store_true', dest='add_totals', required=False,
+                        help='Add totals of all columns as the last entry')
     parser.add_argument('--debug', action='store_true', dest='debug', required=False, help='Enable debug output')
 
     args = parser.parse_args()
@@ -194,7 +213,7 @@ def main():
     logging.debug(args)
 
     run_parser(directory=args.directory, output=args.output, sort_on=args.sort, sort_reverse=args.sort_reverse,
-               add_links=args.add_links, generate_all=args.generate_all)
+               add_links=args.add_links, generate_all=args.generate_all, add_totals=args.add_totals)
 
 
 if __name__ == "__main__":
