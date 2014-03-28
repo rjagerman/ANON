@@ -69,10 +69,13 @@ def get_markdown_table_header(columns, add_links, sort_on=None):
         return '%s%s%s\n' % ('| ', ' | '.join(columns.values()), ' |')
 
 
-def get_markdown_table_divider(columns):
+def get_markdown_table_divider(columns, columns_align_right=[]):
     divider = columns.copy()
     for key in divider.keys():
-        divider[key] = '-' * len(divider[key])
+        if key in columns_align_right:
+            divider[key] = '-' * (len(divider[key]) - 1) + ':'
+        else:
+            divider[key] = '-' * len(divider[key])
 
     return get_markdown_table_header(divider, add_links=False)
 
@@ -150,7 +153,7 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
     return sorted_list
 
 
-def write_output(projects, table_columns, output='readme.md', sort_on='name', sort_reverse=False, add_links=False, add_totals=False):
+def write_output(projects, table_columns, output='readme.md', sort_on='name', sort_reverse=False, add_links=False, add_totals=False, columns_align_right=[]):
 
     with codecs.open(output, 'w', 'utf-8-sig') as output_file:
         if add_links:
@@ -160,7 +163,7 @@ def write_output(projects, table_columns, output='readme.md', sort_on='name', so
         header = get_markdown_table_header(table_columns, add_links, sort_on)
         output_file.write(header)
 
-        header = get_markdown_table_divider(table_columns)
+        header = get_markdown_table_divider(table_columns, columns_align_right)
         output_file.write(header)
 
         for project in get_sorted_list(projects, sort_on, sort_reverse):
@@ -184,6 +187,8 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
                                  ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
 
     table_columns_default_reverse = ['updated_at', 'total_code_lines', 'total_commit_count', 'total_contributor_count']
+    table_columns_align_right = ['total_code_lines', 'total_commit_count', 'total_contributor_count', 'min_month',
+                                 'updated_at']
 
     projects = get_projects(directory)
     logging.info('Loaded %s projects' % len(projects))
@@ -192,10 +197,12 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
         for key in table_columns.keys():
             write_output(projects=projects, table_columns=table_columns,
                          output='TABLE_%s.md' % table_columns[key].upper().replace(' ', '_'), sort_on=key,
-                         sort_reverse=(key in table_columns_default_reverse), add_links=add_links, add_totals=add_totals)
+                         sort_reverse=(key in table_columns_default_reverse), add_links=add_links, add_totals=add_totals,
+                         columns_align_right=table_columns_align_right)
     else:
         write_output(projects=projects, table_columns=table_columns, output=output, sort_on=sort_on,
-                     sort_reverse=sort_reverse, add_links=add_links, add_totals=add_totals)
+                     sort_reverse=sort_reverse, add_links=add_links, add_totals=add_totals,
+                     columns_align_right=table_columns_align_right)
 
 
 def main():
