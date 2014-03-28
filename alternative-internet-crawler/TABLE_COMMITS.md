@@ -163,4 +163,4 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [wlan slovenija](README.md#wlan-slovenija) | - | - | - | - | - | - |
 | [Nymote](README.md#nymote) | - | - | - | - | - | - |
 | [Tonika](README.md#tonika) | - | - | - | - | - | - |
-| **Total:** | - | - | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |
+| **Total:** | - | 482 year(s) | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |

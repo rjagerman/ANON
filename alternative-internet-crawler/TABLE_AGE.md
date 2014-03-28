@@ -163,4 +163,4 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Village Telco](README.md#village-telco) | - | - | - | - | - | - |
 | [Younity](README.md#younity) | - | - | - | - | - | - |
 | [Firecloud](README.md#firecloud) | - | - | - | - | - | - |
-| **Total:** | - | - | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |
+| **Total:** | - | 482 year(s) | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |

@@ -163,4 +163,4 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [unSYSTEM](README.md#unsystem) | - | - | - | - | - | - |
 | [weborganiZm](README.md#weborganizm) | - | - | - | - | - | - |
 | [wlan slovenija](README.md#wlan-slovenija) | - | - | - | - | - | - |
-| **Total:** | - | - | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |
+| **Total:** | - | 482 year(s) | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |
