@@ -4,7 +4,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 [< Back to list](README.md)
 
 | [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Age](TABLE_AGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | Commits | [Contributors](TABLE_CONTRIBUTORS.md) |
-| ---- | -------- | --- | ------------- | --: | ------: | -----------: |
+| ---- | -------- | --: | ------------: | --: | ------: | -----------: |
 | [ownCloud](README.md#owncloud) | PHP | 6 year(s) | 2014-03-15 | 1,297 K | 34,391 | 392 |
 | [Freenet](README.md#freenet) | Java | 13 year(s) | 2014-03-15 | 442 K | 32,009 | 183 |
 | [Tor](README.md#tor) | C | 12 year(s) | 2014-03-13 | 329 K | 29,200 | 184 |

@@ -4,7 +4,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 [< Back to list](README.md)
 
 | [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | Age | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
-| ---- | -------- | --- | ------------- | --: | ------: | -----------: |
+| ---- | -------- | --: | ------------: | --: | ------: | -----------: |
 | [GNU/consensus](README.md#gnuconsensus) | C | 24 year(s) | 2014-03-14 | 23 K | 2,749 | 19 |
 | [Freenet](README.md#freenet) | Java | 13 year(s) | 2014-03-15 | 442 K | 32,009 | 183 |
 | [Askemos](README.md#askemos) | Scheme | 12 year(s) | 2014-03-15 | 78 K | 100 | 1 |

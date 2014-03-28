@@ -4,7 +4,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 [< Back to list](README.md)
 
 | [Name](TABLE_NAME.md) | Language | [Age](TABLE_AGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
-| ---- | -------- | --- | ------------- | --: | ------: | -----------: |
+| ---- | -------- | --: | ------------: | --: | ------: | -----------: |
 | [Refuge](README.md#refuge) | ActionScript | 4 year(s) | 2014-03-14 | 10 K | 57 | 1 |
 | [Serf](README.md#serf) | C | 9 year(s) | 2014-03-15 | 20 K | 1,056 | 15 |
 | [Idno](README.md#idno) | C | 7 year(s) | 2014-03-14 | <1 K | 13 | 1 |

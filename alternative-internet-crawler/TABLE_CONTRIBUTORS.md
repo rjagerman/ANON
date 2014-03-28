@@ -4,7 +4,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 [< Back to list](README.md)
 
 | [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Age](TABLE_AGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | Contributors |
-| ---- | -------- | --- | ------------- | --: | ------: | -----------: |
+| ---- | -------- | --: | ------------: | --: | ------: | -----------: |
 | [ownCloud](README.md#owncloud) | PHP | 6 year(s) | 2014-03-15 | 1,297 K | 34,391 | 392 |
 | [Diaspora*](README.md#diaspora) | Ruby | 3 year(s) | 2014-03-14 | 51 K | 14,202 | 368 |
 | [Bitcoin](README.md#bitcoin) | C++ | 4 year(s) | 2014-03-14 | 474 K | 8,387 | 229 |

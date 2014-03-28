@@ -4,7 +4,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 [< Back to list](README.md)
 
 | [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Age](TABLE_AGE.md) | Last activity | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
-| ---- | -------- | --- | ------------- | --: | ------: | -----------: |
+| ---- | -------- | --: | ------------: | --: | ------: | -----------: |
 | [PageKite](README.md#pagekite) | JavaScript | 3 year(s) | 2014-03-15 | 4 K | 5 | 1 |
 | [Guifi](README.md#guifi) | PHP | 3 year(s) | 2014-03-15 | 59 K | 384 | 15 |
 | [Red Matrix](README.md#red-matrix) | PHP | 3 year(s) | 2014-03-15 | 416 K | 9,981 | 78 |

@@ -4,7 +4,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 [< Back to list](README.md)
 
 | [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | [Age](TABLE_AGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | LOC | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
-| ---- | -------- | --- | ------------- | --: | ------: | -----------: |
+| ---- | -------- | --: | ------------: | --: | ------: | -----------: |
 | [qaul.net](README.md#qaulnet) | C | 1 year(s) | 2014-03-12 | 1,516 K | 367 | 8 |
 | [ownCloud](README.md#owncloud) | PHP | 6 year(s) | 2014-03-15 | 1,297 K | 34,391 | 392 |
 | [Lorea](README.md#lorea) | PHP | 6 year(s) | 2014-03-12 | 873 K | 11,066 | 96 |

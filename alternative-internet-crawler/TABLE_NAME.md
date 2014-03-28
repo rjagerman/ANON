@@ -4,7 +4,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 [< Back to list](README.md)
 
 | Name | [Language](TABLE_LANGUAGE.md) | [Age](TABLE_AGE.md) | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
-| ---- | -------- | --- | ------------- | --: | ------: | -----------: |
+| ---- | -------- | --: | ------------: | --: | ------: | -----------: |
 | [Ampify](README.md#ampify) | shell script | 4 year(s) | 2014-03-14 | 2 K | 1,574 | 8 |
 | [AnoNet](README.md#anonet) | - | - | - | - | - | - |
 | [Askemos](README.md#askemos) | Scheme | 12 year(s) | 2014-03-15 | 78 K | 100 | 1 |
