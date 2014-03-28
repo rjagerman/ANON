@@ -30,11 +30,11 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Sparkleshare](README.md#sparkleshare) | C# | 4 year(s) | 2014-03-13 | 14 K | 3,906 commit(s) | 167 contributor(s) |
 | [pump.io](README.md#pumpio) | JavaScript | 2 year(s) | 2014-03-15 | 87 K | 3,743 commit(s) | 11 contributor(s) |
 | [PeerCoin/PPCoin](README.md#peercoinppcoin) | C++ | 2 year(s) | 2014-03-14 | 100 K | 2,868 commit(s) | 127 contributor(s) |
-| [GNU/consensus](README.md#gnuconsensus) | C | 23 year(s) | 2014-03-14 | 23 K | 2,749 commit(s) | 19 contributor(s) |
+| [GNU/consensus](README.md#gnuconsensus) | C | 24 year(s) | 2014-03-14 | 23 K | 2,749 commit(s) | 19 contributor(s) |
 | [INDX](README.md#indx) | JavaScript | 2 year(s) | 2014-03-15 | 143 K | 2,581 commit(s) | 19 contributor(s) |
 | [Mailpile](README.md#mailpile) | JavaScript | 2 year(s) | 2014-03-15 | 29 K | 1,905 commit(s) | 70 contributor(s) |
 | [ShareIt!](README.md#shareit) | JavaScript | 2 year(s) | 2014-03-15 | 8 K | 1,886 commit(s) | 10 contributor(s) |
-| [MediaCrush](README.md#mediacrush) | JavaScript | 8 month(s) | 2014-03-14 | 13 K | 1,609 commit(s) | 15 contributor(s) |
+| [MediaCrush](README.md#mediacrush) | JavaScript | 9 month(s) | 2014-03-14 | 13 K | 1,609 commit(s) | 15 contributor(s) |
 | [arkOS](README.md#arkos) | Python | 4 year(s) | 2014-03-14 | 28 K | 1,608 commit(s) | 51 contributor(s) |
 | [Ampify](README.md#ampify) | shell script | 4 year(s) | 2014-03-14 | 2 K | 1,574 commit(s) | 8 contributor(s) |
 | [Smallest Federated Wiki](README.md#smallest-federated-wiki) | JavaScript | 2 year(s) | 2014-03-15 | 30 K | 1,517 commit(s) | 47 contributor(s) |
@@ -58,7 +58,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [MaidSafe](README.md#maidsafe) | C++ | 5 year(s) | 2014-03-15 | 111 K | 436 commit(s) | 9 contributor(s) |
 | [Tomb](README.md#tomb) | Python | 3 year(s) | 2014-03-13 | 3 K | 436 commit(s) | 14 contributor(s) |
 | [IPOP](README.md#ipop) | C# | 8 year(s) | 2014-03-14 | 5 K | 410 commit(s) | 25 contributor(s) |
-| [Coinpunk](README.md#coinpunk) | JavaScript | 10 month(s) | 2014-03-13 | 578 K | 389 commit(s) | 12 contributor(s) |
+| [Coinpunk](README.md#coinpunk) | JavaScript | 11 month(s) | 2014-03-13 | 578 K | 389 commit(s) | 12 contributor(s) |
 | [Guifi](README.md#guifi) | PHP | 3 year(s) | 2014-03-15 | 59 K | 384 commit(s) | 15 contributor(s) |
 | [ClearSkies](README.md#clearskies) | Ruby | 6 month(s) | 2014-03-13 | 4 K | 372 commit(s) | 13 contributor(s) |
 | [qaul.net](README.md#qaulnet) | C | 1 year(s) | 2014-03-12 | 1,516 K | 367 commit(s) | 8 contributor(s) |
@@ -74,18 +74,18 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Grimwire](README.md#grimwire) | JavaScript | 7 month(s) | 2014-03-13 | 15 K | 161 commit(s) | 3 contributor(s) |
 | [MettaNode](README.md#mettanode) | C++ | 1 year(s) | 2012-12-03 | 92 K | 154 commit(s) | 2 contributor(s) |
 | [Phantom](README.md#phantom) | Python | 5 year(s) | 2012-09-20 | 4 K | 123 commit(s) | 2 contributor(s) |
-| [Twister](README.md#twister) | C | 11 month(s) | 2014-03-14 | 30 K | 118 commit(s) | 3 contributor(s) |
+| [Twister](README.md#twister) | C | 1 year(s) | 2014-03-14 | 30 K | 118 commit(s) | 3 contributor(s) |
 | [Cables](README.md#cables) | JavaScript | 1 year(s) | 2014-03-15 | 2 K | 118 commit(s) | 2 contributor(s) |
 | [Wave / Apache Wave](README.md#wave--apache-wave) | JavaScript | 4 year(s) | 2011-03-30 | 38 K | 116 commit(s) | 3 contributor(s) |
 | [Avatar](README.md#avatar) | Groovy | 5 year(s) | 2014-03-14 | <1 K | 104 commit(s) | 7 contributor(s) |
-| [Webfist](README.md#webfist) | Go | 9 month(s) | 2014-03-14 | <1 K | 102 commit(s) | 2 contributor(s) |
+| [Webfist](README.md#webfist) | Go | 10 month(s) | 2014-03-14 | <1 K | 102 commit(s) | 2 contributor(s) |
 | [Askemos](README.md#askemos) | Scheme | 12 year(s) | 2014-03-15 | 78 K | 100 commit(s) | 1 contributor(s) |
 | [Tent protocol](README.md#tent-protocol) | Go | 1 year(s) | 2014-03-14 | <1 K | 81 commit(s) | 2 contributor(s) |
 | [Tavern](README.md#tavern) | Erlang | 1 year(s) | 2014-03-13 | <1 K | 71 commit(s) | 2 contributor(s) |
 | [Zero Bin](README.md#zero-bin) | JavaScript | 2 year(s) | 2014-03-15 | 3 K | 67 commit(s) | 14 contributor(s) |
 | [LibraryBox](README.md#librarybox) | Python | 2 year(s) | 2014-03-13 | <1 K | 57 commit(s) | 1 contributor(s) |
 | [Refuge](README.md#refuge) | ActionScript | 4 year(s) | 2014-03-14 | 10 K | 57 commit(s) | 1 contributor(s) |
-| [Litecoin](README.md#litecoin) | coq | 8 month(s) | 2014-03-14 | 42 K | 56 commit(s) | 4 contributor(s) |
+| [Litecoin](README.md#litecoin) | coq | 9 month(s) | 2014-03-14 | 42 K | 56 commit(s) | 4 contributor(s) |
 | [Hyperboria](README.md#hyperboria) | JavaScript | 1 year(s) | 2014-03-13 | 5 K | 56 commit(s) | 9 contributor(s) |
 | [Commotion Wireless](README.md#commotion-wireless) | Objective-C | 1 year(s) | 2014-03-15 | 6 K | 38 commit(s) | 2 contributor(s) |
 | [Vole](README.md#vole) | Python | 4 month(s) | 2014-03-14 | 181 K | 33 commit(s) | 3 contributor(s) |
@@ -94,10 +94,10 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Unhosted](README.md#unhosted) | JavaScript | 2 year(s) | 2014-03-14 | 6 K | 28 commit(s) | 2 contributor(s) |
 | [Webmentions](README.md#webmentions) | PHP | 1 year(s) | 2014-03-13 | <1 K | 25 commit(s) | 2 contributor(s) |
 | [YunoHost](README.md#yunohost) | Python | 1 year(s) | 2014-03-14 | <1 K | 19 commit(s) | 3 contributor(s) |
-| [KA Lite](README.md#ka-lite) | Python | 11 month(s) | 2014-03-13 | <1 K | 18 commit(s) | 3 contributor(s) |
-| [BitTorrent Sync](README.md#bittorrent-sync) | - | 11 month(s) | 2014-03-13 | <1 K | 18 commit(s) | 5 contributor(s) |
+| [KA Lite](README.md#ka-lite) | Python | 1 year(s) | 2014-03-13 | <1 K | 18 commit(s) | 3 contributor(s) |
+| [BitTorrent Sync](README.md#bittorrent-sync) | - | 1 year(s) | 2014-03-13 | <1 K | 18 commit(s) | 5 contributor(s) |
 | [Samizdat](README.md#samizdat) | Python | 5 year(s) | 2014-03-13 | 7 K | 16 commit(s) | 2 contributor(s) |
-| [Idno](README.md#idno) | C | 6 year(s) | 2014-03-14 | <1 K | 13 commit(s) | 1 contributor(s) |
+| [Idno](README.md#idno) | C | 7 year(s) | 2014-03-14 | <1 K | 13 commit(s) | 1 contributor(s) |
 | [Osiris](README.md#osiris) | SQL | 5 year(s) | 2014-03-14 | <1 K | 12 commit(s) | 3 contributor(s) |
 | [The FNF](README.md#the-fnf) | C++ | 4 year(s) | 2014-03-12 | <1 K | 10 commit(s) | 3 contributor(s) |
 | [Starkit](README.md#starkit) | Tcl | 5 year(s) | 2014-03-15 | 46 K | 10 commit(s) | 2 contributor(s) |
@@ -163,3 +163,4 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [wlan slovenija](README.md#wlan-slovenija) | - | - | - | - | - | - |
 | [Nymote](README.md#nymote) | - | - | - | - | - | - |
 | [Tonika](README.md#tonika) | - | - | - | - | - | - |
+| **Total:** | - | - | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |

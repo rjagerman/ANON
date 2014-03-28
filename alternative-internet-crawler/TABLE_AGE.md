@@ -5,7 +5,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 
 | [Name](TABLE_NAME.md) | [Language](TABLE_LANGUAGE.md) | Age | [Last activity](TABLE_LAST_ACTIVITY.md) | [LOC](TABLE_LOC.md) | [Commits](TABLE_COMMITS.md) | [Contributors](TABLE_CONTRIBUTORS.md) |
 | ---- | -------- | --- | ------------- | --- | ------- | ------------ |
-| [GNU/consensus](README.md#gnuconsensus) | C | 23 year(s) | 2014-03-14 | 23 K | 2,749 commit(s) | 19 contributor(s) |
+| [GNU/consensus](README.md#gnuconsensus) | C | 24 year(s) | 2014-03-14 | 23 K | 2,749 commit(s) | 19 contributor(s) |
 | [Freenet](README.md#freenet) | Java | 13 year(s) | 2014-03-15 | 442 K | 32,009 commit(s) | 183 contributor(s) |
 | [Askemos](README.md#askemos) | Scheme | 12 year(s) | 2014-03-15 | 78 K | 100 commit(s) | 1 contributor(s) |
 | [Mixminion](README.md#mixminion) | Python | 12 year(s) | 2014-03-12 | 30 K | 1,091 commit(s) | 6 contributor(s) |
@@ -22,7 +22,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [GNUnet](README.md#gnunet) | C | 8 year(s) | 2014-03-13 | 427 K | 21,398 commit(s) | 37 contributor(s) |
 | [Tahoe-LAFS](README.md#tahoelafs) | Python | 7 year(s) | 2014-03-13 | 158 K | 11,565 commit(s) | 54 contributor(s) |
 | [Kune](README.md#kune) | Java | 7 year(s) | 2014-01-01 | 322 K | 4,232 commit(s) | 9 contributor(s) |
-| [Idno](README.md#idno) | C | 6 year(s) | 2014-03-14 | <1 K | 13 commit(s) | 1 contributor(s) |
+| [Idno](README.md#idno) | C | 7 year(s) | 2014-03-14 | <1 K | 13 commit(s) | 1 contributor(s) |
 | [P](README.md#p) | PHP | 6 year(s) | 2013-05-13 | 25 K | 1,000 commit(s) | 27 contributor(s) |
 | [Retroshare](README.md#retroshare) | C++ | 6 year(s) | 2014-02-24 | 726 K | 5,287 commit(s) | 25 contributor(s) |
 | [People's Open Network](README.md#peoples-open-network) | Vala | 6 year(s) | 2014-03-15 | 9 K | 717 commit(s) | 3 contributor(s) |
@@ -104,13 +104,13 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Commotion Wireless](README.md#commotion-wireless) | Objective-C | 1 year(s) | 2014-03-15 | 6 K | 38 commit(s) | 2 contributor(s) |
 | [Cables](README.md#cables) | JavaScript | 1 year(s) | 2014-03-15 | 2 K | 118 commit(s) | 2 contributor(s) |
 | [Webmentions](README.md#webmentions) | PHP | 1 year(s) | 2014-03-13 | <1 K | 25 commit(s) | 2 contributor(s) |
-| [Twister](README.md#twister) | C | 11 month(s) | 2014-03-14 | 30 K | 118 commit(s) | 3 contributor(s) |
-| [BitTorrent Sync](README.md#bittorrent-sync) | - | 11 month(s) | 2014-03-13 | <1 K | 18 commit(s) | 5 contributor(s) |
-| [KA Lite](README.md#ka-lite) | Python | 11 month(s) | 2014-03-13 | <1 K | 18 commit(s) | 3 contributor(s) |
-| [Coinpunk](README.md#coinpunk) | JavaScript | 10 month(s) | 2014-03-13 | 578 K | 389 commit(s) | 12 contributor(s) |
-| [Webfist](README.md#webfist) | Go | 9 month(s) | 2014-03-14 | <1 K | 102 commit(s) | 2 contributor(s) |
-| [MediaCrush](README.md#mediacrush) | JavaScript | 8 month(s) | 2014-03-14 | 13 K | 1,609 commit(s) | 15 contributor(s) |
-| [Litecoin](README.md#litecoin) | coq | 8 month(s) | 2014-03-14 | 42 K | 56 commit(s) | 4 contributor(s) |
+| [Twister](README.md#twister) | C | 1 year(s) | 2014-03-14 | 30 K | 118 commit(s) | 3 contributor(s) |
+| [BitTorrent Sync](README.md#bittorrent-sync) | - | 1 year(s) | 2014-03-13 | <1 K | 18 commit(s) | 5 contributor(s) |
+| [KA Lite](README.md#ka-lite) | Python | 1 year(s) | 2014-03-13 | <1 K | 18 commit(s) | 3 contributor(s) |
+| [Coinpunk](README.md#coinpunk) | JavaScript | 11 month(s) | 2014-03-13 | 578 K | 389 commit(s) | 12 contributor(s) |
+| [Webfist](README.md#webfist) | Go | 10 month(s) | 2014-03-14 | <1 K | 102 commit(s) | 2 contributor(s) |
+| [MediaCrush](README.md#mediacrush) | JavaScript | 9 month(s) | 2014-03-14 | 13 K | 1,609 commit(s) | 15 contributor(s) |
+| [Litecoin](README.md#litecoin) | coq | 9 month(s) | 2014-03-14 | 42 K | 56 commit(s) | 4 contributor(s) |
 | [Grimwire](README.md#grimwire) | JavaScript | 7 month(s) | 2014-03-13 | 15 K | 161 commit(s) | 3 contributor(s) |
 | [Funkfeuer](README.md#funkfeuer) | JavaScript | 7 month(s) | 2014-03-12 | <1 K | 177 commit(s) | 2 contributor(s) |
 | [Urbit](README.md#urbit) | C | 7 month(s) | 2014-03-14 | 79 K | 823 commit(s) | 34 contributor(s) |
@@ -163,3 +163,4 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Village Telco](README.md#village-telco) | - | - | - | - | - | - |
 | [Younity](README.md#younity) | - | - | - | - | - | - |
 | [Firecloud](README.md#firecloud) | - | - | - | - | - | - |
+| **Total:** | - | - | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |

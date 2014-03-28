@@ -13,7 +13,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [BipIO](README.md#bipio) | - | - | - | - | - | - |
 | [BitMessage](README.md#bitmessage) | Python | 1 year(s) | 2014-03-14 | 34 K | 1,268 commit(s) | 77 contributor(s) |
 | [BitPhone](README.md#bitphone) | - | - | - | - | - | - |
-| [BitTorrent Sync](README.md#bittorrent-sync) | - | 11 month(s) | 2014-03-13 | <1 K | 18 commit(s) | 5 contributor(s) |
+| [BitTorrent Sync](README.md#bittorrent-sync) | - | 1 year(s) | 2014-03-13 | <1 K | 18 commit(s) | 5 contributor(s) |
 | [Bitcloud](README.md#bitcloud) | - | - | - | - | - | - |
 | [Bitcoin](README.md#bitcoin) | C++ | 4 year(s) | 2014-03-14 | 474 K | 8,387 commit(s) | 229 contributor(s) |
 | [Bitcoin by Mobile](README.md#bitcoin-by-mobile) | - | - | - | - | - | - |
@@ -23,7 +23,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Cables](README.md#cables) | JavaScript | 1 year(s) | 2014-03-15 | 2 K | 118 commit(s) | 2 contributor(s) |
 | [Camlistore](README.md#camlistore) | Go | 3 year(s) | 2014-03-15 | 215 K | 4,207 commit(s) | 57 contributor(s) |
 | [ClearSkies](README.md#clearskies) | Ruby | 6 month(s) | 2014-03-13 | 4 K | 372 commit(s) | 13 contributor(s) |
-| [Coinpunk](README.md#coinpunk) | JavaScript | 10 month(s) | 2014-03-13 | 578 K | 389 commit(s) | 12 contributor(s) |
+| [Coinpunk](README.md#coinpunk) | JavaScript | 11 month(s) | 2014-03-13 | 578 K | 389 commit(s) | 12 contributor(s) |
 | [Commotion Wireless](README.md#commotion-wireless) | Objective-C | 1 year(s) | 2014-03-15 | 6 K | 38 commit(s) | 2 contributor(s) |
 | [Cowbox](README.md#cowbox) | - | - | - | - | - | - |
 | [Cozy](README.md#cozy) | JavaScript | 1 year(s) | 2014-03-13 | 77 K | 244 commit(s) | 6 contributor(s) |
@@ -44,7 +44,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Funkfeuer](README.md#funkfeuer) | JavaScript | 7 month(s) | 2014-03-12 | <1 K | 177 commit(s) | 2 contributor(s) |
 | [G0Bin](README.md#gbin) | - | - | - | - | - | - |
 | [GNU social](README.md#gnu-social) | Python | 3 year(s) | 2014-03-15 | 48 K | 4,492 commit(s) | 83 contributor(s) |
-| [GNU/consensus](README.md#gnuconsensus) | C | 23 year(s) | 2014-03-14 | 23 K | 2,749 commit(s) | 19 contributor(s) |
+| [GNU/consensus](README.md#gnuconsensus) | C | 24 year(s) | 2014-03-14 | 23 K | 2,749 commit(s) | 19 contributor(s) |
 | [GNUnet](README.md#gnunet) | C | 8 year(s) | 2014-03-13 | 427 K | 21,398 commit(s) | 37 contributor(s) |
 | [Grand Decentral Station](README.md#grand-decentral-station) | - | - | - | - | - | - |
 | [Grimwire](README.md#grimwire) | JavaScript | 7 month(s) | 2014-03-13 | 15 K | 161 commit(s) | 3 contributor(s) |
@@ -53,19 +53,19 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [I2P](README.md#ip) | Java | 10 year(s) | 2014-03-14 | 216 K | 9,817 commit(s) | 51 contributor(s) |
 | [INDX](README.md#indx) | JavaScript | 2 year(s) | 2014-03-15 | 143 K | 2,581 commit(s) | 19 contributor(s) |
 | [IPOP](README.md#ipop) | C# | 8 year(s) | 2014-03-14 | 5 K | 410 commit(s) | 25 contributor(s) |
-| [Idno](README.md#idno) | C | 6 year(s) | 2014-03-14 | <1 K | 13 commit(s) | 1 contributor(s) |
-| [KA Lite](README.md#ka-lite) | Python | 11 month(s) | 2014-03-13 | <1 K | 18 commit(s) | 3 contributor(s) |
+| [Idno](README.md#idno) | C | 7 year(s) | 2014-03-14 | <1 K | 13 commit(s) | 1 contributor(s) |
+| [KA Lite](README.md#ka-lite) | Python | 1 year(s) | 2014-03-13 | <1 K | 18 commit(s) | 3 contributor(s) |
 | [Kademlia](README.md#kademlia) | - | - | - | - | - | - |
 | [Keybits](README.md#keybits) | - | - | - | - | - | - |
 | [Kune](README.md#kune) | Java | 7 year(s) | 2014-01-01 | 322 K | 4,232 commit(s) | 9 contributor(s) |
 | [Libertree](README.md#libertree) | Ruby | 2 year(s) | 2014-03-14 | <1 K | 168 commit(s) | 2 contributor(s) |
 | [LibraryBox](README.md#librarybox) | Python | 2 year(s) | 2014-03-13 | <1 K | 57 commit(s) | 1 contributor(s) |
 | [LibreVPN](README.md#librevpn) | - | - | - | - | - | - |
-| [Litecoin](README.md#litecoin) | coq | 8 month(s) | 2014-03-14 | 42 K | 56 commit(s) | 4 contributor(s) |
+| [Litecoin](README.md#litecoin) | coq | 9 month(s) | 2014-03-14 | 42 K | 56 commit(s) | 4 contributor(s) |
 | [Lorea](README.md#lorea) | PHP | 6 year(s) | 2014-03-12 | 873 K | 11,066 commit(s) | 96 contributor(s) |
 | [MaidSafe](README.md#maidsafe) | C++ | 5 year(s) | 2014-03-15 | 111 K | 436 commit(s) | 9 contributor(s) |
 | [Mailpile](README.md#mailpile) | JavaScript | 2 year(s) | 2014-03-15 | 29 K | 1,905 commit(s) | 70 contributor(s) |
-| [MediaCrush](README.md#mediacrush) | JavaScript | 8 month(s) | 2014-03-14 | 13 K | 1,609 commit(s) | 15 contributor(s) |
+| [MediaCrush](README.md#mediacrush) | JavaScript | 9 month(s) | 2014-03-14 | 13 K | 1,609 commit(s) | 15 contributor(s) |
 | [MediaGoblin](README.md#mediagoblin) | Python | 3 year(s) | 2014-03-15 | 48 K | 4,492 commit(s) | 83 contributor(s) |
 | [MettaNode](README.md#mettanode) | C++ | 1 year(s) | 2012-12-03 | 92 K | 154 commit(s) | 2 contributor(s) |
 | [Mixmaster](README.md#mixmaster) | - | - | - | - | - | - |
@@ -132,13 +132,13 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Tribler](README.md#tribler) | Python | 8 year(s) | 2014-03-15 | 148 K | 11,521 commit(s) | 48 contributor(s) |
 | [Trovebox](README.md#trovebox) | Haskell | 1 year(s) | 2014-03-13 | <1 K | 3 commit(s) | 1 contributor(s) |
 | [Truecrypt](README.md#truecrypt) | C | 2 year(s) | 2014-03-14 | 108 K | 4 commit(s) | 1 contributor(s) |
-| [Twister](README.md#twister) | C | 11 month(s) | 2014-03-14 | 30 K | 118 commit(s) | 3 contributor(s) |
+| [Twister](README.md#twister) | C | 1 year(s) | 2014-03-14 | 30 K | 118 commit(s) | 3 contributor(s) |
 | [Unhosted](README.md#unhosted) | JavaScript | 2 year(s) | 2014-03-14 | 6 K | 28 commit(s) | 2 contributor(s) |
 | [Urbit](README.md#urbit) | C | 7 month(s) | 2014-03-14 | 79 K | 823 commit(s) | 34 contributor(s) |
 | [Village Telco](README.md#village-telco) | - | - | - | - | - | - |
 | [Vole](README.md#vole) | Python | 4 month(s) | 2014-03-14 | 181 K | 33 commit(s) | 3 contributor(s) |
 | [Wave / Apache Wave](README.md#wave--apache-wave) | JavaScript | 4 year(s) | 2011-03-30 | 38 K | 116 commit(s) | 3 contributor(s) |
-| [Webfist](README.md#webfist) | Go | 9 month(s) | 2014-03-14 | <1 K | 102 commit(s) | 2 contributor(s) |
+| [Webfist](README.md#webfist) | Go | 10 month(s) | 2014-03-14 | <1 K | 102 commit(s) | 2 contributor(s) |
 | [Webmentions](README.md#webmentions) | PHP | 1 year(s) | 2014-03-13 | <1 K | 25 commit(s) | 2 contributor(s) |
 | [YaCy](README.md#yacy) | Java | 9 year(s) | 2014-03-15 | 227 K | 10,540 commit(s) | 64 contributor(s) |
 | [Yaap it !](README.md#yaap-it-) | - | - | - | - | - | - |
@@ -163,3 +163,4 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [unSYSTEM](README.md#unsystem) | - | - | - | - | - | - |
 | [weborganiZm](README.md#weborganizm) | - | - | - | - | - | - |
 | [wlan slovenija](README.md#wlan-slovenija) | - | - | - | - | - | - |
+| **Total:** | - | - | - | 12,380 K | 327,686 commit(s) | 3,587 contributor(s) |
