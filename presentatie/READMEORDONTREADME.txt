@@ -1,6 +1,8 @@
 Problem bij de presentatie:
 
 Bij today staat Decentralized privacy-enhancing systems.. in het paper hebben we het over decentralized systems, of ze prive zijn staat in de tabel. Aanpassen dus.
+
+
 Onder problems with tor -> scalability staat directory servers. Waarom, wat moeten we hierbij vertellen? Hebben deze het te druk?
 	-> de directory servers is dé centrale component waarvan we de functionaliteit onder de peers willen verspreiden (decentralisatie). Deze hebben het inderdaad vrij druk omdat peers steeds de consensus moeten downloaden om het netwerk te leren kennen. Een mogelijke oplossing is om de peer discovery methodes te gebruiken van andere al gedecentraliseerde netwerken.
 
