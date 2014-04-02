@@ -53,10 +53,13 @@ def get_projects(path):
 
 def get_markdown_page_header():
     header = '# Alternative Internet\n' + \
-             'Project statistics fetched from [Ohloh](https://www.ohloh.net).\n' +\
+             'Pull requests VERY welcome!\n' + \
              '\n' + \
-             '[< Back to list](README.md)\n' + \
+             '[Compare projects in table](TABLE_NAME.md)\n' + \
+             '\n' + \
+             '[A](#a) - [B](#b) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [H](#h) - [I](#i) - [J](#j) - [K](#k) - [L](#l) - [M](#m) - [N](#n) - [O](#o) - [P](#p) - [Q](#q) - [R](#r) - [S](#s) - [T](#t) - [U](#u) - [V](#v) - [W](#w) - [X](#x) - [Y](#y) - [Z](#z)\n' + \
              '\n'
+
     return header
 
 
@@ -143,8 +146,24 @@ def get_markdown_table_entry(columns, project, add_links):
         except:
             entry.append(project[key] if key in project.keys() and not project[key] is None else '-')
 
-    return '%s%s%s\n' % ('| ', ' | '.join(entry), ' |')
+    rows = '%s%s%s\n' % ('| ', ' | '.join(entry), ' |')
 
+
+    complete_entry = '## %s\n' % format_functions['name'](project['name'], False) + \
+        '\n'
+
+    if not rows == '| - | - | - | - | - | - |\n':
+        complete_entry = complete_entry + \
+            get_markdown_table_header(columns, False) + \
+            get_markdown_table_divider(columns) + \
+            rows + \
+            '\n'
+
+    complete_entry = complete_entry + \
+        format_functions['description'](project['description'], False) + \
+        '\n'
+
+    return complete_entry
 
 def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
     unknown_entry = -99999 if sort_reverse else 'zzzzz'
@@ -168,14 +187,7 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
 def write_output(projects, table_columns, output='readme.md', sort_on='name', sort_reverse=False, add_links=False, add_totals=False, columns_align_right=[]):
 
     with codecs.open(output, 'w', 'utf-8-sig') as output_file:
-        if add_links:
-            header = get_markdown_page_header()
-            output_file.write(header)
-
-        header = get_markdown_table_header(table_columns, add_links, sort_on)
-        output_file.write(header)
-
-        header = get_markdown_table_divider(table_columns, columns_align_right)
+        header = get_markdown_page_header()
         output_file.write(header)
 
         for project in get_sorted_list(projects, sort_on, sort_reverse):
@@ -195,13 +207,13 @@ def write_output(projects, table_columns, output='readme.md', sort_on='name', so
 
 def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False, generate_all=False, add_totals=False):
     # Proposed by Pouwelse (Project name, #commits, #LinesOfCode, Age in years, Description)
-    table_columns = OrderedDict([('name', 'Name'), ('total_commit_count', 'Commits'), ('total_code_lines', 'LOC'),
-                                 ('min_month', 'Age'), ('description', 'Description')])
+    # table_columns = OrderedDict([('name', 'Name'), ('total_commit_count', 'Commits'), ('total_code_lines', 'LOC'),
+    #                             ('min_month', 'Age'), ('description', 'Description')])
 
     # Original table columns
-    # table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('min_month', 'Age'),
-    #                              ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
-    #                              ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
+    table_columns = OrderedDict([('main_language', 'Language'), ('min_month', 'Age'),
+                                 ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
+                                 ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
 
     table_columns_default_reverse = ['updated_at', 'total_code_lines', 'total_commit_count', 'total_contributor_count']
     table_columns_align_right = ['total_code_lines', 'total_commit_count', 'total_contributor_count', 'min_month',
