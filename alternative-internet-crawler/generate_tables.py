@@ -97,7 +97,10 @@ def get_markdown_table_totals(columns, projects):
             # datetime.strftime() doesn't like years before 1900, so we'll just use a modified isotime() instead
             total_entry[key] = "%sZ" % ((datetime.utcnow() - total_time).isoformat().strip().split(".")[0])
         else:
-            total_entry[key] = sum(int(project[key]) if (not project[key] is None and project[key].isdigit()) else 0 for project in entries)
+            try:
+                total_entry[key] = sum(int(project[key]) if (not project[key] is None and project[key].isdigit()) else 0 for project in entries)
+            except:
+                total_entry[key] = 0
 
         if total_entry[key] == 0:
             total_entry[key] = '-'
@@ -150,7 +153,11 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
 
     logging.info('Sorting on \'%s\'' % sort_on)
 
-    sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if (not k[sort_on] is None and k[sort_on].isdigit()) else k[sort_on]) if sort_on in k.keys() and not k[sort_on] is None else unknown_entry)
+    try:
+        sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if (not k[sort_on] is None and k[sort_on].isdigit()) else k[sort_on]) if sort_on in k.keys() and not k[sort_on] is None else unknown_entry)
+    except:
+        sorted_list = dictionary
+        
     if sort_reverse:
         sorted_list.reverse()
 
