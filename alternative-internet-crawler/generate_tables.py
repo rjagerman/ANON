@@ -133,6 +133,7 @@ def get_markdown_table_entry(columns, project, add_links):
                         'total_code_lines': lambda s, l: '<{:,} K'.format(1) if (int(s) / 1000) <= 1 else '{:,} K'.format(int(s) / 1000),
                         'min_month': lambda s, l: '%s' % get_markdown_table_entry_format_timedelta(datetime.utcnow() - datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ')),
                         'description': lambda s, l: '%s...' % s[:DESCRIPTION_MAX_LENGTH] if len(s) > DESCRIPTION_MAX_LENGTH else s,
+                        'factoids': lambda s, l: ', '.join(s) if not s is None else '-'
                         }
 
     entry = []
