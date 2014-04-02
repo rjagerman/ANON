@@ -186,9 +186,14 @@ def write_output(projects, table_columns, output='readme.md', sort_on='name', so
 
 
 def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False, generate_all=False, add_totals=False):
-    table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('min_month', 'Age'),
-                                 ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
-                                 ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
+    # Proposed by Pouwelse (Project name, #commits, #LinesOfCode, Age in years, Description)
+    table_columns = OrderedDict([('name', 'Name'), ('total_commit_count', 'Commits'), ('total_code_lines', 'LOC'),
+                                 ('min_month', 'Age'), ('description', 'Description')])
+
+    # Original table columns
+    # table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('min_month', 'Age'),
+    #                              ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
+    #                              ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
 
     table_columns_default_reverse = ['updated_at', 'total_code_lines', 'total_commit_count', 'total_contributor_count']
     table_columns_align_right = ['total_code_lines', 'total_commit_count', 'total_contributor_count', 'min_month',
