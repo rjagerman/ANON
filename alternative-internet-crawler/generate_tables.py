@@ -102,7 +102,7 @@ def get_markdown_table_totals(columns, projects):
         if total_entry[key] == 0:
             total_entry[key] = '-'
 
-    total_entry['name'] = '**Total:**'
+    total_entry['name'] = '**Total**'
 
     return get_markdown_table_entry(columns, total_entry, False)
 
