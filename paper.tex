@@ -238,7 +238,7 @@
 
 		Tor currently uses an interactive forward-secret key-exchange protocol called the Tor Authentication Protocol (TAP) \cite{backes2012ace}. This protocol uses telescoping, which means that the initiator negotiates session keys with each successive hop in the circuit. There are several proposals for more efficient key exchange methods. One of them is ACE, an one-way authenticated key exchange protocol. The authors of this methods claim to have a 46\% efficiency improvement on the side of the client and nearly 19\% on the side of the onion routers. ACE requires clients to send one extra element in the key exchange. This does not introduce any overhead however, because the element fits in the unused space in a cell.
 
-\section{Decentralized privacy-enhancing systems}
+\section{Decentralized \mbox{privacy-enhancing} systems}
 	\label{sec:decentralized}
 	
 	Fully decentralized systems with large scale usage are without exception based on the peer-to-peer paradigm. Many such systems have been proposed, yet only some have been implemented and are currently in use and actively maintained \cite{mislove2004ap3, rennhard2002introducing, panchenko2006nisan, rowstron2001pastry, nambiar2006salsa, freedman2002tarzan, ripeanu2001peer, androutsellis2004survey}. Here we focus on fully decentralized networks with the exception of Torsk (which is almost fully decentralized but still requires a neighbourhood authority).
