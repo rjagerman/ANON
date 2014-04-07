@@ -97,7 +97,10 @@ def get_markdown_table_totals(columns, projects):
             # datetime.strftime() doesn't like years before 1900, so we'll just use a modified isotime() instead
             total_entry[key] = "%sZ" % ((datetime.utcnow() - total_time).isoformat().strip().split(".")[0])
         else:
-            total_entry[key] = sum(int(project[key]) if (not project[key] is None and project[key].isdigit()) else 0 for project in entries)
+            try:
+                total_entry[key] = sum(int(project[key]) if (not project[key] is None and project[key].isdigit()) else 0 for project in entries)
+            except:
+                total_entry[key] = 0
 
         if total_entry[key] == 0:
             total_entry[key] = '-'
@@ -130,6 +133,7 @@ def get_markdown_table_entry(columns, project, add_links):
                         'total_code_lines': lambda s, l: '<{:,} K'.format(1) if (int(s) / 1000) <= 1 else '{:,} K'.format(int(s) / 1000),
                         'min_month': lambda s, l: '%s' % get_markdown_table_entry_format_timedelta(datetime.utcnow() - datetime.strptime(s, '%Y-%m-%dT%H:%M:%SZ')),
                         'description': lambda s, l: '%s...' % s[:DESCRIPTION_MAX_LENGTH] if len(s) > DESCRIPTION_MAX_LENGTH else s,
+                        'factoids': lambda s, l: ', '.join(s) if not s is None else '-'
                         }
 
     entry = []
@@ -150,7 +154,11 @@ def get_sorted_list(dictionary, sort_on='name', sort_reverse=False):
 
     logging.info('Sorting on \'%s\'' % sort_on)
 
-    sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if (not k[sort_on] is None and k[sort_on].isdigit()) else k[sort_on]) if sort_on in k.keys() and not k[sort_on] is None else unknown_entry)
+    try:
+        sorted_list = sorted(dictionary, key=lambda k: (int(k[sort_on]) if (not k[sort_on] is None and k[sort_on].isdigit()) else k[sort_on]) if sort_on in k.keys() and not k[sort_on] is None else unknown_entry)
+    except:
+        sorted_list = dictionary
+        
     if sort_reverse:
         sorted_list.reverse()
 
@@ -186,9 +194,14 @@ def write_output(projects, table_columns, output='readme.md', sort_on='name', so
 
 
 def run_parser(directory='projects', output='readme.md', sort_on='name', sort_reverse=False, add_links=False, generate_all=False, add_totals=False):
-    table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('min_month', 'Age'),
-                                 ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
-                                 ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
+    # Proposed by Pouwelse (Project name, #commits, #LinesOfCode, Age in years, Description)
+    table_columns = OrderedDict([('name', 'Name'), ('total_commit_count', 'Commits'), ('total_code_lines', 'LOC'),
+                                 ('min_month', 'Age'), ('description', 'Description')])
+
+    # Original table columns
+    # table_columns = OrderedDict([('name', 'Name'), ('main_language', 'Language'), ('min_month', 'Age'),
+    #                              ('updated_at', 'Last activity'), ('total_code_lines', 'LOC'),
+    #                              ('total_commit_count', 'Commits'), ('total_contributor_count', 'Contributors')])
 
     table_columns_default_reverse = ['updated_at', 'total_code_lines', 'total_commit_count', 'total_contributor_count']
     table_columns_align_right = ['total_code_lines', 'total_commit_count', 'total_contributor_count', 'min_month',
