@@ -53,9 +53,9 @@ def get_projects(path):
 
 def get_markdown_page_header():
     header = '# Alternative Internet\n' + \
-             'Project statistics fetched from [Ohloh](https://www.ohloh.net).\n' +\
+             'Pull requests VERY welcome!\n' + \
              '\n' + \
-             '[< Back to list](README.md)\n' + \
+             'Project statistics fetched from [Ohloh](https://www.ohloh.net).\n' +\
              '\n'
     return header
 
