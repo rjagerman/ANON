@@ -181,7 +181,7 @@ def write_output(projects, table_columns, output='readme.md', sort_on='name', so
         for project in get_sorted_list(projects, sort_on, sort_reverse):
             try:
                 logging.debug('Parsing %s' % project['name'])
-                entry = get_markdown_table_entry(table_columns, project, add_links)
+                entry = get_markdown_table_entry(table_columns, project, add_links=False)
                 output_file.write(entry)
             except:
                 logging.warning('Parsing entry failed (%s)' % project)
