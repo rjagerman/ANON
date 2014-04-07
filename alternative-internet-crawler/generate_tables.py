@@ -65,7 +65,7 @@ def get_markdown_table_header(columns, add_links, sort_on=None):
         linked_columns = columns.copy()
         for key in linked_columns.keys():
             if not key == sort_on:
-                linked_columns[key] = '[%s](TABLE_%s.md)' % (linked_columns[key], linked_columns[key].replace(' ', '_').upper())
+                linked_columns[key] = '[%s](README%s.md)' % (linked_columns[key], '_' + linked_columns[key].replace(' ', '_').upper() if not key == 'name' else '')
         return get_markdown_table_header(linked_columns, add_links=False)
     else:
         return '%s%s%s\n' % ('| ', ' | '.join(columns.values()), ' |')
@@ -213,7 +213,7 @@ def run_parser(directory='projects', output='readme.md', sort_on='name', sort_re
     if generate_all:
         for key in table_columns.keys():
             write_output(projects=projects, table_columns=table_columns,
-                         output='TABLE_%s.md' % table_columns[key].upper().replace(' ', '_'), sort_on=key,
+                         output='README_%s.md' % table_columns[key].upper().replace(' ', '_') if not key == 'name' else 'README.md', sort_on=key,
                          sort_reverse=(key in table_columns_default_reverse), add_links=add_links, add_totals=add_totals,
                          columns_align_right=table_columns_align_right)
     else:
@@ -240,7 +240,7 @@ def main():
     parser.add_argument('-l', '--add-links', action='store_true', dest='add_links', required=False,
                         help='Link from header to sorted versions, plus link from entries to readme.md')
     parser.add_argument('-a', '-all', action='store_true', dest='generate_all', required=False,
-                        help='Generate all files as TABLE_COLUMN_NAME.md (-s, -r, -o are ignored)')
+                        help='Generate all files as README_COLUMN_NAME.md (-s, -r, -o are ignored)')
     parser.add_argument('-t', '--totals', action='store_true', dest='add_totals', required=False,
                         help='Add totals of all columns as the last entry')
     parser.add_argument('--debug', action='store_true', dest='debug', required=False, help='Enable debug output')
