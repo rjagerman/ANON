@@ -1,5 +1,5 @@
 # Alternative Internet
-Pull requests VERY welcome!
+[Pull requests VERY welcome!](CONTRIBUTING.md)
 
 Project statistics fetched from [Ohloh](https://www.ohloh.net).
 
@@ -126,7 +126,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 |Refuge|-|-|-|The [Refuge Project](http://refuge.io/) aims to provide a fully decentralized and opensource data platform. It is built in Erlang and includes [RCouch](https://github.com/refuge/rcouch), a static distribution of couchdb using rebar, and [Coffer](https://github.com/refuge/coffer), a blob server.|
 |Avatar|-|-|-|[Avatar](http://avatar.ai) is a distributed "operating system for the internet" running inside the web browser. It allows for secure messaging (think email, social networks) and distributed data storage, employing a policy of "privacy and data security by default". Building its own encrypted P2P network, it does not rely upon any central authority.|
 |BitPhone|-|-|-|[BitPhone](http://www.gullicksonlaboratories.com/projects/bitphone/) is a mobile communications device with the features of a modern smartphone built on top of decentralized BitCoin-style proof-of-work networking.|
-|Bitcloud|-|-|-|[Bitcloud](http://http://bitcloudproject.org) is an open source distributed cloud storage system and escrow agent based on Tahoe-LAFS that allows publishers to pay storage nodes for storing encrypted data and sharing that data with others. The decentralized nature of Bitcloud allows anyone to publish large amounts of data in a way that is free from censorship, high costs, and proprietary software.  The first application for bitcloud will be [WeTube](https://github.com/wetube/wetube-web), a platform for viewing and publishing videos, podcasts, ebooks, music, and other forms of media.|
+|Bitcloud|-|-|-|[Bitcloud](http://bitcloudproject.org) is an open source distributed cloud storage system and escrow agent based on Tahoe-LAFS that allows publishers to pay storage nodes for storing encrypted data and sharing that data with others. The decentralized nature of Bitcloud allows anyone to publish large amounts of data in a way that is free from censorship, high costs, and proprietary software.  The first application for bitcloud will be [WeTube](https://github.com/wetube/wetube-web), a platform for viewing and publishing videos, podcasts, ebooks, music, and other forms of media.|
 |RenderJs|-|-|-|[RenderJS](http://www.renderjs.org) is a JavaScript library which provides an easy way to define gadgets (aka mashups) in pure HTML5, without requiring any application server. It is suitable for the development of mobile applications, desktop applications.|
 |DeadC|-|-|-|[DeadC](http://deadc.net/) Create a one-click expiring link|
 |StreamRoot|-|-|-|[StreamRoot](http://www.streamroot.io/) is JavaScript in-browser video player using WebRTC. It creates a real-time peer-to-peer sharing network of users watching the same videos simultaniously, and reduces the origin server's bandwidth usage.|
