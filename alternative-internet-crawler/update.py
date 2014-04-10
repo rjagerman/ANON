@@ -54,11 +54,13 @@ If you don't want to get information from Ohloh and just generate the table, omi
 
 """
 
+from __future__ import unicode_literals
 from argparse import ArgumentParser
 from os import listdir
 from os.path import isfile, join
 from operator import itemgetter
 from collections import OrderedDict
+import sys
 import datetime
 import logging
 import codecs
@@ -86,27 +88,61 @@ text_footer = ""
 
 
 class SortableMarkdownTable:
+    """
+    Generates markdown files that represent a sortable table
+    """
 
     def __init__(self):
         self.columns = []
         self.rows = []
 
     def add_column(self, title, sortable=False, suffix='', align='', width=3, reverse=False):
+        """
+        Adds a column to the table
+
+        Keyword arguments:
+        title -- The column's visible title
+        sortable -- Whether this column is sortable (and should therefor generate a file)
+        suffix -- The file suffix to write to
+        align -- The column alignment
+        width -- The column width
+        reverse -- Whether the sorting should happen in reverse (useful for numbers)
+        """
         if suffix != '':
             suffix = '_' + suffix
         self.columns.append({'title': title, 'sortable': sortable, 'reverse': reverse, 'suffix': suffix, 'align': align,
                              'width': width})
 
     def add_row(self, data):
+        """
+        Adds a row to the table
+
+        Keyword arguments:
+        data -- A list of data, the order of the data determines the column it ends up in
+        """
         assert len(data) == len(self.columns)
         self.rows.append(data)
 
     def write_files(self, filename='README'):
+        """
+        Writes the table to markdown files
+
+        Keyword arguments:
+        filename -- The file to write to (without the .md extension)
+        """
         for idx, column in enumerate(self.columns):
             if column['sortable']:
                 self.write_file(filename, idx, column['reverse'])
 
     def write_file(self, filename, column_idx, reverse):
+        """
+        Writes a single file for a column index
+
+        Keyword arguments:
+        filename -- The file to write to
+        column_idx -- The index of the column to sort on
+        reverse -- Whether the sorting should happen in reverse
+        """
         with codecs.open('%s%s.md' % (filename, self.columns[column_idx]['suffix']), 'w', 'utf8') as f:
 
             # Sort data according to column index
@@ -139,7 +175,11 @@ class SortableMarkdownTable:
                 for col in row:
                     if col is None:
                         col = '-'
-                    f.write('|' + unicode(col))
+                    if sys.version < '3':
+                        col = unicode(col)
+                    else:
+                        col = str(col)
+                    f.write(u'|' + col)
                 f.write('|\n')
 
             # Write footer text
@@ -154,29 +194,42 @@ def write_to_table(projects):
     projects -- The list of projects to store
     """
     class OhlohValue:
+        """
+        Abstracts complex data and make it sortable and writable for the SortableMarkdownTable
+        """
         def __init__(self, obj, value):
             if 'ohloh' in obj.keys() and value in obj['ohloh'].keys():
                 self.value = obj['ohloh'][value]
             else:
                 self.value = None
-        def __cmp__(self,other):
-            return cmp(self.value, other.value)
+        def __lt__(self,other):
+            if self.value == None:
+                return True
+            if other.value == None:
+                return False
+            return self.value < other.value
 
     class OhlohNumber(OhlohValue):
-        def __unicode__(self):
+        """
+        OhlohValue implementation for numeric data with a pretty unicode function for numbers that are very large
+        """
+        def __str__(self):
             try:
-                value = int(self.value)
+                value = float(self.value)
                 sizes = ['G', 'M', 'K']
                 size = ''
                 while(value/(10**3) >= 1.0 and len(sizes) > 0):
                     value = value/(10**3)
                     size = sizes.pop()
-                return '%s %s' % (str(value), size)
+                return '%d %s' % (round(value), size)
             except:
                 return '-'
 
     class OhlohDate(OhlohValue):
-        def __unicode__(self):
+        """
+        OhlohValue implementation for dates with a pretty unicode function that shows the time difference
+        """
+        def __str__(self):
             td = datetime.datetime.now() - self.dateobj()
             if td.days < 0:
                 return '-'
@@ -191,8 +244,8 @@ def write_to_table(projects):
                 return datetime.datetime(int(self.value[:4]), int(self.value[6:7]), int(self.value[9:10]))
             except:
                 return datetime.datetime.max
-        def __cmp__(self,other):
-            return cmp(self.dateobj(), other.dateobj())
+        def __lt__(self,other):
+            return self.dateobj() < other.dateobj()
 
     table = SortableMarkdownTable()
 
@@ -220,7 +273,6 @@ def get_projects():
     for file_name in listdir(json_directory):
         file_path = join(json_directory, file_name)
         if isfile(file_path) and file_path.endswith('.json'):
-            print file_path
             projects[file_path] = json.load(open(file_path, 'r'), object_pairs_hook=OrderedDict)
     return projects
 
@@ -233,9 +285,6 @@ def save_project(project, file_path):
     project -- The project to store
     filename -- The filename to store the project in
     """
-    # for key in project.keys():
-    #     if key != 'name' and key != 'description':
-    #         del project[key]
     json.dump(project, codecs.open(file_path, 'w', 'utf8'), indent=4)
 
 
@@ -250,7 +299,7 @@ def get_ohloh_api_request(url, api_key, params=None):
     """
     parameters = {'api_key': api_key}
     if params is not None:
-        for key, value in params.iteritems():
+        for key, value in params.items():
             parameters[key] = value
 
     xml = urlopen('%s?%s' % (url, urlencode(parameters)))
@@ -338,7 +387,7 @@ def run_crawler():
     """
     projects = get_projects()
 
-    for file_path, project in projects.iteritems():
+    for file_path, project in projects.items():
 
         logging.info("Processing %s" % file_path)
 
