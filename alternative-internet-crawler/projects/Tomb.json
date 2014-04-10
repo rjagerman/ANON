@@ -3,8 +3,6 @@
         "main_language": "Python", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "Tomb is a system to make strong encryption easy for everyday use. A tomb is like a locked folder that can be safely transported and hidden in a filesystem. Its keys can be kept separate; for example, you can keep the tomb on your computer and its key on a USB stick or a remote SSH shell.\nTomb is written in code that is easy to review and links shared components: it consists of a ZShell script and desktop integration apps; it uses standard GNU tools and the cryptographic API of the Linux kernel (dm-crypt) via cryptsetup.", 
-        "total_contributor_count": 14, 
-        "total_code_lines": 3179, 
         "tags": [
             "search", 
             "index", 
@@ -27,6 +25,8 @@
             "usable", 
             "steganography"
         ], 
+        "total_code_lines": 3179, 
+        "total_contributor_count": 14, 
         "twelve_month_contributor_count": 5, 
         "updated_at": "2014-04-07T02:16:19Z", 
         "analysis": "19837278", 

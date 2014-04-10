@@ -3,12 +3,12 @@
         "main_language": "JavaScript", 
         "max_month": "2014-03-01T00:00:00Z", 
         "description": "Open source, self-hosted DIY Bitcoin wallet service", 
-        "total_contributor_count": 12, 
-        "total_code_lines": 578449, 
         "tags": [
             "bitcoin", 
             "html5"
         ], 
+        "total_code_lines": 578449, 
+        "total_contributor_count": 12, 
         "twelve_month_contributor_count": 12, 
         "updated_at": "2014-04-09T13:18:43Z", 
         "analysis": "19777918", 

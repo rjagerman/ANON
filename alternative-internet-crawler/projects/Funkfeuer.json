@@ -1,24 +1,6 @@
 {
     "ohloh": {
-        "main_language": "JavaScript", 
-        "max_month": "2013-12-01T00:00:00Z", 
-        "description": "The CouchDB server design document for LibreMap - a scalable, global and decentralized router database and map visualization for community networks, such as guifi, Altermundi, FunkFeuer, ninux, freifunk, Commotion...", 
-        "total_contributor_count": 2, 
-        "total_code_lines": 316, 
-        "tags": [], 
-        "twelve_month_contributor_count": 2, 
-        "updated_at": "2014-04-06T14:49:39Z", 
-        "analysis": "19769984", 
-        "min_month": "2013-08-01T00:00:00Z", 
-        "factoids": [
-            "Short source control history", 
-            "Small development team", 
-            "Very few source code comments"
-        ], 
-        "twelve_month_commit_count": 158, 
-        "total_commit_count": 177, 
-        "id": "711532", 
-        "name": "libremap-api"
+        "skip": true
     }, 
     "description": "[Funkfeuer](http://funkfeuer.at/) is, just like Freifunk, a non commercial initiative for free wireless mesh networks. Funkfeuer is based in Austria and uses [OpenWRT](http://www.openwrt.net) as the firmware for the Routers.", 
     "name": "Funkfeuer"

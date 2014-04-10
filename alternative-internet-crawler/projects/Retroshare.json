@@ -3,8 +3,6 @@
         "main_language": "C++", 
         "max_month": "2013-08-01T00:00:00Z", 
         "description": "RetroShare is a cross-platform private P2P sharing program. It lets you share securely your friends, using a web-of-trust to authenticate peers and OpenSSL to encrypt all communication. RetroShare provides filesharing, chat, messages and channels.", 
-        "total_contributor_count": 25, 
-        "total_code_lines": 726104, 
         "tags": [
             "gpg", 
             "encryption", 
@@ -26,6 +24,8 @@
             "pgp", 
             "retroshare"
         ], 
+        "total_code_lines": 726104, 
+        "total_contributor_count": 25, 
         "twelve_month_contributor_count": 6, 
         "updated_at": "2014-02-24T19:29:32Z", 
         "analysis": "19171921", 

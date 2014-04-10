@@ -3,8 +3,6 @@
         "main_language": "Java", 
         "max_month": "2013-12-01T00:00:00Z", 
         "description": "Kune is a free/libre distributed collaborative social network focused on: the collaborative edition in real time of free contents, thinking on the collaborative work of collectives and organizations; its publishing on the web; and the communication in social network among social movements, academic groups and social initiatives. Besides, it stresses the CC licenses of contents and usability for humans. Many buzzwords, but we try to take it seriously :)", 
-        "total_contributor_count": 9, 
-        "total_code_lines": 322393, 
         "tags": [
             "nonprofit", 
             "creativecommons", 
@@ -46,6 +44,8 @@
             "webpublishing", 
             "non-profit"
         ], 
+        "total_code_lines": 322393, 
+        "total_contributor_count": 9, 
         "twelve_month_contributor_count": 4, 
         "updated_at": "2014-01-01T10:56:47Z", 
         "analysis": "17767964", 

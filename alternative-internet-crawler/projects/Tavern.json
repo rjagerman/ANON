@@ -1,24 +1,6 @@
 {
     "ohloh": {
-        "main_language": "Erlang", 
-        "max_month": "2013-05-01T00:00:00Z", 
-        "description": "Alternative RESTfull layer to Cowboy", 
-        "total_contributor_count": 2, 
-        "total_code_lines": 790, 
-        "tags": [], 
-        "twelve_month_contributor_count": 1, 
-        "updated_at": "2014-04-07T07:37:35Z", 
-        "analysis": "19433088", 
-        "min_month": "2012-08-01T00:00:00Z", 
-        "factoids": [
-            "Short source control history", 
-            "Only a single active developer", 
-            "Very few source code comments"
-        ], 
-        "twelve_month_commit_count": 1, 
-        "total_commit_count": 71, 
-        "id": "686670", 
-        "name": "tavern"
+        "skip": true
     }, 
     "description": "[Tavern](https://tavern.com/) is a distributed, anonymous, unblockable network designed to ensure that no one is silenced, censored, or cut off from the rest of the world", 
     "name": "Tavern"

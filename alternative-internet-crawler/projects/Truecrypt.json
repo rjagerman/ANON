@@ -3,8 +3,6 @@
         "main_language": "C", 
         "max_month": "2011-11-01T00:00:00Z", 
         "description": "On-the-fly encryption software which can create a virtual encrypted disk within a file and mount it as a real disk. It can also encrypt a hard disk partition or storage device, such as USB flash drive. Moreover, TrueCrypt supports plausible deniability.", 
-        "total_contributor_count": 1, 
-        "total_code_lines": 108817, 
         "tags": [
             "crypto", 
             "cryptography", 
@@ -15,6 +13,8 @@
             "aes", 
             "file-system"
         ], 
+        "total_code_lines": 108817, 
+        "total_contributor_count": 1, 
         "twelve_month_contributor_count": 0, 
         "updated_at": "2014-04-09T07:12:37Z", 
         "analysis": "19520059", 

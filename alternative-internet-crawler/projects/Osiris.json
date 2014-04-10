@@ -3,11 +3,11 @@
         "main_language": "C++", 
         "max_month": "2014-01-01T00:00:00Z", 
         "description": "Osiris is a free portal creation software. The portals created with osiris don't need a central server, they are safe, indestructible and anonymous. In those portals, all users have the same rights, so the standard hierarchys (administrators, moderators, members) of regular forums are not present, even if they are supported.", 
+        "total_contributor_count": 2, 
+        "total_code_lines": 1144089, 
         "tags": [
             "serverless"
         ], 
-        "total_code_lines": 1144089, 
-        "total_contributor_count": 2, 
         "twelve_month_contributor_count": 2, 
         "updated_at": "2014-04-09T07:27:14Z", 
         "analysis": "19529366", 

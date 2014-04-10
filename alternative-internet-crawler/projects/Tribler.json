@@ -3,8 +3,6 @@
         "main_language": "Python", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "Tribler is a social community that facilitates filesharing and a/v streaming through a peer-to-peer (p2p) network.", 
-        "total_contributor_count": 49, 
-        "total_code_lines": 153773, 
         "tags": [
             "p2p", 
             "bittorrent", 
@@ -12,6 +10,8 @@
             "streaming", 
             "social"
         ], 
+        "total_code_lines": 153773, 
+        "total_contributor_count": 49, 
         "twelve_month_contributor_count": 16, 
         "updated_at": "2014-04-08T08:36:10Z", 
         "analysis": "19864272", 

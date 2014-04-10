@@ -1,25 +1,6 @@
 {
     "ohloh": {
-        "main_language": "shell script", 
-        "max_month": "2014-03-01T00:00:00Z", 
-        "description": "Encoder/decoder for one-time pad encryption.  Uses a command-line interface, and has basic pad-management fetaures, including remembering previously-used pad ranges.", 
-        "total_contributor_count": 3, 
-        "total_code_lines": 2886, 
-        "tags": [], 
-        "twelve_month_contributor_count": 2, 
-        "updated_at": "2014-04-08T21:47:16Z", 
-        "analysis": "19399016", 
-        "min_month": "2004-10-01T00:00:00Z", 
-        "factoids": [
-            "Mature, well-established codebase", 
-            "Increasing Y-O-Y development activity", 
-            "Well-commented source code", 
-            "Small development team"
-        ], 
-        "twelve_month_commit_count": 274, 
-        "total_commit_count": 578, 
-        "id": "480313", 
-        "name": "onetime"
+        "skip": true
     }, 
     "description": "[1TY](https://1ty.me/) is \"One Time Self Destructing Links For Sharing Sensitive Information\"", 
     "name": "OneTime (1ty)"

@@ -1,37 +1,6 @@
 {
     "ohloh": {
-        "main_language": "Vala", 
-        "max_month": "2009-03-01T00:00:00Z", 
-        "description": "Moved to libfolks http://telepathy.freedesktop.org/wiki/Folks", 
-        "total_contributor_count": 3, 
-        "total_code_lines": 9832, 
-        "tags": [
-            "social-networks", 
-            "contactmanagement", 
-            "vala", 
-            "contacts", 
-            "gnome", 
-            "addressbook", 
-            "dbus", 
-            "xfce4", 
-            "kde", 
-            "freedesktop", 
-            "people"
-        ], 
-        "twelve_month_contributor_count": 0, 
-        "updated_at": "2014-04-09T03:31:03Z", 
-        "analysis": "19700247", 
-        "min_month": "2007-12-01T00:00:00Z", 
-        "factoids": [
-            "Well-commented source code", 
-            "Young, but established codebase", 
-            "Stable Y-O-Y development activity", 
-            "No recent development activity"
-        ], 
-        "twelve_month_commit_count": 0, 
-        "total_commit_count": 717, 
-        "id": "310790", 
-        "name": "People project"
+        "skip": true
     }, 
     "description": "[People's Open Network](https://sudoroom.org/wiki/Mesh) is a community mesh network in Oakland, California.", 
     "name": "People's Open Network"

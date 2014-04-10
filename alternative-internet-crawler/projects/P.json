@@ -1,31 +1,6 @@
 {
     "ohloh": {
-        "main_language": "PHP", 
-        "max_month": "2012-03-01T00:00:00Z", 
-        "description": "PhD renders DocBook into other formats such as HTML, PDF and CHM.", 
-        "total_contributor_count": 27, 
-        "total_code_lines": 25246, 
-        "tags": [
-            "renderer", 
-            "documentation", 
-            "php", 
-            "xml", 
-            "docbook"
-        ], 
-        "twelve_month_contributor_count": 0, 
-        "updated_at": "2013-05-13T06:11:33Z", 
-        "analysis": "13714292", 
-        "min_month": "2007-07-01T00:00:00Z", 
-        "factoids": [
-            "Well-established codebase", 
-            "Few source code comments", 
-            "Decreasing Y-O-Y development activity", 
-            "No recent development activity"
-        ], 
-        "twelve_month_commit_count": 0, 
-        "total_commit_count": 1000, 
-        "id": "9210", 
-        "name": "PhD: [PH]P based [D]ocBook renderer"
+        "skip": true
     }, 
     "description": "[P](http://ozan.io/p/) is a small JavaScript library for creating peer-to-peer applications in browsers.It allows for transitive connections across peers which makes certain network topologies, such mesh networks,easy to establish.", 
     "name": "P"

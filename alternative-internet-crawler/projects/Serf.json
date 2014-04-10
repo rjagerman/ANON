@@ -1,25 +1,6 @@
 {
     "ohloh": {
-        "main_language": "C", 
-        "max_month": "2014-03-01T00:00:00Z", 
-        "description": "The serf library is a C-based HTTP client library built upon the Apache Portable Runtime (APR) library. It multiplexes connections, running the read/write communication asynchronously. Memory copies and transformations are kept to a minimum to provide high performance operation.", 
-        "total_contributor_count": 15, 
-        "total_code_lines": 20267, 
-        "tags": [], 
-        "twelve_month_contributor_count": 9, 
-        "updated_at": "2014-04-08T13:51:43Z", 
-        "analysis": "19388890", 
-        "min_month": "2004-08-01T00:00:00Z", 
-        "factoids": [
-            "Mature, well-established codebase", 
-            "Increasing Y-O-Y development activity", 
-            "Large, active development team", 
-            "Average number of code comments"
-        ], 
-        "twelve_month_commit_count": 403, 
-        "total_commit_count": 1056, 
-        "id": "9813", 
-        "name": "serf"
+        "skip": true
     }, 
     "description": "[Serf](http://www.serfdom.io/) is a decentralized solution for service discovery and orchestration that is lightweight, highly available, and fault tolerant.", 
     "name": "Serf"

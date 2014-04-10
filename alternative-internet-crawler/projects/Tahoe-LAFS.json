@@ -3,8 +3,6 @@
         "main_language": "Python", 
         "max_month": "2014-03-01T00:00:00Z", 
         "description": "The Tahoe Least-Authority Filesystem is a secure, decentralized, fault-tolerant filesystem.", 
-        "total_contributor_count": 54, 
-        "total_code_lines": 158489, 
         "tags": [
             "fault_tolerant", 
             "filesystem", 
@@ -12,6 +10,8 @@
             "storage", 
             "secure"
         ], 
+        "total_code_lines": 158489, 
+        "total_contributor_count": 54, 
         "twelve_month_contributor_count": 12, 
         "updated_at": "2014-04-09T16:34:21Z", 
         "analysis": "19778476", 

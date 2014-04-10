@@ -3,15 +3,15 @@
         "main_language": "Python", 
         "max_month": "2014-03-01T00:00:00Z", 
         "description": "Bitmessage is a P2P communications protocol used to send encrypted messages to another person or to many subscribers. It is decentralized and trustless, meaning that you need-not inherently trust any entities like root certificate authorities. It also aims to hide \"non-content\" data, like the sender and receiver of messages, from eavesdroppers.", 
-        "total_contributor_count": 77, 
-        "total_code_lines": 34055, 
         "tags": [
             "bitcoin", 
             "message", 
             "p2p"
         ], 
+        "total_code_lines": 34055, 
+        "total_contributor_count": 77, 
         "twelve_month_contributor_count": 72, 
-        "updated_at": "2014-04-08T03:53:33Z", 
+        "updated_at": "2014-04-10T13:21:07Z", 
         "analysis": "19860061", 
         "min_month": "2012-11-01T00:00:00Z", 
         "factoids": [

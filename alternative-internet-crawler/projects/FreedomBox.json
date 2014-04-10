@@ -3,8 +3,6 @@
         "main_language": "JavaScript", 
         "max_month": "2014-03-01T00:00:00Z", 
         "description": "Email and telecommunications that protects privacy and resists eavesdropping\nA publishing platform that resists oppression and censorship.\nAn organizing tool for democratic activists in hostile regimes.\nAn emergency communication network in times of crisis.", 
-        "total_contributor_count": 19, 
-        "total_code_lines": 10758, 
         "tags": [
             "communication", 
             "security", 
@@ -15,6 +13,8 @@
             "message", 
             "freedombox"
         ], 
+        "total_code_lines": 10758, 
+        "total_contributor_count": 19, 
         "twelve_month_contributor_count": 11, 
         "updated_at": "2014-04-09T06:00:45Z", 
         "analysis": "19532179", 

@@ -3,13 +3,13 @@
         "main_language": "Python", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "A modern, fast web-mail client with user-friendly encryption and privacy features.", 
-        "total_contributor_count": 75, 
-        "total_code_lines": 19630, 
         "tags": [
             "python", 
             "email", 
             "webmail"
         ], 
+        "total_code_lines": 19630, 
+        "total_contributor_count": 75, 
         "twelve_month_contributor_count": 74, 
         "updated_at": "2014-04-10T12:36:13Z", 
         "analysis": "19881821", 

@@ -3,8 +3,6 @@
         "main_language": "C++", 
         "max_month": "2012-11-01T00:00:00Z", 
         "description": "MettaNode Grabber prototype", 
-        "total_contributor_count": 2, 
-        "total_code_lines": 92270, 
         "tags": [
             "filesharing", 
             "screenshare", 
@@ -16,6 +14,8 @@
             "screenshooter", 
             "whiteboarding"
         ], 
+        "total_code_lines": 92270, 
+        "total_contributor_count": 2, 
         "twelve_month_contributor_count": 2, 
         "updated_at": "2012-12-03T00:09:18Z", 
         "analysis": "11500412", 

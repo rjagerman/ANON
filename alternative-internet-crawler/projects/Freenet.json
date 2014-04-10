@@ -3,8 +3,6 @@
         "main_language": "Java", 
         "max_month": "2014-03-01T00:00:00Z", 
         "description": "Freenet is a peer-to-peer network designed to allow the distribution of information over the Internet in an efficient manner, without fear of censorship. It is completely decentralized (there is no person or computer essential to its operation), meaning that Freenet cannot be attacked like centralized peer-to-peer systems such as Napster. Freenet also employs intelligent routing and caching to learn to route requests more efficiently, automatically mirror popular data, make network flooding almost impossible, and move data to where it is in greatest demand.", 
-        "total_contributor_count": 185, 
-        "total_code_lines": 442690, 
         "tags": [
             "darknet", 
             "anonymity", 
@@ -29,6 +27,8 @@
             "security", 
             "technology"
         ], 
+        "total_code_lines": 442690, 
+        "total_contributor_count": 185, 
         "twelve_month_contributor_count": 23, 
         "updated_at": "2014-04-09T10:01:36Z", 
         "analysis": "19778439", 

@@ -3,8 +3,6 @@
         "main_language": "PHP", 
         "max_month": "2013-07-01T00:00:00Z", 
         "description": "StatusNet (formerly Laconica) is a microblogging service. Users post short (140 character) notices which are broadcast to their friends and fans using the Web, RSS, or instant messages. It is the software that runs Identi.ca.", 
-        "total_contributor_count": 92, 
-        "total_code_lines": 230115, 
         "tags": [
             "ostatus", 
             "blog", 
@@ -19,6 +17,8 @@
             "identica", 
             "twitter"
         ], 
+        "total_code_lines": 230115, 
+        "total_contributor_count": 92, 
         "twelve_month_contributor_count": 3, 
         "updated_at": "2014-04-08T04:07:56Z", 
         "analysis": "19720073", 

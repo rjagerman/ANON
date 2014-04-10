@@ -3,8 +3,6 @@
         "main_language": "Python", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "arkOS is an open-source platform for securely self-hosting your online life. It is designed to help its users take control of their personal data, and to make running a server as easy as using a desktop computer.", 
-        "total_contributor_count": 51, 
-        "total_code_lines": 29084, 
         "tags": [
             "distribution", 
             "archlinux", 
@@ -19,6 +17,8 @@
             "python", 
             "selfhosting"
         ], 
+        "total_code_lines": 29084, 
+        "total_contributor_count": 51, 
         "twelve_month_contributor_count": 18, 
         "updated_at": "2014-04-07T18:35:30Z", 
         "analysis": "19838066", 

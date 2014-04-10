@@ -1,24 +1,6 @@
 {
     "ohloh": {
-        "main_language": "JavaScript", 
-        "max_month": "2014-01-01T00:00:00Z", 
-        "description": "The map and graph modules of Wikileak's ProjectK, the diplomatic cables of the Kissinger era.", 
-        "total_contributor_count": 2, 
-        "total_code_lines": 2577, 
-        "tags": [], 
-        "twelve_month_contributor_count": 2, 
-        "updated_at": "2014-04-08T18:59:15Z", 
-        "analysis": "19838981", 
-        "min_month": "2013-02-01T00:00:00Z", 
-        "factoids": [
-            "Well-commented source code", 
-            "Small development team", 
-            "Short source control history"
-        ], 
-        "twelve_month_commit_count": 65, 
-        "total_commit_count": 118, 
-        "id": "657649", 
-        "name": "wikileaks-kissinger-cables"
+        "skip": true
     }, 
     "description": "[Cables communication](http://dee.su/cables) implements secure and anonymous communication using email-like addresses, pioneered in Libert\u00e9 Linux. Cables communication is Libert\u00e9's pivotal component for enabling anyone to communicate safely and covertly in hostile environments.", 
     "name": "Cables"

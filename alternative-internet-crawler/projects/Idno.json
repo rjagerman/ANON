@@ -1,25 +1,6 @@
 {
     "ohloh": {
-        "main_language": "C", 
-        "max_month": "2007-07-01T00:00:00Z", 
-        "description": "Idno is a simple NCurses-Based RPG engine/game. Still in planning. It will use a Plug-In architecture to allow different games to be played and new rules added to the engine. If you have any queries, suggestions or anything else, just post in the forums.", 
-        "total_contributor_count": 1, 
-        "total_code_lines": 169, 
-        "tags": [], 
-        "twelve_month_contributor_count": 0, 
-        "updated_at": "2014-04-08T05:10:16Z", 
-        "analysis": "19418515", 
-        "min_month": "2007-06-01T00:00:00Z", 
-        "factoids": [
-            "Well-commented source code", 
-            "Short source control history", 
-            "Stable Y-O-Y development activity", 
-            "No recent development activity"
-        ], 
-        "twelve_month_commit_count": 0, 
-        "total_commit_count": 13, 
-        "id": "75441", 
-        "name": "Idno"
+        "skip": true
     }, 
     "description": "[Idno](http://idno.co/) is a distributed social publishing platform for companies, groups and individuals, based on [IndieWeb](http://indiewebcamp.com) technologies. All the code is available on [GitHub](https://github.com/idno/idno).", 
     "name": "Idno"
