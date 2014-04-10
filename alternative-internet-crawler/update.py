@@ -338,9 +338,6 @@ def run_crawler():
 
     for file_path, project in projects.iteritems():
 
-        if file_path != 'projects/Osiris.json':
-            continue
-
         logging.info("Processing %s" % file_path)
 
         if api_key is not None:
@@ -351,8 +348,9 @@ def run_crawler():
 
         save_project(project, file_path)
 
-
+    logging.info("Writing to tables")
     write_to_table(projects)
+    logging.info("Done!")
 
 
 def main():
