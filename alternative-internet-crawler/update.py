@@ -58,6 +58,7 @@ from argparse import ArgumentParser
 from os import listdir
 from os.path import isfile, join
 from operator import itemgetter
+from collections import OrderedDict
 import datetime
 import logging
 import codecs
@@ -220,7 +221,7 @@ def get_projects():
         file_path = join(json_directory, file_name)
         if isfile(file_path) and file_path.endswith('.json'):
             print file_path
-            projects[file_path] = json.load(open(file_path, 'r'))
+            projects[file_path] = json.load(open(file_path, 'r'), object_pairs_hook=OrderedDict)
     return projects
 
 
