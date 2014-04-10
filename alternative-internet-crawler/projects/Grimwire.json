@@ -1,1 +1,25 @@
-{"main_language": "JavaScript", "ohloh_name": "grimwire", "max_month": "2013-12-01T00:00:00Z", "description": "[Grimwire](http://blog.grimwire.com/#2013-04-04-grimwire.md) is a browser OS which uses Web Workers for process isolation, and WebRTC for peer-to-peer communication.", "tags": [], "ohloh_analysis": "19363875", "total_code_lines": "15563", "ohloh_description": "A Peer-to-Peer, User-Driven Web OS. Powered by grimwire/local.", "updated_at": "2014-03-13T01:39:49Z", "min_month": "2013-08-01T00:00:00Z", "total_commit_count": "161", "ohloh_id": "667086", "name": "Grimwire", "total_contributor_count": "3", "twelve_month_contributor_count": "3", "factoids": ["Short source control history", "Average number of code comments", "Small development team"], "twelve_month_commit_count": "161"}
+{
+    "ohloh": {
+        "main_language": "JavaScript", 
+        "max_month": "2013-12-01T00:00:00Z", 
+        "description": "A Peer-to-Peer, User-Driven Web OS. Powered by grimwire/local.", 
+        "total_contributor_count": 3, 
+        "total_code_lines": 15563, 
+        "tags": [], 
+        "twelve_month_contributor_count": 3, 
+        "updated_at": "2014-04-09T08:29:00Z", 
+        "analysis": "19877966", 
+        "min_month": "2013-08-01T00:00:00Z", 
+        "factoids": [
+            "Short source control history", 
+            "Average number of code comments", 
+            "Small development team"
+        ], 
+        "twelve_month_commit_count": 161, 
+        "total_commit_count": 161, 
+        "id": "667086", 
+        "name": "grimwire"
+    }, 
+    "description": "[Grimwire](http://blog.grimwire.com/#2013-04-04-grimwire.md) is a browser OS which uses Web Workers for process isolation, and WebRTC for peer-to-peer communication.", 
+    "name": "Grimwire"
+}

@@ -1,1 +1,30 @@
-{"main_language": "PHP", "ohloh_name": "Lorea", "max_month": "2014-01-01T00:00:00Z", "description": "[Lorea](https://lorea.org/) researches free software Internet tools to emancipate your social networks where autonomy, group collaboration, and privacy matter.  Since 2009, Lorea has been _(re-)taking the networks_, with its flagship [N-1](https://n-1.cc/) seed.", "tags": ["social_networks", "distributed", "socialnetwork"], "ohloh_analysis": "19054872", "total_code_lines": "873431", "ohloh_description": "Lorea is a project to create secure social cybernetic systems, in which human networks will become simultaneusly represented on a virtual shared world.", "updated_at": "2014-03-12T21:44:58Z", "min_month": "2008-02-01T00:00:00Z", "total_commit_count": "11066", "ohloh_id": "485870", "name": "Lorea", "total_contributor_count": "96", "twelve_month_contributor_count": "20", "factoids": ["Mature, well-established codebase", "Large, active development team", "Average number of code comments", "Decreasing Y-O-Y development activity"], "twelve_month_commit_count": "464"}
+{
+    "ohloh": {
+        "main_language": "PHP", 
+        "max_month": "2014-01-01T00:00:00Z", 
+        "description": "Lorea is a project to create secure social cybernetic systems, in which human networks will become simultaneusly represented on a virtual shared world.", 
+        "total_contributor_count": 96, 
+        "total_code_lines": 873431, 
+        "tags": [
+            "social_networks", 
+            "distributed", 
+            "socialnetwork"
+        ], 
+        "twelve_month_contributor_count": 19, 
+        "updated_at": "2014-04-09T09:29:56Z", 
+        "analysis": "19551378", 
+        "min_month": "2008-02-01T00:00:00Z", 
+        "factoids": [
+            "Mature, well-established codebase", 
+            "Large, active development team", 
+            "Average number of code comments", 
+            "Decreasing Y-O-Y development activity"
+        ], 
+        "twelve_month_commit_count": 396, 
+        "total_commit_count": 11066, 
+        "id": "485870", 
+        "name": "Lorea"
+    }, 
+    "description": "[Lorea](https://lorea.org/) researches free software Internet tools to emancipate your social networks where autonomy, group collaboration, and privacy matter.  Since 2009, Lorea has been _(re-)taking the networks_, with its flagship [N-1](https://n-1.cc/) seed.", 
+    "name": "Lorea"
+}

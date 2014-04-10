@@ -1,1 +1,29 @@
-{"main_language": "C", "ohloh_name": "CudaMiner-twister", "max_month": "2014-01-01T00:00:00Z", "description": "[Twister](http://twister.net.co) is a secure and fully-decentralized P2P microblogging platform based on concepts and code from Bitcoin and Libtorrent (as described in [this whitepaper](http://arxiv.org/abs/1312.7152)). Feel free to contribute to its [core service](https://github.com/miguelfreitas/twister-core) or [HTML UI](https://github.com/miguelfreitas/twister-html)!", "tags": ["bitcoin", "cuda", "mining"], "ohloh_analysis": "19037831", "total_code_lines": "30568", "ohloh_description": "CudaMiner patched to generate twister's blocks", "updated_at": "2014-03-14T18:41:02Z", "min_month": "2013-04-01T00:00:00Z", "total_commit_count": "118", "ohloh_id": "713806", "name": "Twister", "total_contributor_count": "3", "twelve_month_contributor_count": "3", "factoids": ["Short source control history", "Few source code comments", "Small development team"], "twelve_month_commit_count": "118"}
+{
+    "ohloh": {
+        "main_language": "C", 
+        "max_month": "2014-01-01T00:00:00Z", 
+        "description": "CudaMiner patched to generate twister's blocks", 
+        "total_contributor_count": 3, 
+        "total_code_lines": 30568, 
+        "tags": [
+            "bitcoin", 
+            "cuda", 
+            "mining"
+        ], 
+        "twelve_month_contributor_count": 3, 
+        "updated_at": "2014-04-08T22:29:25Z", 
+        "analysis": "19536185", 
+        "min_month": "2013-04-01T00:00:00Z", 
+        "factoids": [
+            "Short source control history", 
+            "Few source code comments", 
+            "Small development team"
+        ], 
+        "twelve_month_commit_count": 118, 
+        "total_commit_count": 118, 
+        "id": "713806", 
+        "name": "CudaMiner-twister"
+    }, 
+    "description": "[Twister](http://twister.net.co) is a secure and fully-decentralized P2P microblogging platform based on concepts and code from Bitcoin and Libtorrent (as described in [this whitepaper](http://arxiv.org/abs/1312.7152)). Feel free to contribute to its [core service](https://github.com/miguelfreitas/twister-core) or [HTML UI](https://github.com/miguelfreitas/twister-html)!", 
+    "name": "Twister"
+}

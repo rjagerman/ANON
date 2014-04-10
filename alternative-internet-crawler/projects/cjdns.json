@@ -1,1 +1,26 @@
-{"main_language": "Puppet", "ohloh_name": "puppet-cjdns", "max_month": "2012-11-01T00:00:00Z", "description": "[cjdns](http://cjdns.info/) - Encrypted networking for regular people. cjdns implements an encrypted IPv6 network using public key cryptography for address allocation and a distributed hash table for routing. This provides near zero-configuration networking without many of the security and robustness issues that regular IPv4 and IPv6 networks have.", "tags": ["puppet_module", "puppet", "cjdns", "meshnet"], "ohloh_analysis": "19163589", "total_code_lines": "200", "ohloh_description": "Puppet module for cjdns", "updated_at": "2014-03-15T05:51:46Z", "min_month": "2012-11-01T00:00:00Z", "total_commit_count": "2", "ohloh_id": "616788", "name": "cjdns", "total_contributor_count": "1", "twelve_month_contributor_count": "0", "factoids": ["Very well-commented source code", "Short source control history", "No recent development activity"], "twelve_month_commit_count": "0"}
+{
+    "ohloh": {
+        "main_language": "Assembly", 
+        "max_month": "2014-03-01T00:00:00Z", 
+        "description": "Cjdns implements an encrypted IPv6 network using public-key cryptography for address allocation and a distributed hash table for routing. This provides near-zero-configuration networking, and prevents many of the security and scalability issues that plague existing networks.", 
+        "total_contributor_count": 89, 
+        "total_code_lines": 295260, 
+        "tags": [], 
+        "twelve_month_contributor_count": 57, 
+        "updated_at": "2014-04-09T05:23:22Z", 
+        "analysis": "19839214", 
+        "min_month": "2011-02-01T00:00:00Z", 
+        "factoids": [
+            "Very large, active development team", 
+            "Well-established codebase", 
+            "Stable Y-O-Y development activity", 
+            "Very few source code comments"
+        ], 
+        "twelve_month_commit_count": 926, 
+        "total_commit_count": 2411, 
+        "id": "633020", 
+        "name": "CJDNS"
+    }, 
+    "description": "[cjdns](http://cjdns.info/) - Encrypted networking for regular people. cjdns implements an encrypted IPv6 network using public key cryptography for address allocation and a distributed hash table for routing. This provides near zero-configuration networking without many of the security and robustness issues that regular IPv4 and IPv6 networks have.", 
+    "name": "cjdns"
+}

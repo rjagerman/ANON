@@ -1,1 +1,26 @@
-{"main_language": "shell script", "ohloh_name": "ampify", "max_month": "2014-02-01T00:00:00Z", "description": "[Ampify](http://ampify.net/) is an open source, decentralised, social platform. It is intended as a successor to the Open Web and as a replacement for closed platforms like iOS and Facebook by providing a web application framework to create social apps on top of a secure, decentralised core.", "tags": [], "ohloh_analysis": "19013759", "total_code_lines": "2643", "ohloh_description": "Ampify is an open and decentralised application platform. See the README for more info and join in!", "updated_at": "2014-03-14T22:07:58Z", "min_month": "2009-12-01T00:00:00Z", "total_commit_count": "1574", "ohloh_id": "495438", "name": "Ampify", "total_contributor_count": "8", "twelve_month_contributor_count": "2", "factoids": ["Very well-commented source code", "Well-established codebase", "Small development team", "Decreasing Y-O-Y development activity"], "twelve_month_commit_count": "11"}
+{
+    "ohloh": {
+        "main_language": "shell script", 
+        "max_month": "2014-02-01T00:00:00Z", 
+        "description": "Ampify is an open and decentralised application platform. See the README for more info and join in!", 
+        "total_contributor_count": 8, 
+        "total_code_lines": 2643, 
+        "tags": [], 
+        "twelve_month_contributor_count": 2, 
+        "updated_at": "2014-04-09T09:05:18Z", 
+        "analysis": "19510543", 
+        "min_month": "2009-12-01T00:00:00Z", 
+        "factoids": [
+            "Very well-commented source code", 
+            "Well-established codebase", 
+            "Small development team", 
+            "Decreasing Y-O-Y development activity"
+        ], 
+        "twelve_month_commit_count": 3, 
+        "total_commit_count": 1574, 
+        "id": "495438", 
+        "name": "ampify"
+    }, 
+    "description": "[Ampify](http://ampify.net/) is an open source, decentralised, social platform. It is intended as a successor to the Open Web and as a replacement for closed platforms like iOS and Facebook by providing a web application framework to create social apps on top of a secure, decentralised core.", 
+    "name": "Ampify"
+}

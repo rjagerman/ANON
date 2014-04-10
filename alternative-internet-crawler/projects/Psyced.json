@@ -1,1 +1,40 @@
-{"main_language": "C", "ohloh_name": "psyced", "max_month": "2012-08-01T00:00:00Z", "description": "[Psyced](http://www.psyced.org/) is a scalable multi-protocol multi-casting chat, messaging and social server solution to build decentralized chat networks upon, released as open source.", "tags": ["s2s", "telnet", "decentral", "chat", "chatting", "lpc", "federated", "communication", "multicast", "irc", "jabber", "xmpp", "psyc"], "ohloh_analysis": "11986583", "total_code_lines": "41671", "ohloh_description": "", "updated_at": "2013-01-06T02:51:40Z", "min_month": "2009-01-01T00:00:00Z", "total_commit_count": "346", "ohloh_id": "485620", "name": "Psyced", "total_contributor_count": "4", "twelve_month_contributor_count": "1", "factoids": ["Well-established codebase", "Average number of code comments", "Decreasing Y-O-Y development activity", "Only a single active developer"], "twelve_month_commit_count": "5"}
+{
+    "ohloh": {
+        "main_language": "C", 
+        "max_month": "2012-08-01T00:00:00Z", 
+        "description": "", 
+        "total_contributor_count": 4, 
+        "total_code_lines": 41671, 
+        "tags": [
+            "s2s", 
+            "telnet", 
+            "decentral", 
+            "chat", 
+            "chatting", 
+            "lpc", 
+            "federated", 
+            "communication", 
+            "multicast", 
+            "irc", 
+            "jabber", 
+            "xmpp", 
+            "psyc"
+        ], 
+        "twelve_month_contributor_count": 1, 
+        "updated_at": "2013-01-06T02:51:40Z", 
+        "analysis": "11986583", 
+        "min_month": "2009-01-01T00:00:00Z", 
+        "factoids": [
+            "Well-established codebase", 
+            "Average number of code comments", 
+            "Decreasing Y-O-Y development activity", 
+            "Only a single active developer"
+        ], 
+        "twelve_month_commit_count": 5, 
+        "total_commit_count": 346, 
+        "id": "485620", 
+        "name": "psyced"
+    }, 
+    "description": "[Psyced](http://www.psyced.org/) is a scalable multi-protocol multi-casting chat, messaging and social server solution to build decentralized chat networks upon, released as open source.", 
+    "name": "Psyced"
+}

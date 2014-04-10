@@ -1,1 +1,26 @@
-{"main_language": "JavaScript", "ohloh_name": "Byzantium", "max_month": "2014-01-01T00:00:00Z", "description": "[Project Byzantium](http://project-byzantium.org/) - Ad-hoc wireless mesh networking for the zombie apocalypse. The goal of Project Byzantium is to develop a communication system by which users can connect to each other and share information in the absence of convenient access to the Internet.  This is done by setting up an ad-hoc wireless mesh network that offers services which replace popular websites often used for this purpose, such as Twitter and IRC.", "tags": [], "ohloh_analysis": "19034722", "total_code_lines": "62779", "ohloh_description": "Configs and code for Project Byzantium.", "updated_at": "2014-03-13T19:50:43Z", "min_month": "2011-02-01T00:00:00Z", "total_commit_count": "1338", "ohloh_id": "598905", "name": "Project Byzantium", "total_contributor_count": "16", "twelve_month_contributor_count": "6", "factoids": ["Average size development team", "Young, but established codebase", "Average number of code comments", "Decreasing Y-O-Y development activity"], "twelve_month_commit_count": "194"}
+{
+    "ohloh": {
+        "main_language": "JavaScript", 
+        "max_month": "2014-01-01T00:00:00Z", 
+        "description": "Configs and code for Project Byzantium.", 
+        "total_contributor_count": 16, 
+        "total_code_lines": 62779, 
+        "tags": [], 
+        "twelve_month_contributor_count": 6, 
+        "updated_at": "2014-04-07T15:21:51Z", 
+        "analysis": "19526167", 
+        "min_month": "2011-02-01T00:00:00Z", 
+        "factoids": [
+            "Average size development team", 
+            "Young, but established codebase", 
+            "Average number of code comments", 
+            "Decreasing Y-O-Y development activity"
+        ], 
+        "twelve_month_commit_count": 183, 
+        "total_commit_count": 1338, 
+        "id": "598905", 
+        "name": "Byzantium"
+    }, 
+    "description": "[Project Byzantium](http://project-byzantium.org/) - Ad-hoc wireless mesh networking for the zombie apocalypse. The goal of Project Byzantium is to develop a communication system by which users can connect to each other and share information in the absence of convenient access to the Internet.  This is done by setting up an ad-hoc wireless mesh network that offers services which replace popular websites often used for this purpose, such as Twitter and IRC.", 
+    "name": "Project Byzantium"
+}

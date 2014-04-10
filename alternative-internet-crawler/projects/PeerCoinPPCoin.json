@@ -1,1 +1,29 @@
-{"main_language": "C++", "ohloh_name": "Peercoin", "max_month": "2014-03-01T00:00:00Z", "description": "[PeerCoin/PPCoin](http://ppcoin.org/) is the first known cryptocurrency based on an implementation of a combined proof-of-stake/proof-of-work system", "tags": ["currency", "p2p"], "ohloh_analysis": "19451702", "total_code_lines": "100676", "ohloh_description": "Peercoin (abbreviated PPC), also known as PPCoin and Peer-to-Peer Coin is the first cryptocurrency design introducing proof-of-stake consensus as a security model, with a combined proof-of-stake/proof-of-work minting system. Peercoin is based on Bitcoin, while introducing many important innovations to cryptocurrency field including new security model, energy efficiency, better minting model and more adaptive response to rapid change in network computation power.", "updated_at": "2014-03-14T12:34:41Z", "min_month": "2011-11-01T00:00:00Z", "total_commit_count": "2868", "ohloh_id": "713949", "name": "PeerCoin/PPCoin", "total_contributor_count": "127", "twelve_month_contributor_count": "5", "factoids": ["Average size development team", "Young, but established codebase", "Few source code comments", "Decreasing Y-O-Y development activity"], "twelve_month_commit_count": "40"}
+{
+    "ohloh": {
+        "main_language": "C++", 
+        "max_month": "2014-03-01T00:00:00Z", 
+        "description": "Peercoin (abbreviated PPC), also known as PPCoin and Peer-to-Peer Coin is the first cryptocurrency design introducing proof-of-stake consensus as a security model, with a combined proof-of-stake/proof-of-work minting system. Peercoin is based on Bitcoin, while introducing many important innovations to cryptocurrency field including new security model, energy efficiency, better minting model and more adaptive response to rapid change in network computation power.", 
+        "total_contributor_count": 127, 
+        "total_code_lines": 100676, 
+        "tags": [
+            "currency", 
+            "p2p"
+        ], 
+        "twelve_month_contributor_count": 5, 
+        "updated_at": "2014-04-06T12:47:33Z", 
+        "analysis": "19451702", 
+        "min_month": "2011-11-01T00:00:00Z", 
+        "factoids": [
+            "Average size development team", 
+            "Young, but established codebase", 
+            "Few source code comments", 
+            "Decreasing Y-O-Y development activity"
+        ], 
+        "twelve_month_commit_count": 40, 
+        "total_commit_count": 2868, 
+        "id": "713949", 
+        "name": "Peercoin"
+    }, 
+    "description": "[PeerCoin/PPCoin](http://ppcoin.org/) is the first known cryptocurrency based on an implementation of a combined proof-of-stake/proof-of-work system", 
+    "name": "PeerCoin/PPCoin"
+}

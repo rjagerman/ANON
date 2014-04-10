@@ -1,1 +1,25 @@
-{"main_language": "C++", "ohloh_name": "firestr", "max_month": "2014-03-01T00:00:00Z", "description": "[Firestr](http://github.com/mempko/firestr) is a simple decentralized communication and computation platform. Apps are written in Lua and are pushed to peers where they automatically run and connect. All communication is P2P and encrypted.", "tags": [], "ohloh_analysis": "19455882", "total_code_lines": "35416", "ohloh_description": "Simple platform for distributed communication and computation.", "updated_at": "2014-03-15T17:19:15Z", "min_month": "2012-07-01T00:00:00Z", "total_commit_count": "452", "ohloh_id": "669862", "name": "Firestr", "total_contributor_count": "3", "twelve_month_contributor_count": "2", "factoids": ["Young, but established codebase", "Few source code comments", "Small development team"], "twelve_month_commit_count": "253"}
+{
+    "ohloh": {
+        "main_language": "C++", 
+        "max_month": "2014-04-01T00:00:00Z", 
+        "description": "Simple platform for distributed communication and computation.", 
+        "total_contributor_count": 3, 
+        "total_code_lines": 35682, 
+        "tags": [], 
+        "twelve_month_contributor_count": 1, 
+        "updated_at": "2014-04-07T14:45:14Z", 
+        "analysis": "19839516", 
+        "min_month": "2012-07-01T00:00:00Z", 
+        "factoids": [
+            "Young, but established codebase", 
+            "Few source code comments", 
+            "Only a single active developer"
+        ], 
+        "twelve_month_commit_count": 233, 
+        "total_commit_count": 466, 
+        "id": "669862", 
+        "name": "firestr"
+    }, 
+    "description": "[Firestr](http://github.com/mempko/firestr) is a simple decentralized communication and computation platform. Apps are written in Lua and are pushed to peers where they automatically run and connect. All communication is P2P and encrypted.", 
+    "name": "Firestr"
+}

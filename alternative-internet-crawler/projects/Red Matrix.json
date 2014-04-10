@@ -1,1 +1,41 @@
-{"main_language": "PHP", "ohloh_name": "Red Matrix", "max_month": "2014-03-01T00:00:00Z", "description": "The [Red Matrix](https://redmatrix.me) is a decentralised identity and communications platform which provides internet-wide single-sign-on with nomadic identity, internet-wide access control, communications, content management and personal cloud storage.", "tags": ["red", "channels", "platform", "community", "mysql", "php", "socialnetworks", "social_networks", "distributed", "zot", "friendica", "forum", "streams", "matrix"], "ohloh_analysis": "19475086", "total_code_lines": "416794", "ohloh_description": "The Red Matrix is a decentrliased identity and communications platform which provides internet-wide single-sign-on with nomadic identity, internet-wide access control, communications, content management and personal cloud storage.", "updated_at": "2014-03-15T19:22:22Z", "min_month": "2010-07-01T00:00:00Z", "total_commit_count": "9981", "ohloh_id": "623130", "name": "Red Matrix", "total_contributor_count": "78", "twelve_month_contributor_count": "37", "factoids": ["Very large, active development team", "Well-established codebase", "Average number of code comments", "Stable Y-O-Y development activity"], "twelve_month_commit_count": "2771"}
+{
+    "ohloh": {
+        "main_language": "PHP", 
+        "max_month": "2014-04-01T00:00:00Z", 
+        "description": "The Red Matrix is a decentrliased identity and communications platform which provides internet-wide single-sign-on with nomadic identity, internet-wide access control, communications, content management and personal cloud storage.", 
+        "total_contributor_count": 81, 
+        "total_code_lines": 423609, 
+        "tags": [
+            "red", 
+            "channels", 
+            "platform", 
+            "community", 
+            "mysql", 
+            "php", 
+            "socialnetworks", 
+            "social_networks", 
+            "distributed", 
+            "zot", 
+            "friendica", 
+            "forum", 
+            "streams", 
+            "matrix"
+        ], 
+        "twelve_month_contributor_count": 40, 
+        "updated_at": "2014-04-08T06:55:55Z", 
+        "analysis": "19863714", 
+        "min_month": "2010-07-01T00:00:00Z", 
+        "factoids": [
+            "Very large, active development team", 
+            "Well-established codebase", 
+            "Average number of code comments", 
+            "Stable Y-O-Y development activity"
+        ], 
+        "twelve_month_commit_count": 2876, 
+        "total_commit_count": 10151, 
+        "id": "623130", 
+        "name": "Red Matrix"
+    }, 
+    "description": "The [Red Matrix](https://redmatrix.me) is a decentralised identity and communications platform which provides internet-wide single-sign-on with nomadic identity, internet-wide access control, communications, content management and personal cloud storage.", 
+    "name": "Red Matrix"
+}

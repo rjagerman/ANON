@@ -1,1 +1,25 @@
-{"main_language": "C", "ohloh_name": "qaul.net", "max_month": "2014-01-01T00:00:00Z", "description": "[qaul.net](https://github.com/WachterJud/qaul.net) implements a redundant, open communication principle, in which wireless-enabled computers and mobile devices can directly form a spontaneous network. Chat functions, file sharing and voice chat is possible independent of internet and cellular networks.", "tags": [], "ohloh_analysis": "19038235", "total_code_lines": "1516519", "ohloh_description": "tools for the next revolution", "updated_at": "2014-03-12T23:01:50Z", "min_month": "2012-07-01T00:00:00Z", "total_commit_count": "367", "ohloh_id": "681160", "name": "qaul.net", "total_contributor_count": "8", "twelve_month_contributor_count": "5", "factoids": ["Well-commented source code", "Average size development team", "Young, but established codebase"], "twelve_month_commit_count": "78"}
+{
+    "ohloh": {
+        "main_language": "C", 
+        "max_month": "2014-01-01T00:00:00Z", 
+        "description": "tools for the next revolution", 
+        "total_contributor_count": 8, 
+        "total_code_lines": 1516519, 
+        "tags": [], 
+        "twelve_month_contributor_count": 5, 
+        "updated_at": "2014-04-06T22:48:47Z", 
+        "analysis": "19534210", 
+        "min_month": "2012-07-01T00:00:00Z", 
+        "factoids": [
+            "Well-commented source code", 
+            "Average size development team", 
+            "Young, but established codebase"
+        ], 
+        "twelve_month_commit_count": 67, 
+        "total_commit_count": 367, 
+        "id": "681160", 
+        "name": "qaul.net"
+    }, 
+    "description": "[qaul.net](https://github.com/WachterJud/qaul.net) implements a redundant, open communication principle, in which wireless-enabled computers and mobile devices can directly form a spontaneous network. Chat functions, file sharing and voice chat is possible independent of internet and cellular networks.", 
+    "name": "qaul.net"
+}
