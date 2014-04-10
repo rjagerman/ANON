@@ -1,10 +1,10 @@
 {
-    "description": "[P](http://ozan.io/p/) is a small JavaScript library for creating peer-to-peer applications in browsers.It allows for transitive connections across peers which makes certain network topologies, such mesh networks,easy to establish.", 
-    "name": "P", 
     "ohloh": {
         "main_language": "PHP", 
         "max_month": "2012-03-01T00:00:00Z", 
         "description": "PhD renders DocBook into other formats such as HTML, PDF and CHM.", 
+        "total_contributor_count": 27, 
+        "total_code_lines": 25246, 
         "tags": [
             "renderer", 
             "documentation", 
@@ -12,8 +12,6 @@
             "xml", 
             "docbook"
         ], 
-        "total_code_lines": 25246, 
-        "total_contributor_count": 27, 
         "twelve_month_contributor_count": 0, 
         "updated_at": "2013-05-13T06:11:33Z", 
         "analysis": "13714292", 
@@ -28,5 +26,7 @@
         "total_commit_count": 1000, 
         "id": "9210", 
         "name": "PhD: [PH]P based [D]ocBook renderer"
-    }
+    }, 
+    "description": "[P](http://ozan.io/p/) is a small JavaScript library for creating peer-to-peer applications in browsers.It allows for transitive connections across peers which makes certain network topologies, such mesh networks,easy to establish.", 
+    "name": "P"
 }

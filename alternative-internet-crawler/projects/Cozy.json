@@ -1,13 +1,11 @@
 {
-    "description": "[Cozy](http://cozy.io) is a personal cloud you can host, hack and delete. With Cozy, you manage your web apps like you were on your smartphone. It provides an open market place from where you can install the web app you made yourself (Cozy is a [personal PaaS](http://cozy.io/hack/getting-started/architecture-overview.html)). Today, the most successful applications are Contact and Calendar managers that you can synchronize with any device. Check the [demo](https://demo.cozycloud.cc) to discover more applications.", 
-    "name": "Cozy", 
     "ohloh": {
         "main_language": "CoffeeScript", 
         "max_month": "2014-03-01T00:00:00Z", 
         "description": "Template project to create quickly a cozy application with Javascript", 
-        "tags": [], 
-        "total_code_lines": -17530, 
         "total_contributor_count": 4, 
+        "total_code_lines": -17530, 
+        "tags": [], 
         "twelve_month_contributor_count": 3, 
         "updated_at": "2014-04-09T14:58:26Z", 
         "analysis": "19772935", 
@@ -21,5 +19,7 @@
         "total_commit_count": 26, 
         "id": "676330", 
         "name": "cozy-template-js"
-    }
+    }, 
+    "description": "[Cozy](http://cozy.io) is a personal cloud you can host, hack and delete. With Cozy, you manage your web apps like you were on your smartphone. It provides an open market place from where you can install the web app you made yourself (Cozy is a [personal PaaS](http://cozy.io/hack/getting-started/architecture-overview.html)). Today, the most successful applications are Contact and Calendar managers that you can synchronize with any device. Check the [demo](https://demo.cozycloud.cc) to discover more applications.", 
+    "name": "Cozy"
 }

@@ -1,11 +1,11 @@
 {
-    "description": "[Kademlia](http://en.wikipedia.org/wiki/Kademlia) is a distributed hash table for decentralized peer-to-peer computer networks", 
-    "name": "Kademlia", 
     "ohloh": {
-        "id": "355275", 
-        "name": "simple-kademlia-simulator", 
         "description": "A simple C project used to simulate a DHT kademlia protocol mainly for research purpose", 
+        "tags": [], 
+        "id": "355275", 
         "analysis": "", 
-        "tags": []
-    }
+        "name": "simple-kademlia-simulator"
+    }, 
+    "description": "[Kademlia](http://en.wikipedia.org/wiki/Kademlia) is a distributed hash table for decentralized peer-to-peer computer networks", 
+    "name": "Kademlia"
 }

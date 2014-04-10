@@ -1,18 +1,16 @@
 {
-    "description": "[Seafile](http://seafile.com) is a cloud software similar to owncloud, with clients for Windows, Mac, Linux, Android and iOS. Server for Linux and Raspberry Pi.", 
-    "name": "Seafile", 
     "ohloh": {
         "main_language": "C", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "Seafile -- Private cloud for Group file sharing and collaboration.", 
+        "total_contributor_count": 29, 
+        "total_code_lines": 83862, 
         "tags": [
             "cloudfiles", 
             "cloudstorage", 
             "teamwork", 
             "filesync"
         ], 
-        "total_code_lines": 83862, 
-        "total_contributor_count": 29, 
         "twelve_month_contributor_count": 23, 
         "updated_at": "2014-04-08T09:24:54Z", 
         "analysis": "19864551", 
@@ -26,5 +24,7 @@
         "total_commit_count": 895, 
         "id": "617046", 
         "name": "seafile"
-    }
+    }, 
+    "description": "[Seafile](http://seafile.com) is a cloud software similar to owncloud, with clients for Windows, Mac, Linux, Android and iOS. Server for Linux and Raspberry Pi.", 
+    "name": "Seafile"
 }

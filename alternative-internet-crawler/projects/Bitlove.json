@@ -1,13 +1,11 @@
 {
-    "description": "[bitlove-ui](http://bitlove.org/) Bitlove creates Torrents for all enclosures of an RSS/ATOM feed and seeds them for podcasts.", 
-    "name": "Bitlove", 
     "ohloh": {
         "main_language": "Haskell", 
         "max_month": "2014-01-01T00:00:00Z", 
         "description": "Bitlove.org on Yesod", 
-        "tags": [], 
-        "total_code_lines": 9136, 
         "total_contributor_count": 4, 
+        "total_code_lines": 9136, 
+        "tags": [], 
         "twelve_month_contributor_count": 1, 
         "updated_at": "2014-04-07T23:09:21Z", 
         "analysis": "19395584", 
@@ -21,5 +19,7 @@
         "total_commit_count": 283, 
         "id": "681884", 
         "name": "bitlove-ui"
-    }
+    }, 
+    "description": "[bitlove-ui](http://bitlove.org/) Bitlove creates Torrents for all enclosures of an RSS/ATOM feed and seeds them for podcasts.", 
+    "name": "Bitlove"
 }

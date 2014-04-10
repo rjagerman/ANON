@@ -1,13 +1,11 @@
 {
-    "description": "[Cables communication](http://dee.su/cables) implements secure and anonymous communication using email-like addresses, pioneered in Libert\u00e9 Linux. Cables communication is Libert\u00e9's pivotal component for enabling anyone to communicate safely and covertly in hostile environments.", 
-    "name": "Cables", 
     "ohloh": {
         "main_language": "JavaScript", 
         "max_month": "2014-01-01T00:00:00Z", 
         "description": "The map and graph modules of Wikileak's ProjectK, the diplomatic cables of the Kissinger era.", 
-        "tags": [], 
-        "total_code_lines": 2577, 
         "total_contributor_count": 2, 
+        "total_code_lines": 2577, 
+        "tags": [], 
         "twelve_month_contributor_count": 2, 
         "updated_at": "2014-04-08T18:59:15Z", 
         "analysis": "19838981", 
@@ -21,5 +19,7 @@
         "total_commit_count": 118, 
         "id": "657649", 
         "name": "wikileaks-kissinger-cables"
-    }
+    }, 
+    "description": "[Cables communication](http://dee.su/cables) implements secure and anonymous communication using email-like addresses, pioneered in Libert\u00e9 Linux. Cables communication is Libert\u00e9's pivotal component for enabling anyone to communicate safely and covertly in hostile environments.", 
+    "name": "Cables"
 }

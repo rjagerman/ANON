@@ -1,13 +1,11 @@
 {
-    "description": "The [Refuge Project](http://refuge.io/) aims to provide a fully decentralized and opensource data platform. It is built in Erlang and includes [RCouch](https://github.com/refuge/rcouch), a static distribution of couchdb using rebar, and [Coffer](https://github.com/refuge/coffer), a blob server.", 
-    "name": "Refuge", 
     "ohloh": {
         "main_language": "ActionScript", 
         "max_month": "2009-09-01T00:00:00Z", 
         "description": "space invaders with a dash of puzzle bobble, for ludum dare #15.", 
-        "tags": [], 
-        "total_code_lines": 10453, 
         "total_contributor_count": 1, 
+        "total_code_lines": 10453, 
+        "tags": [], 
         "twelve_month_contributor_count": 0, 
         "updated_at": "2014-04-08T08:44:19Z", 
         "analysis": "19527016", 
@@ -22,5 +20,7 @@
         "total_commit_count": 57, 
         "id": "526951", 
         "name": "refuge"
-    }
+    }, 
+    "description": "The [Refuge Project](http://refuge.io/) aims to provide a fully decentralized and opensource data platform. It is built in Erlang and includes [RCouch](https://github.com/refuge/rcouch), a static distribution of couchdb using rebar, and [Coffer](https://github.com/refuge/coffer), a blob server.", 
+    "name": "Refuge"
 }

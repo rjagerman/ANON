@@ -1,10 +1,10 @@
 {
-    "description": "[buddycloud](http://buddycloud.com/) is a set of tools, open source software and protocols to help you build a distributed social network. All the code is on [GitHub](https://github.com/buddycloud).", 
-    "name": "buddycloud", 
     "ohloh": {
         "main_language": "Java", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "buddycloud is built for people who care about their privacy.\n\nWe are building the future of social networks. A future founded on openness. A future built using open standards.\n\nWe are making the future happen now, by building a massively scaled and fully distributed social network. buddycloud is leading a quiet revolution to replace the closed retweet and Like incumbents.", 
+        "total_contributor_count": 38, 
+        "total_code_lines": 297594, 
         "tags": [
             "android", 
             "backbone", 
@@ -14,8 +14,6 @@
             "xmpp", 
             "socialnetworking"
         ], 
-        "total_code_lines": 297594, 
-        "total_contributor_count": 38, 
         "twelve_month_contributor_count": 18, 
         "updated_at": "2014-04-09T21:22:24Z", 
         "analysis": "19881646", 
@@ -30,5 +28,7 @@
         "total_commit_count": 4375, 
         "id": "535958", 
         "name": "buddycloud"
-    }
+    }, 
+    "description": "[buddycloud](http://buddycloud.com/) is a set of tools, open source software and protocols to help you build a distributed social network. All the code is on [GitHub](https://github.com/buddycloud).", 
+    "name": "buddycloud"
 }

@@ -1,16 +1,14 @@
 {
-    "description": "[Tox](https://github.com/irungentoo/ProjectTox-Core#why-are-you-doing-this-there-are-already-a-bunch-of-free-skype-alternatives)  The goal of this project is to create a configuration free p2p skype replacement.", 
-    "name": "Tox", 
     "ohloh": {
         "main_language": "Python", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "Tox as is a generic virtualenv management and test command line tool you can use for:\n\n* checking your package installs correctly with different Python versions and interpreters\n\n* running your tests in each of the environments, configuring your test tool of choice\n\n* acting as a frontend to Continuous Integration servers, greatly reducing boilerplate and merging CI and shell-based testing.", 
+        "total_contributor_count": 37, 
+        "total_code_lines": 4856, 
         "tags": [
             "python", 
             "virtualenv"
         ], 
-        "total_code_lines": 4856, 
-        "total_contributor_count": 37, 
         "twelve_month_contributor_count": 22, 
         "updated_at": "2014-04-10T07:18:35Z", 
         "analysis": "19835875", 
@@ -25,5 +23,7 @@
         "total_commit_count": 596, 
         "id": "587443", 
         "name": "python-tox"
-    }
+    }, 
+    "description": "[Tox](https://github.com/irungentoo/ProjectTox-Core#why-are-you-doing-this-there-are-already-a-bunch-of-free-skype-alternatives)  The goal of this project is to create a configuration free p2p skype replacement.", 
+    "name": "Tox"
 }

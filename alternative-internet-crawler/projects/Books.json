@@ -1,7 +1,7 @@
 {
-    "description": "[Books](http://en.wikipedia.org/wiki/Books) are a stable, production tested communication protocol suitable for a wide range of information services.", 
-    "name": "Books", 
     "ohloh": {
         "skip": true
-    }
+    }, 
+    "description": "[Books](http://en.wikipedia.org/wiki/Books) are a stable, production tested communication protocol suitable for a wide range of information services.", 
+    "name": "Books"
 }

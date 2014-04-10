@@ -1,13 +1,11 @@
 {
-    "description": "[Ori](http://ori.scs.stanford.edu/) is a distributed file system built for offline operation and empowers the user with control over synchronization operations and conflict resolution.  It provides history through light weight snapshots and allows users to verify the history has not been tampered with. Through the use of replication instances it is resilient and can recover damaged data from other nodes.", 
-    "name": "Ori", 
     "ohloh": {
         "main_language": "Objective-C", 
         "max_month": "2013-06-01T00:00:00Z", 
         "description": "Objetive-C Runtime Inspector", 
-        "tags": [], 
-        "total_code_lines": 9350, 
         "total_contributor_count": 1, 
+        "total_code_lines": 9350, 
+        "tags": [], 
         "twelve_month_contributor_count": 1, 
         "updated_at": "2014-04-08T16:27:57Z", 
         "analysis": "19556106", 
@@ -21,5 +19,7 @@
         "total_commit_count": 4, 
         "id": "680326", 
         "name": "ORI"
-    }
+    }, 
+    "description": "[Ori](http://ori.scs.stanford.edu/) is a distributed file system built for offline operation and empowers the user with control over synchronization operations and conflict resolution.  It provides history through light weight snapshots and allows users to verify the history has not been tampered with. Through the use of replication instances it is resilient and can recover damaged data from other nodes.", 
+    "name": "Ori"
 }

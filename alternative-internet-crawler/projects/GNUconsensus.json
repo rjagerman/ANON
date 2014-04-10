@@ -1,10 +1,10 @@
 {
-    "description": "[GNU/consensus](https://gnu.org/consensus) is a GNU project to coordinate development efforts of free software for social networking. It recommends using the [AGPLv3+ license](https://gnu.org/licenses/agpl) and aims to inform free software developers about interesting projects and perspectives for a decentralized, freedom-respecting, and privacy-respecting online social networking environment. The GNU/consensus promotes convergence towards the use of the extensible [GNUnet Social API](https://gnunet.org/design-social-messaging-system).", 
-    "name": "GNU/consensus", 
     "ohloh": {
         "main_language": "C", 
         "max_month": "2014-03-01T00:00:00Z", 
         "description": "Sed (streams editor) isn't really a true text editor or text processor. Instead, it is used to filter text, i.e., it takes text input and performs some operation (or set of operations) on it and outputs the modified text. \n\nSed is typically used for extracting part of a file using pattern matching or substituting multiple occurrences of a string within a file.", 
+        "total_contributor_count": 14, 
+        "total_code_lines": 23534, 
         "tags": [
             "gnu", 
             "posix", 
@@ -15,8 +15,6 @@
             "console", 
             "shell"
         ], 
-        "total_code_lines": 23534, 
-        "total_contributor_count": 14, 
         "twelve_month_contributor_count": 2, 
         "updated_at": "2014-04-09T05:16:34Z", 
         "analysis": "19720006", 
@@ -31,5 +29,7 @@
         "total_commit_count": 379, 
         "id": "1984", 
         "name": "GNU sed"
-    }
+    }, 
+    "description": "[GNU/consensus](https://gnu.org/consensus) is a GNU project to coordinate development efforts of free software for social networking. It recommends using the [AGPLv3+ license](https://gnu.org/licenses/agpl) and aims to inform free software developers about interesting projects and perspectives for a decentralized, freedom-respecting, and privacy-respecting online social networking environment. The GNU/consensus promotes convergence towards the use of the extensible [GNUnet Social API](https://gnunet.org/design-social-messaging-system).", 
+    "name": "GNU/consensus"
 }
