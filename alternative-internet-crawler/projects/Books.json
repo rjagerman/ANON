@@ -1,38 +1,6 @@
 {
     "ohloh": {
-        "main_language": "XSL Transformation", 
-        "max_month": "2014-03-01T00:00:00Z", 
-        "description": "DocBook is an XML/SGML vocabulary that enables you to create document content in a presentation-neutral form that captures the logical structure of the content. Using the DocBook stylesheets, you can publish DocBook content as HTML pages and PDF files and other formats, including man pages, HTML Help, and JavaHelp.", 
-        "total_contributor_count": 40, 
-        "total_code_lines": 1328795, 
-        "tags": [
-            "reference", 
-            "xslt", 
-            "sgml", 
-            "programming", 
-            "text", 
-            "development", 
-            "xsl", 
-            "css", 
-            "tools", 
-            "documentation", 
-            "standards", 
-            "text_processing"
-        ], 
-        "twelve_month_contributor_count": 10, 
-        "updated_at": "2014-04-08T17:50:14Z", 
-        "analysis": "19773301", 
-        "min_month": "2000-09-01T00:00:00Z", 
-        "factoids": [
-            "Mature, well-established codebase", 
-            "Large, active development team", 
-            "Well-commented source code", 
-            "Decreasing Y-O-Y development activity"
-        ], 
-        "twelve_month_commit_count": 177, 
-        "total_commit_count": 8993, 
-        "id": "230", 
-        "name": "DocBook"
+        "skip": true
     }, 
     "description": "[Books](http://en.wikipedia.org/wiki/Books) are a stable, production tested communication protocol suitable for a wide range of information services.", 
     "name": "Books"
