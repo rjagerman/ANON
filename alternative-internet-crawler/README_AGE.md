@@ -5,7 +5,6 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 
 | [Name](README.md) | [Commits](README_COMMITS.md) | [LOC](README_LOC.md) | Age | Description |
 | ---- | ------: | --: | --: | ----------- |
-|Books|8 K|1 M|13 year(s)|[Books](http://en.wikipedia.org/wiki/Books) are a stable, production tested communication protocol suitable for a wide range of information services.|
 |Mixminion|1 K|30 K|12 year(s)|[Mixminion](http://mixminion.net/) is a new remailer approach. The so-called type III remailer allows it to receive and send anonymous messages. However the development has stalled and the current software needs improvement.|
 |Tor|29 K|333 K|12 year(s)|[Tor](https://www.torproject.org/) protects you by bouncing your communications around a distributed network of relays run by volunteers all around the world: it prevents somebody watching your Internet connection from learning what sites you visit, and it prevents the sites you visit from learning your physical location.|
 |Netsukuku|5 K|169 K|10 year(s)|[Netsukuku](http://netsukuku.freaknet.org) is an ad-hoc network system designed to handle massive numbers of nodes with minimal consumption of CPU and memory resources. It can be used to build a world-wide distributed, fault-tolerant, anonymous, and censorship-immune network, fully independent from the Internet.|
@@ -107,6 +106,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 |Funkfeuer|177 |316 |8 month(s)|[Funkfeuer](http://funkfeuer.at/) is, just like Freifunk, a non commercial initiative for free wireless mesh networks. Funkfeuer is based in Austria and uses [OpenWRT](http://www.openwrt.net) as the firmware for the Routers.|
 |ClearSkies|730 |240 K|7 month(s)|[ClearSkies](https://github.com/jewel/clearskies) is a peer-to-peer file sync program.  It is inspired by BitTorrent Sync, but has an open and fully-documented protocol.|
 |Quietnet|-|-|-|[Quietnet](https://github.com/Katee/quietnet) is a simple chat program using near ultrasonic frequencies. It works without Wi-Fi or Bluetooth and cannot be eavesdropped using conventional network capturing methods.|
+|Books|-|-|-|[Books](http://en.wikipedia.org/wiki/Books) are a stable, production tested communication protocol suitable for a wide range of information services.|
 |Bitcoin by Mobile|-|-|-|[Bitcoin by Mobile](http://www.bitcoinbymobile.com/) allows Bitcoin newcomers to quickly and easily purchase small sums of Bitcoin using their mobile phone to fund the purchase.|
 |Kademlia|-|-|-|[Kademlia](http://en.wikipedia.org/wiki/Kademlia) is a distributed hash table for decentralized peer-to-peer computer networks|
 |PeerServer|-|-|-|[PeerServer](http://www.peer-server.com/) is a peer-to-peer client server using WebRTC, where your browser acts as a server for other browsers across WebRTC peer-to-peer data channels.|

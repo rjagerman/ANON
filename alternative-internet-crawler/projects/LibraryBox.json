@@ -1,11 +1,13 @@
 {
+    "description": "[LibraryBox](http://jasongriffey.net/librarybox/)  is an open source, portable digital file distribution tool based on inexpensive hardware that enables delivery of educational, healthcare, and other vital information to individuals off the grid.", 
+    "name": "LibraryBox", 
     "ohloh": {
         "main_language": "Python", 
         "max_month": "2012-10-01T00:00:00Z", 
         "description": "Inspired by griffey's LibraryBox project, create a standalone ebook server", 
-        "total_contributor_count": 1, 
-        "total_code_lines": 662, 
         "tags": [], 
+        "total_code_lines": 662, 
+        "total_contributor_count": 1, 
         "twelve_month_contributor_count": 0, 
         "updated_at": "2014-04-10T12:45:34Z", 
         "analysis": "19635315", 
@@ -19,7 +21,5 @@
         "total_commit_count": 57, 
         "id": "697443", 
         "name": "BiblioBox"
-    }, 
-    "description": "[LibraryBox](http://jasongriffey.net/librarybox/)  is an open source, portable digital file distribution tool based on inexpensive hardware that enables delivery of educational, healthcare, and other vital information to individuals off the grid.", 
-    "name": "LibraryBox"
+    }
 }

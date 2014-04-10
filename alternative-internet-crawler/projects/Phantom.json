@@ -1,10 +1,10 @@
 {
+    "description": "[Phantom](https://code.google.com/p/phantom/) is (was?) a system for generic, decentralized, unstoppable internet anonymity", 
+    "name": "Phantom", 
     "ohloh": {
         "main_language": "Python", 
         "max_month": "2010-08-01T00:00:00Z", 
         "description": "A Simple and multipurpose IRC bot that is simple to develop. it is modular .", 
-        "total_contributor_count": 2, 
-        "total_code_lines": 4356, 
         "tags": [
             "irc", 
             "robot", 
@@ -12,6 +12,8 @@
             "linux", 
             "bot"
         ], 
+        "total_code_lines": 4356, 
+        "total_contributor_count": 2, 
         "twelve_month_contributor_count": 0, 
         "updated_at": "2012-09-20T05:12:46Z", 
         "analysis": "9984775", 
@@ -25,7 +27,5 @@
         "total_commit_count": 123, 
         "id": "317032", 
         "name": "Phantom-bot"
-    }, 
-    "description": "[Phantom](https://code.google.com/p/phantom/) is (was?) a system for generic, decentralized, unstoppable internet anonymity", 
-    "name": "Phantom"
+    }
 }

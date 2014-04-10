@@ -1,11 +1,13 @@
 {
+    "description": "[Syme](https://getsyme.com) is an experimental project that aims at bringing more privacy and security to online communication through end-to-end encryption. Syme's zero-knowledge key infrastructure enables persistent multiparty communication and secure key exchanges on minimally trusted servers and relays.", 
+    "name": "Syme", 
     "ohloh": {
         "main_language": "C", 
         "max_month": "2010-11-01T00:00:00Z", 
         "description": "An implementation of Newspeak on the Rubinius VM.", 
-        "total_contributor_count": 1, 
-        "total_code_lines": 2773, 
         "tags": [], 
+        "total_code_lines": 2773, 
+        "total_contributor_count": 1, 
         "twelve_month_contributor_count": 0, 
         "updated_at": "2014-04-09T09:43:28Z", 
         "analysis": "19795515", 
@@ -20,7 +22,5 @@
         "total_commit_count": 7, 
         "id": "522325", 
         "name": "syme"
-    }, 
-    "description": "[Syme](https://getsyme.com) is an experimental project that aims at bringing more privacy and security to online communication through end-to-end encryption. Syme's zero-knowledge key infrastructure enables persistent multiparty communication and secure key exchanges on minimally trusted servers and relays.", 
-    "name": "Syme"
+    }
 }

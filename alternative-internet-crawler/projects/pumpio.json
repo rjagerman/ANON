@@ -1,10 +1,10 @@
 {
+    "description": "[pump.io](http://pump.io/) Described as \"a stream server that does most of what people really want from a social network\". It's a social stream with support for federated comunication.", 
+    "name": "pump.io", 
     "ohloh": {
         "main_language": "JavaScript", 
         "max_month": "2014-02-01T00:00:00Z", 
         "description": "A simple, high-performance engine for distributing social activities.", 
-        "total_contributor_count": 11, 
-        "total_code_lines": 87328, 
         "tags": [
             "feed", 
             "server", 
@@ -13,6 +13,8 @@
             "nodejs", 
             "activitystream"
         ], 
+        "total_code_lines": 87328, 
+        "total_contributor_count": 11, 
         "twelve_month_contributor_count": 9, 
         "updated_at": "2014-04-08T07:44:40Z", 
         "analysis": "19774786", 
@@ -27,7 +29,5 @@
         "total_commit_count": 3744, 
         "id": "587826", 
         "name": "pump.io"
-    }, 
-    "description": "[pump.io](http://pump.io/) Described as \"a stream server that does most of what people really want from a social network\". It's a social stream with support for federated comunication.", 
-    "name": "pump.io"
+    }
 }

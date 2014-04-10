@@ -1,10 +1,10 @@
 {
+    "description": "[ownCloud](http://www.owncloud.org/) is personal cloud software with a focus on ease of use and syncing, mobile clients and a wide range of applications.", 
+    "name": "ownCloud", 
     "ohloh": {
         "main_language": "PHP", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "ownCloud is an open-source web application for data synchronization, file sharing, and cloud storage.", 
-        "total_contributor_count": 402, 
-        "total_code_lines": 1301310, 
         "tags": [
             "storage", 
             "file", 
@@ -20,6 +20,8 @@
             "owncloud", 
             "apps"
         ], 
+        "total_code_lines": 1301310, 
+        "total_contributor_count": 402, 
         "twelve_month_contributor_count": 197, 
         "updated_at": "2014-04-07T18:37:34Z", 
         "analysis": "19853788", 
@@ -34,7 +36,5 @@
         "total_commit_count": 35308, 
         "id": "481964", 
         "name": "ownCloud"
-    }, 
-    "description": "[ownCloud](http://www.owncloud.org/) is personal cloud software with a focus on ease of use and syncing, mobile clients and a wide range of applications.", 
-    "name": "ownCloud"
+    }
 }

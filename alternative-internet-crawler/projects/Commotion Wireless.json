@@ -1,11 +1,13 @@
 {
+    "description": "[Commotion Wireless](https://commotionwireless.net) is an open-source communication tool that uses mobile phones, computers, and other wireless devices to create decentralized mesh networks.", 
+    "name": "Commotion Wireless", 
     "ohloh": {
         "main_language": "Objective-C", 
         "max_month": "2013-11-01T00:00:00Z", 
         "description": "MeshBook is an open-source OSX utility app that uses OLSR (a routing protocol for mobile ad-hoc networks) for communication with mobile phones, computers, and other wireless devices to create decentralized mesh networks.", 
-        "total_contributor_count": 2, 
-        "total_code_lines": 6238, 
         "tags": [], 
+        "total_code_lines": 6238, 
+        "total_contributor_count": 2, 
         "twelve_month_contributor_count": 2, 
         "updated_at": "2014-04-08T16:15:59Z", 
         "analysis": "19699269", 
@@ -19,7 +21,5 @@
         "total_commit_count": 38, 
         "id": "666764", 
         "name": "commotion-meshbook"
-    }, 
-    "description": "[Commotion Wireless](https://commotionwireless.net) is an open-source communication tool that uses mobile phones, computers, and other wireless devices to create decentralized mesh networks.", 
-    "name": "Commotion Wireless"
+    }
 }

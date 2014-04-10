@@ -1,10 +1,10 @@
 {
+    "description": "See [unSYSTEM](#unSYSTEM) above, and [bitcointalk](https://bitcointalk.org/index.php?topic=134179.0) for a list of others.", 
+    "name": "Others", 
     "ohloh": {
         "main_language": "C++", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "Paludis is a package manager for use with Gentoo and related distributions. It is entirely independent of Portage.", 
-        "total_contributor_count": 71, 
-        "total_code_lines": 194622, 
         "tags": [
             "package", 
             "gentoo", 
@@ -12,6 +12,8 @@
             "exherbo", 
             "package-manager"
         ], 
+        "total_code_lines": 194622, 
+        "total_contributor_count": 71, 
         "twelve_month_contributor_count": 13, 
         "updated_at": "2014-04-08T21:53:00Z", 
         "analysis": "19866176", 
@@ -26,7 +28,5 @@
         "total_commit_count": 8118, 
         "id": "8721", 
         "name": "Paludis, the Other Package Mangler"
-    }, 
-    "description": "See [unSYSTEM](#unSYSTEM) above, and [bitcointalk](https://bitcointalk.org/index.php?topic=134179.0) for a list of others.", 
-    "name": "Others"
+    }
 }

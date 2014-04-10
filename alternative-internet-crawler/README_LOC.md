@@ -6,7 +6,6 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 | [Name](README.md) | [Commits](README_COMMITS.md) | LOC | [Age](README_AGE.md) | Description |
 | ---- | ------: | --: | --: | ----------- |
 |qaul.net|367 |1 M|1 year(s)|[qaul.net](https://github.com/WachterJud/qaul.net) implements a redundant, open communication principle, in which wireless-enabled computers and mobile devices can directly form a spontaneous network. Chat functions, file sharing and voice chat is possible independent of internet and cellular networks.|
-|Books|8 K|1 M|13 year(s)|[Books](http://en.wikipedia.org/wiki/Books) are a stable, production tested communication protocol suitable for a wide range of information services.|
 |ownCloud|35 K|1 M|6 year(s)|[ownCloud](http://www.owncloud.org/) is personal cloud software with a focus on ease of use and syncing, mobile clients and a wide range of applications.|
 |Osiris|371 |1 M|4 year(s)|[Osiris](http://www.osiris-sps.org/) is software for decentralized portal, managed and shared via P2P between members.|
 |Lorea|11 K|873 K|6 year(s)|[Lorea](https://lorea.org/) researches free software Internet tools to emancipate your social networks where autonomy, group collaboration, and privacy matter.  Since 2009, Lorea has been _(re-)taking the networks_, with its flagship [N-1](https://n-1.cc/) seed.|
@@ -116,6 +115,7 @@ Project statistics fetched from [Ohloh](https://www.ohloh.net).
 |Project Meshnet|1 |0 |6 year(s)|[Project Meshnet](https://projectmeshnet.org/) aims to build a sustainable decentralized alternative internet. Used by [Hyperboria](http://hyperboria.net/) and built on [CJDNS](http://cjdns.info/).|
 |Cozy|26 |-17530 |2 year(s)|[Cozy](http://cozy.io) is a personal cloud you can host, hack and delete. With Cozy, you manage your web apps like you were on your smartphone. It provides an open market place from where you can install the web app you made yourself (Cozy is a [personal PaaS](http://cozy.io/hack/getting-started/architecture-overview.html)). Today, the most successful applications are Contact and Calendar managers that you can synchronize with any device. Check the [demo](https://demo.cozycloud.cc) to discover more applications.|
 |Quietnet|-|-|-|[Quietnet](https://github.com/Katee/quietnet) is a simple chat program using near ultrasonic frequencies. It works without Wi-Fi or Bluetooth and cannot be eavesdropped using conventional network capturing methods.|
+|Books|-|-|-|[Books](http://en.wikipedia.org/wiki/Books) are a stable, production tested communication protocol suitable for a wide range of information services.|
 |Bitcoin by Mobile|-|-|-|[Bitcoin by Mobile](http://www.bitcoinbymobile.com/) allows Bitcoin newcomers to quickly and easily purchase small sums of Bitcoin using their mobile phone to fund the purchase.|
 |Kademlia|-|-|-|[Kademlia](http://en.wikipedia.org/wiki/Kademlia) is a distributed hash table for decentralized peer-to-peer computer networks|
 |PeerServer|-|-|-|[PeerServer](http://www.peer-server.com/) is a peer-to-peer client server using WebRTC, where your browser acts as a server for other browsers across WebRTC peer-to-peer data channels.|

@@ -1,10 +1,10 @@
 {
+    "description": "[arkOS](https://arkos.io) is an operating system and software stack to easily host your own websites, email addresses, cloud services and more. It uses a graphical interface (called Genesis) to do all of this, with a focus on end-user experience and simple design. Presently in active development, it is currently functional on the Raspberry Pi with new services and platforms in the works.", 
+    "name": "arkOS", 
     "ohloh": {
         "main_language": "Python", 
         "max_month": "2014-04-01T00:00:00Z", 
         "description": "arkOS is an open-source platform for securely self-hosting your online life. It is designed to help its users take control of their personal data, and to make running a server as easy as using a desktop computer.", 
-        "total_contributor_count": 51, 
-        "total_code_lines": 29084, 
         "tags": [
             "distribution", 
             "archlinux", 
@@ -19,6 +19,8 @@
             "python", 
             "selfhosting"
         ], 
+        "total_code_lines": 29084, 
+        "total_contributor_count": 51, 
         "twelve_month_contributor_count": 18, 
         "updated_at": "2014-04-07T18:35:30Z", 
         "analysis": "19838066", 
@@ -33,7 +35,5 @@
         "total_commit_count": 1638, 
         "id": "665997", 
         "name": "arkOS"
-    }, 
-    "description": "[arkOS](https://arkos.io) is an operating system and software stack to easily host your own websites, email addresses, cloud services and more. It uses a graphical interface (called Genesis) to do all of this, with a focus on end-user experience and simple design. Presently in active development, it is currently functional on the Raspberry Pi with new services and platforms in the works.", 
-    "name": "arkOS"
+    }
 }

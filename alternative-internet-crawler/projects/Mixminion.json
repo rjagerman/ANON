@@ -1,11 +1,13 @@
 {
+    "description": "[Mixminion](http://mixminion.net/) is a new remailer approach. The so-called type III remailer allows it to receive and send anonymous messages. However the development has stalled and the current software needs improvement.", 
+    "name": "Mixminion", 
     "ohloh": {
         "main_language": "Python", 
         "max_month": "2012-07-01T00:00:00Z", 
         "description": "mixminion is the main implementation of the Type III (\"Mixminion\") remailer protocol.", 
-        "total_contributor_count": 6, 
-        "total_code_lines": 30943, 
         "tags": [], 
+        "total_code_lines": 30943, 
+        "total_contributor_count": 6, 
         "twelve_month_contributor_count": 0, 
         "updated_at": "2014-04-10T00:25:01Z", 
         "analysis": "19882355", 
@@ -20,7 +22,5 @@
         "total_commit_count": 1091, 
         "id": "540388", 
         "name": "mixminion"
-    }, 
-    "description": "[Mixminion](http://mixminion.net/) is a new remailer approach. The so-called type III remailer allows it to receive and send anonymous messages. However the development has stalled and the current software needs improvement.", 
-    "name": "Mixminion"
+    }
 }

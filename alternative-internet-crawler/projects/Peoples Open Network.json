@@ -1,10 +1,10 @@
 {
+    "description": "[People's Open Network](https://sudoroom.org/wiki/Mesh) is a community mesh network in Oakland, California.", 
+    "name": "People's Open Network", 
     "ohloh": {
         "main_language": "Vala", 
         "max_month": "2009-03-01T00:00:00Z", 
         "description": "Moved to libfolks http://telepathy.freedesktop.org/wiki/Folks", 
-        "total_contributor_count": 3, 
-        "total_code_lines": 9832, 
         "tags": [
             "social-networks", 
             "contactmanagement", 
@@ -18,6 +18,8 @@
             "freedesktop", 
             "people"
         ], 
+        "total_code_lines": 9832, 
+        "total_contributor_count": 3, 
         "twelve_month_contributor_count": 0, 
         "updated_at": "2014-04-09T03:31:03Z", 
         "analysis": "19700247", 
@@ -32,7 +34,5 @@
         "total_commit_count": 717, 
         "id": "310790", 
         "name": "People project"
-    }, 
-    "description": "[People's Open Network](https://sudoroom.org/wiki/Mesh) is a community mesh network in Oakland, California.", 
-    "name": "People's Open Network"
+    }
 }
